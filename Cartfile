@@ -1,0 +1,4 @@
+github "ishkawa/APIKit" ~> 5.0
+github "SVProgressHUD/SVProgressHUD" ~> 2.2
+github "ReactiveCocoa/ReactiveSwift" ~> 6.1
+github "ReactiveCocoa/ReactiveCocoa" ~> 10.1

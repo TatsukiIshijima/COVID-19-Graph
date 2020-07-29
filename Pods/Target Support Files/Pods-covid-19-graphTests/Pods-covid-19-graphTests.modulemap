@@ -1,0 +1,6 @@
+framework module Pods_covid_19_graphTests {
+  umbrella header "Pods-covid-19-graphTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
