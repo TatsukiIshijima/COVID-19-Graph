@@ -15,6 +15,7 @@
 		494DB3DA24D1B2D400C391EA /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		494DB3DB24D1B2D400C391EA /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; };
 		494DB3DC24D1B2D400C391EA /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 498EDF1624D2F730000CB11B /* .swiftlint.yml */; };
 		49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753A24D19CDA009EC846 /* AppDelegate.swift */; };
 		49A6753D24D19CDA009EC846 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753C24D19CDA009EC846 /* SceneDelegate.swift */; };
 		49A6753F24D19CDA009EC846 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753E24D19CDA009EC846 /* ViewController.swift */; };
@@ -71,6 +72,7 @@
 		494DB3D424D1B2D400C391EA /* ReactiveMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMapKit.framework; path = Carthage/Build/iOS/ReactiveMapKit.framework; sourceTree = "<group>"; };
 		494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		498EDF1624D2F730000CB11B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		49A6753724D19CDA009EC846 /* covid-19-graph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "covid-19-graph.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A6753A24D19CDA009EC846 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A6753C24D19CDA009EC846 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		49A6752E24D19CDA009EC846 = {
 			isa = PBXGroup;
 			children = (
+				498EDF1624D2F730000CB11B /* .swiftlint.yml */,
 				49A6753924D19CDA009EC846 /* covid-19-graph */,
 				49A6755024D19CDF009EC846 /* covid-19-graphTests */,
 				49A6755B24D19CDF009EC846 /* covid-19-graphUITests */,
@@ -316,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */,
 				49A6754724D19CDE009EC846 /* LaunchScreen.storyboard in Resources */,
 				49A6754424D19CDE009EC846 /* Assets.xcassets in Resources */,
 				49A6754224D19CDA009EC846 /* Main.storyboard in Resources */,
@@ -380,7 +384,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Carthage setting\n/usr/local/bin/carthage copy-frameworks\n\n# SwiftLint setting\nif which ./Pods/SwiftLint/swiftlint > /dev/null; then\n    ./Pods/SwiftLint/swiftlint autocorrect --format\n    ./Pods/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "# Carthage setting\n/usr/local/bin/carthage copy-frameworks\n\n# SwiftFormat setting\n./Pods/SwiftFormat/CommandLineTool/swiftformat . --exclude Carthage,Pods --trimwhitespace nonblank-lines --stripunusedargs closure-only --disable strongOutlets,trailingCommas\n\n# SwiftLint setting\nif which ./Pods/SwiftLint/swiftlint > /dev/null; then\n    ./Pods/SwiftLint/swiftlint autocorrect --format\n    ./Pods/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		63038886BEC86F000EF692E2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

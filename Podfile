@@ -10,6 +10,7 @@ target 'covid-19-graph' do
   target 'covid-19-graphTests' do
     inherit! :search_paths
     pod 'SwiftLint','0.39.2'
+    pod 'SwiftFormat/CLI','0.45.1'
   end
 
   target 'covid-19-graphUITests' do

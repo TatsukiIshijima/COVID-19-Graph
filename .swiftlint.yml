@@ -1,0 +1,13 @@
+# Lint対象から除外するパス
+excluded:
+- Carthage
+- Pods
+- covid-19-graphTests
+- covid-19-graphUITests
+disabled_rules:
+- trailing_whitespace
+
+# 1行の文字列制限
+line_length:
+- 200   # warning
+- 300   # error
