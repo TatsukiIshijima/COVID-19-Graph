@@ -1,0 +1,4 @@
+// バンドルID
+PRODUCT_BUNDLE_IDENTIFIER = com.tatsuki.covid-19-graph
+// アプリ表示名
+DISPLAY_NAME=covid-19

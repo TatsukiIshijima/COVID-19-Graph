@@ -1,0 +1,3 @@
+#include "Debug.xcconfig"
+#include "Production.xcconfig"
+OTHER_SWIFT_FLAGS = "-D" "DEBUG_PRODUCTION"

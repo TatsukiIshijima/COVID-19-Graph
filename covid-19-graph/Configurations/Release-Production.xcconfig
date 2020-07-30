@@ -1,0 +1,3 @@
+#include "Release.xcconfig"
+#include "Production.xcconfig"
+OTHER_SWIFT_FLAGS = "-D" "RELEASE_PRODUCTION"
