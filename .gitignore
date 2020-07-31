@@ -1,5 +1,10 @@
 # Xcode (from gitignore.io)
+
+## build generated
 build/
+DerivedData
+
+## various settings
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -9,14 +14,16 @@ build/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata
+
+## others
 *.xccheckout
+*.xcuserstate
+*.xcscmblueprint
 *.moved-aside
-DerivedData
 *.hmap
 *.ipa
-*.xcuserstate
+*.dSYM.zip
+*.dSYM
 
-# others
-*.swp
-!.gitkeep
-.DS_Store
+# Carthage
+Carthage/Checkouts
