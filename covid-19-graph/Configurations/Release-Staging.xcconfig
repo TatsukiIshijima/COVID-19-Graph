@@ -1,3 +1,4 @@
-#include "Release.xcconfig"
+//#include "Release.xcconfig"
 #include "Staging.xcconfig"
+#include "Pods/Target Support Files/Pods-covid-19-graph/Pods-covid-19-graph.release-staging.xcconfig"
 OTHER_SWIFT_FLAGS = "-D" "RELEASE_STAGING"

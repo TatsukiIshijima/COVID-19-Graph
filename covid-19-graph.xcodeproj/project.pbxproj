@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		494DB3CD24D1A60400C391EA /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3CC24D1A60400C391EA /* APIKit.framework */; };
-		494DB3CE24D1A60400C391EA /* APIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3CC24D1A60400C391EA /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		494DB3D224D1A90B00C391EA /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */; };
-		494DB3D324D1A90B00C391EA /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		494DB3D924D1B2D400C391EA /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; };
-		494DB3DA24D1B2D400C391EA /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		494DB3DB24D1B2D400C391EA /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; };
-		494DB3DC24D1B2D400C391EA /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 498EDF1624D2F730000CB11B /* .swiftlint.yml */; };
 		49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753A24D19CDA009EC846 /* AppDelegate.swift */; };
 		49A6753D24D19CDA009EC846 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753C24D19CDA009EC846 /* SceneDelegate.swift */; };
@@ -24,6 +16,7 @@
 		49A6754724D19CDE009EC846 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A6754524D19CDE009EC846 /* LaunchScreen.storyboard */; };
 		49A6755224D19CDF009EC846 /* covid_19_graphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6755124D19CDF009EC846 /* covid_19_graphTests.swift */; };
 		49A6755D24D19CDF009EC846 /* covid_19_graphUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6755C24D19CDF009EC846 /* covid_19_graphUITests.swift */; };
+		6E473E69BE0E30BBA8ECD9EF /* Pods_covid_19_graph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498EDF4124D30933000CB11B /* Pods_covid_19_graph.framework */; };
 		B165F675AF3B96AA834E081E /* Pods_covid_19_graph_covid_19_graphUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E17FE36CE4AE946CB40D58A /* Pods_covid_19_graph_covid_19_graphUITests.framework */; };
 		E13E5463C6D1110EB1B79B9A /* Pods_covid_19_graphTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F5FEAC6BA9345CC17900B7 /* Pods_covid_19_graphTests.framework */; };
 /* End PBXBuildFile section */
@@ -45,27 +38,17 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		494DB3CF24D1A60400C391EA /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				494DB3D324D1A90B00C391EA /* SVProgressHUD.framework in Embed Frameworks */,
-				494DB3CE24D1A60400C391EA /* APIKit.framework in Embed Frameworks */,
-				494DB3DA24D1B2D400C391EA /* ReactiveSwift.framework in Embed Frameworks */,
-				494DB3DC24D1B2D400C391EA /* ReactiveCocoa.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		055A3866F35996A03398CE4B /* Pods-covid-19-graphTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.debug.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.debug.xcconfig"; sourceTree = "<group>"; };
+		105DE34DB51D00E86DC719BC /* Pods-covid-19-graphTests.release-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.release-development.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.release-development.xcconfig"; sourceTree = "<group>"; };
+		13D0E01038A6A2B130A49D72 /* Pods-covid-19-graph.release-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph.release-staging.xcconfig"; path = "Target Support Files/Pods-covid-19-graph/Pods-covid-19-graph.release-staging.xcconfig"; sourceTree = "<group>"; };
+		1DE86482C42D5371F6A4F548 /* Pods-covid-19-graph-covid-19-graphUITests.debug-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.debug-staging.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.debug-staging.xcconfig"; sourceTree = "<group>"; };
+		232FEF5FAF0EF7B188CBA7B2 /* Pods-covid-19-graphTests.debug-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.debug-production.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.debug-production.xcconfig"; sourceTree = "<group>"; };
 		2A8D6FDC686BEE724126D6B7 /* Pods-covid-19-graph.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph.debug.xcconfig"; path = "Target Support Files/Pods-covid-19-graph/Pods-covid-19-graph.debug.xcconfig"; sourceTree = "<group>"; };
+		2AD787A6CB352CBA95D75F45 /* Pods-covid-19-graphTests.debug-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.debug-development.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.debug-development.xcconfig"; sourceTree = "<group>"; };
 		34F5FEAC6BA9345CC17900B7 /* Pods_covid_19_graphTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_covid_19_graphTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BA10F9A57B3AB1B312377A4 /* Pods-covid-19-graph.debug-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph.debug-staging.xcconfig"; path = "Target Support Files/Pods-covid-19-graph/Pods-covid-19-graph.debug-staging.xcconfig"; sourceTree = "<group>"; };
+		3C7E0E1AD18F386BBA073E90 /* Pods-covid-19-graphTests.release-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.release-production.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.release-production.xcconfig"; sourceTree = "<group>"; };
 		494DB3CC24D1A60400C391EA /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		494DB3D424D1B2D400C391EA /* ReactiveMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMapKit.framework; path = Carthage/Build/iOS/ReactiveMapKit.framework; sourceTree = "<group>"; };
@@ -101,9 +84,20 @@
 		49A6755E24D19CDF009EC846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C31CF853D82EA2FA46CD902 /* Pods-covid-19-graphTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.release.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E17FE36CE4AE946CB40D58A /* Pods_covid_19_graph_covid_19_graphUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_covid_19_graph_covid_19_graphUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		515B835AFFE4F6F0710BE1CA /* Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig"; sourceTree = "<group>"; };
 		670A691A8C43BAC680571B29 /* Pods-covid-19-graph-covid-19-graphUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.release.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6F2C118BF7D6536A7865CE44 /* Pods-covid-19-graph.debug-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph.debug-production.xcconfig"; path = "Target Support Files/Pods-covid-19-graph/Pods-covid-19-graph.debug-production.xcconfig"; sourceTree = "<group>"; };
+		7632440AAAFEAE6B2BF95123 /* Pods-covid-19-graph-covid-19-graphUITests.debug-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.debug-production.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.debug-production.xcconfig"; sourceTree = "<group>"; };
+		7AD7BFEAF774271AC8699AF9 /* Pods-covid-19-graph-covid-19-graphUITests.debug-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.debug-development.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.debug-development.xcconfig"; sourceTree = "<group>"; };
 		7CF6916CD1466E3400F87D4C /* Pods_covid_19_graph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_covid_19_graph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DE1C604FFDD1C0A503BCB5E /* Pods-covid-19-graph.release-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph.release-development.xcconfig"; path = "Target Support Files/Pods-covid-19-graph/Pods-covid-19-graph.release-development.xcconfig"; sourceTree = "<group>"; };
 		8EE8703CD64229CAAE57D0B0 /* Pods-covid-19-graph-covid-19-graphUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.debug.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A22BA7A69B1AF073E0A9344B /* Pods-covid-19-graph-covid-19-graphUITests.release-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.release-staging.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.release-staging.xcconfig"; sourceTree = "<group>"; };
+		A7FF60D1B544F87D9EDBBF7A /* Pods-covid-19-graph.release-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph.release-production.xcconfig"; path = "Target Support Files/Pods-covid-19-graph/Pods-covid-19-graph.release-production.xcconfig"; sourceTree = "<group>"; };
+		B0215644974210492A4FC6C4 /* Pods-covid-19-graphTests.release-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.release-staging.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.release-staging.xcconfig"; sourceTree = "<group>"; };
+		B51C4931BE4E5E19AFF90767 /* Pods-covid-19-graph.debug-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph.debug-development.xcconfig"; path = "Target Support Files/Pods-covid-19-graph/Pods-covid-19-graph.debug-development.xcconfig"; sourceTree = "<group>"; };
+		D1FE10C672007FCF1DAC000F /* Pods-covid-19-graphTests.debug-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.debug-staging.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.debug-staging.xcconfig"; sourceTree = "<group>"; };
+		DBFB7FC4E03699CC6C79147A /* Pods-covid-19-graph-covid-19-graphUITests.release-development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.release-development.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.release-development.xcconfig"; sourceTree = "<group>"; };
 		F848575A0205B4F6B81A307F /* Pods-covid-19-graph.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph.release.xcconfig"; path = "Target Support Files/Pods-covid-19-graph/Pods-covid-19-graph.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,10 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				494DB3D224D1A90B00C391EA /* SVProgressHUD.framework in Frameworks */,
-				494DB3DB24D1B2D400C391EA /* ReactiveCocoa.framework in Frameworks */,
-				494DB3D924D1B2D400C391EA /* ReactiveSwift.framework in Frameworks */,
-				494DB3CD24D1A60400C391EA /* APIKit.framework in Frameworks */,
+				6E473E69BE0E30BBA8ECD9EF /* Pods_covid_19_graph.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +155,24 @@
 				670A691A8C43BAC680571B29 /* Pods-covid-19-graph-covid-19-graphUITests.release.xcconfig */,
 				055A3866F35996A03398CE4B /* Pods-covid-19-graphTests.debug.xcconfig */,
 				4C31CF853D82EA2FA46CD902 /* Pods-covid-19-graphTests.release.xcconfig */,
+				6F2C118BF7D6536A7865CE44 /* Pods-covid-19-graph.debug-production.xcconfig */,
+				3BA10F9A57B3AB1B312377A4 /* Pods-covid-19-graph.debug-staging.xcconfig */,
+				B51C4931BE4E5E19AFF90767 /* Pods-covid-19-graph.debug-development.xcconfig */,
+				A7FF60D1B544F87D9EDBBF7A /* Pods-covid-19-graph.release-production.xcconfig */,
+				13D0E01038A6A2B130A49D72 /* Pods-covid-19-graph.release-staging.xcconfig */,
+				8DE1C604FFDD1C0A503BCB5E /* Pods-covid-19-graph.release-development.xcconfig */,
+				7632440AAAFEAE6B2BF95123 /* Pods-covid-19-graph-covid-19-graphUITests.debug-production.xcconfig */,
+				1DE86482C42D5371F6A4F548 /* Pods-covid-19-graph-covid-19-graphUITests.debug-staging.xcconfig */,
+				7AD7BFEAF774271AC8699AF9 /* Pods-covid-19-graph-covid-19-graphUITests.debug-development.xcconfig */,
+				515B835AFFE4F6F0710BE1CA /* Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig */,
+				A22BA7A69B1AF073E0A9344B /* Pods-covid-19-graph-covid-19-graphUITests.release-staging.xcconfig */,
+				DBFB7FC4E03699CC6C79147A /* Pods-covid-19-graph-covid-19-graphUITests.release-development.xcconfig */,
+				232FEF5FAF0EF7B188CBA7B2 /* Pods-covid-19-graphTests.debug-production.xcconfig */,
+				D1FE10C672007FCF1DAC000F /* Pods-covid-19-graphTests.debug-staging.xcconfig */,
+				2AD787A6CB352CBA95D75F45 /* Pods-covid-19-graphTests.debug-development.xcconfig */,
+				3C7E0E1AD18F386BBA073E90 /* Pods-covid-19-graphTests.release-production.xcconfig */,
+				B0215644974210492A4FC6C4 /* Pods-covid-19-graphTests.release-staging.xcconfig */,
+				105DE34DB51D00E86DC719BC /* Pods-covid-19-graphTests.release-development.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -253,7 +262,6 @@
 				49A6753324D19CDA009EC846 /* Sources */,
 				49A6753424D19CDA009EC846 /* Frameworks */,
 				49A6753524D19CDA009EC846 /* Resources */,
-				494DB3CF24D1A60400C391EA /* Embed Frameworks */,
 				494DB3D024D1A69D00C391EA /* ShellScript */,
 			);
 			buildRules = (
@@ -613,7 +621,7 @@
 		};
 		498EDF2624D3009A000CB11B /* Debug-Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498EDF1E24D2FBE3000CB11B /* Debug-Development.xcconfig */;
+			baseConfigurationReference = 2AD787A6CB352CBA95D75F45 /* Pods-covid-19-graphTests.debug-development.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -636,7 +644,7 @@
 		};
 		498EDF2724D3009A000CB11B /* Debug-Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498EDF1E24D2FBE3000CB11B /* Debug-Development.xcconfig */;
+			baseConfigurationReference = 7AD7BFEAF774271AC8699AF9 /* Pods-covid-19-graph-covid-19-graphUITests.debug-development.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -742,7 +750,7 @@
 		};
 		498EDF2A24D300A4000CB11B /* Debug-Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498EDF1F24D2FBF1000CB11B /* Debug-Staging.xcconfig */;
+			baseConfigurationReference = D1FE10C672007FCF1DAC000F /* Pods-covid-19-graphTests.debug-staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -765,7 +773,7 @@
 		};
 		498EDF2B24D300A4000CB11B /* Debug-Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498EDF1F24D2FBF1000CB11B /* Debug-Staging.xcconfig */;
+			baseConfigurationReference = 1DE86482C42D5371F6A4F548 /* Pods-covid-19-graph-covid-19-graphUITests.debug-staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -871,7 +879,7 @@
 		};
 		498EDF2E24D300AE000CB11B /* Debug-Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498EDF2024D2FC02000CB11B /* Debug-Production.xcconfig */;
+			baseConfigurationReference = 232FEF5FAF0EF7B188CBA7B2 /* Pods-covid-19-graphTests.debug-production.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -894,7 +902,7 @@
 		};
 		498EDF2F24D300AE000CB11B /* Debug-Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498EDF2024D2FC02000CB11B /* Debug-Production.xcconfig */;
+			baseConfigurationReference = 7632440AAAFEAE6B2BF95123 /* Pods-covid-19-graph-covid-19-graphUITests.debug-production.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -994,7 +1002,7 @@
 		};
 		498EDF3224D300BA000CB11B /* Release-Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498EDF2124D2FC15000CB11B /* Release-Development.xcconfig */;
+			baseConfigurationReference = 105DE34DB51D00E86DC719BC /* Pods-covid-19-graphTests.release-development.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1017,7 +1025,7 @@
 		};
 		498EDF3324D300BA000CB11B /* Release-Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498EDF2124D2FC15000CB11B /* Release-Development.xcconfig */;
+			baseConfigurationReference = DBFB7FC4E03699CC6C79147A /* Pods-covid-19-graph-covid-19-graphUITests.release-development.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1117,7 +1125,7 @@
 		};
 		498EDF3624D300C3000CB11B /* Release-Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498EDF2224D2FC23000CB11B /* Release-Staging.xcconfig */;
+			baseConfigurationReference = B0215644974210492A4FC6C4 /* Pods-covid-19-graphTests.release-staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1140,7 +1148,7 @@
 		};
 		498EDF3724D300C3000CB11B /* Release-Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498EDF2224D2FC23000CB11B /* Release-Staging.xcconfig */;
+			baseConfigurationReference = A22BA7A69B1AF073E0A9344B /* Pods-covid-19-graph-covid-19-graphUITests.release-staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1240,7 +1248,7 @@
 		};
 		498EDF3A24D300CB000CB11B /* Release-Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498EDF2324D2FC32000CB11B /* Release-Production.xcconfig */;
+			baseConfigurationReference = 3C7E0E1AD18F386BBA073E90 /* Pods-covid-19-graphTests.release-production.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1263,7 +1271,7 @@
 		};
 		498EDF3B24D300CB000CB11B /* Release-Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 498EDF2324D2FC32000CB11B /* Release-Production.xcconfig */;
+			baseConfigurationReference = 515B835AFFE4F6F0710BE1CA /* Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

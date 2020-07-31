@@ -1,3 +1,4 @@
-#include "Debug.xcconfig"
+//#include "Debug.xcconfig"
 #include "Staging.xcconfig"
+#include "Pods/Target Support Files/Pods-covid-19-graph/Pods-covid-19-graph.debug-staging.xcconfig"
 OTHER_SWIFT_FLAGS = "-D" "DEBUG_STAGING"
