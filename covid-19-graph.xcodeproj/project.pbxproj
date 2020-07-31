@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		495BCD1E24D3B8B800D166A8 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3CC24D1A60400C391EA /* APIKit.framework */; };
+		495BCD1F24D3B8B800D166A8 /* APIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3CC24D1A60400C391EA /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; };
+		495BCD2224D3BB9500D166A8 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		495BCD2324D3BB9500D166A8 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; };
+		495BCD2424D3BB9500D166A8 /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		495BCD2524D3BB9500D166A8 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */; };
+		495BCD2624D3BB9500D166A8 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 498EDF1624D2F730000CB11B /* .swiftlint.yml */; };
 		49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753A24D19CDA009EC846 /* AppDelegate.swift */; };
 		49A6753D24D19CDA009EC846 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753C24D19CDA009EC846 /* SceneDelegate.swift */; };
@@ -37,6 +45,23 @@
 			remoteInfo = "covid-19-graph";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		495BCD2024D3B8B800D166A8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				495BCD1F24D3B8B800D166A8 /* APIKit.framework in Embed Frameworks */,
+				495BCD2224D3BB9500D166A8 /* ReactiveCocoa.framework in Embed Frameworks */,
+				495BCD2624D3BB9500D166A8 /* SVProgressHUD.framework in Embed Frameworks */,
+				495BCD2424D3BB9500D166A8 /* ReactiveSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		055A3866F35996A03398CE4B /* Pods-covid-19-graphTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.debug.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,7 +131,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				495BCD1E24D3B8B800D166A8 /* APIKit.framework in Frameworks */,
+				495BCD2524D3BB9500D166A8 /* SVProgressHUD.framework in Frameworks */,
+				495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */,
 				6E473E69BE0E30BBA8ECD9EF /* Pods_covid_19_graph.framework in Frameworks */,
+				495BCD2324D3BB9500D166A8 /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +292,7 @@
 				49A6753424D19CDA009EC846 /* Frameworks */,
 				49A6753524D19CDA009EC846 /* Resources */,
 				494DB3D024D1A69D00C391EA /* ShellScript */,
+				495BCD2024D3B8B800D166A8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
