@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		495BCD1E24D3B8B800D166A8 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3CC24D1A60400C391EA /* APIKit.framework */; };
-		495BCD1F24D3B8B800D166A8 /* APIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3CC24D1A60400C391EA /* APIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; };
 		495BCD2224D3BB9500D166A8 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		495BCD2324D3BB9500D166A8 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; };
@@ -24,6 +22,10 @@
 		49A6754724D19CDE009EC846 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A6754524D19CDE009EC846 /* LaunchScreen.storyboard */; };
 		49A6755224D19CDF009EC846 /* covid_19_graphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6755124D19CDF009EC846 /* covid_19_graphTests.swift */; };
 		49A6755D24D19CDF009EC846 /* covid_19_graphUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6755C24D19CDF009EC846 /* covid_19_graphUITests.swift */; };
+		49B57D2124D3C5B200D3E828 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D2024D3C5B200D3E828 /* APIClient.swift */; };
+		49B57D2524D3C89400D3E828 /* TotalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D2424D3C89400D3E828 /* TotalResponse.swift */; };
+		49B57D2724D3E7AE00D3E828 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; };
+		49B57D2824D3E7AE00D3E828 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E473E69BE0E30BBA8ECD9EF /* Pods_covid_19_graph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498EDF4124D30933000CB11B /* Pods_covid_19_graph.framework */; };
 		B165F675AF3B96AA834E081E /* Pods_covid_19_graph_covid_19_graphUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E17FE36CE4AE946CB40D58A /* Pods_covid_19_graph_covid_19_graphUITests.framework */; };
 		E13E5463C6D1110EB1B79B9A /* Pods_covid_19_graphTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F5FEAC6BA9345CC17900B7 /* Pods_covid_19_graphTests.framework */; };
@@ -53,10 +55,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				495BCD1F24D3B8B800D166A8 /* APIKit.framework in Embed Frameworks */,
 				495BCD2224D3BB9500D166A8 /* ReactiveCocoa.framework in Embed Frameworks */,
 				495BCD2624D3BB9500D166A8 /* SVProgressHUD.framework in Embed Frameworks */,
 				495BCD2424D3BB9500D166A8 /* ReactiveSwift.framework in Embed Frameworks */,
+				49B57D2824D3E7AE00D3E828 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +109,9 @@
 		49A6755824D19CDF009EC846 /* covid-19-graphUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "covid-19-graphUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A6755C24D19CDF009EC846 /* covid_19_graphUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = covid_19_graphUITests.swift; sourceTree = "<group>"; };
 		49A6755E24D19CDF009EC846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49B57D2024D3C5B200D3E828 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		49B57D2424D3C89400D3E828 /* TotalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalResponse.swift; sourceTree = "<group>"; };
+		49B57D2624D3E7AE00D3E828 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		4C31CF853D82EA2FA46CD902 /* Pods-covid-19-graphTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.release.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E17FE36CE4AE946CB40D58A /* Pods_covid_19_graph_covid_19_graphUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_covid_19_graph_covid_19_graphUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		515B835AFFE4F6F0710BE1CA /* Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig"; sourceTree = "<group>"; };
@@ -131,10 +136,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				495BCD1E24D3B8B800D166A8 /* APIKit.framework in Frameworks */,
 				495BCD2524D3BB9500D166A8 /* SVProgressHUD.framework in Frameworks */,
 				495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */,
 				6E473E69BE0E30BBA8ECD9EF /* Pods_covid_19_graph.framework in Frameworks */,
+				49B57D2724D3E7AE00D3E828 /* Alamofire.framework in Frameworks */,
 				495BCD2324D3BB9500D166A8 /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +166,7 @@
 		47D8F619B6CBE1BB2DD3D646 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49B57D2624D3E7AE00D3E828 /* Alamofire.framework */,
 				498EDF4124D30933000CB11B /* Pods_covid_19_graph.framework */,
 				498EDF3E24D308F2000CB11B /* Pods_covid_19_graph.framework */,
 				494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */,
@@ -250,6 +256,7 @@
 		49A6753924D19CDA009EC846 /* covid-19-graph */ = {
 			isa = PBXGroup;
 			children = (
+				49B57D1F24D3C3DC00D3E828 /* API */,
 				498EDF1824D2FB58000CB11B /* Configurations */,
 				49A6753A24D19CDA009EC846 /* AppDelegate.swift */,
 				49A6753C24D19CDA009EC846 /* SceneDelegate.swift */,
@@ -278,6 +285,31 @@
 				49A6755E24D19CDF009EC846 /* Info.plist */,
 			);
 			path = "covid-19-graphUITests";
+			sourceTree = "<group>";
+		};
+		49B57D1F24D3C3DC00D3E828 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				49B57D2324D3C73600D3E828 /* Response */,
+				49B57D2224D3C72E00D3E828 /* Request */,
+				49B57D2024D3C5B200D3E828 /* APIClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		49B57D2224D3C72E00D3E828 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		49B57D2324D3C73600D3E828 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				49B57D2424D3C89400D3E828 /* TotalResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,10 +475,10 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -510,6 +542,8 @@
 				49A6753F24D19CDA009EC846 /* ViewController.swift in Sources */,
 				49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */,
 				49A6753D24D19CDA009EC846 /* SceneDelegate.swift in Sources */,
+				49B57D2524D3C89400D3E828 /* TotalResponse.swift in Sources */,
+				49B57D2124D3C5B200D3E828 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
