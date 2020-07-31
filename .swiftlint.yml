@@ -4,6 +4,7 @@ excluded:
     - Pods
     - covid-19-graphTests
     - covid-19-graphUITests
+    - covid-19-graph/API/Response
 
 opt_in_rules:
     - force_unwrapping
