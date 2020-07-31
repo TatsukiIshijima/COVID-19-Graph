@@ -26,6 +26,11 @@
 		49B57D2524D3C89400D3E828 /* TotalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D2424D3C89400D3E828 /* TotalResponse.swift */; };
 		49B57D2724D3E7AE00D3E828 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; };
 		49B57D2824D3E7AE00D3E828 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49B57D2A24D3E9F700D3E828 /* COVID19Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D2924D3E9F700D3E828 /* COVID19Client.swift */; };
+		49B57D2D24D4007400D3E828 /* COVID19Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D2C24D4007400D3E828 /* COVID19Repository.swift */; };
+		49B57D2F24D40F8500D3E828 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D2E24D40F8500D3E828 /* APIResponse.swift */; };
+		49B57D3224D43D0100D3E828 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D3124D43D0100D3E828 /* AppContainer.swift */; };
+		49B57D3524D4467700D3E828 /* FactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D3424D4467700D3E828 /* FactoryProtocol.swift */; };
 		6E473E69BE0E30BBA8ECD9EF /* Pods_covid_19_graph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498EDF4124D30933000CB11B /* Pods_covid_19_graph.framework */; };
 		B165F675AF3B96AA834E081E /* Pods_covid_19_graph_covid_19_graphUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E17FE36CE4AE946CB40D58A /* Pods_covid_19_graph_covid_19_graphUITests.framework */; };
 		E13E5463C6D1110EB1B79B9A /* Pods_covid_19_graphTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F5FEAC6BA9345CC17900B7 /* Pods_covid_19_graphTests.framework */; };
@@ -112,6 +117,11 @@
 		49B57D2024D3C5B200D3E828 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		49B57D2424D3C89400D3E828 /* TotalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalResponse.swift; sourceTree = "<group>"; };
 		49B57D2624D3E7AE00D3E828 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		49B57D2924D3E9F700D3E828 /* COVID19Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID19Client.swift; sourceTree = "<group>"; };
+		49B57D2C24D4007400D3E828 /* COVID19Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID19Repository.swift; sourceTree = "<group>"; };
+		49B57D2E24D40F8500D3E828 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		49B57D3124D43D0100D3E828 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		49B57D3424D4467700D3E828 /* FactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryProtocol.swift; sourceTree = "<group>"; };
 		4C31CF853D82EA2FA46CD902 /* Pods-covid-19-graphTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.release.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E17FE36CE4AE946CB40D58A /* Pods_covid_19_graph_covid_19_graphUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_covid_19_graph_covid_19_graphUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		515B835AFFE4F6F0710BE1CA /* Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +266,8 @@
 		49A6753924D19CDA009EC846 /* covid-19-graph */ = {
 			isa = PBXGroup;
 			children = (
+				49B57D3024D43CD200D3E828 /* DI */,
+				49B57D2B24D4003D00D3E828 /* Repository */,
 				49B57D1F24D3C3DC00D3E828 /* API */,
 				498EDF1824D2FB58000CB11B /* Configurations */,
 				49A6753A24D19CDA009EC846 /* AppDelegate.swift */,
@@ -293,6 +305,7 @@
 				49B57D2324D3C73600D3E828 /* Response */,
 				49B57D2224D3C72E00D3E828 /* Request */,
 				49B57D2024D3C5B200D3E828 /* APIClient.swift */,
+				49B57D2924D3E9F700D3E828 /* COVID19Client.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -308,8 +321,34 @@
 			isa = PBXGroup;
 			children = (
 				49B57D2424D3C89400D3E828 /* TotalResponse.swift */,
+				49B57D2E24D40F8500D3E828 /* APIResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		49B57D2B24D4003D00D3E828 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				49B57D2C24D4007400D3E828 /* COVID19Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		49B57D3024D43CD200D3E828 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				49B57D3324D4466700D3E828 /* Factory */,
+				49B57D3124D43D0100D3E828 /* AppContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		49B57D3324D4466700D3E828 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				49B57D3424D4467700D3E828 /* FactoryProtocol.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -539,9 +578,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B57D3524D4467700D3E828 /* FactoryProtocol.swift in Sources */,
 				49A6753F24D19CDA009EC846 /* ViewController.swift in Sources */,
 				49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */,
+				49B57D3224D43D0100D3E828 /* AppContainer.swift in Sources */,
+				49B57D2A24D3E9F700D3E828 /* COVID19Client.swift in Sources */,
+				49B57D2D24D4007400D3E828 /* COVID19Repository.swift in Sources */,
 				49A6753D24D19CDA009EC846 /* SceneDelegate.swift in Sources */,
+				49B57D2F24D40F8500D3E828 /* APIResponse.swift in Sources */,
 				49B57D2524D3C89400D3E828 /* TotalResponse.swift in Sources */,
 				49B57D2124D3C5B200D3E828 /* APIClient.swift in Sources */,
 			);

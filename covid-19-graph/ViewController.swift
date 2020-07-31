@@ -8,6 +8,16 @@ import UIKit
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+        appDelegate.appContainer?.covid19Repository.fetchTotal().startWithResult { result in
+            switch result {
+            case let .success(total):
+                print("Success \(total.date)")
+            case let .failure(error):
+                print("Error \(error)")
+            }
+        }
     }
 }
