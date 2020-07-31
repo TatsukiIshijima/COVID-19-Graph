@@ -1,13 +1,35 @@
 # Lint対象から除外するパス
 excluded:
-- Carthage
-- Pods
-- covid-19-graphTests
-- covid-19-graphUITests
-disabled_rules:
-- trailing_whitespace
+    - Carthage
+    - Pods
+    - covid-19-graphTests
+    - covid-19-graphUITests
 
-# 1行の文字列制限
-line_length:
-- 200   # warning
-- 300   # error
+opt_in_rules:
+    - force_unwrapping
+    
+variable_name:
+    min_length:
+        warning: 2
+        error: 2
+    excluded:
+    - URLRequest
+    - URLResponse
+    
+function_body_length:
+    warning: 50
+    error: 100
+
+type_body_length:
+    warning: 300
+    error: 500
+    
+file_length:
+    warning: 500
+    error: 1000
+    
+force_cast: warning
+
+disabled_rules:
+    - line_length
+    - trailing_whitespace
