@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct TotalResponse: Decodable {
+struct TotalResponse: APIResponse {
     var date: Int
     var pcr: Int
     var hospitalize: Int

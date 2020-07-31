@@ -5,10 +5,11 @@
 
 import Alamofire
 import Foundation
+import ReactiveSwift
 
 final class COVID19Client: APIClient {
-    func requestTotal() -> DataRequest {
+    func requestTotal() -> SignalProducer<TotalResponse, Error> {
         let url = "https://covid19-japan-web-api.now.sh/api/v1/total"
-        return createGetRequest(baseUrl: url, parameters: nil)
+        return getRequest(baseUrl: url, parameters: nil)
     }
 }
