@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qo5-p6-S7i">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="pKu-s8-FMV">
+            <objects>
+                <viewController id="qo5-p6-S7i" customClass="SplashViewController" customModule="covid_19_graph" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IO8-nH-ekn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Splash" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iT5-zT-Yxs">
+                                <rect key="frame" x="181" y="438" width="52" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keh-Ju-qwX">
+                                <rect key="frame" x="184" y="503.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goToHome:" destination="qo5-p6-S7i" eventType="touchUpInside" id="q9g-1G-j60"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iT5-zT-Yxs" firstAttribute="centerX" secondItem="IO8-nH-ekn" secondAttribute="centerX" id="92o-hb-uS6"/>
+                            <constraint firstItem="keh-Ju-qwX" firstAttribute="centerX" secondItem="IO8-nH-ekn" secondAttribute="centerX" id="ElQ-tB-M2G"/>
+                            <constraint firstItem="iT5-zT-Yxs" firstAttribute="centerY" secondItem="IO8-nH-ekn" secondAttribute="centerY" id="Sfz-bb-C3t"/>
+                            <constraint firstItem="keh-Ju-qwX" firstAttribute="top" secondItem="iT5-zT-Yxs" secondAttribute="bottom" constant="45" id="qWa-yW-Xd4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2qJ-UZ-47C"/>
+                    </view>
+                    <connections>
+                        <segue destination="Xwp-Ms-9th" kind="presentation" identifier="goToHome" modalPresentationStyle="fullScreen" id="6UQ-Xv-rWk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9b-cn-Z2o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="-252"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="wXH-Tr-X5N">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="Home" id="Xwp-Ms-9th" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SgO-7U-qqa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PdX-dj-ef7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="503" y="-252"/>
+        </scene>
+    </scenes>
+</document>

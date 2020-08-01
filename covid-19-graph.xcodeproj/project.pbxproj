@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4905C65924D53E83005DE24F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905C65824D53E83005DE24F /* SplashViewController.swift */; };
+		4905C65B24D54473005DE24F /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905C65A24D54473005DE24F /* Splash.storyboard */; };
+		4905C65D24D547C7005DE24F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905C65C24D547C7005DE24F /* Home.storyboard */; };
+		4905C65F24D553B5005DE24F /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4905C65E24D553B5005DE24F /* Rswift.framework */; };
+		4905C66024D553B5005DE24F /* Rswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4905C65E24D553B5005DE24F /* Rswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4905C66324D59BCD005DE24F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905C66224D59BCD005DE24F /* R.generated.swift */; };
 		495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; };
 		495BCD2224D3BB9500D166A8 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		495BCD2324D3BB9500D166A8 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; };
@@ -16,8 +22,7 @@
 		498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 498EDF1624D2F730000CB11B /* .swiftlint.yml */; };
 		49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753A24D19CDA009EC846 /* AppDelegate.swift */; };
 		49A6753D24D19CDA009EC846 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753C24D19CDA009EC846 /* SceneDelegate.swift */; };
-		49A6753F24D19CDA009EC846 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753E24D19CDA009EC846 /* ViewController.swift */; };
-		49A6754224D19CDA009EC846 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A6754024D19CDA009EC846 /* Main.storyboard */; };
+		49A6753F24D19CDA009EC846 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753E24D19CDA009EC846 /* HomeViewController.swift */; };
 		49A6754424D19CDE009EC846 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49A6754324D19CDE009EC846 /* Assets.xcassets */; };
 		49A6754724D19CDE009EC846 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A6754524D19CDE009EC846 /* LaunchScreen.storyboard */; };
 		49A6755224D19CDF009EC846 /* covid_19_graphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6755124D19CDF009EC846 /* covid_19_graphTests.swift */; };
@@ -63,6 +68,7 @@
 				495BCD2224D3BB9500D166A8 /* ReactiveCocoa.framework in Embed Frameworks */,
 				495BCD2624D3BB9500D166A8 /* SVProgressHUD.framework in Embed Frameworks */,
 				495BCD2424D3BB9500D166A8 /* ReactiveSwift.framework in Embed Frameworks */,
+				4905C66024D553B5005DE24F /* Rswift.framework in Embed Frameworks */,
 				49B57D2824D3E7AE00D3E828 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -81,6 +87,11 @@
 		34F5FEAC6BA9345CC17900B7 /* Pods_covid_19_graphTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_covid_19_graphTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA10F9A57B3AB1B312377A4 /* Pods-covid-19-graph.debug-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph.debug-staging.xcconfig"; path = "Target Support Files/Pods-covid-19-graph/Pods-covid-19-graph.debug-staging.xcconfig"; sourceTree = "<group>"; };
 		3C7E0E1AD18F386BBA073E90 /* Pods-covid-19-graphTests.release-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.release-production.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.release-production.xcconfig"; sourceTree = "<group>"; };
+		4905C65824D53E83005DE24F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		4905C65A24D54473005DE24F /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		4905C65C24D547C7005DE24F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		4905C65E24D553B5005DE24F /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
+		4905C66224D59BCD005DE24F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		494DB3CC24D1A60400C391EA /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		494DB3D424D1B2D400C391EA /* ReactiveMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMapKit.framework; path = Carthage/Build/iOS/ReactiveMapKit.framework; sourceTree = "<group>"; };
@@ -103,8 +114,7 @@
 		49A6753724D19CDA009EC846 /* covid-19-graph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "covid-19-graph.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A6753A24D19CDA009EC846 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A6753C24D19CDA009EC846 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49A6753E24D19CDA009EC846 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		49A6754124D19CDA009EC846 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49A6753E24D19CDA009EC846 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		49A6754324D19CDE009EC846 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49A6754624D19CDE009EC846 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49A6754824D19CDE009EC846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -147,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				495BCD2524D3BB9500D166A8 /* SVProgressHUD.framework in Frameworks */,
+				4905C65F24D553B5005DE24F /* Rswift.framework in Frameworks */,
 				495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */,
 				6E473E69BE0E30BBA8ECD9EF /* Pods_covid_19_graph.framework in Frameworks */,
 				49B57D2724D3E7AE00D3E828 /* Alamofire.framework in Frameworks */,
@@ -176,6 +187,7 @@
 		47D8F619B6CBE1BB2DD3D646 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4905C65E24D553B5005DE24F /* Rswift.framework */,
 				49B57D2624D3E7AE00D3E828 /* Alamofire.framework */,
 				498EDF4124D30933000CB11B /* Pods_covid_19_graph.framework */,
 				498EDF3E24D308F2000CB11B /* Pods_covid_19_graph.framework */,
@@ -225,8 +237,10 @@
 		4905C65724D53D8B005DE24F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				49A6753E24D19CDA009EC846 /* ViewController.swift */,
-				49A6754024D19CDA009EC846 /* Main.storyboard */,
+				49A6753E24D19CDA009EC846 /* HomeViewController.swift */,
+				4905C65824D53E83005DE24F /* SplashViewController.swift */,
+				4905C65A24D54473005DE24F /* Splash.storyboard */,
+				4905C65C24D547C7005DE24F /* Home.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +266,7 @@
 		49A6752E24D19CDA009EC846 = {
 			isa = PBXGroup;
 			children = (
+				4905C66224D59BCD005DE24F /* R.generated.swift */,
 				498EDF1624D2F730000CB11B /* .swiftlint.yml */,
 				49A6753924D19CDA009EC846 /* covid-19-graph */,
 				49A6755024D19CDF009EC846 /* covid-19-graphTests */,
@@ -367,10 +382,11 @@
 			buildConfigurationList = 49A6756124D19CDF009EC846 /* Build configuration list for PBXNativeTarget "covid-19-graph" */;
 			buildPhases = (
 				63038886BEC86F000EF692E2 /* [CP] Check Pods Manifest.lock */,
+				4905C66124D55634005DE24F /* Run Rswift Script */,
 				49A6753324D19CDA009EC846 /* Sources */,
 				49A6753424D19CDA009EC846 /* Frameworks */,
 				49A6753524D19CDA009EC846 /* Resources */,
-				494DB3D024D1A69D00C391EA /* ShellScript */,
+				494DB3D024D1A69D00C391EA /* Run Settings Script */,
 				495BCD2024D3B8B800D166A8 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -469,9 +485,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */,
+				4905C65D24D547C7005DE24F /* Home.storyboard in Resources */,
 				49A6754724D19CDE009EC846 /* LaunchScreen.storyboard in Resources */,
+				4905C65B24D54473005DE24F /* Splash.storyboard in Resources */,
 				49A6754424D19CDE009EC846 /* Assets.xcassets in Resources */,
-				49A6754224D19CDA009EC846 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,7 +531,27 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		494DB3D024D1A69D00C391EA /* ShellScript */ = {
+		4905C66124D55634005DE24F /* Run Rswift Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "Run Rswift Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		494DB3D024D1A69D00C391EA /* Run Settings Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -526,7 +563,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
 			);
+			name = "Run Settings Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -587,7 +626,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49B57D3524D4467700D3E828 /* FactoryProtocol.swift in Sources */,
-				49A6753F24D19CDA009EC846 /* ViewController.swift in Sources */,
+				49A6753F24D19CDA009EC846 /* HomeViewController.swift in Sources */,
 				49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */,
 				49B57D3224D43D0100D3E828 /* AppContainer.swift in Sources */,
 				49B57D2A24D3E9F700D3E828 /* COVID19Client.swift in Sources */,
@@ -596,6 +635,8 @@
 				49B57D2F24D40F8500D3E828 /* APIResponse.swift in Sources */,
 				49B57D2524D3C89400D3E828 /* TotalResponse.swift in Sources */,
 				49B57D2124D3C5B200D3E828 /* APIClient.swift in Sources */,
+				4905C65924D53E83005DE24F /* SplashViewController.swift in Sources */,
+				4905C66324D59BCD005DE24F /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,14 +672,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		49A6754024D19CDA009EC846 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49A6754124D19CDA009EC846 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		49A6754524D19CDE009EC846 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

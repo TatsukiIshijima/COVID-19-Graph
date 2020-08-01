@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  covid-19-graph
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
         appDelegate.appContainer?.covid19Repository.fetchTotal().startWithResult { result in
