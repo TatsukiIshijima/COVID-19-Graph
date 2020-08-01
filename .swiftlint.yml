@@ -5,6 +5,7 @@ excluded:
     - covid-19-graphTests
     - covid-19-graphUITests
     - covid-19-graph/API/Response
+    - R.generated.swift
 
 opt_in_rules:
     - force_unwrapping

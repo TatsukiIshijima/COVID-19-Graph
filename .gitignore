@@ -27,3 +27,6 @@ xcuserdata
 
 # Carthage
 Carthage/Checkouts
+
+# R.swift
+*.generated.swift
