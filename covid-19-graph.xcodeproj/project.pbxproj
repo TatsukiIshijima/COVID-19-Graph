@@ -222,6 +222,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4905C65724D53D8B005DE24F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				49A6753E24D19CDA009EC846 /* ViewController.swift */,
+				49A6754024D19CDA009EC846 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		498EDF1824D2FB58000CB11B /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,14 +275,13 @@
 		49A6753924D19CDA009EC846 /* covid-19-graph */ = {
 			isa = PBXGroup;
 			children = (
+				4905C65724D53D8B005DE24F /* View */,
 				49B57D3024D43CD200D3E828 /* DI */,
 				49B57D2B24D4003D00D3E828 /* Repository */,
 				49B57D1F24D3C3DC00D3E828 /* API */,
 				498EDF1824D2FB58000CB11B /* Configurations */,
 				49A6753A24D19CDA009EC846 /* AppDelegate.swift */,
 				49A6753C24D19CDA009EC846 /* SceneDelegate.swift */,
-				49A6753E24D19CDA009EC846 /* ViewController.swift */,
-				49A6754024D19CDA009EC846 /* Main.storyboard */,
 				49A6754324D19CDE009EC846 /* Assets.xcassets */,
 				49A6754524D19CDE009EC846 /* LaunchScreen.storyboard */,
 				49A6754824D19CDE009EC846 /* Info.plist */,
