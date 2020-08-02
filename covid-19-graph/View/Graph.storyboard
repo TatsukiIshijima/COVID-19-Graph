@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Graph View Controller-->
+        <!--Graph-->
         <scene sceneID="llT-6e-EtJ">
             <objects>
-                <viewController storyboardIdentifier="Graph" id="1ty-va-xDx" customClass="GraphViewController" customModule="covid_19_graph" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Graph" title="Graph" id="1ty-va-xDx" customClass="GraphViewController" customModule="covid_19_graph" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HB2-Xi-nfU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

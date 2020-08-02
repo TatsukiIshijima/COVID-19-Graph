@@ -19,5 +19,13 @@ class HomeViewController: UITabBarController {
                 print("Error \(error)")
             }
         }
+
+        delegate = self
+    }
+}
+
+extension HomeViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        print("didSelect selectedIndex=\(selectedIndex)")
     }
 }
