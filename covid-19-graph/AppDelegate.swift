@@ -10,11 +10,9 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var appContainer: AppContainer?
+    let appContainer: AppContainer = AppContainer()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        appContainer = AppContainer()
-
         return true
     }
 
