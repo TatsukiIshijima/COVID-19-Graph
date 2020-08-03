@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Graph-->
-        <scene sceneID="llT-6e-EtJ">
+        <!--Settings-->
+        <scene sceneID="yeR-px-8UI">
             <objects>
-                <viewController storyboardIdentifier="Graph" title="Graph" id="1ty-va-xDx" customClass="GraphViewController" customModule="covid_19_graph" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HB2-Xi-nfU">
+                <viewController storyboardIdentifier="SettingsViewController" title="Settings" id="A00-X0-uqt" customClass="SettingsViewController" customModule="covid_19_graph" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DvK-qq-DLX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Graph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4K-Tx-2bU">
-                                <rect key="frame" x="183" y="437.5" width="48" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xs-Mt-rbU">
+                                <rect key="frame" x="175.5" y="437.5" width="63.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -24,15 +24,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="k4K-Tx-2bU" firstAttribute="centerY" secondItem="HB2-Xi-nfU" secondAttribute="centerY" id="q2a-9N-nCk"/>
-                            <constraint firstItem="k4K-Tx-2bU" firstAttribute="centerX" secondItem="HB2-Xi-nfU" secondAttribute="centerX" id="ySX-c4-2Aw"/>
+                            <constraint firstItem="1xs-Mt-rbU" firstAttribute="centerY" secondItem="DvK-qq-DLX" secondAttribute="centerY" id="Adi-Eq-trR"/>
+                            <constraint firstItem="1xs-Mt-rbU" firstAttribute="centerX" secondItem="DvK-qq-DLX" secondAttribute="centerX" id="ArU-Jp-Smi"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="QUj-nO-yM9"/>
+                        <viewLayoutGuide key="safeArea" id="KHY-KQ-7yu"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gyU-Fj-KUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0JX-lT-Kkr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="104"/>
+            <point key="canvasLocation" x="-332" y="-52"/>
         </scene>
     </scenes>
 </document>

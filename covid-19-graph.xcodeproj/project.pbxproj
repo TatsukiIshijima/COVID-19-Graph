@@ -16,9 +16,9 @@
 		4905C66724D5A087005DE24F /* TotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905C66624D5A087005DE24F /* TotalViewController.swift */; };
 		4905C66B24D5A0E7005DE24F /* TotalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905C66A24D5A0E7005DE24F /* TotalViewController.storyboard */; };
 		490C957D24D67DB6002C0F45 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C957C24D67DB6002C0F45 /* SettingsViewController.swift */; };
-		490C957F24D67DC5002C0F45 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C957E24D67DC5002C0F45 /* Settings.storyboard */; };
+		490C957F24D67DC5002C0F45 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C957E24D67DC5002C0F45 /* SettingsViewController.storyboard */; };
 		490C958124D68630002C0F45 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C958024D6862F002C0F45 /* GraphViewController.swift */; };
-		490C958324D6864E002C0F45 /* Graph.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C958224D6864E002C0F45 /* Graph.storyboard */; };
+		490C958324D6864E002C0F45 /* GraphViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C958224D6864E002C0F45 /* GraphViewController.storyboard */; };
 		490C958624D6ECFD002C0F45 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C958424D6ECFD002C0F45 /* TotalTableViewCell.swift */; };
 		490C958724D6ECFD002C0F45 /* TotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490C958524D6ECFD002C0F45 /* TotalTableViewCell.xib */; };
 		495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; };
@@ -103,9 +103,9 @@
 		4905C66624D5A087005DE24F /* TotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalViewController.swift; sourceTree = "<group>"; };
 		4905C66A24D5A0E7005DE24F /* TotalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TotalViewController.storyboard; sourceTree = "<group>"; };
 		490C957C24D67DB6002C0F45 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		490C957E24D67DC5002C0F45 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		490C957E24D67DC5002C0F45 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		490C958024D6862F002C0F45 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
-		490C958224D6864E002C0F45 /* Graph.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Graph.storyboard; sourceTree = "<group>"; };
+		490C958224D6864E002C0F45 /* GraphViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GraphViewController.storyboard; sourceTree = "<group>"; };
 		490C958424D6ECFD002C0F45 /* TotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
 		490C958524D6ECFD002C0F45 /* TotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalTableViewCell.xib; sourceTree = "<group>"; };
 		494DB3CC24D1A60400C391EA /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
@@ -260,9 +260,9 @@
 				4905C66624D5A087005DE24F /* TotalViewController.swift */,
 				4905C66A24D5A0E7005DE24F /* TotalViewController.storyboard */,
 				490C957C24D67DB6002C0F45 /* SettingsViewController.swift */,
-				490C957E24D67DC5002C0F45 /* Settings.storyboard */,
+				490C957E24D67DC5002C0F45 /* SettingsViewController.storyboard */,
 				490C958024D6862F002C0F45 /* GraphViewController.swift */,
-				490C958224D6864E002C0F45 /* Graph.storyboard */,
+				490C958224D6864E002C0F45 /* GraphViewController.storyboard */,
 				490C958424D6ECFD002C0F45 /* TotalTableViewCell.swift */,
 				490C958524D6ECFD002C0F45 /* TotalTableViewCell.xib */,
 			);
@@ -509,14 +509,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */,
-				490C958324D6864E002C0F45 /* Graph.storyboard in Resources */,
+				490C958324D6864E002C0F45 /* GraphViewController.storyboard in Resources */,
 				490C958724D6ECFD002C0F45 /* TotalTableViewCell.xib in Resources */,
 				4905C65D24D547C7005DE24F /* HomeViewController.storyboard in Resources */,
 				49A6754724D19CDE009EC846 /* LaunchScreen.storyboard in Resources */,
 				4905C66B24D5A0E7005DE24F /* TotalViewController.storyboard in Resources */,
 				4905C65B24D54473005DE24F /* SplashViewController.storyboard in Resources */,
 				49A6754424D19CDE009EC846 /* Assets.xcassets in Resources */,
-				490C957F24D67DC5002C0F45 /* Settings.storyboard in Resources */,
+				490C957F24D67DC5002C0F45 /* SettingsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

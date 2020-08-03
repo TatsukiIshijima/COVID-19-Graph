@@ -69,10 +69,10 @@
             </objects>
             <point key="canvasLocation" x="810" y="113"/>
         </scene>
-        <!--Settings-->
+        <!--SettingsViewController-->
         <scene sceneID="5h5-yj-l1N">
             <objects>
-                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="Settings" id="uA3-Vj-x32" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="SettingsViewController" referencedIdentifier="SettingsViewController" id="uA3-Vj-x32" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Setting" image="hammer" catalog="system" id="zjD-ue-8cY"/>
                     <navigationItem key="navigationItem" id="jXC-Sb-ipn"/>
                 </viewControllerPlaceholder>
@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="-68" y="113"/>
         </scene>
-        <!--Graph-->
+        <!--GraphViewController-->
         <scene sceneID="fiI-6W-0eZ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Graph" referencedIdentifier="Graph" id="Szb-a3-lol" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="GraphViewController" referencedIdentifier="GraphViewController" id="Szb-a3-lol" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="nbK-6S-dGP"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T2S-Pw-tYk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
