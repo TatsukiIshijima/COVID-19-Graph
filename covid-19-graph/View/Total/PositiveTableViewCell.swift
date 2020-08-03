@@ -20,12 +20,3 @@ class PositiveTableViewCell: UITableViewCell {
         numLabel.text = positiveNum.toCommaSeperateString
     }
 }
-
-extension Int {
-    var toCommaSeperateString: String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.locale = Locale(identifier: "ja_JP")
-        return formatter.string(for: self) ?? ""
-    }
-}
