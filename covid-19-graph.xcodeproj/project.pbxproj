@@ -22,6 +22,8 @@
 		492630A924D7F46700261690 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630A824D7F46700261690 /* Int+Extension.swift */; };
 		492630AC24D8173600261690 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630AA24D8173600261690 /* TotalTableViewCell.swift */; };
 		492630AD24D8173600261690 /* TotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492630AB24D8173600261690 /* TotalTableViewCell.xib */; };
+		492630B024D846A900261690 /* TotalHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630AE24D846A900261690 /* TotalHistoryTableViewCell.swift */; };
+		492630B124D846A900261690 /* TotalHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492630AF24D846A900261690 /* TotalHistoryTableViewCell.xib */; };
 		495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; };
 		495BCD2224D3BB9500D166A8 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		495BCD2324D3BB9500D166A8 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; };
@@ -110,6 +112,8 @@
 		492630A824D7F46700261690 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		492630AA24D8173600261690 /* TotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
 		492630AB24D8173600261690 /* TotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalTableViewCell.xib; sourceTree = "<group>"; };
+		492630AE24D846A900261690 /* TotalHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		492630AF24D846A900261690 /* TotalHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		494DB3CC24D1A60400C391EA /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		494DB3D424D1B2D400C391EA /* ReactiveMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMapKit.framework; path = Carthage/Build/iOS/ReactiveMapKit.framework; sourceTree = "<group>"; };
@@ -283,6 +287,8 @@
 				4905C66A24D5A0E7005DE24F /* TotalViewController.storyboard */,
 				492630AA24D8173600261690 /* TotalTableViewCell.swift */,
 				492630AB24D8173600261690 /* TotalTableViewCell.xib */,
+				492630AE24D846A900261690 /* TotalHistoryTableViewCell.swift */,
+				492630AF24D846A900261690 /* TotalHistoryTableViewCell.xib */,
 			);
 			path = Total;
 			sourceTree = "<group>";
@@ -528,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */,
+				492630B124D846A900261690 /* TotalHistoryTableViewCell.xib in Resources */,
 				490C958324D6864E002C0F45 /* GraphViewController.storyboard in Resources */,
 				4905C65D24D547C7005DE24F /* HomeViewController.storyboard in Resources */,
 				49A6754724D19CDE009EC846 /* LaunchScreen.storyboard in Resources */,
@@ -689,6 +696,7 @@
 				49B57D2124D3C5B200D3E828 /* APIClient.swift in Sources */,
 				4905C65924D53E83005DE24F /* SplashViewController.swift in Sources */,
 				4905C66324D59BCD005DE24F /* R.generated.swift in Sources */,
+				492630B024D846A900261690 /* TotalHistoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

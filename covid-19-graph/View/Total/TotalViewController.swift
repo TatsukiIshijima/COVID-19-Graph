@@ -6,9 +6,6 @@
 import UIKit
 
 final class TotalViewController: UIViewController {
-    let positiveCellHeight: CGFloat = 88
-    let totalCellHeight: CGFloat = 64
-
     @IBOutlet private weak var totalTableView: UITableView!
 
     override func viewDidLoad() {
@@ -30,12 +27,17 @@ final class TotalViewController: UIViewController {
         totalTableView.delegate = self
         totalTableView.dataSource = self
         totalTableView.register(R.nib.totalTableViewCell)
+        totalTableView.register(R.nib.totalHistoryTableViewCell)
     }
 }
 
 extension TotalViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
 }
 
@@ -45,9 +47,17 @@ extension TotalViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let totalTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.totalTableViewCell, for: indexPath) else {
-            fatalError("failed to dequeue with \(R.reuseIdentifier.totalTableViewCell)")
+        switch indexPath.section {
+        case 0:
+            guard let totalTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.totalTableViewCell, for: indexPath) else {
+                fatalError("failed to dequeue with \(R.reuseIdentifier.totalTableViewCell)")
+            }
+            return totalTableViewCell
+        default:
+            guard let totalHistoryTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.totalHistoryTableViewCell, for: indexPath) else {
+                fatalError("failed to dequeue with \(R.reuseIdentifier.totalHistoryTableViewCell)")
+            }
+            return totalHistoryTableViewCell
         }
-        return totalTableViewCell
     }
 }
