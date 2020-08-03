@@ -21,6 +21,7 @@
 		490C958324D6864E002C0F45 /* GraphViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C958224D6864E002C0F45 /* GraphViewController.storyboard */; };
 		490C958624D6ECFD002C0F45 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C958424D6ECFD002C0F45 /* TotalTableViewCell.swift */; };
 		490C958724D6ECFD002C0F45 /* TotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490C958524D6ECFD002C0F45 /* TotalTableViewCell.xib */; };
+		492630A924D7F46700261690 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630A824D7F46700261690 /* Int+Extension.swift */; };
 		493BC6F624D7E14000B581D7 /* PositiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493BC6F424D7E14000B581D7 /* PositiveTableViewCell.swift */; };
 		493BC6F724D7E14000B581D7 /* PositiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 493BC6F524D7E14000B581D7 /* PositiveTableViewCell.xib */; };
 		495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; };
@@ -110,6 +111,7 @@
 		490C958224D6864E002C0F45 /* GraphViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GraphViewController.storyboard; sourceTree = "<group>"; };
 		490C958424D6ECFD002C0F45 /* TotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
 		490C958524D6ECFD002C0F45 /* TotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalTableViewCell.xib; sourceTree = "<group>"; };
+		492630A824D7F46700261690 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		493BC6F424D7E14000B581D7 /* PositiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveTableViewCell.swift; sourceTree = "<group>"; };
 		493BC6F524D7E14000B581D7 /* PositiveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PositiveTableViewCell.xib; sourceTree = "<group>"; };
 		494DB3CC24D1A60400C391EA /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
@@ -270,6 +272,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		492630A724D7F3A000261690 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				492630A824D7F46700261690 /* Int+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		493BC6F324D7DFDF00B581D7 /* Total */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +338,7 @@
 		49A6753924D19CDA009EC846 /* covid-19-graph */ = {
 			isa = PBXGroup;
 			children = (
+				492630A724D7F3A000261690 /* Extension */,
 				4905C65724D53D8B005DE24F /* View */,
 				49B57D3024D43CD200D3E828 /* DI */,
 				49B57D2B24D4003D00D3E828 /* Repository */,
@@ -671,6 +682,7 @@
 				49B57D3524D4467700D3E828 /* FactoryProtocol.swift in Sources */,
 				493BC6F624D7E14000B581D7 /* PositiveTableViewCell.swift in Sources */,
 				49A6753F24D19CDA009EC846 /* HomeViewController.swift in Sources */,
+				492630A924D7F46700261690 /* Int+Extension.swift in Sources */,
 				49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */,
 				4905C66724D5A087005DE24F /* TotalViewController.swift in Sources */,
 				49B57D3224D43D0100D3E828 /* AppContainer.swift in Sources */,
