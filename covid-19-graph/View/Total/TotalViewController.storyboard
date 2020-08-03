@@ -15,27 +15,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jOK-qm-JLe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yb5-Tz-avJ">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="jOK-qm-JLe" firstAttribute="leading" secondItem="ijo-MS-Cj6" secondAttribute="leading" id="6NM-Rn-sFf"/>
-                            <constraint firstItem="jOK-qm-JLe" firstAttribute="trailing" secondItem="ijo-MS-Cj6" secondAttribute="trailing" id="LrY-JS-91m"/>
-                            <constraint firstItem="ijo-MS-Cj6" firstAttribute="bottom" secondItem="jOK-qm-JLe" secondAttribute="bottom" id="O7F-tk-dXd"/>
-                            <constraint firstItem="jOK-qm-JLe" firstAttribute="top" secondItem="ijo-MS-Cj6" secondAttribute="top" id="XVH-Jb-qhG"/>
+                            <constraint firstItem="Yb5-Tz-avJ" firstAttribute="top" secondItem="ijo-MS-Cj6" secondAttribute="top" id="Obq-li-zPo"/>
+                            <constraint firstItem="Yb5-Tz-avJ" firstAttribute="leading" secondItem="ijo-MS-Cj6" secondAttribute="leading" id="R5d-Zu-xmV"/>
+                            <constraint firstItem="Yb5-Tz-avJ" firstAttribute="bottom" secondItem="ijo-MS-Cj6" secondAttribute="bottom" id="XDS-x6-NHb"/>
+                            <constraint firstItem="Yb5-Tz-avJ" firstAttribute="trailing" secondItem="ijo-MS-Cj6" secondAttribute="trailing" id="epC-8m-RjL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ijo-MS-Cj6"/>
                     </view>
                     <connections>
-                        <outlet property="totalTableView" destination="jOK-qm-JLe" id="RMa-aT-sF6"/>
+                        <outlet property="totalTableView" destination="Yb5-Tz-avJ" id="xOQ-Ni-QYH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1u-ob-OrW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-954" y="-342"/>
+            <point key="canvasLocation" x="-955.07246376811599" y="-342.1875"/>
         </scene>
     </scenes>
 </document>

@@ -30,48 +30,24 @@ final class TotalViewController: UIViewController {
         totalTableView.delegate = self
         totalTableView.dataSource = self
         totalTableView.register(R.nib.totalTableViewCell)
-        totalTableView.register(R.nib.positiveTableViewCell)
     }
 }
 
 extension TotalViewController: UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 extension TotalViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
-            guard let positiveTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.positiveTableViewCell, for: indexPath) else {
-                fatalError("failed dequeueResuableCell with  \(R.reuseIdentifier.positiveTableViewCell)")
-            }
-            positiveTableViewCell.setNum(positiveNum: 5000)
-            return positiveTableViewCell
-        default:
-            guard let totalTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.totalTableViewCell, for: indexPath) else {
-                fatalError("failed dequeueResuableCell with \(R.reuseIdentifier.totalTableViewCell.identifier)")
-            }
-            totalTableViewCell.set(title: "入院者数", num: 1200)
-            return totalTableViewCell
+        guard let totalTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.totalTableViewCell, for: indexPath) else {
+            fatalError("failed to dequeue with \(R.reuseIdentifier.totalTableViewCell)")
         }
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
-            return positiveCellHeight
-        default:
-            return totalCellHeight
-        }
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        return totalTableViewCell
     }
 }
