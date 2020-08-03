@@ -26,7 +26,8 @@ final class TotalViewController: UIViewController {
 
         totalTableView.delegate = self
         totalTableView.dataSource = self
-        totalTableView.register(UINib(nibName: R.nib.totalTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: R.reuseIdentifier.totalTableViewCell.identifier)
+        totalTableView.register(R.nib.totalTableViewCell)
+        totalTableView.register(R.nib.positiveTableViewCell)
     }
 }
 
@@ -42,9 +43,26 @@ extension TotalViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let totalTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.nib.totalTableViewCell, for: indexPath) else {
-            fatalError("failed dequeueResuableCell with \(R.nib.totalTableViewCell.identifier)")
+        switch indexPath.row {
+        case 0:
+            guard let positiveTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.positiveTableViewCell, for: indexPath) else {
+                fatalError("failed dequeueResuableCell with  \(R.reuseIdentifier.positiveTableViewCell)")
+            }
+            return positiveTableViewCell
+        default:
+            guard let totalTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.totalTableViewCell, for: indexPath) else {
+                fatalError("failed dequeueResuableCell with \(R.reuseIdentifier.totalTableViewCell.identifier)")
+            }
+            return totalTableViewCell
         }
-        return totalTableViewCell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 88
+        default:
+            return 64
+        }
     }
 }
