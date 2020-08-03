@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		4905C65924D53E83005DE24F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905C65824D53E83005DE24F /* SplashViewController.swift */; };
-		4905C65B24D54473005DE24F /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905C65A24D54473005DE24F /* Splash.storyboard */; };
-		4905C65D24D547C7005DE24F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905C65C24D547C7005DE24F /* Home.storyboard */; };
+		4905C65B24D54473005DE24F /* SplashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905C65A24D54473005DE24F /* SplashViewController.storyboard */; };
+		4905C65D24D547C7005DE24F /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905C65C24D547C7005DE24F /* HomeViewController.storyboard */; };
 		4905C65F24D553B5005DE24F /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4905C65E24D553B5005DE24F /* Rswift.framework */; };
 		4905C66024D553B5005DE24F /* Rswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4905C65E24D553B5005DE24F /* Rswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4905C66324D59BCD005DE24F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905C66224D59BCD005DE24F /* R.generated.swift */; };
 		4905C66724D5A087005DE24F /* TotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905C66624D5A087005DE24F /* TotalViewController.swift */; };
-		4905C66B24D5A0E7005DE24F /* Total.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905C66A24D5A0E7005DE24F /* Total.storyboard */; };
+		4905C66B24D5A0E7005DE24F /* TotalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905C66A24D5A0E7005DE24F /* TotalViewController.storyboard */; };
 		490C957D24D67DB6002C0F45 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C957C24D67DB6002C0F45 /* SettingsViewController.swift */; };
 		490C957F24D67DC5002C0F45 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C957E24D67DC5002C0F45 /* Settings.storyboard */; };
 		490C958124D68630002C0F45 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C958024D6862F002C0F45 /* GraphViewController.swift */; };
 		490C958324D6864E002C0F45 /* Graph.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C958224D6864E002C0F45 /* Graph.storyboard */; };
+		490C958624D6ECFD002C0F45 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C958424D6ECFD002C0F45 /* TotalTableViewCell.swift */; };
+		490C958724D6ECFD002C0F45 /* TotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490C958524D6ECFD002C0F45 /* TotalTableViewCell.xib */; };
 		495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; };
 		495BCD2224D3BB9500D166A8 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		495BCD2324D3BB9500D166A8 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; };
@@ -94,16 +96,18 @@
 		3BA10F9A57B3AB1B312377A4 /* Pods-covid-19-graph.debug-staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph.debug-staging.xcconfig"; path = "Target Support Files/Pods-covid-19-graph/Pods-covid-19-graph.debug-staging.xcconfig"; sourceTree = "<group>"; };
 		3C7E0E1AD18F386BBA073E90 /* Pods-covid-19-graphTests.release-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.release-production.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.release-production.xcconfig"; sourceTree = "<group>"; };
 		4905C65824D53E83005DE24F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		4905C65A24D54473005DE24F /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
-		4905C65C24D547C7005DE24F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		4905C65A24D54473005DE24F /* SplashViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashViewController.storyboard; sourceTree = "<group>"; };
+		4905C65C24D547C7005DE24F /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		4905C65E24D553B5005DE24F /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
 		4905C66224D59BCD005DE24F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		4905C66624D5A087005DE24F /* TotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalViewController.swift; sourceTree = "<group>"; };
-		4905C66A24D5A0E7005DE24F /* Total.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Total.storyboard; sourceTree = "<group>"; };
+		4905C66A24D5A0E7005DE24F /* TotalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TotalViewController.storyboard; sourceTree = "<group>"; };
 		490C957C24D67DB6002C0F45 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		490C957E24D67DC5002C0F45 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		490C958024D6862F002C0F45 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		490C958224D6864E002C0F45 /* Graph.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Graph.storyboard; sourceTree = "<group>"; };
+		490C958424D6ECFD002C0F45 /* TotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
+		490C958524D6ECFD002C0F45 /* TotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalTableViewCell.xib; sourceTree = "<group>"; };
 		494DB3CC24D1A60400C391EA /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		494DB3D424D1B2D400C391EA /* ReactiveMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMapKit.framework; path = Carthage/Build/iOS/ReactiveMapKit.framework; sourceTree = "<group>"; };
@@ -251,14 +255,16 @@
 			children = (
 				49A6753E24D19CDA009EC846 /* HomeViewController.swift */,
 				4905C65824D53E83005DE24F /* SplashViewController.swift */,
-				4905C65A24D54473005DE24F /* Splash.storyboard */,
-				4905C65C24D547C7005DE24F /* Home.storyboard */,
+				4905C65A24D54473005DE24F /* SplashViewController.storyboard */,
+				4905C65C24D547C7005DE24F /* HomeViewController.storyboard */,
 				4905C66624D5A087005DE24F /* TotalViewController.swift */,
-				4905C66A24D5A0E7005DE24F /* Total.storyboard */,
+				4905C66A24D5A0E7005DE24F /* TotalViewController.storyboard */,
 				490C957C24D67DB6002C0F45 /* SettingsViewController.swift */,
 				490C957E24D67DC5002C0F45 /* Settings.storyboard */,
 				490C958024D6862F002C0F45 /* GraphViewController.swift */,
 				490C958224D6864E002C0F45 /* Graph.storyboard */,
+				490C958424D6ECFD002C0F45 /* TotalTableViewCell.swift */,
+				490C958524D6ECFD002C0F45 /* TotalTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -504,10 +510,11 @@
 			files = (
 				498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */,
 				490C958324D6864E002C0F45 /* Graph.storyboard in Resources */,
-				4905C65D24D547C7005DE24F /* Home.storyboard in Resources */,
+				490C958724D6ECFD002C0F45 /* TotalTableViewCell.xib in Resources */,
+				4905C65D24D547C7005DE24F /* HomeViewController.storyboard in Resources */,
 				49A6754724D19CDE009EC846 /* LaunchScreen.storyboard in Resources */,
-				4905C66B24D5A0E7005DE24F /* Total.storyboard in Resources */,
-				4905C65B24D54473005DE24F /* Splash.storyboard in Resources */,
+				4905C66B24D5A0E7005DE24F /* TotalViewController.storyboard in Resources */,
+				4905C65B24D54473005DE24F /* SplashViewController.storyboard in Resources */,
 				49A6754424D19CDE009EC846 /* Assets.xcassets in Resources */,
 				490C957F24D67DC5002C0F45 /* Settings.storyboard in Resources */,
 			);
@@ -656,6 +663,7 @@
 				49B57D2D24D4007400D3E828 /* COVID19Repository.swift in Sources */,
 				49A6753D24D19CDA009EC846 /* SceneDelegate.swift in Sources */,
 				49B57D2F24D40F8500D3E828 /* APIResponse.swift in Sources */,
+				490C958624D6ECFD002C0F45 /* TotalTableViewCell.swift in Sources */,
 				490C957D24D67DB6002C0F45 /* SettingsViewController.swift in Sources */,
 				49B57D2524D3C89400D3E828 /* TotalResponse.swift in Sources */,
 				49B57D2124D3C5B200D3E828 /* APIClient.swift in Sources */,
