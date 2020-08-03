@@ -9,7 +9,7 @@
         <!--Home View Controller-->
         <scene sceneID="3KC-Nf-EvV">
             <objects>
-                <tabBarController storyboardIdentifier="Home" id="NP6-fa-e7E" customClass="HomeViewController" customModule="covid_19_graph" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeViewController" id="NP6-fa-e7E" customClass="HomeViewController" customModule="covid_19_graph" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LpN-u1-MyC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -41,14 +41,14 @@
             </objects>
             <point key="canvasLocation" x="-867" y="113"/>
         </scene>
-        <!--Total-->
+        <!--TotalViewController-->
         <scene sceneID="vgY-o2-aCr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LnM-jd-Gol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewControllerPlaceholder storyboardName="Total" referencedIdentifier="Total" id="e4B-pN-zPn" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TotalViewController" referencedIdentifier="TotalViewController" id="e4B-pN-zPn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Total" image="house" catalog="system" id="zcx-QN-k9K"/>
                     <navigationItem key="navigationItem" id="7fQ-JT-y3C"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LnM-jd-Gol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-868" y="557"/>
         </scene>
