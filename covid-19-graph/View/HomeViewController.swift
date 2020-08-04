@@ -3,6 +3,7 @@
 //  covid-19-graph
 //
 
+import Core
 import UIKit
 
 class HomeViewController: UITabBarController {
@@ -10,6 +11,7 @@ class HomeViewController: UITabBarController {
         super.viewDidLoad()
 
         delegate = self
+        Sample.sample()
     }
 }
 
