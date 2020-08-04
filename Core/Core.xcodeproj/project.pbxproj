@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		4936667524D991CD00A2BBA0 /* Aggregate */ = {
+		4936667524D991CD00A2BBA0 /* CoreAggregate */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 4936667624D991CD00A2BBA0 /* Build configuration list for PBXAggregateTarget "Aggregate" */;
+			buildConfigurationList = 4936667624D991CD00A2BBA0 /* Build configuration list for PBXAggregateTarget "CoreAggregate" */;
 			buildPhases = (
 				4936667924D991DC00A2BBA0 /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = Aggregate;
+			name = CoreAggregate;
 			productName = Aggregate;
 		};
 /* End PBXAggregateTarget section */
@@ -191,7 +191,7 @@
 			targets = (
 				4936662B24D9604000A2BBA0 /* Core */,
 				4936663424D9604100A2BBA0 /* CoreTests */,
-				4936667524D991CD00A2BBA0 /* Aggregate */,
+				4936667524D991CD00A2BBA0 /* CoreAggregate */,
 			);
 		};
 /* End PBXProject section */
@@ -538,7 +538,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4936667624D991CD00A2BBA0 /* Build configuration list for PBXAggregateTarget "Aggregate" */ = {
+		4936667624D991CD00A2BBA0 /* Build configuration list for PBXAggregateTarget "CoreAggregate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4936667724D991CD00A2BBA0 /* Debug */,
