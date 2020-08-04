@@ -29,6 +29,7 @@ final class TotalViewController: UIViewController {
         totalTableView.register(R.nib.totalTableViewCell)
         totalTableView.register(R.nib.totalHistoryTableViewCell)
         totalTableView.register(UINib(resource: R.nib.totalHeaderView), forHeaderFooterViewReuseIdentifier: R.nib.totalHeaderView.name)
+        totalTableView.register(UINib(resource: R.nib.totalFooterView), forHeaderFooterViewReuseIdentifier: R.nib.totalFooterView.name)
     }
 }
 
@@ -48,10 +49,17 @@ extension TotalViewController: UITableViewDelegate {
         switch section {
         case 0:
             totalHeaderView.setTitle(title: "本日の状況")
+            return totalHeaderView
         default:
-            break
+            return nil
         }
-        return totalHeaderView
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard let totalFooterView = tableView.dequeueReusableHeaderFooterView(withIdentifier: R.nib.totalFooterView.name) as? TotalFooterView else {
+            fatalError("failed to dequeue with \(R.nib.totalFooterView.name)")
+        }
+        return section == 0 ? totalFooterView : nil
     }
 }
 

@@ -21,6 +21,8 @@
 		490C958324D6864E002C0F45 /* GraphViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C958224D6864E002C0F45 /* GraphViewController.storyboard */; };
 		4920955D24D935D1007B7474 /* TotalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4920955B24D935D1007B7474 /* TotalHeaderView.swift */; };
 		4920955E24D935D1007B7474 /* TotalHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4920955C24D935D1007B7474 /* TotalHeaderView.xib */; };
+		4920956124D93C28007B7474 /* TotalFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4920955F24D93C28007B7474 /* TotalFooterView.swift */; };
+		4920956224D93C28007B7474 /* TotalFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4920956024D93C28007B7474 /* TotalFooterView.xib */; };
 		492630A924D7F46700261690 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630A824D7F46700261690 /* Int+Extension.swift */; };
 		492630AC24D8173600261690 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630AA24D8173600261690 /* TotalTableViewCell.swift */; };
 		492630AD24D8173600261690 /* TotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492630AB24D8173600261690 /* TotalTableViewCell.xib */; };
@@ -113,6 +115,8 @@
 		490C958224D6864E002C0F45 /* GraphViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GraphViewController.storyboard; sourceTree = "<group>"; };
 		4920955B24D935D1007B7474 /* TotalHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHeaderView.swift; sourceTree = "<group>"; };
 		4920955C24D935D1007B7474 /* TotalHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalHeaderView.xib; sourceTree = "<group>"; };
+		4920955F24D93C28007B7474 /* TotalFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalFooterView.swift; sourceTree = "<group>"; };
+		4920956024D93C28007B7474 /* TotalFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalFooterView.xib; sourceTree = "<group>"; };
 		492630A824D7F46700261690 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		492630AA24D8173600261690 /* TotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
 		492630AB24D8173600261690 /* TotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalTableViewCell.xib; sourceTree = "<group>"; };
@@ -295,6 +299,8 @@
 				492630AF24D846A900261690 /* TotalHistoryTableViewCell.xib */,
 				4920955B24D935D1007B7474 /* TotalHeaderView.swift */,
 				4920955C24D935D1007B7474 /* TotalHeaderView.xib */,
+				4920955F24D93C28007B7474 /* TotalFooterView.swift */,
+				4920956024D93C28007B7474 /* TotalFooterView.xib */,
 			);
 			path = Total;
 			sourceTree = "<group>";
@@ -545,6 +551,7 @@
 				4905C65D24D547C7005DE24F /* HomeViewController.storyboard in Resources */,
 				49A6754724D19CDE009EC846 /* LaunchScreen.storyboard in Resources */,
 				4905C66B24D5A0E7005DE24F /* TotalViewController.storyboard in Resources */,
+				4920956224D93C28007B7474 /* TotalFooterView.xib in Resources */,
 				4905C65B24D54473005DE24F /* SplashViewController.storyboard in Resources */,
 				49A6754424D19CDE009EC846 /* Assets.xcassets in Resources */,
 				490C957F24D67DC5002C0F45 /* SettingsViewController.storyboard in Resources */,
@@ -692,6 +699,7 @@
 				49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */,
 				4905C66724D5A087005DE24F /* TotalViewController.swift in Sources */,
 				49B57D3224D43D0100D3E828 /* AppContainer.swift in Sources */,
+				4920956124D93C28007B7474 /* TotalFooterView.swift in Sources */,
 				4920955D24D935D1007B7474 /* TotalHeaderView.swift in Sources */,
 				49B57D2A24D3E9F700D3E828 /* COVID19Client.swift in Sources */,
 				490C958124D68630002C0F45 /* GraphViewController.swift in Sources */,
