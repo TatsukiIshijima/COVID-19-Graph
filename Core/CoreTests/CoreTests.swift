@@ -1,12 +1,12 @@
 //
-//  coreTests.swift
-//  coreTests
+//  CoreTests.swift
+//  CoreTests
 //
 
 import XCTest
-@testable import core
+@testable import Core
 
-class coreTests: XCTestCase {
+class CoreTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

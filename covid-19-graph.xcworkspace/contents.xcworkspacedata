@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:covid-19-graph.xcodeproj">
+      location = "group:Core/Core.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:core/core.xcodeproj">
+      location = "group:covid-19-graph.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
