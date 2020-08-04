@@ -19,8 +19,8 @@
 		490C957F24D67DC5002C0F45 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C957E24D67DC5002C0F45 /* SettingsViewController.storyboard */; };
 		490C958124D68630002C0F45 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C958024D6862F002C0F45 /* GraphViewController.swift */; };
 		490C958324D6864E002C0F45 /* GraphViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C958224D6864E002C0F45 /* GraphViewController.storyboard */; };
-		4920955824D920BA007B7474 /* TotalHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4920955724D920BA007B7474 /* TotalHeaderView.xib */; };
-		4920955A24D920FC007B7474 /* TotalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4920955924D920FC007B7474 /* TotalHeaderView.swift */; };
+		4920955D24D935D1007B7474 /* TotalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4920955B24D935D1007B7474 /* TotalHeaderView.swift */; };
+		4920955E24D935D1007B7474 /* TotalHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4920955C24D935D1007B7474 /* TotalHeaderView.xib */; };
 		492630A924D7F46700261690 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630A824D7F46700261690 /* Int+Extension.swift */; };
 		492630AC24D8173600261690 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630AA24D8173600261690 /* TotalTableViewCell.swift */; };
 		492630AD24D8173600261690 /* TotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492630AB24D8173600261690 /* TotalTableViewCell.xib */; };
@@ -111,8 +111,8 @@
 		490C957E24D67DC5002C0F45 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		490C958024D6862F002C0F45 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		490C958224D6864E002C0F45 /* GraphViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GraphViewController.storyboard; sourceTree = "<group>"; };
-		4920955724D920BA007B7474 /* TotalHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalHeaderView.xib; sourceTree = "<group>"; };
-		4920955924D920FC007B7474 /* TotalHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHeaderView.swift; sourceTree = "<group>"; };
+		4920955B24D935D1007B7474 /* TotalHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHeaderView.swift; sourceTree = "<group>"; };
+		4920955C24D935D1007B7474 /* TotalHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalHeaderView.xib; sourceTree = "<group>"; };
 		492630A824D7F46700261690 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		492630AA24D8173600261690 /* TotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
 		492630AB24D8173600261690 /* TotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalTableViewCell.xib; sourceTree = "<group>"; };
@@ -293,8 +293,8 @@
 				492630AB24D8173600261690 /* TotalTableViewCell.xib */,
 				492630AE24D846A900261690 /* TotalHistoryTableViewCell.swift */,
 				492630AF24D846A900261690 /* TotalHistoryTableViewCell.xib */,
-				4920955724D920BA007B7474 /* TotalHeaderView.xib */,
-				4920955924D920FC007B7474 /* TotalHeaderView.swift */,
+				4920955B24D935D1007B7474 /* TotalHeaderView.swift */,
+				4920955C24D935D1007B7474 /* TotalHeaderView.xib */,
 			);
 			path = Total;
 			sourceTree = "<group>";
@@ -549,7 +549,7 @@
 				49A6754424D19CDE009EC846 /* Assets.xcassets in Resources */,
 				490C957F24D67DC5002C0F45 /* SettingsViewController.storyboard in Resources */,
 				492630AD24D8173600261690 /* TotalTableViewCell.xib in Resources */,
-				4920955824D920BA007B7474 /* TotalHeaderView.xib in Resources */,
+				4920955E24D935D1007B7474 /* TotalHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,7 +692,7 @@
 				49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */,
 				4905C66724D5A087005DE24F /* TotalViewController.swift in Sources */,
 				49B57D3224D43D0100D3E828 /* AppContainer.swift in Sources */,
-				4920955A24D920FC007B7474 /* TotalHeaderView.swift in Sources */,
+				4920955D24D935D1007B7474 /* TotalHeaderView.swift in Sources */,
 				49B57D2A24D3E9F700D3E828 /* COVID19Client.swift in Sources */,
 				490C958124D68630002C0F45 /* GraphViewController.swift in Sources */,
 				49B57D2D24D4007400D3E828 /* COVID19Repository.swift in Sources */,

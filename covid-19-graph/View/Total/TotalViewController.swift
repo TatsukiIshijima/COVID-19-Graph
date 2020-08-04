@@ -47,8 +47,7 @@ extension TotalViewController: UITableViewDelegate {
         }
         switch section {
         case 0:
-            // totalHeaderView.setTitle(title: "本日の状況")
-            break
+            totalHeaderView.setTitle(title: "本日の状況")
         default:
             break
         }

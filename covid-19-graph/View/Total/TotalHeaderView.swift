@@ -3,7 +3,12 @@
 //  covid-19-graph
 //
 
-import Foundation
 import UIKit
 
-class TotalHeaderView: UITableViewHeaderFooterView {}
+class TotalHeaderView: UITableViewHeaderFooterView {
+    @IBOutlet weak var title: UILabel!
+
+    func setTitle(title: String) {
+        self.title.text = title
+    }
+}
