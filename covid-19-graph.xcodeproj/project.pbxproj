@@ -28,8 +28,8 @@
 		492630AD24D8173600261690 /* TotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492630AB24D8173600261690 /* TotalTableViewCell.xib */; };
 		492630B024D846A900261690 /* TotalHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630AE24D846A900261690 /* TotalHistoryTableViewCell.swift */; };
 		492630B124D846A900261690 /* TotalHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492630AF24D846A900261690 /* TotalHistoryTableViewCell.xib */; };
-		4936666424D98A6300A2BBA0 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4936666324D98A6300A2BBA0 /* Core.framework */; };
-		4936666524D98A8B00A2BBA0 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4936666324D98A6300A2BBA0 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4936667B24D992AF00A2BBA0 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4936667A24D992AF00A2BBA0 /* Core.framework */; };
+		4936667C24D992AF00A2BBA0 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4936667A24D992AF00A2BBA0 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; };
 		495BCD2224D3BB9500D166A8 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		495BCD2324D3BB9500D166A8 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; };
@@ -80,11 +80,11 @@
 			dstSubfolderSpec = 10;
 			files = (
 				495BCD2224D3BB9500D166A8 /* ReactiveCocoa.framework in Embed Frameworks */,
+				4936667C24D992AF00A2BBA0 /* Core.framework in Embed Frameworks */,
 				495BCD2624D3BB9500D166A8 /* SVProgressHUD.framework in Embed Frameworks */,
 				495BCD2424D3BB9500D166A8 /* ReactiveSwift.framework in Embed Frameworks */,
 				4905C66024D553B5005DE24F /* Rswift.framework in Embed Frameworks */,
 				49B57D2824D3E7AE00D3E828 /* Alamofire.framework in Embed Frameworks */,
-				4936666524D98A8B00A2BBA0 /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,7 +121,7 @@
 		492630AB24D8173600261690 /* TotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalTableViewCell.xib; sourceTree = "<group>"; };
 		492630AE24D846A900261690 /* TotalHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		492630AF24D846A900261690 /* TotalHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalHistoryTableViewCell.xib; sourceTree = "<group>"; };
-		4936666324D98A6300A2BBA0 /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Core.framework; sourceTree = "<group>"; };
+		4936667A24D992AF00A2BBA0 /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Core.framework; path = Core/Core.framework; sourceTree = "<group>"; };
 		494DB3CC24D1A60400C391EA /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		494DB3D424D1B2D400C391EA /* ReactiveMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMapKit.framework; path = Carthage/Build/iOS/ReactiveMapKit.framework; sourceTree = "<group>"; };
@@ -183,8 +183,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				495BCD2524D3BB9500D166A8 /* SVProgressHUD.framework in Frameworks */,
+				4936667B24D992AF00A2BBA0 /* Core.framework in Frameworks */,
 				4905C65F24D553B5005DE24F /* Rswift.framework in Frameworks */,
-				4936666424D98A6300A2BBA0 /* Core.framework in Frameworks */,
 				495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */,
 				49B57D2724D3E7AE00D3E828 /* Alamofire.framework in Frameworks */,
 				495BCD2324D3BB9500D166A8 /* ReactiveSwift.framework in Frameworks */,
@@ -211,7 +211,7 @@
 		47D8F619B6CBE1BB2DD3D646 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4936666324D98A6300A2BBA0 /* Core.framework */,
+				4936667A24D992AF00A2BBA0 /* Core.framework */,
 				4905C65E24D553B5005DE24F /* Rswift.framework */,
 				49B57D2624D3E7AE00D3E828 /* Alamofire.framework */,
 				494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */,
@@ -822,6 +822,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Core",
 				);
 				INFOPLIST_FILE = "covid-19-graph/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -952,6 +953,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Core",
 				);
 				INFOPLIST_FILE = "covid-19-graph/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1082,6 +1084,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Core",
 				);
 				INFOPLIST_FILE = "covid-19-graph/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1207,6 +1210,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Core",
 				);
 				INFOPLIST_FILE = "covid-19-graph/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1331,6 +1335,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Core",
 				);
 				INFOPLIST_FILE = "covid-19-graph/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1455,6 +1460,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Core",
 				);
 				INFOPLIST_FILE = "covid-19-graph/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1638,6 +1644,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Core",
 				);
 				INFOPLIST_FILE = "covid-19-graph/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1663,6 +1670,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Core",
 				);
 				INFOPLIST_FILE = "covid-19-graph/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
