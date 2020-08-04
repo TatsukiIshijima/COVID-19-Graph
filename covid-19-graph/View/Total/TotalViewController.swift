@@ -55,6 +55,10 @@ extension TotalViewController: UITableViewDelegate {
         }
     }
 
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 70
+    }
+
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         guard let totalFooterView = tableView.dequeueReusableHeaderFooterView(withIdentifier: R.nib.totalFooterView.name) as? TotalFooterView else {
             fatalError("failed to dequeue with \(R.nib.totalFooterView.name)")
