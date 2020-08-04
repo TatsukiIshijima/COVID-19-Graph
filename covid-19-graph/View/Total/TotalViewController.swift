@@ -28,6 +28,7 @@ final class TotalViewController: UIViewController {
         totalTableView.dataSource = self
         totalTableView.register(R.nib.totalTableViewCell)
         totalTableView.register(R.nib.totalHistoryTableViewCell)
+        totalTableView.register(UINib(resource: R.nib.totalHeaderView), forHeaderFooterViewReuseIdentifier: R.nib.totalHeaderView.name)
     }
 }
 
@@ -38,6 +39,20 @@ extension TotalViewController: UITableViewDelegate {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let totalHeaderView = tableView.dequeueReusableHeaderFooterView(withIdentifier: R.nib.totalHeaderView.name) as? TotalHeaderView else {
+            fatalError("failed to dequeue with \(R.nib.totalHeaderView.name)")
+        }
+        switch section {
+        case 0:
+            // totalHeaderView.setTitle(title: "本日の状況")
+            break
+        default:
+            break
+        }
+        return totalHeaderView
     }
 }
 
