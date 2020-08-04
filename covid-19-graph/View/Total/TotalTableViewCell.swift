@@ -7,11 +7,11 @@ import UIKit
 
 class TotalTableViewCell: UITableViewCell {
     @IBOutlet private weak var positiveNum: UILabel!
-    @IBOutlet weak var PCRNum: UILabel!
-    @IBOutlet weak var hospitalizeNum: UILabel!
-    @IBOutlet weak var severeNum: UILabel!
-    @IBOutlet weak var dischargeNum: UILabel!
-    @IBOutlet weak var deathNum: UILabel!
+    @IBOutlet private weak var PCRNum: UILabel!
+    @IBOutlet private weak var hospitalizeNum: UILabel!
+    @IBOutlet private weak var severeNum: UILabel!
+    @IBOutlet private weak var dischargeNum: UILabel!
+    @IBOutlet private weak var deathNum: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
