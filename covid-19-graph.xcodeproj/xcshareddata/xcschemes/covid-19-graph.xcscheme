@@ -48,6 +48,26 @@
                ReferencedContainer = "container:covid-19-graph.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4936668A24D9AE8C00A2BBA0"
+               BuildableName = "FeatureTests.xctest"
+               BlueprintName = "FeatureTests"
+               ReferencedContainer = "container:covid-19-graph.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "492C373E24DA40560083CEEE"
+               BuildableName = "CoreTests.xctest"
+               BlueprintName = "CoreTests"
+               ReferencedContainer = "container:covid-19-graph.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

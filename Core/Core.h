@@ -2,6 +2,9 @@
 //  Core.h
 //  Core
 //
+//  Created by 石島樹 on 2020/08/05.
+//  Copyright © 2020 石島樹. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 
