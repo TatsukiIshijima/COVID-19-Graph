@@ -3,6 +3,7 @@
 //  covid-19-graph
 //
 
+import Core
 import Foundation
 
 class AppContainer {

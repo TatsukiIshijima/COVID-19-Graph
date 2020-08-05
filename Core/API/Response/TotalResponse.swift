@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct TotalResponse: APIResponse {
+public struct TotalResponse: APIResponse {
     // 日付
     var date: Int
     // PCR検査実施人数

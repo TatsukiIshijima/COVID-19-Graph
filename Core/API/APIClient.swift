@@ -7,7 +7,7 @@ import Alamofire
 import Foundation
 import ReactiveSwift
 
-class APIClient {
+public class APIClient {
     func getRequest<Response>(baseUrl: String,
                               parameters: [String: Any]?,
                               headers: HTTPHeaders = ["Content-Type": "application/json"]) -> SignalProducer<Response, Error> where Response: APIResponse {

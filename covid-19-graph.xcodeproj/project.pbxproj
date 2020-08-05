@@ -33,7 +33,6 @@
 		492C377724DA41580083CEEE /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 492C376724DA41570083CEEE /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		492C377A24DA41580083CEEE /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492C376524DA41570083CEEE /* Core.framework */; };
 		492C377B24DA41580083CEEE /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 492C376524DA41570083CEEE /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		492C378F24DA424A0083CEEE /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492C378E24DA424A0083CEEE /* Sample.swift */; };
 		492C379024DA43DF0083CEEE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; };
 		492C379124DA43DF0083CEEE /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; };
 		495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; };
@@ -154,7 +153,6 @@
 		492C376D24DA41570083CEEE /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		492C377424DA41580083CEEE /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		492C377624DA41580083CEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		492C378E24DA424A0083CEEE /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		4936667A24D992AF00A2BBA0 /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Core.framework; path = Core/Core.framework; sourceTree = "<group>"; };
 		494DB3CC24D1A60400C391EA /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
@@ -336,7 +334,6 @@
 				49B57D1F24D3C3DC00D3E828 /* API */,
 				492C376724DA41570083CEEE /* Core.h */,
 				492C376824DA41570083CEEE /* Info.plist */,
-				492C378E24DA424A0083CEEE /* Sample.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -849,7 +846,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				492C378F24DA424A0083CEEE /* Sample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1235,7 +1231,6 @@
 		492C378624DA41580083CEEE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F6D29Y538;
 				INFOPLIST_FILE = CoreTests/Info.plist;
@@ -1256,7 +1251,6 @@
 		492C378724DA41580083CEEE /* Debug-Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F6D29Y538;
 				INFOPLIST_FILE = CoreTests/Info.plist;
@@ -1277,7 +1271,6 @@
 		492C378824DA41580083CEEE /* Debug-Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F6D29Y538;
 				INFOPLIST_FILE = CoreTests/Info.plist;
@@ -1298,7 +1291,6 @@
 		492C378924DA41580083CEEE /* Debug-Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F6D29Y538;
 				INFOPLIST_FILE = CoreTests/Info.plist;
@@ -1319,7 +1311,6 @@
 		492C378A24DA41580083CEEE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F6D29Y538;
 				INFOPLIST_FILE = CoreTests/Info.plist;
@@ -1340,7 +1331,6 @@
 		492C378B24DA41580083CEEE /* Release-Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F6D29Y538;
 				INFOPLIST_FILE = CoreTests/Info.plist;
@@ -1361,7 +1351,6 @@
 		492C378C24DA41580083CEEE /* Release-Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F6D29Y538;
 				INFOPLIST_FILE = CoreTests/Info.plist;
@@ -1382,7 +1371,6 @@
 		492C378D24DA41580083CEEE /* Release-Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F6D29Y538;
 				INFOPLIST_FILE = CoreTests/Info.plist;
@@ -1465,7 +1453,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 498EDF1E24D2FBE3000CB11B /* Debug-Development.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -1598,7 +1585,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 498EDF1F24D2FBF1000CB11B /* Debug-Staging.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -1730,7 +1716,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 498EDF2024D2FC02000CB11B /* Debug-Production.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -1856,7 +1841,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 498EDF2124D2FC15000CB11B /* Release-Development.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -1983,7 +1967,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 498EDF2224D2FC23000CB11B /* Release-Staging.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -2109,7 +2092,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 498EDF2324D2FC32000CB11B /* Release-Production.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -2294,7 +2276,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A8D6FDC686BEE724126D6B7 /* Pods-covid-19-graph.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -2321,7 +2302,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F848575A0205B4F6B81A307F /* Pods-covid-19-graph.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
