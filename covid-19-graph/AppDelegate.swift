@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
 
-        let appCoordinator = AppCoordinator(window: window)
+        let splashCoordinator = SplashCoordinator(navigationController: UINavigationController())
+        let appCoordinator = AppCoordinator(window: window, coordinator: splashCoordinator)
         appCordinator = appCoordinator
         appCoordinator.start()
 

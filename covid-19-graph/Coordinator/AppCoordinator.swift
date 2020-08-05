@@ -5,24 +5,19 @@
 
 import UIKit
 
-final class AppCoordinator: CoordinatorProtocol {
+final class AppCoordinator {
+
     private let window: UIWindow
-    private let rootViewController: UINavigationController
+    private let rootCordinator: CoordinatorProtocol
 
-    init(window: UIWindow) {
+    init(window: UIWindow, coordinator: CoordinatorProtocol) {
         self.window = window
-        rootViewController = UINavigationController()
-
-        let storyboard = UIStoryboard(resource: R.storyboard.splashViewController)
-        guard let splashViewController = storyboard.instantiateInitialViewController() as? SplashViewController else {
-            return
-        }
-        rootViewController.setNavigationBarHidden(true, animated: false)
-        rootViewController.pushViewController(splashViewController, animated: false)
+        rootCordinator = coordinator
     }
 
     func start() {
-        window.rootViewController = rootViewController
+        rootCordinator.start()
+        window.rootViewController = rootCordinator.viewController
         window.makeKeyAndVisible()
     }
 }
