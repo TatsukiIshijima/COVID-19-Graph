@@ -1,13 +1,13 @@
 //
 //  TotalResponse.swift
-//  covid-19-graph
+//  Core
 //
 
 import Foundation
 
 public struct TotalResponse: APIResponse {
     // 日付
-    var date: Int
+    public var date: Int
     // PCR検査実施人数
     var pcr: Int
     // 入院者数

@@ -1,6 +1,6 @@
 //
 //  COVID19Repository.swift
-//  covid-19-graph
+//  Core
 //
 
 import Alamofire
@@ -10,7 +10,7 @@ import ReactiveSwift
 public final class COVID19Repository {
     var client: COVID19Client
 
-    init(client: COVID19Client) {
+    public init(client: COVID19Client) {
         self.client = client
     }
 

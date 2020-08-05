@@ -1,6 +1,6 @@
 //
 //  APIClient.swift
-//  covid-19-graph
+//  Core
 //
 
 import Alamofire

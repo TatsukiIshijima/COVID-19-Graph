@@ -1,6 +1,6 @@
 //
 //  APIResponse.swift
-//  covid-19-graph
+//  Core
 //
 
 import Foundation
