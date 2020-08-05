@@ -5,12 +5,18 @@
 
 import UIKit
 
+protocol SplashViewControllerDelegate: class {
+    func goToHome()
+}
+
 class SplashViewController: UIViewController {
+    weak var delegate: SplashViewControllerDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func goToHome(_ sender: Any) {
-        performSegue(withIdentifier: R.segue.splashViewController.goToHome, sender: nil)
+        delegate?.goToHome()
     }
 }

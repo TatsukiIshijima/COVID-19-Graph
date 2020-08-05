@@ -53,6 +53,7 @@
 		49B2EED524DA5049000CD25D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EED424DA5049000CD25D /* AppCoordinator.swift */; };
 		49B2EED924DA6EAC000CD25D /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EED824DA6EAC000CD25D /* SplashCoordinator.swift */; };
 		49B2EEE324DA92B7000CD25D /* NavigationCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE224DA92B6000CD25D /* NavigationCoordinatorProtocol.swift */; };
+		49B2EEE524DA9417000CD25D /* TabBarCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE424DA9417000CD25D /* TabBarCoordinatorProtocol.swift */; };
 		49B57D2124D3C5B200D3E828 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D2024D3C5B200D3E828 /* APIClient.swift */; };
 		49B57D2524D3C89400D3E828 /* TotalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D2424D3C89400D3E828 /* TotalResponse.swift */; };
 		49B57D2724D3E7AE00D3E828 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; };
@@ -192,6 +193,7 @@
 		49B2EED424DA5049000CD25D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		49B2EED824DA6EAC000CD25D /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		49B2EEE224DA92B6000CD25D /* NavigationCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		49B2EEE424DA9417000CD25D /* TabBarCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		49B57D2024D3C5B200D3E828 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		49B57D2424D3C89400D3E828 /* TotalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalResponse.swift; sourceTree = "<group>"; };
 		49B57D2624D3E7AE00D3E828 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -456,12 +458,21 @@
 		49B2EECD24DA4B29000CD25D /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				49B2EECE24DA4BA7000CD25D /* CoordinatorProtocol.swift */,
+				49B2EEE624DA97DD000CD25D /* Protocols */,
 				49B2EED424DA5049000CD25D /* AppCoordinator.swift */,
 				49B2EED824DA6EAC000CD25D /* SplashCoordinator.swift */,
-				49B2EEE224DA92B6000CD25D /* NavigationCoordinatorProtocol.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		49B2EEE624DA97DD000CD25D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				49B2EECE24DA4BA7000CD25D /* CoordinatorProtocol.swift */,
+				49B2EEE224DA92B6000CD25D /* NavigationCoordinatorProtocol.swift */,
+				49B2EEE424DA9417000CD25D /* TabBarCoordinatorProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		49B57D1F24D3C3DC00D3E828 /* API */ = {
@@ -884,6 +895,7 @@
 				49B57D3524D4467700D3E828 /* FactoryProtocol.swift in Sources */,
 				49B2EED924DA6EAC000CD25D /* SplashCoordinator.swift in Sources */,
 				49A6753F24D19CDA009EC846 /* HomeViewController.swift in Sources */,
+				49B2EEE524DA9417000CD25D /* TabBarCoordinatorProtocol.swift in Sources */,
 				492630A924D7F46700261690 /* Int+Extension.swift in Sources */,
 				49B2EEE324DA92B7000CD25D /* NavigationCoordinatorProtocol.swift in Sources */,
 				49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */,

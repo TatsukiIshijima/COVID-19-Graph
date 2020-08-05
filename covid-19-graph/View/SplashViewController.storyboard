@@ -38,23 +38,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2qJ-UZ-47C"/>
                     </view>
-                    <connections>
-                        <segue destination="Xwp-Ms-9th" kind="presentation" identifier="goToHome" modalPresentationStyle="fullScreen" id="6UQ-Xv-rWk"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9b-cn-Z2o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-14" y="-252"/>
-        </scene>
-        <!--HomeViewController-->
-        <scene sceneID="wXH-Tr-X5N">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HomeViewController" referencedIdentifier="HomeViewController" id="Xwp-Ms-9th" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="SgO-7U-qqa"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PdX-dj-ef7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="503" y="-252"/>
         </scene>
     </scenes>
 </document>

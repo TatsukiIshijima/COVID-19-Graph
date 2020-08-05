@@ -6,7 +6,6 @@
 import UIKit
 
 final class AppCoordinator {
-
     private let window: UIWindow
     private let rootCordinator: CoordinatorProtocol
 

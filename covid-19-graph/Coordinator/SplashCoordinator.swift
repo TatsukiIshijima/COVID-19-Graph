@@ -5,7 +5,7 @@
 
 import UIKit
 
-final class SplashCoordinator: NavigationCordinator {
+final class SplashCoordinator: NavigationCoordinator {
     var navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
@@ -17,7 +17,12 @@ final class SplashCoordinator: NavigationCordinator {
         guard let splashViewController = storyboard.instantiateInitialViewController() as? SplashViewController else {
             return
         }
+        splashViewController.delegate = self
         navigationController.setNavigationBarHidden(true, animated: false)
         navigationController.pushViewController(splashViewController, animated: false)
     }
+}
+
+extension SplashCoordinator: SplashViewControllerDelegate {
+    func goToHome() {}
 }

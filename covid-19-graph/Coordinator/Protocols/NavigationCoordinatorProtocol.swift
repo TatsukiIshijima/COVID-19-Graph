@@ -5,11 +5,11 @@
 
 import UIKit
 
-protocol NavigationCordinator: CoordinatorProtocol {
+protocol NavigationCoordinator: CoordinatorProtocol {
     var navigationController: UINavigationController { get }
 }
 
-extension NavigationCordinator {
+extension NavigationCoordinator {
     var viewController: UIViewController {
         return navigationController as UIViewController
     }
