@@ -54,6 +54,10 @@
 		49B2EED924DA6EAC000CD25D /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EED824DA6EAC000CD25D /* SplashCoordinator.swift */; };
 		49B2EEE324DA92B7000CD25D /* NavigationCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE224DA92B6000CD25D /* NavigationCoordinatorProtocol.swift */; };
 		49B2EEE524DA9417000CD25D /* TabBarCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE424DA9417000CD25D /* TabBarCoordinatorProtocol.swift */; };
+		49B2EEE824DA9BA5000CD25D /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE724DA9BA5000CD25D /* HomeCoordinator.swift */; };
+		49B2EEEA24DA9E8E000CD25D /* TotalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE924DA9E8E000CD25D /* TotalCoordinator.swift */; };
+		49B2EEEC24DA9F90000CD25D /* GraphCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEEB24DA9F90000CD25D /* GraphCoordinator.swift */; };
+		49B2EEEE24DAA072000CD25D /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEED24DAA072000CD25D /* SettingsCoordinator.swift */; };
 		49B57D2124D3C5B200D3E828 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D2024D3C5B200D3E828 /* APIClient.swift */; };
 		49B57D2524D3C89400D3E828 /* TotalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D2424D3C89400D3E828 /* TotalResponse.swift */; };
 		49B57D2724D3E7AE00D3E828 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; };
@@ -194,6 +198,10 @@
 		49B2EED824DA6EAC000CD25D /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		49B2EEE224DA92B6000CD25D /* NavigationCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		49B2EEE424DA9417000CD25D /* TabBarCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		49B2EEE724DA9BA5000CD25D /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		49B2EEE924DA9E8E000CD25D /* TotalCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCoordinator.swift; sourceTree = "<group>"; };
+		49B2EEEB24DA9F90000CD25D /* GraphCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCoordinator.swift; sourceTree = "<group>"; };
+		49B2EEED24DAA072000CD25D /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		49B57D2024D3C5B200D3E828 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		49B57D2424D3C89400D3E828 /* TotalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalResponse.swift; sourceTree = "<group>"; };
 		49B57D2624D3E7AE00D3E828 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -461,6 +469,10 @@
 				49B2EEE624DA97DD000CD25D /* Protocols */,
 				49B2EED424DA5049000CD25D /* AppCoordinator.swift */,
 				49B2EED824DA6EAC000CD25D /* SplashCoordinator.swift */,
+				49B2EEE724DA9BA5000CD25D /* HomeCoordinator.swift */,
+				49B2EEE924DA9E8E000CD25D /* TotalCoordinator.swift */,
+				49B2EEEB24DA9F90000CD25D /* GraphCoordinator.swift */,
+				49B2EEED24DAA072000CD25D /* SettingsCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -903,9 +915,11 @@
 				49B57D3224D43D0100D3E828 /* AppContainer.swift in Sources */,
 				4920956124D93C28007B7474 /* TotalFooterView.swift in Sources */,
 				4920955D24D935D1007B7474 /* TotalHeaderView.swift in Sources */,
+				49B2EEEC24DA9F90000CD25D /* GraphCoordinator.swift in Sources */,
 				49B57D2A24D3E9F700D3E828 /* COVID19Client.swift in Sources */,
 				490C958124D68630002C0F45 /* GraphViewController.swift in Sources */,
 				49B57D2D24D4007400D3E828 /* COVID19Repository.swift in Sources */,
+				49B2EEEE24DAA072000CD25D /* SettingsCoordinator.swift in Sources */,
 				49B2EED524DA5049000CD25D /* AppCoordinator.swift in Sources */,
 				49A6753D24D19CDA009EC846 /* SceneDelegate.swift in Sources */,
 				49B57D2F24D40F8500D3E828 /* APIResponse.swift in Sources */,
@@ -913,7 +927,9 @@
 				490C957D24D67DB6002C0F45 /* SettingsViewController.swift in Sources */,
 				49B57D2524D3C89400D3E828 /* TotalResponse.swift in Sources */,
 				49B57D2124D3C5B200D3E828 /* APIClient.swift in Sources */,
+				49B2EEE824DA9BA5000CD25D /* HomeCoordinator.swift in Sources */,
 				4905C65924D53E83005DE24F /* SplashViewController.swift in Sources */,
+				49B2EEEA24DA9E8E000CD25D /* TotalCoordinator.swift in Sources */,
 				4905C66324D59BCD005DE24F /* R.generated.swift in Sources */,
 				492630B024D846A900261690 /* TotalHistoryTableViewCell.swift in Sources */,
 				49B2EECF24DA4BA7000CD25D /* CoordinatorProtocol.swift in Sources */,

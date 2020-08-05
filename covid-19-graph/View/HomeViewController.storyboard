@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NP6-fa-e7E">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -14,105 +14,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="Oha-pJ-z5f" kind="relationship" relationship="viewControllers" id="PTJ-4N-h2i"/>
-                        <segue destination="azc-p0-9kV" kind="relationship" relationship="viewControllers" id="D8i-n2-Nim"/>
-                        <segue destination="AM7-1K-Gvf" kind="relationship" relationship="viewControllers" id="Yw3-03-AMg"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIt-Ki-oA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="303" y="-629"/>
         </scene>
-        <!--Total-->
-        <scene sceneID="uAq-AO-LSQ">
-            <objects>
-                <navigationController id="Oha-pJ-z5f" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Total" image="scope" catalog="system" id="hq5-WI-UeE"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="emN-HF-oep">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="e4B-pN-zPn" kind="relationship" relationship="rootViewController" id="52e-3C-xWy"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CNa-Aq-MdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-867" y="113"/>
-        </scene>
-        <!--TotalViewController-->
-        <scene sceneID="vgY-o2-aCr">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TotalViewController" referencedIdentifier="TotalViewController" id="e4B-pN-zPn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Total" image="house" catalog="system" id="zcx-QN-k9K"/>
-                    <navigationItem key="navigationItem" id="7fQ-JT-y3C"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LnM-jd-Gol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-868" y="557"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="hDn-wa-6o2">
-            <objects>
-                <navigationController id="AM7-1K-Gvf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="pencil.circle" catalog="system" id="brO-kV-C4M"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s9a-zJ-OIR">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="uA3-Vj-x32" kind="relationship" relationship="rootViewController" id="e8a-dM-XOh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EOa-W4-pXn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="810" y="113"/>
-        </scene>
-        <!--SettingsViewController-->
-        <scene sceneID="5h5-yj-l1N">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SettingsViewController" referencedIdentifier="SettingsViewController" id="uA3-Vj-x32" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Setting" image="hammer" catalog="system" id="zjD-ue-8cY"/>
-                    <navigationItem key="navigationItem" id="jXC-Sb-ipn"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pLf-yv-goA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="809" y="545"/>
-        </scene>
-        <!--Graph-->
-        <scene sceneID="ocG-C7-kBG">
-            <objects>
-                <navigationController id="azc-p0-9kV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Graph" image="paragraph" catalog="system" id="8qU-OE-UV1"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="anv-WM-Fnl">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Szb-a3-lol" kind="relationship" relationship="rootViewController" id="xHx-WO-YUO"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vGp-S5-PFT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-68" y="113"/>
-        </scene>
-        <!--GraphViewController-->
-        <scene sceneID="fiI-6W-0eZ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="GraphViewController" referencedIdentifier="GraphViewController" id="Szb-a3-lol" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="nbK-6S-dGP"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T2S-Pw-tYk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-67" y="544"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="hammer" catalog="system" width="128" height="115"/>
-        <image name="house" catalog="system" width="128" height="110"/>
-        <image name="paragraph" catalog="system" width="120" height="128"/>
-        <image name="pencil.circle" catalog="system" width="128" height="121"/>
-        <image name="scope" catalog="system" width="128" height="122"/>
-    </resources>
 </document>
