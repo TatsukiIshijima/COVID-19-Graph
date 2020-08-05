@@ -11,7 +11,6 @@ class HomeViewController: UITabBarController {
         super.viewDidLoad()
 
         delegate = self
-        Sample.sample()
     }
 }
 
