@@ -7,10 +7,22 @@ import Core
 import UIKit
 
 class HomeViewController: UITabBarController {
+    private let tabIconSystemName = ["house", "map", "gear"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         delegate = self
+
+        setTabItems()
+    }
+
+    private func setTabItems() {
+        if let tabBarItems = tabBar.items {
+            for (index, item) in tabBarItems.enumerated() {
+                item.image = UIImage(systemName: tabIconSystemName[index])
+            }
+        }
     }
 }
 
