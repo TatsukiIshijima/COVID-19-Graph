@@ -15,10 +15,8 @@ final class TotalCoordinator: NavigationCoordinator {
     func start() {
         let storyboard = UIStoryboard(resource: R.storyboard.totalViewController)
         guard let totalViewController = storyboard.instantiateInitialViewController() as? TotalViewController else {
-            return
+            fatalError("failed to TotalViewController instantiate")
         }
-        print("TotalCoordinator start() called.")
-        navigationController.setNavigationBarHidden(false, animated: true)
         navigationController.pushViewController(totalViewController, animated: true)
     }
 }

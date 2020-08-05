@@ -53,7 +53,6 @@
 		49B2EED524DA5049000CD25D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EED424DA5049000CD25D /* AppCoordinator.swift */; };
 		49B2EED924DA6EAC000CD25D /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EED824DA6EAC000CD25D /* SplashCoordinator.swift */; };
 		49B2EEE324DA92B7000CD25D /* NavigationCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE224DA92B6000CD25D /* NavigationCoordinatorProtocol.swift */; };
-		49B2EEE524DA9417000CD25D /* TabBarCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE424DA9417000CD25D /* TabBarCoordinatorProtocol.swift */; };
 		49B2EEE824DA9BA5000CD25D /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE724DA9BA5000CD25D /* HomeCoordinator.swift */; };
 		49B2EEEA24DA9E8E000CD25D /* TotalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE924DA9E8E000CD25D /* TotalCoordinator.swift */; };
 		49B2EEEC24DA9F90000CD25D /* GraphCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEEB24DA9F90000CD25D /* GraphCoordinator.swift */; };
@@ -197,7 +196,6 @@
 		49B2EED424DA5049000CD25D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		49B2EED824DA6EAC000CD25D /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		49B2EEE224DA92B6000CD25D /* NavigationCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinatorProtocol.swift; sourceTree = "<group>"; };
-		49B2EEE424DA9417000CD25D /* TabBarCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		49B2EEE724DA9BA5000CD25D /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		49B2EEE924DA9E8E000CD25D /* TotalCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCoordinator.swift; sourceTree = "<group>"; };
 		49B2EEEB24DA9F90000CD25D /* GraphCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCoordinator.swift; sourceTree = "<group>"; };
@@ -482,7 +480,6 @@
 			children = (
 				49B2EECE24DA4BA7000CD25D /* CoordinatorProtocol.swift */,
 				49B2EEE224DA92B6000CD25D /* NavigationCoordinatorProtocol.swift */,
-				49B2EEE424DA9417000CD25D /* TabBarCoordinatorProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -907,7 +904,6 @@
 				49B57D3524D4467700D3E828 /* FactoryProtocol.swift in Sources */,
 				49B2EED924DA6EAC000CD25D /* SplashCoordinator.swift in Sources */,
 				49A6753F24D19CDA009EC846 /* HomeViewController.swift in Sources */,
-				49B2EEE524DA9417000CD25D /* TabBarCoordinatorProtocol.swift in Sources */,
 				492630A924D7F46700261690 /* Int+Extension.swift in Sources */,
 				49B2EEE324DA92B7000CD25D /* NavigationCoordinatorProtocol.swift in Sources */,
 				49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */,

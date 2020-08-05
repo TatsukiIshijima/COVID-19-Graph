@@ -15,9 +15,8 @@ final class SettingsCoordinator: NavigationCoordinator {
     func start() {
         let storyboard = UIStoryboard(resource: R.storyboard.settingsViewController)
         guard let settingsViewController = storyboard.instantiateInitialViewController() as? SettingsViewController else {
-            return
+            fatalError("failed to SettingsViewController instantiate")
         }
-        print("SettingsCoordinator start() called.")
         navigationController.pushViewController(settingsViewController, animated: false)
     }
 }

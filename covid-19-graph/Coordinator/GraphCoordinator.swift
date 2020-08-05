@@ -15,11 +15,8 @@ final class GraphCoordinator: NavigationCoordinator {
     func start() {
         let storyboard = UIStoryboard(resource: R.storyboard.graphViewController)
         guard let graphViewController = storyboard.instantiateInitialViewController() as? GraphViewController else {
-            return
+            fatalError("failed to GraphViewController instantiate")
         }
-        print("GraphCoordinator start() called.")
-        // navigationController.pushViewController(graphViewController, animated: false)
-        graphViewController.modalPresentationStyle = .fullScreen
-        navigationController.present(graphViewController, animated: true, completion: nil)
+        navigationController.pushViewController(graphViewController, animated: false)
     }
 }
