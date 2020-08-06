@@ -5,7 +5,7 @@
 
 import UIKit
 
-final class TotalCoordinator: NavigationCoordinator {
+final class TodayCoordinator: NavigationCoordinator {
     let navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
@@ -13,8 +13,8 @@ final class TotalCoordinator: NavigationCoordinator {
     }
 
     func start() {
-        let storyboard = UIStoryboard(resource: R.storyboard.totalViewController)
-        guard let totalViewController = storyboard.instantiateInitialViewController() as? TotalViewController else {
+        let storyboard = UIStoryboard(resource: R.storyboard.todayViewController)
+        guard let totalViewController = storyboard.instantiateInitialViewController() as? TodayViewController else {
             fatalError("failed to TotalViewController instantiate")
         }
         navigationController.pushViewController(totalViewController, animated: true)

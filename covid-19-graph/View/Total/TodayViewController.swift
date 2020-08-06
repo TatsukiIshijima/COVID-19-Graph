@@ -5,7 +5,7 @@
 
 import UIKit
 
-final class TotalViewController: UIViewController {
+final class TodayViewController: UIViewController {
     @IBOutlet private weak var totalTableView: UITableView!
 
     override func viewDidLoad() {
@@ -66,18 +66,19 @@ final class TotalViewController: UIViewController {
         totalTableView.dataSource = self
         totalTableView.register(R.nib.totalTableViewCell)
         totalTableView.register(R.nib.totalHistoryTableViewCell)
+        totalTableView.register(R.nib.todayTableViewCell)
         totalTableView.register(UINib(resource: R.nib.totalHeaderView), forHeaderFooterViewReuseIdentifier: R.nib.totalHeaderView.name)
         totalTableView.register(UINib(resource: R.nib.totalFooterView), forHeaderFooterViewReuseIdentifier: R.nib.totalFooterView.name)
     }
 }
 
-extension TotalViewController: UITableViewDelegate {
+extension TodayViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -105,23 +106,18 @@ extension TotalViewController: UITableViewDelegate {
     }
 }
 
-extension TotalViewController: UITableViewDataSource {
+extension TodayViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 4
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
-            guard let totalTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.totalTableViewCell, for: indexPath) else {
-                fatalError("failed to dequeue with \(R.reuseIdentifier.totalTableViewCell)")
-            }
-            return totalTableViewCell
-        default:
-            guard let totalHistoryTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.totalHistoryTableViewCell, for: indexPath) else {
-                fatalError("failed to dequeue with \(R.reuseIdentifier.totalHistoryTableViewCell)")
-            }
-            return totalHistoryTableViewCell
+        guard let todayTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.todayTableViewCell, for: indexPath) else {
+            fatalError("failed to dequeue with \(R.reuseIdentifier.todayTableViewCell)")
         }
+        if let main = R.color.mainColor() {
+            todayTableViewCell.setContent(backgroundColor: main, num: 124_500, title: "感染者")
+        }
+        return todayTableViewCell
     }
 }

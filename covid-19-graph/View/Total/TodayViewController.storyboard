@@ -10,7 +10,7 @@
         <!--Today-->
         <scene sceneID="C6v-Yo-rLT">
             <objects>
-                <viewController storyboardIdentifier="TotalViewController" title="Today" id="Hg9-2a-NWx" customClass="TotalViewController" customModule="covid_19_graph" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TotalViewController" title="Today" id="Hg9-2a-NWx" customClass="TodayViewController" customModule="covid_19_graph" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ybw-aN-U4j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
