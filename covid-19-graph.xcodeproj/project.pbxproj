@@ -19,15 +19,7 @@
 		490C957F24D67DC5002C0F45 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C957E24D67DC5002C0F45 /* SettingsViewController.storyboard */; };
 		490C958124D68630002C0F45 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C958024D6862F002C0F45 /* GraphViewController.swift */; };
 		490C958324D6864E002C0F45 /* GraphViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C958224D6864E002C0F45 /* GraphViewController.storyboard */; };
-		4920955D24D935D1007B7474 /* TotalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4920955B24D935D1007B7474 /* TotalHeaderView.swift */; };
-		4920955E24D935D1007B7474 /* TotalHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4920955C24D935D1007B7474 /* TotalHeaderView.xib */; };
-		4920956124D93C28007B7474 /* TotalFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4920955F24D93C28007B7474 /* TotalFooterView.swift */; };
-		4920956224D93C28007B7474 /* TotalFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4920956024D93C28007B7474 /* TotalFooterView.xib */; };
 		492630A924D7F46700261690 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630A824D7F46700261690 /* Int+Extension.swift */; };
-		492630AC24D8173600261690 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630AA24D8173600261690 /* TotalTableViewCell.swift */; };
-		492630AD24D8173600261690 /* TotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492630AB24D8173600261690 /* TotalTableViewCell.xib */; };
-		492630B024D846A900261690 /* TotalHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630AE24D846A900261690 /* TotalHistoryTableViewCell.swift */; };
-		492630B124D846A900261690 /* TotalHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492630AF24D846A900261690 /* TotalHistoryTableViewCell.xib */; };
 		492C376E24DA41580083CEEE /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492C376524DA41570083CEEE /* Core.framework */; };
 		492C377524DA41580083CEEE /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492C377424DA41580083CEEE /* CoreTests.swift */; };
 		492C377724DA41580083CEEE /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 492C376724DA41570083CEEE /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,8 +39,6 @@
 		496C1E2924DBC9EF00521D25 /* StatisticsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C1E2824DBC9EF00521D25 /* StatisticsResponse.swift */; };
 		496C1E2B24DBCAE800521D25 /* PrefectureStatisticsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C1E2A24DBCAE800521D25 /* PrefectureStatisticsResponse.swift */; };
 		498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 498EDF1624D2F730000CB11B /* .swiftlint.yml */; };
-		49940E4224DBDA6E00CAC6FA /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49940E4024DBDA6E00CAC6FA /* TodayTableViewCell.swift */; };
-		49940E4324DBDA6E00CAC6FA /* TodayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49940E4124DBDA6E00CAC6FA /* TodayTableViewCell.xib */; };
 		49940E4624DBEA2600CAC6FA /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49940E4424DBEA2600CAC6FA /* TodayCollectionViewCell.swift */; };
 		49940E4724DBEA2600CAC6FA /* TodayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49940E4524DBEA2600CAC6FA /* TodayCollectionViewCell.xib */; };
 		49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753A24D19CDA009EC846 /* AppDelegate.swift */; };
@@ -158,15 +148,7 @@
 		490C957E24D67DC5002C0F45 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		490C958024D6862F002C0F45 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		490C958224D6864E002C0F45 /* GraphViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GraphViewController.storyboard; sourceTree = "<group>"; };
-		4920955B24D935D1007B7474 /* TotalHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHeaderView.swift; sourceTree = "<group>"; };
-		4920955C24D935D1007B7474 /* TotalHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalHeaderView.xib; sourceTree = "<group>"; };
-		4920955F24D93C28007B7474 /* TotalFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalFooterView.swift; sourceTree = "<group>"; };
-		4920956024D93C28007B7474 /* TotalFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalFooterView.xib; sourceTree = "<group>"; };
 		492630A824D7F46700261690 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
-		492630AA24D8173600261690 /* TotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
-		492630AB24D8173600261690 /* TotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalTableViewCell.xib; sourceTree = "<group>"; };
-		492630AE24D846A900261690 /* TotalHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHistoryTableViewCell.swift; sourceTree = "<group>"; };
-		492630AF24D846A900261690 /* TotalHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		492C376524DA41570083CEEE /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		492C376724DA41570083CEEE /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		492C376824DA41570083CEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -196,8 +178,6 @@
 		498EDF2124D2FC15000CB11B /* Release-Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release-Development.xcconfig"; sourceTree = "<group>"; };
 		498EDF2224D2FC23000CB11B /* Release-Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release-Staging.xcconfig"; sourceTree = "<group>"; };
 		498EDF2324D2FC32000CB11B /* Release-Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release-Production.xcconfig"; sourceTree = "<group>"; };
-		49940E4024DBDA6E00CAC6FA /* TodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
-		49940E4124DBDA6E00CAC6FA /* TodayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayTableViewCell.xib; sourceTree = "<group>"; };
 		49940E4424DBEA2600CAC6FA /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
 		49940E4524DBEA2600CAC6FA /* TodayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCollectionViewCell.xib; sourceTree = "<group>"; };
 		49A6753724D19CDA009EC846 /* covid-19-graph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "covid-19-graph.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -392,16 +372,6 @@
 			children = (
 				4905C66624D5A087005DE24F /* TodayViewController.swift */,
 				4905C66A24D5A0E7005DE24F /* TodayViewController.storyboard */,
-				492630AA24D8173600261690 /* TotalTableViewCell.swift */,
-				492630AB24D8173600261690 /* TotalTableViewCell.xib */,
-				492630AE24D846A900261690 /* TotalHistoryTableViewCell.swift */,
-				492630AF24D846A900261690 /* TotalHistoryTableViewCell.xib */,
-				4920955B24D935D1007B7474 /* TotalHeaderView.swift */,
-				4920955C24D935D1007B7474 /* TotalHeaderView.xib */,
-				4920955F24D93C28007B7474 /* TotalFooterView.swift */,
-				4920956024D93C28007B7474 /* TotalFooterView.xib */,
-				49940E4024DBDA6E00CAC6FA /* TodayTableViewCell.swift */,
-				49940E4124DBDA6E00CAC6FA /* TodayTableViewCell.xib */,
 				49940E4424DBEA2600CAC6FA /* TodayCollectionViewCell.swift */,
 				49940E4524DBEA2600CAC6FA /* TodayCollectionViewCell.xib */,
 			);
@@ -773,19 +743,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */,
-				492630B124D846A900261690 /* TotalHistoryTableViewCell.xib in Resources */,
 				490C958324D6864E002C0F45 /* GraphViewController.storyboard in Resources */,
 				4905C65D24D547C7005DE24F /* HomeViewController.storyboard in Resources */,
 				49A6754724D19CDE009EC846 /* LaunchScreen.storyboard in Resources */,
 				4905C66B24D5A0E7005DE24F /* TodayViewController.storyboard in Resources */,
-				4920956224D93C28007B7474 /* TotalFooterView.xib in Resources */,
 				4905C65B24D54473005DE24F /* SplashViewController.storyboard in Resources */,
 				49A6754424D19CDE009EC846 /* Assets.xcassets in Resources */,
 				490C957F24D67DC5002C0F45 /* SettingsViewController.storyboard in Resources */,
 				49940E4724DBEA2600CAC6FA /* TodayCollectionViewCell.xib in Resources */,
-				492630AD24D8173600261690 /* TotalTableViewCell.xib in Resources */,
-				4920955E24D935D1007B7474 /* TotalHeaderView.xib in Resources */,
-				49940E4324DBDA6E00CAC6FA /* TodayTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -975,23 +940,18 @@
 				49B2EEE324DA92B7000CD25D /* NavigationCoordinatorProtocol.swift in Sources */,
 				49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */,
 				4905C66724D5A087005DE24F /* TodayViewController.swift in Sources */,
-				49940E4224DBDA6E00CAC6FA /* TodayTableViewCell.swift in Sources */,
 				49B57D3224D43D0100D3E828 /* AppContainer.swift in Sources */,
 				49940E4624DBEA2600CAC6FA /* TodayCollectionViewCell.swift in Sources */,
-				4920956124D93C28007B7474 /* TotalFooterView.swift in Sources */,
-				4920955D24D935D1007B7474 /* TotalHeaderView.swift in Sources */,
 				49B2EEEC24DA9F90000CD25D /* GraphCoordinator.swift in Sources */,
 				490C958124D68630002C0F45 /* GraphViewController.swift in Sources */,
 				49B2EEEE24DAA072000CD25D /* SettingsCoordinator.swift in Sources */,
 				49B2EED524DA5049000CD25D /* AppCoordinator.swift in Sources */,
 				49A6753D24D19CDA009EC846 /* SceneDelegate.swift in Sources */,
-				492630AC24D8173600261690 /* TotalTableViewCell.swift in Sources */,
 				490C957D24D67DB6002C0F45 /* SettingsViewController.swift in Sources */,
 				49B2EEE824DA9BA5000CD25D /* HomeCoordinator.swift in Sources */,
 				4905C65924D53E83005DE24F /* SplashViewController.swift in Sources */,
 				49B2EEEA24DA9E8E000CD25D /* TodayCoordinator.swift in Sources */,
 				4905C66324D59BCD005DE24F /* R.generated.swift in Sources */,
-				492630B024D846A900261690 /* TotalHistoryTableViewCell.swift in Sources */,
 				49B2EECF24DA4BA7000CD25D /* CoordinatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
