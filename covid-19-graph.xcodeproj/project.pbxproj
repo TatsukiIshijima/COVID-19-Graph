@@ -388,6 +388,17 @@
 			path = Total;
 			sourceTree = "<group>";
 		};
+		496C1E2224DBC51900521D25 /* Total */ = {
+			isa = PBXGroup;
+			children = (
+				49B57D2424D3C89400D3E828 /* TotalResponse.swift */,
+				49B2EEF324DAEB5E000CD25D /* TotalHistoryResponse.swift */,
+				49B2EEFB24DAEF40000CD25D /* TotalPredictionResponse.swift */,
+				49B2EEFD24DAEF9C000CD25D /* PredictionResponse.swift */,
+			);
+			path = Total;
+			sourceTree = "<group>";
+		};
 		498EDF1824D2FB58000CB11B /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,11 +525,8 @@
 		49B57D2324D3C73600D3E828 /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				49B57D2424D3C89400D3E828 /* TotalResponse.swift */,
+				496C1E2224DBC51900521D25 /* Total */,
 				49B57D2E24D40F8500D3E828 /* APIResponse.swift */,
-				49B2EEF324DAEB5E000CD25D /* TotalHistoryResponse.swift */,
-				49B2EEFB24DAEF40000CD25D /* TotalPredictionResponse.swift */,
-				49B2EEFD24DAEF9C000CD25D /* PredictionResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
