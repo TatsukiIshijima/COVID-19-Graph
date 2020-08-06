@@ -26,9 +26,9 @@ final class SplashCoordinator: NavigationCoordinator {
 extension SplashCoordinator: SplashViewControllerDelegate {
     func goToHome() {
         let todayCoordinator = TodayCoordinator(navigationController: UINavigationController())
-        let graphCoordinator = GraphCoordinator(navigationController: UINavigationController())
+        let prefectureCoordinator = PrefectureCoordinator(navigationController: UINavigationController())
         let settingsCoordinator = SettingsCoordinator(navigationController: UINavigationController())
-        let homeCoordinator = HomeCoordinator(navigationController: navigationController, childCoordinators: [todayCoordinator, graphCoordinator, settingsCoordinator])
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController, childCoordinators: [todayCoordinator, prefectureCoordinator, settingsCoordinator])
         homeCoordinator.start()
     }
 }

@@ -17,8 +17,8 @@
 		4905C66B24D5A0E7005DE24F /* TodayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905C66A24D5A0E7005DE24F /* TodayViewController.storyboard */; };
 		490C957D24D67DB6002C0F45 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C957C24D67DB6002C0F45 /* SettingsViewController.swift */; };
 		490C957F24D67DC5002C0F45 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C957E24D67DC5002C0F45 /* SettingsViewController.storyboard */; };
-		490C958124D68630002C0F45 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C958024D6862F002C0F45 /* GraphViewController.swift */; };
-		490C958324D6864E002C0F45 /* GraphViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C958224D6864E002C0F45 /* GraphViewController.storyboard */; };
+		490C958124D68630002C0F45 /* PrefectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C958024D6862F002C0F45 /* PrefectureViewController.swift */; };
+		490C958324D6864E002C0F45 /* PrefectureViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C958224D6864E002C0F45 /* PrefectureViewController.storyboard */; };
 		492630A924D7F46700261690 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630A824D7F46700261690 /* Int+Extension.swift */; };
 		492C376E24DA41580083CEEE /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492C376524DA41570083CEEE /* Core.framework */; };
 		492C377524DA41580083CEEE /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492C377424DA41580083CEEE /* CoreTests.swift */; };
@@ -54,7 +54,7 @@
 		49B2EEE324DA92B7000CD25D /* NavigationCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE224DA92B6000CD25D /* NavigationCoordinatorProtocol.swift */; };
 		49B2EEE824DA9BA5000CD25D /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE724DA9BA5000CD25D /* HomeCoordinator.swift */; };
 		49B2EEEA24DA9E8E000CD25D /* TodayCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE924DA9E8E000CD25D /* TodayCoordinator.swift */; };
-		49B2EEEC24DA9F90000CD25D /* GraphCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEEB24DA9F90000CD25D /* GraphCoordinator.swift */; };
+		49B2EEEC24DA9F90000CD25D /* PrefectureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEEB24DA9F90000CD25D /* PrefectureCoordinator.swift */; };
 		49B2EEEE24DAA072000CD25D /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEED24DAA072000CD25D /* SettingsCoordinator.swift */; };
 		49B2EEF424DAEB5E000CD25D /* TotalHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEF324DAEB5E000CD25D /* TotalHistoryResponse.swift */; };
 		49B2EEF524DAEBAB000CD25D /* COVID19Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D2C24D4007400D3E828 /* COVID19Repository.swift */; };
@@ -146,8 +146,8 @@
 		4905C66A24D5A0E7005DE24F /* TodayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TodayViewController.storyboard; sourceTree = "<group>"; };
 		490C957C24D67DB6002C0F45 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		490C957E24D67DC5002C0F45 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
-		490C958024D6862F002C0F45 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
-		490C958224D6864E002C0F45 /* GraphViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GraphViewController.storyboard; sourceTree = "<group>"; };
+		490C958024D6862F002C0F45 /* PrefectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureViewController.swift; sourceTree = "<group>"; };
+		490C958224D6864E002C0F45 /* PrefectureViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrefectureViewController.storyboard; sourceTree = "<group>"; };
 		492630A824D7F46700261690 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		492C376524DA41570083CEEE /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		492C376724DA41570083CEEE /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 		49B2EEE224DA92B6000CD25D /* NavigationCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		49B2EEE724DA9BA5000CD25D /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		49B2EEE924DA9E8E000CD25D /* TodayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCoordinator.swift; sourceTree = "<group>"; };
-		49B2EEEB24DA9F90000CD25D /* GraphCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphCoordinator.swift; sourceTree = "<group>"; };
+		49B2EEEB24DA9F90000CD25D /* PrefectureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureCoordinator.swift; sourceTree = "<group>"; };
 		49B2EEED24DAA072000CD25D /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		49B2EEF324DAEB5E000CD25D /* TotalHistoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHistoryResponse.swift; sourceTree = "<group>"; };
 		49B2EEFB24DAEF40000CD25D /* TotalPredictionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPredictionResponse.swift; sourceTree = "<group>"; };
@@ -326,6 +326,7 @@
 		4905C65724D53D8B005DE24F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				49940E4824DC36E100CAC6FA /* Prefecture */,
 				493BC6F324D7DFDF00B581D7 /* Today */,
 				49A6753E24D19CDA009EC846 /* HomeViewController.swift */,
 				4905C65824D53E83005DE24F /* SplashViewController.swift */,
@@ -333,8 +334,6 @@
 				4905C65C24D547C7005DE24F /* HomeViewController.storyboard */,
 				490C957C24D67DB6002C0F45 /* SettingsViewController.swift */,
 				490C957E24D67DC5002C0F45 /* SettingsViewController.storyboard */,
-				490C958024D6862F002C0F45 /* GraphViewController.swift */,
-				490C958224D6864E002C0F45 /* GraphViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -418,6 +417,15 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		49940E4824DC36E100CAC6FA /* Prefecture */ = {
+			isa = PBXGroup;
+			children = (
+				490C958024D6862F002C0F45 /* PrefectureViewController.swift */,
+				490C958224D6864E002C0F45 /* PrefectureViewController.storyboard */,
+			);
+			path = Prefecture;
+			sourceTree = "<group>";
+		};
 		49A6752E24D19CDA009EC846 = {
 			isa = PBXGroup;
 			children = (
@@ -489,7 +497,7 @@
 				49B2EED824DA6EAC000CD25D /* SplashCoordinator.swift */,
 				49B2EEE724DA9BA5000CD25D /* HomeCoordinator.swift */,
 				49B2EEE924DA9E8E000CD25D /* TodayCoordinator.swift */,
-				49B2EEEB24DA9F90000CD25D /* GraphCoordinator.swift */,
+				49B2EEEB24DA9F90000CD25D /* PrefectureCoordinator.swift */,
 				49B2EEED24DAA072000CD25D /* SettingsCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -743,7 +751,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */,
-				490C958324D6864E002C0F45 /* GraphViewController.storyboard in Resources */,
+				490C958324D6864E002C0F45 /* PrefectureViewController.storyboard in Resources */,
 				4905C65D24D547C7005DE24F /* HomeViewController.storyboard in Resources */,
 				49A6754724D19CDE009EC846 /* LaunchScreen.storyboard in Resources */,
 				4905C66B24D5A0E7005DE24F /* TodayViewController.storyboard in Resources */,
@@ -942,8 +950,8 @@
 				4905C66724D5A087005DE24F /* TodayViewController.swift in Sources */,
 				49B57D3224D43D0100D3E828 /* AppContainer.swift in Sources */,
 				49940E4624DBEA2600CAC6FA /* TodayCollectionViewCell.swift in Sources */,
-				49B2EEEC24DA9F90000CD25D /* GraphCoordinator.swift in Sources */,
-				490C958124D68630002C0F45 /* GraphViewController.swift in Sources */,
+				49B2EEEC24DA9F90000CD25D /* PrefectureCoordinator.swift in Sources */,
+				490C958124D68630002C0F45 /* PrefectureViewController.swift in Sources */,
 				49B2EEEE24DAA072000CD25D /* SettingsCoordinator.swift in Sources */,
 				49B2EED524DA5049000CD25D /* AppCoordinator.swift in Sources */,
 				49A6753D24D19CDA009EC846 /* SceneDelegate.swift in Sources */,
