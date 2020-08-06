@@ -49,6 +49,8 @@
 		498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 498EDF1624D2F730000CB11B /* .swiftlint.yml */; };
 		49940E4224DBDA6E00CAC6FA /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49940E4024DBDA6E00CAC6FA /* TodayTableViewCell.swift */; };
 		49940E4324DBDA6E00CAC6FA /* TodayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49940E4124DBDA6E00CAC6FA /* TodayTableViewCell.xib */; };
+		49940E4624DBEA2600CAC6FA /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49940E4424DBEA2600CAC6FA /* TodayCollectionViewCell.swift */; };
+		49940E4724DBEA2600CAC6FA /* TodayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49940E4524DBEA2600CAC6FA /* TodayCollectionViewCell.xib */; };
 		49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753A24D19CDA009EC846 /* AppDelegate.swift */; };
 		49A6753D24D19CDA009EC846 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753C24D19CDA009EC846 /* SceneDelegate.swift */; };
 		49A6753F24D19CDA009EC846 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753E24D19CDA009EC846 /* HomeViewController.swift */; };
@@ -196,6 +198,8 @@
 		498EDF2324D2FC32000CB11B /* Release-Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release-Production.xcconfig"; sourceTree = "<group>"; };
 		49940E4024DBDA6E00CAC6FA /* TodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
 		49940E4124DBDA6E00CAC6FA /* TodayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayTableViewCell.xib; sourceTree = "<group>"; };
+		49940E4424DBEA2600CAC6FA /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
+		49940E4524DBEA2600CAC6FA /* TodayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCollectionViewCell.xib; sourceTree = "<group>"; };
 		49A6753724D19CDA009EC846 /* covid-19-graph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "covid-19-graph.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A6753A24D19CDA009EC846 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A6753C24D19CDA009EC846 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -398,6 +402,8 @@
 				4920956024D93C28007B7474 /* TotalFooterView.xib */,
 				49940E4024DBDA6E00CAC6FA /* TodayTableViewCell.swift */,
 				49940E4124DBDA6E00CAC6FA /* TodayTableViewCell.xib */,
+				49940E4424DBEA2600CAC6FA /* TodayCollectionViewCell.swift */,
+				49940E4524DBEA2600CAC6FA /* TodayCollectionViewCell.xib */,
 			);
 			path = Total;
 			sourceTree = "<group>";
@@ -776,6 +782,7 @@
 				4905C65B24D54473005DE24F /* SplashViewController.storyboard in Resources */,
 				49A6754424D19CDE009EC846 /* Assets.xcassets in Resources */,
 				490C957F24D67DC5002C0F45 /* SettingsViewController.storyboard in Resources */,
+				49940E4724DBEA2600CAC6FA /* TodayCollectionViewCell.xib in Resources */,
 				492630AD24D8173600261690 /* TotalTableViewCell.xib in Resources */,
 				4920955E24D935D1007B7474 /* TotalHeaderView.xib in Resources */,
 				49940E4324DBDA6E00CAC6FA /* TodayTableViewCell.xib in Resources */,
@@ -970,6 +977,7 @@
 				4905C66724D5A087005DE24F /* TodayViewController.swift in Sources */,
 				49940E4224DBDA6E00CAC6FA /* TodayTableViewCell.swift in Sources */,
 				49B57D3224D43D0100D3E828 /* AppContainer.swift in Sources */,
+				49940E4624DBEA2600CAC6FA /* TodayCollectionViewCell.swift in Sources */,
 				4920956124D93C28007B7474 /* TotalFooterView.swift in Sources */,
 				4920955D24D935D1007B7474 /* TotalHeaderView.swift in Sources */,
 				49B2EEEC24DA9F90000CD25D /* GraphCoordinator.swift in Sources */,

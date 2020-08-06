@@ -6,7 +6,7 @@
 import UIKit
 
 final class TodayViewController: UIViewController {
-    @IBOutlet private weak var totalTableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,62 +62,37 @@ final class TodayViewController: UIViewController {
             .foregroundColor: UIColor.white
         ]
 
-        totalTableView.delegate = self
-        totalTableView.dataSource = self
-        totalTableView.register(R.nib.totalTableViewCell)
-        totalTableView.register(R.nib.totalHistoryTableViewCell)
-        totalTableView.register(R.nib.todayTableViewCell)
-        totalTableView.register(UINib(resource: R.nib.totalHeaderView), forHeaderFooterViewReuseIdentifier: R.nib.totalHeaderView.name)
-        totalTableView.register(UINib(resource: R.nib.totalFooterView), forHeaderFooterViewReuseIdentifier: R.nib.totalFooterView.name)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+
+        collectionView.register(R.nib.todayCollectionViewCell)
+
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 25
+        collectionView.collectionViewLayout = layout
     }
 }
 
-extension TodayViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+extension TodayViewController: UICollectionViewDelegate {}
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let totalHeaderView = tableView.dequeueReusableHeaderFooterView(withIdentifier: R.nib.totalHeaderView.name) as? TotalHeaderView else {
-            fatalError("failed to dequeue with \(R.nib.totalHeaderView.name)")
-        }
-        switch section {
-        case 0:
-            totalHeaderView.setTitle(title: "本日の状況")
-            return totalHeaderView
-        default:
-            return nil
-        }
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 70
-    }
-
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        guard let totalFooterView = tableView.dequeueReusableHeaderFooterView(withIdentifier: R.nib.totalFooterView.name) as? TotalFooterView else {
-            fatalError("failed to dequeue with \(R.nib.totalFooterView.name)")
-        }
-        return section == 0 ? totalFooterView : nil
-    }
-}
-
-extension TodayViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension TodayViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let todayTableViewCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.todayTableViewCell, for: indexPath) else {
-            fatalError("failed to dequeue with \(R.reuseIdentifier.todayTableViewCell)")
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let todayCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.todayCollectionViewCell, for: indexPath) else {
+            fatalError("")
         }
-        if let main = R.color.mainColor() {
-            todayTableViewCell.setContent(backgroundColor: main, num: 124_500, title: "感染者")
-        }
-        return todayTableViewCell
+        todayCollectionViewCell.setContent(backgroundColor: .lightGray, num: 1000, title: "ほげ")
+        return todayCollectionViewCell
+    }
+}
+
+extension TodayViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width: CGFloat = UIScreen.main.bounds.width - 32
+        let height: CGFloat = 125
+        return CGSize(width: width, height: height)
     }
 }

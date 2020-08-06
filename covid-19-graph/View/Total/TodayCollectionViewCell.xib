@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TodayCollectionViewCell" id="gTV-IL-0wX" customClass="TodayCollectionViewCell" customModule="covid_19_graph" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="960,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssv-kT-MlU" userLabel="Num">
+                        <rect key="frame" x="16" y="16" width="152.5" height="48"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="人数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwq-fm-GNi" userLabel="Title">
+                        <rect key="frame" x="255" y="80" width="49" height="29"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Dwq-fm-GNi" secondAttribute="bottom" constant="16" id="1wz-aj-9hl"/>
+                <constraint firstItem="Dwq-fm-GNi" firstAttribute="top" secondItem="Ssv-kT-MlU" secondAttribute="bottom" constant="16" id="48b-rm-AK4"/>
+                <constraint firstItem="Ssv-kT-MlU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="ChI-fe-AYF"/>
+                <constraint firstItem="Ssv-kT-MlU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="Rct-QK-Hve"/>
+                <constraint firstAttribute="trailing" secondItem="Dwq-fm-GNi" secondAttribute="trailing" constant="16" id="TNn-vW-oyn"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="243" height="121"/>
+            <connections>
+                <outlet property="numLabel" destination="Ssv-kT-MlU" id="ICi-fK-Iyh"/>
+                <outlet property="titleLabel" destination="Dwq-fm-GNi" id="5EF-Sx-Red"/>
+            </connections>
+            <point key="canvasLocation" x="76.811594202898561" y="78.683035714285708"/>
+        </collectionViewCell>
+    </objects>
+</document>

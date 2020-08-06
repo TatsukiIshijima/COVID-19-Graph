@@ -12,6 +12,14 @@ class TodayTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        contentView.layer.masksToBounds = true
+        contentView.layer.cornerRadius = 10.0
+
+        layer.masksToBounds = false
+        layer.shadowOffset = CGSize(width: 2, height: 4)
+        layer.shadowRadius = 10.0
+        layer.shadowOpacity = 0.5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
