@@ -42,6 +42,15 @@ final class TotalViewController: UIViewController {
             }
         }
 
+        appDelegate.appContainer.covid19Repository.fetchStatistics().startWithResult { result in
+            switch result {
+            case let .success(prefecture):
+                print("FetchStatistics Success \(prefecture.all.count) \(prefecture.all[0].male.generationsCount.generation00s)")
+            case let .failure(error):
+                print("FetchStatistics Error \(error)")
+            }
+        }
+
         totalTableView.delegate = self
         totalTableView.dataSource = self
         totalTableView.register(R.nib.totalTableViewCell)

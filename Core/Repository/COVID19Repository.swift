@@ -25,4 +25,8 @@ public final class COVID19Repository {
     public func fetchTotalPrediction() -> SignalProducer<TotalPredictionResponse, Error> {
         return client.requestTotalPrediction()
     }
+
+    public func fetchStatistics() -> SignalProducer<PrefectureStatisticsResponse, Error> {
+        return client.requestStatistics()
+    }
 }

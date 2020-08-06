@@ -33,4 +33,8 @@ public final class COVID19Client: APIClient {
         let url = "\(totalUrl)?predict=true"
         return getRequest(baseUrl: url, parameters: nil)
     }
+
+    public func requestStatistics() -> SignalProducer<PrefectureStatisticsResponse, Error> {
+        return getRequest(baseUrl: statistics, parameters: nil)
+    }
 }
