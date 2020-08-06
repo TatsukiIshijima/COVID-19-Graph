@@ -21,4 +21,8 @@ public final class COVID19Repository {
     public func fetchTotalHistory() -> SignalProducer<TotalHistoryResponse, Error> {
         return client.requestTotalHistory()
     }
+
+    public func fetchTotalPrediction() -> SignalProducer<TotalPredictionResponse, Error> {
+        return client.requestTotalPrediction()
+    }
 }
