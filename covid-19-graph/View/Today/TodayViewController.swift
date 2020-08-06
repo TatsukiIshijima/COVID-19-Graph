@@ -66,10 +66,6 @@ final class TodayViewController: UIViewController {
         collectionView.dataSource = self
 
         collectionView.register(R.nib.todayCollectionViewCell)
-
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 25
-        collectionView.collectionViewLayout = layout
     }
 }
 
@@ -82,7 +78,7 @@ extension TodayViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let todayCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.todayCollectionViewCell, for: indexPath) else {
-            fatalError("")
+            fatalError("failed to dequeue with \(R.reuseIdentifier.todayCollectionViewCell)")
         }
         todayCollectionViewCell.setContent(backgroundColor: .lightGray, num: 1000, title: "ほげ")
         return todayCollectionViewCell
@@ -90,9 +86,20 @@ extension TodayViewController: UICollectionViewDataSource {
 }
 
 extension TodayViewController: UICollectionViewDelegateFlowLayout {
+    // セルの大きさ設定
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width: CGFloat = UIScreen.main.bounds.width - 32
+        let width: CGFloat = UIScreen.main.bounds.width - 48
         let height: CGFloat = 125
         return CGSize(width: width, height: height)
+    }
+
+    // セッションごとのマージン設定
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 24, left: 0, bottom: 24, right: 0)
+    }
+
+    // セル間のマージン設定
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat(24)
     }
 }
