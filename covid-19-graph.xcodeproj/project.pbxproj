@@ -42,6 +42,10 @@
 		495BCD2524D3BB9500D166A8 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */; };
 		495BCD2624D3BB9500D166A8 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		496C1E2124DB923500521D25 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C1E2024DB923500521D25 /* APIRequest.swift */; };
+		496C1E2524DBC5B300521D25 /* GenerationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C1E2424DBC5B300521D25 /* GenerationsResponse.swift */; };
+		496C1E2724DBC7DC00521D25 /* GenderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C1E2624DBC7DC00521D25 /* GenderResponse.swift */; };
+		496C1E2924DBC9EF00521D25 /* StatisticsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C1E2824DBC9EF00521D25 /* StatisticsResponse.swift */; };
+		496C1E2B24DBCAE800521D25 /* PrefectureStatisticsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C1E2A24DBCAE800521D25 /* PrefectureStatisticsResponse.swift */; };
 		498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 498EDF1624D2F730000CB11B /* .swiftlint.yml */; };
 		49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753A24D19CDA009EC846 /* AppDelegate.swift */; };
 		49A6753D24D19CDA009EC846 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753C24D19CDA009EC846 /* SceneDelegate.swift */; };
@@ -172,6 +176,10 @@
 		494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		496C1E2024DB923500521D25 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		496C1E2424DBC5B300521D25 /* GenerationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsResponse.swift; sourceTree = "<group>"; };
+		496C1E2624DBC7DC00521D25 /* GenderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderResponse.swift; sourceTree = "<group>"; };
+		496C1E2824DBC9EF00521D25 /* StatisticsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsResponse.swift; sourceTree = "<group>"; };
+		496C1E2A24DBCAE800521D25 /* PrefectureStatisticsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureStatisticsResponse.swift; sourceTree = "<group>"; };
 		498EDF1624D2F730000CB11B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		498EDF1924D2FB8E000CB11B /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		498EDF1A24D2FB9E000CB11B /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -399,6 +407,17 @@
 			path = Total;
 			sourceTree = "<group>";
 		};
+		496C1E2324DBC55600521D25 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				496C1E2424DBC5B300521D25 /* GenerationsResponse.swift */,
+				496C1E2624DBC7DC00521D25 /* GenderResponse.swift */,
+				496C1E2824DBC9EF00521D25 /* StatisticsResponse.swift */,
+				496C1E2A24DBCAE800521D25 /* PrefectureStatisticsResponse.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
 		498EDF1824D2FB58000CB11B /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +544,7 @@
 		49B57D2324D3C73600D3E828 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				496C1E2324DBC55600521D25 /* Statistics */,
 				496C1E2224DBC51900521D25 /* Total */,
 				49B57D2E24D40F8500D3E828 /* APIResponse.swift */,
 			);
@@ -907,14 +927,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				49B2EEF424DAEB5E000CD25D /* TotalHistoryResponse.swift in Sources */,
+				496C1E2724DBC7DC00521D25 /* GenderResponse.swift in Sources */,
 				49B2EEF824DAEBBF000CD25D /* APIResponse.swift in Sources */,
 				49B2EEF624DAEBB8000CD25D /* TotalResponse.swift in Sources */,
+				496C1E2B24DBCAE800521D25 /* PrefectureStatisticsResponse.swift in Sources */,
 				49B2EEFE24DAEF9C000CD25D /* PredictionResponse.swift in Sources */,
 				49B2EEF924DAEBDE000CD25D /* APIClient.swift in Sources */,
 				49B2EEFA24DAEBED000CD25D /* COVID19Client.swift in Sources */,
 				49B2EEF524DAEBAB000CD25D /* COVID19Repository.swift in Sources */,
 				496C1E2124DB923500521D25 /* APIRequest.swift in Sources */,
 				49B2EEFC24DAEF40000CD25D /* TotalPredictionResponse.swift in Sources */,
+				496C1E2924DBC9EF00521D25 /* StatisticsResponse.swift in Sources */,
+				496C1E2524DBC5B300521D25 /* GenerationsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
