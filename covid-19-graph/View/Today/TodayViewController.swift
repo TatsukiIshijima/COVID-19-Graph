@@ -54,7 +54,7 @@ final class TodayViewController: UIViewController {
          */
 
         // TODO: この辺りはTabBarで使用する画面としてまとめたい
-        navigationController?.navigationBar.barTintColor = UIColor(named: R.color.mainColor.name)
+        navigationController?.navigationBar.barTintColor = UIColor(named: R.color.primaryColor.name)
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
@@ -80,7 +80,20 @@ extension TodayViewController: UICollectionViewDataSource {
         guard let todayCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.todayCollectionViewCell, for: indexPath) else {
             fatalError("failed to dequeue with \(R.reuseIdentifier.todayCollectionViewCell)")
         }
-        todayCollectionViewCell.setContent(backgroundColor: .lightGray, num: 1000, title: "ほげ")
+        var color: UIColor = .gray
+        switch indexPath.row {
+        case 0:
+            color = R.color.orange() ?? .gray
+        case 1:
+            color = R.color.primaryColor() ?? .gray
+        case 2:
+            color = R.color.green() ?? .gray
+        case 3:
+            color = R.color.navy() ?? .gray
+        default:
+            color = .gray
+        }
+        todayCollectionViewCell.setContent(backgroundColor: color, num: 1000, title: "ほげ")
         return todayCollectionViewCell
     }
 }
