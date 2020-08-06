@@ -20,6 +20,10 @@
 		490C958124D68630002C0F45 /* PrefectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C958024D6862F002C0F45 /* PrefectureViewController.swift */; };
 		490C958324D6864E002C0F45 /* PrefectureViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C958224D6864E002C0F45 /* PrefectureViewController.storyboard */; };
 		492630A924D7F46700261690 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630A824D7F46700261690 /* Int+Extension.swift */; };
+		4928897324DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4928897124DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.swift */; };
+		4928897424DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4928897224DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.xib */; };
+		4928897724DC3D59002DCCC2 /* CircleGraphCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4928897524DC3D59002DCCC2 /* CircleGraphCollectionViewCell.swift */; };
+		4928897824DC3D59002DCCC2 /* CircleGraphCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4928897624DC3D59002DCCC2 /* CircleGraphCollectionViewCell.xib */; };
 		492C376E24DA41580083CEEE /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492C376524DA41570083CEEE /* Core.framework */; };
 		492C377524DA41580083CEEE /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492C377424DA41580083CEEE /* CoreTests.swift */; };
 		492C377724DA41580083CEEE /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 492C376724DA41570083CEEE /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -149,6 +153,10 @@
 		490C958024D6862F002C0F45 /* PrefectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureViewController.swift; sourceTree = "<group>"; };
 		490C958224D6864E002C0F45 /* PrefectureViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrefectureViewController.storyboard; sourceTree = "<group>"; };
 		492630A824D7F46700261690 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		4928897124DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGrapheCollectionViewCell.swift; sourceTree = "<group>"; };
+		4928897224DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarGrapheCollectionViewCell.xib; sourceTree = "<group>"; };
+		4928897524DC3D59002DCCC2 /* CircleGraphCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGraphCollectionViewCell.swift; sourceTree = "<group>"; };
+		4928897624DC3D59002DCCC2 /* CircleGraphCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleGraphCollectionViewCell.xib; sourceTree = "<group>"; };
 		492C376524DA41570083CEEE /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		492C376724DA41570083CEEE /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		492C376824DA41570083CEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -422,6 +430,10 @@
 			children = (
 				490C958024D6862F002C0F45 /* PrefectureViewController.swift */,
 				490C958224D6864E002C0F45 /* PrefectureViewController.storyboard */,
+				4928897124DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.swift */,
+				4928897224DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.xib */,
+				4928897524DC3D59002DCCC2 /* CircleGraphCollectionViewCell.swift */,
+				4928897624DC3D59002DCCC2 /* CircleGraphCollectionViewCell.xib */,
 			);
 			path = Prefecture;
 			sourceTree = "<group>";
@@ -750,6 +762,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4928897824DC3D59002DCCC2 /* CircleGraphCollectionViewCell.xib in Resources */,
 				498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */,
 				490C958324D6864E002C0F45 /* PrefectureViewController.storyboard in Resources */,
 				4905C65D24D547C7005DE24F /* HomeViewController.storyboard in Resources */,
@@ -759,6 +772,7 @@
 				49A6754424D19CDE009EC846 /* Assets.xcassets in Resources */,
 				490C957F24D67DC5002C0F45 /* SettingsViewController.storyboard in Resources */,
 				49940E4724DBEA2600CAC6FA /* TodayCollectionViewCell.xib in Resources */,
+				4928897424DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -944,6 +958,7 @@
 				49B57D3524D4467700D3E828 /* FactoryProtocol.swift in Sources */,
 				49B2EED924DA6EAC000CD25D /* SplashCoordinator.swift in Sources */,
 				49A6753F24D19CDA009EC846 /* HomeViewController.swift in Sources */,
+				4928897724DC3D59002DCCC2 /* CircleGraphCollectionViewCell.swift in Sources */,
 				492630A924D7F46700261690 /* Int+Extension.swift in Sources */,
 				49B2EEE324DA92B7000CD25D /* NavigationCoordinatorProtocol.swift in Sources */,
 				49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */,
@@ -952,6 +967,7 @@
 				49940E4624DBEA2600CAC6FA /* TodayCollectionViewCell.swift in Sources */,
 				49B2EEEC24DA9F90000CD25D /* PrefectureCoordinator.swift in Sources */,
 				490C958124D68630002C0F45 /* PrefectureViewController.swift in Sources */,
+				4928897324DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.swift in Sources */,
 				49B2EEEE24DAA072000CD25D /* SettingsCoordinator.swift in Sources */,
 				49B2EED524DA5049000CD25D /* AppCoordinator.swift in Sources */,
 				49A6753D24D19CDA009EC846 /* SceneDelegate.swift in Sources */,

@@ -15,24 +15,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prefecture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4K-Tx-2bU">
-                                <rect key="frame" x="167" y="437.5" width="80.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cJY-Nn-aQ3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="K4G-JX-l8j">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="k4K-Tx-2bU" firstAttribute="centerY" secondItem="HB2-Xi-nfU" secondAttribute="centerY" id="q2a-9N-nCk"/>
-                            <constraint firstItem="k4K-Tx-2bU" firstAttribute="centerX" secondItem="HB2-Xi-nfU" secondAttribute="centerX" id="ySX-c4-2Aw"/>
+                            <constraint firstItem="cJY-Nn-aQ3" firstAttribute="top" secondItem="QUj-nO-yM9" secondAttribute="top" id="LOS-eY-VKE"/>
+                            <constraint firstItem="cJY-Nn-aQ3" firstAttribute="trailing" secondItem="QUj-nO-yM9" secondAttribute="trailing" id="O50-XG-dCa"/>
+                            <constraint firstItem="cJY-Nn-aQ3" firstAttribute="leading" secondItem="QUj-nO-yM9" secondAttribute="leading" id="OqD-4b-7VI"/>
+                            <constraint firstItem="cJY-Nn-aQ3" firstAttribute="bottom" secondItem="QUj-nO-yM9" secondAttribute="bottom" id="evh-B7-Rxo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QUj-nO-yM9"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="cJY-Nn-aQ3" id="ZY8-tD-961"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyU-Fj-KUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-375" y="91"/>
+            <point key="canvasLocation" x="-375.36231884057975" y="90.401785714285708"/>
         </scene>
     </scenes>
 </document>
