@@ -326,7 +326,7 @@
 		4905C65724D53D8B005DE24F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				493BC6F324D7DFDF00B581D7 /* Total */,
+				493BC6F324D7DFDF00B581D7 /* Today */,
 				49A6753E24D19CDA009EC846 /* HomeViewController.swift */,
 				4905C65824D53E83005DE24F /* SplashViewController.swift */,
 				4905C65A24D54473005DE24F /* SplashViewController.storyboard */,
@@ -367,7 +367,7 @@
 			path = CoreTests;
 			sourceTree = "<group>";
 		};
-		493BC6F324D7DFDF00B581D7 /* Total */ = {
+		493BC6F324D7DFDF00B581D7 /* Today */ = {
 			isa = PBXGroup;
 			children = (
 				4905C66624D5A087005DE24F /* TodayViewController.swift */,
@@ -375,7 +375,7 @@
 				49940E4424DBEA2600CAC6FA /* TodayCollectionViewCell.swift */,
 				49940E4524DBEA2600CAC6FA /* TodayCollectionViewCell.xib */,
 			);
-			path = Total;
+			path = Today;
 			sourceTree = "<group>";
 		};
 		496C1E2224DBC51900521D25 /* Total */ = {
