@@ -11,45 +11,56 @@ final class TotalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            fatalError("AppDelegate is nil.")
-        }
+        /*
+         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+         fatalError("AppDelegate is nil.")
+         }
 
-        appDelegate.appContainer.covid19Repository.fetchTotal().startWithResult { result in
-            switch result {
-            case let .success(total):
-                print("FetchTotal Success \(total.date)")
-            case let .failure(error):
-                print("FetchTotal Error \(error)")
-            }
-        }
+         appDelegate.appContainer.covid19Repository.fetchTotal().startWithResult { result in
+         switch result {
+         case let .success(total):
+         print("FetchTotal Success \(total.date)")
+         case let .failure(error):
+         print("FetchTotal Error \(error)")
+         }
+         }
 
-        appDelegate.appContainer.covid19Repository.fetchTotalHistory().startWithResult { result in
-            switch result {
-            case let .success(totalHistory):
-                print("FetchTotalHistory Success \(totalHistory.history.count)")
-            case let .failure(error):
-                print("FetchTotalHistory Error \(error)")
-            }
-        }
+         appDelegate.appContainer.covid19Repository.fetchTotalHistory().startWithResult { result in
+         switch result {
+         case let .success(totalHistory):
+         print("FetchTotalHistory Success \(totalHistory.history.count)")
+         case let .failure(error):
+         print("FetchTotalHistory Error \(error)")
+         }
+         }
 
-        appDelegate.appContainer.covid19Repository.fetchTotalPrediction().startWithResult { result in
-            switch result {
-            case let .success(totalPrediction):
-                print("FetchTotalPrediction Success \(totalPrediction.total.count)")
-            case let .failure(error):
-                print("FetchTotalPrediction Error \(error)")
-            }
-        }
+         appDelegate.appContainer.covid19Repository.fetchTotalPrediction().startWithResult { result in
+         switch result {
+         case let .success(totalPrediction):
+         print("FetchTotalPrediction Success \(totalPrediction.total.count)")
+         case let .failure(error):
+         print("FetchTotalPrediction Error \(error)")
+         }
+         }
 
-        appDelegate.appContainer.covid19Repository.fetchStatistics().startWithResult { result in
-            switch result {
-            case let .success(prefecture):
-                print("FetchStatistics Success \(prefecture.all.count) \(prefecture.all[0].male.generationsCount.generation00s)")
-            case let .failure(error):
-                print("FetchStatistics Error \(error)")
-            }
-        }
+         appDelegate.appContainer.covid19Repository.fetchStatistics().startWithResult { result in
+         switch result {
+         case let .success(prefecture):
+         print("FetchStatistics Success \(prefecture.all.count) \(prefecture.all[0].male.generationsCount.generation00s)")
+         case let .failure(error):
+         print("FetchStatistics Error \(error)")
+         }
+         }
+         */
+
+        // TODO: この辺りはTabBarで使用する画面としてまとめたい
+        navigationController?.navigationBar.barTintColor = UIColor(named: R.color.mainColor.name)
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.titleTextAttributes = [
+            .foregroundColor: UIColor.white
+        ]
 
         totalTableView.delegate = self
         totalTableView.dataSource = self
