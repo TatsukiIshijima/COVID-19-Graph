@@ -7,7 +7,7 @@ import Charts
 import UIKit
 
 class BarGrapheCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var barChartView: BarChartView!
+    @IBOutlet private weak var barChartView: BarChartView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

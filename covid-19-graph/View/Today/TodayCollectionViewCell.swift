@@ -7,7 +7,7 @@ import Charts
 import UIKit
 
 class TodayCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var barChartView: BarChartView!
+    @IBOutlet private weak var barChartView: BarChartView!
     @IBOutlet private weak var numLabel: UILabel!
     @IBOutlet private weak var titleLabel: UILabel!
 
