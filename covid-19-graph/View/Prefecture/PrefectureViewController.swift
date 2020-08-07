@@ -40,7 +40,8 @@ extension PrefectureViewController: UICollectionViewDataSource {
             guard let barGraphCell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.barGraphCollectionViewCell, for: indexPath) else {
                 fatalError()
             }
-            barGraphCell.backgroundColor = .gray
+            // barGraphCell.backgroundColor = .gray
+            barGraphCell.setChart()
             return barGraphCell
         case 1:
             guard let circleGraphCell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.circleGraphCollectionViewCell, for: indexPath) else {
@@ -57,8 +58,8 @@ extension PrefectureViewController: UICollectionViewDataSource {
 extension PrefectureViewController: UICollectionViewDelegateFlowLayout {
     // セルの大きさ設定
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width: CGFloat = UIScreen.main.bounds.width
-        let height: CGFloat = 125
+        let width: CGFloat = UIScreen.main.bounds.width - 32
+        let height: CGFloat = 250
         return CGSize(width: width, height: height)
     }
 
