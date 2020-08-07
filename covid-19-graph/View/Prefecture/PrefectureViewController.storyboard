@@ -15,30 +15,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cJY-Nn-aQ3">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEm-Rg-BxC" customClass="JapanMapView" customModule="covid_19_graph" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="K4G-JX-l8j">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="cJY-Nn-aQ3" firstAttribute="top" secondItem="QUj-nO-yM9" secondAttribute="top" id="LOS-eY-VKE"/>
-                            <constraint firstItem="cJY-Nn-aQ3" firstAttribute="trailing" secondItem="QUj-nO-yM9" secondAttribute="trailing" id="O50-XG-dCa"/>
-                            <constraint firstItem="cJY-Nn-aQ3" firstAttribute="leading" secondItem="QUj-nO-yM9" secondAttribute="leading" id="OqD-4b-7VI"/>
-                            <constraint firstItem="cJY-Nn-aQ3" firstAttribute="bottom" secondItem="QUj-nO-yM9" secondAttribute="bottom" id="evh-B7-Rxo"/>
+                            <constraint firstItem="hEm-Rg-BxC" firstAttribute="trailing" secondItem="QUj-nO-yM9" secondAttribute="trailing" id="3XU-N6-XXs"/>
+                            <constraint firstItem="hEm-Rg-BxC" firstAttribute="leading" secondItem="QUj-nO-yM9" secondAttribute="leading" id="BlE-My-ZfZ"/>
+                            <constraint firstItem="hEm-Rg-BxC" firstAttribute="top" secondItem="QUj-nO-yM9" secondAttribute="top" id="yyS-uc-vNF"/>
+                            <constraint firstItem="hEm-Rg-BxC" firstAttribute="bottom" secondItem="QUj-nO-yM9" secondAttribute="bottom" id="zKo-yL-Z7d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QUj-nO-yM9"/>
                     </view>
-                    <connections>
-                        <outlet property="collectionView" destination="cJY-Nn-aQ3" id="ZY8-tD-961"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyU-Fj-KUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
