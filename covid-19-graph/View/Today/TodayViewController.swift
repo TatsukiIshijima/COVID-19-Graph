@@ -93,7 +93,7 @@ extension TodayViewController: UICollectionViewDataSource {
         default:
             color = .gray
         }
-        todayCollectionViewCell.setContent(backgroundColor: color, num: 1000, title: "ほげ")
+        todayCollectionViewCell.setContent(backgroundColor: color, num: 1000, title: "参加人数")
         return todayCollectionViewCell
     }
 }

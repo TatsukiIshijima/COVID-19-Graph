@@ -16,14 +16,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dc-5V-SUY" customClass="BarChartView" customModule="Charts">
+                        <rect key="frame" x="16" y="64" width="174.5" height="45"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="960,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssv-kT-MlU" userLabel="Num">
                         <rect key="frame" x="16" y="16" width="152.5" height="48"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="人数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwq-fm-GNi" userLabel="Title">
-                        <rect key="frame" x="255" y="80" width="49" height="29"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="参加人数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwq-fm-GNi" userLabel="Title">
+                        <rect key="frame" x="206.5" y="80" width="97.5" height="29"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -34,12 +38,17 @@
                 <constraint firstAttribute="bottom" secondItem="Dwq-fm-GNi" secondAttribute="bottom" constant="16" id="1wz-aj-9hl"/>
                 <constraint firstItem="Dwq-fm-GNi" firstAttribute="top" secondItem="Ssv-kT-MlU" secondAttribute="bottom" constant="16" id="48b-rm-AK4"/>
                 <constraint firstItem="Ssv-kT-MlU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="ChI-fe-AYF"/>
+                <constraint firstItem="4dc-5V-SUY" firstAttribute="top" secondItem="Ssv-kT-MlU" secondAttribute="bottom" id="RRV-gw-XAj"/>
                 <constraint firstItem="Ssv-kT-MlU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="Rct-QK-Hve"/>
                 <constraint firstAttribute="trailing" secondItem="Dwq-fm-GNi" secondAttribute="trailing" constant="16" id="TNn-vW-oyn"/>
+                <constraint firstItem="Dwq-fm-GNi" firstAttribute="leading" secondItem="4dc-5V-SUY" secondAttribute="trailing" constant="16" id="VTU-na-NRG"/>
+                <constraint firstItem="4dc-5V-SUY" firstAttribute="bottom" secondItem="Dwq-fm-GNi" secondAttribute="bottom" id="YY4-Jj-aM8"/>
+                <constraint firstItem="4dc-5V-SUY" firstAttribute="leading" secondItem="Ssv-kT-MlU" secondAttribute="leading" id="jn6-6T-jru"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="243" height="121"/>
             <connections>
+                <outlet property="barChartView" destination="4dc-5V-SUY" id="yv4-fu-Hfk"/>
                 <outlet property="numLabel" destination="Ssv-kT-MlU" id="ICi-fK-Iyh"/>
                 <outlet property="titleLabel" destination="Dwq-fm-GNi" id="5EF-Sx-Red"/>
             </connections>
