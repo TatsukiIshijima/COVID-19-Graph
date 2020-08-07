@@ -33,6 +33,8 @@
 		492C377B24DA41580083CEEE /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 492C376524DA41570083CEEE /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		492C379024DA43DF0083CEEE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; };
 		492C379124DA43DF0083CEEE /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; };
+		4942934E24DD498C006B5C58 /* JapanMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942934D24DD498C006B5C58 /* JapanMap.swift */; };
+		4942935024DD4BD8006B5C58 /* JapanMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942934F24DD4BD8006B5C58 /* JapanMapView.swift */; };
 		495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; };
 		495BCD2224D3BB9500D166A8 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		495BCD2324D3BB9500D166A8 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; };
@@ -168,6 +170,8 @@
 		492C377424DA41580083CEEE /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		492C377624DA41580083CEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4936667A24D992AF00A2BBA0 /* Core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Core.framework; path = Core/Core.framework; sourceTree = "<group>"; };
+		4942934D24DD498C006B5C58 /* JapanMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JapanMap.swift; sourceTree = "<group>"; };
+		4942934F24DD4BD8006B5C58 /* JapanMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapanMapView.swift; sourceTree = "<group>"; };
 		494DB3CC24D1A60400C391EA /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		494DB3D424D1B2D400C391EA /* ReactiveMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMapKit.framework; path = Carthage/Build/iOS/ReactiveMapKit.framework; sourceTree = "<group>"; };
@@ -391,6 +395,15 @@
 			path = Today;
 			sourceTree = "<group>";
 		};
+		4942934C24DD4933006B5C58 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4942934D24DD498C006B5C58 /* JapanMap.swift */,
+				49A6754324D19CDE009EC846 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		496C1E2224DBC51900521D25 /* Total */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +453,7 @@
 				4928897224DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.xib */,
 				4928897524DC3D59002DCCC2 /* CircleGraphCollectionViewCell.swift */,
 				4928897624DC3D59002DCCC2 /* CircleGraphCollectionViewCell.xib */,
+				4942934F24DD4BD8006B5C58 /* JapanMapView.swift */,
 			);
 			path = Prefecture;
 			sourceTree = "<group>";
@@ -475,6 +489,7 @@
 		49A6753924D19CDA009EC846 /* covid-19-graph */ = {
 			isa = PBXGroup;
 			children = (
+				4942934C24DD4933006B5C58 /* Resource */,
 				49B2EECD24DA4B29000CD25D /* Coordinator */,
 				492630A724D7F3A000261690 /* Extension */,
 				4905C65724D53D8B005DE24F /* View */,
@@ -482,7 +497,6 @@
 				498EDF1824D2FB58000CB11B /* Configurations */,
 				49A6753A24D19CDA009EC846 /* AppDelegate.swift */,
 				49A6753C24D19CDA009EC846 /* SceneDelegate.swift */,
-				49A6754324D19CDE009EC846 /* Assets.xcassets */,
 				49A6754524D19CDE009EC846 /* LaunchScreen.storyboard */,
 				49A6754824D19CDE009EC846 /* Info.plist */,
 			);
@@ -962,6 +976,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4942935024DD4BD8006B5C58 /* JapanMapView.swift in Sources */,
 				49B57D3524D4467700D3E828 /* FactoryProtocol.swift in Sources */,
 				49B2EED924DA6EAC000CD25D /* SplashCoordinator.swift in Sources */,
 				49A6753F24D19CDA009EC846 /* HomeViewController.swift in Sources */,
@@ -974,6 +989,7 @@
 				49940E4624DBEA2600CAC6FA /* TodayCollectionViewCell.swift in Sources */,
 				49B2EEEC24DA9F90000CD25D /* PrefectureCoordinator.swift in Sources */,
 				490C958124D68630002C0F45 /* PrefectureViewController.swift in Sources */,
+				4942934E24DD498C006B5C58 /* JapanMap.swift in Sources */,
 				4928897324DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.swift in Sources */,
 				49B2EEEE24DAA072000CD25D /* SettingsCoordinator.swift in Sources */,
 				49B2EED524DA5049000CD25D /* AppCoordinator.swift in Sources */,
