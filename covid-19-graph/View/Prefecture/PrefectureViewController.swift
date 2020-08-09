@@ -6,6 +6,8 @@
 import UIKit
 
 class PrefectureViewController: UIViewController {
+    @IBOutlet private weak var japanMapView: JapanMapView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,5 +19,24 @@ class PrefectureViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [
             .foregroundColor: UIColor.white
         ]
+
+        japanMapView.isUserInteractionEnabled = true
+
+        let selector = #selector(PrefectureViewController.tapAction(_:))
+        japanMapView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: selector))
+    }
+
+    @objc private func tapAction(_ sender: UITapGestureRecognizer) {
+        let originalTapPoint = sender.location(in: japanMapView)
+        // 以下は元画像のサイズ
+        let imageWidth: CGFloat = japanMapView.originalWidth
+        let imageHeight: CGFloat = japanMapView.originalHeight
+
+        let imageTapPoint = CGPoint(x: imageWidth / japanMapView.frame.width * originalTapPoint.x, y: imageHeight / japanMapView.frame.height * originalTapPoint.y)
+
+        if Prefecture.hokkaido.path.contains(imageTapPoint) {
+            print("Hokkaido Tapped!!")
+            japanMapView.fillPrefecture()
+        }
     }
 }
