@@ -310,57 +310,15 @@ public class JapanMap {
         Prefecture.hokkaido.path.miterLimit = 4
         Prefecture.hokkaido.path.stroke()
         
-        /*
-         //// TOKYO(ISLANDS) Drawing
-         let tOKYOISLANDSPath = UIBezierPath()
-         tOKYOISLANDSPath.move(to: CGPoint(x: 351.68, y: 465.91))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 352.53, y: 465.85), controlPoint1: CGPoint(x: 351.68, y: 465.91), controlPoint2: CGPoint(x: 352.47, y: 465.73))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 353.98, y: 467.24), controlPoint1: CGPoint(x: 352.59, y: 465.97), controlPoint2: CGPoint(x: 353.98, y: 467.24))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 354.59, y: 467.3), controlPoint1: CGPoint(x: 353.98, y: 467.24), controlPoint2: CGPoint(x: 354.53, y: 467.24))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 354.77, y: 468.76), controlPoint1: CGPoint(x: 354.65, y: 467.36), controlPoint2: CGPoint(x: 354.77, y: 468.76))
-         tOKYOISLANDSPath.addLine(to: CGPoint(x: 354.05, y: 469.49))
-         tOKYOISLANDSPath.addLine(to: CGPoint(x: 352.71, y: 468.94))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 352.65, y: 467.85), controlPoint1: CGPoint(x: 352.71, y: 468.94), controlPoint2: CGPoint(x: 352.71, y: 467.85))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 352.1, y: 467.85), controlPoint1: CGPoint(x: 352.59, y: 467.85), controlPoint2: CGPoint(x: 352.1, y: 467.85))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 351.56, y: 466.94), controlPoint1: CGPoint(x: 352.1, y: 467.85), controlPoint2: CGPoint(x: 351.56, y: 466.88))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 351.68, y: 465.91), controlPoint1: CGPoint(x: 351.56, y: 467), controlPoint2: CGPoint(x: 351.68, y: 465.91))
-         tOKYOISLANDSPath.close()
-         tOKYOISLANDSPath.move(to: CGPoint(x: 344.77, y: 432.02))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 345.74, y: 431.9), controlPoint1: CGPoint(x: 344.77, y: 431.96), controlPoint2: CGPoint(x: 345.74, y: 431.9))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 346.53, y: 432.51), controlPoint1: CGPoint(x: 345.74, y: 431.9), controlPoint2: CGPoint(x: 346.53, y: 432.44))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 346.47, y: 433.84), controlPoint1: CGPoint(x: 346.53, y: 432.57), controlPoint2: CGPoint(x: 346.53, y: 433.9))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 345.56, y: 434.45), controlPoint1: CGPoint(x: 346.41, y: 433.78), controlPoint2: CGPoint(x: 345.62, y: 434.45))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 344.53, y: 434.57), controlPoint1: CGPoint(x: 345.5, y: 434.45), controlPoint2: CGPoint(x: 344.53, y: 434.57))
-         tOKYOISLANDSPath.addLine(to: CGPoint(x: 344.1, y: 433.48))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 344.77, y: 432.02), controlPoint1: CGPoint(x: 344.1, y: 433.48), controlPoint2: CGPoint(x: 344.77, y: 432.08))
-         tOKYOISLANDSPath.close()
-         tOKYOISLANDSPath.move(to: CGPoint(x: 338.71, y: 421.05))
-         tOKYOISLANDSPath.addLine(to: CGPoint(x: 338.83, y: 421.84))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 338.4, y: 422.56), controlPoint1: CGPoint(x: 338.83, y: 421.84), controlPoint2: CGPoint(x: 338.46, y: 422.56))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 338.22, y: 424.69), controlPoint1: CGPoint(x: 338.34, y: 422.56), controlPoint2: CGPoint(x: 338.22, y: 424.69))
-         tOKYOISLANDSPath.addLine(to: CGPoint(x: 337.37, y: 424.02))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 337.5, y: 423.05), controlPoint1: CGPoint(x: 337.37, y: 424.02), controlPoint2: CGPoint(x: 337.5, y: 423.11))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 337.8, y: 422.08), controlPoint1: CGPoint(x: 337.5, y: 422.99), controlPoint2: CGPoint(x: 337.86, y: 422.08))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 338.71, y: 421.05), controlPoint1: CGPoint(x: 337.74, y: 422.08), controlPoint2: CGPoint(x: 338.71, y: 421.05))
-         tOKYOISLANDSPath.close()
-         tOKYOISLANDSPath.move(to: CGPoint(x: 340.61, y: 408.08))
-         tOKYOISLANDSPath.addLine(to: CGPoint(x: 342.17, y: 408.47))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 343.2, y: 409.53), controlPoint1: CGPoint(x: 342.17, y: 408.47), controlPoint2: CGPoint(x: 343.2, y: 409.5))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 343.2, y: 412.18), controlPoint1: CGPoint(x: 343.2, y: 409.56), controlPoint2: CGPoint(x: 343.2, y: 412.18))
-         tOKYOISLANDSPath.addLine(to: CGPoint(x: 341.72, y: 412.25))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 340.63, y: 411.07), controlPoint1: CGPoint(x: 341.72, y: 412.25), controlPoint2: CGPoint(x: 340.63, y: 411.1))
-         tOKYOISLANDSPath.addCurve(to: CGPoint(x: 340.61, y: 408.08), controlPoint1: CGPoint(x: 340.63, y: 411.04), controlPoint2: CGPoint(x: 340.61, y: 408.08))
-         tOKYOISLANDSPath.close()
-         strokeColor.setStroke()
-         tOKYOISLANDSPath.lineWidth = 0.5
-         tOKYOISLANDSPath.miterLimit = 4
-         tOKYOISLANDSPath.stroke()
-          */
+        //// TOKYO(ISLANDS) Drawing
+        strokeColor.setStroke()
+        Prefecture.ogasawara.path.lineWidth = 0.5
+        Prefecture.ogasawara.path.miterLimit = 4
+        Prefecture.ogasawara.path.stroke()
         
         context.restoreGState()
     }
     
-    @objc(JapanMapResizingBehavior)
     public enum ResizingBehavior: Int {
         case aspectFit /// The content is proportionally resized to fit into the target rectangle.
         case aspectFill /// The content is proportionally resized to completely fill the target rectangle.
