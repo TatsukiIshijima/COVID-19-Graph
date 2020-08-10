@@ -9,17 +9,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     let appContainer: AppContainer = AppContainer()
 
-    private var appCordinator: AppCoordinator?
+    private var appCoordinator: AppCoordinator?
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        self.window = window
+        window = UIWindow(frame: UIScreen.main.bounds)
+        guard let window = self.window else {
+            fatalError("Window is nil.")
+        }
 
         let splashCoordinator = SplashCoordinator(navigationController: UINavigationController())
-        let appCoordinator = AppCoordinator(window: window, coordinator: splashCoordinator)
-        appCordinator = appCoordinator
-        appCoordinator.start()
+        appCoordinator = AppCoordinator(window: window, coordinator: splashCoordinator)
+        appCoordinator?.start()
 
         return true
     }

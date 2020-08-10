@@ -14,6 +14,8 @@ class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     @IBAction func goToHome(_ sender: Any) {

@@ -18,7 +18,6 @@ final class SplashCoordinator: NavigationCoordinator {
             fatalError("failed to SplashViewController instantiate")
         }
         splashViewController.delegate = self
-        navigationController.setNavigationBarHidden(true, animated: false)
         navigationController.pushViewController(splashViewController, animated: false)
     }
 }
