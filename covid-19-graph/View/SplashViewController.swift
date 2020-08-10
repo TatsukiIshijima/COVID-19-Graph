@@ -10,6 +10,7 @@ protocol SplashViewControllerDelegate: class {
 }
 
 class SplashViewController: UIViewController {
+    weak var coordinator: SplashCoordinator?
     weak var delegate: SplashViewControllerDelegate?
 
     override func viewDidLoad() {

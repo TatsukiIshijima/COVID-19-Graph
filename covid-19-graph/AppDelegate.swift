@@ -8,8 +8,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     let appContainer: AppContainer = AppContainer()
-
-    private var appCoordinator: AppCoordinator?
+    var mainCoordinator: MainCoordinator?
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -18,9 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("Window is nil.")
         }
 
-        let splashCoordinator = SplashCoordinator(navigationController: UINavigationController())
-        appCoordinator = AppCoordinator(window: window, coordinator: splashCoordinator)
-        appCoordinator?.start()
+        let navigationController = UINavigationController()
+        mainCoordinator = MainCoordinator(navigationController: navigationController)
+        mainCoordinator?.start()
+
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
 
         return true
     }

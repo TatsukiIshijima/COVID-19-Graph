@@ -5,8 +5,10 @@
 
 import UIKit
 
-final class SplashCoordinator: NavigationCoordinator {
-    let navigationController: UINavigationController
+final class SplashCoordinator: Coordinator {
+    weak var parentCoordinator: MainCoordinator?
+    var childCoordinators = [Coordinator]()
+    var navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -17,17 +19,18 @@ final class SplashCoordinator: NavigationCoordinator {
         guard let splashViewController = storyboard.instantiateInitialViewController() as? SplashViewController else {
             fatalError("failed to SplashViewController instantiate")
         }
-        splashViewController.delegate = self
+        // splashViewController.delegate = self
+        splashViewController.coordinator = self
         navigationController.pushViewController(splashViewController, animated: false)
     }
 }
 
-extension SplashCoordinator: SplashViewControllerDelegate {
-    func goToHome() {
-        let todayCoordinator = TodayCoordinator(navigationController: UINavigationController())
-        let prefectureCoordinator = PrefectureCoordinator(navigationController: UINavigationController())
-        let settingsCoordinator = SettingsCoordinator(navigationController: UINavigationController())
-        let homeCoordinator = HomeCoordinator(navigationController: navigationController, childCoordinators: [todayCoordinator, prefectureCoordinator, settingsCoordinator])
-        homeCoordinator.start()
-    }
-}
+// extension SplashCoordinator: SplashViewControllerDelegate {
+//    func goToHome() {
+//        let todayCoordinator = TodayCoordinator(navigationController: UINavigationController())
+//        let prefectureCoordinator = PrefectureCoordinator(navigationController: UINavigationController())
+//        let settingsCoordinator = SettingsCoordinator(navigationController: UINavigationController())
+//        let homeCoordinator = HomeCoordinator(navigationController: navigationController, childCoordinators: [todayCoordinator, prefectureCoordinator, settingsCoordinator])
+//        homeCoordinator.start()
+//    }
+// }
