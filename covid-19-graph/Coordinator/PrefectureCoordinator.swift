@@ -14,9 +14,18 @@ final class PrefectureCoordinator: NavigationCoordinator {
 
     func start() {
         let storyboard = UIStoryboard(resource: R.storyboard.prefectureViewController)
-        guard let graphViewController = storyboard.instantiateInitialViewController() as? PrefectureViewController else {
-            fatalError("failed to GraphViewController instantiate")
+        guard let prefectureViewController = storyboard.instantiateInitialViewController() as? PrefectureViewController else {
+            fatalError("failed to PrefectureViewController instantiate")
         }
-        navigationController.pushViewController(graphViewController, animated: false)
+        prefectureViewController.delegate = self
+        navigationController.pushViewController(prefectureViewController, animated: false)
+    }
+}
+
+extension PrefectureCoordinator: PrefectureViewControllerDelegate {
+    func goToRegion(prefecture: Prefecture) {
+        print("goToRegion: \(prefecture)")
+        let regionCoordinator = RegionCoordinator(navigationController: navigationController)
+        regionCoordinator.start()
     }
 }

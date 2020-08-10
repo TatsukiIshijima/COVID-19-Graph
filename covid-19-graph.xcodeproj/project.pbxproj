@@ -21,6 +21,7 @@
 		490C958324D6864E002C0F45 /* PrefectureViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C958224D6864E002C0F45 /* PrefectureViewController.storyboard */; };
 		491EEB9A24DFE5D100E07765 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491EEB9924DFE5D100E07765 /* RegionViewController.swift */; };
 		491EEB9C24DFE5F200E07765 /* RegionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491EEB9B24DFE5F200E07765 /* RegionViewController.storyboard */; };
+		491EEB9E24DFE6D600E07765 /* RegionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491EEB9D24DFE6D600E07765 /* RegionCoordinator.swift */; };
 		492630A924D7F46700261690 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492630A824D7F46700261690 /* Int+Extension.swift */; };
 		4928897324DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4928897124DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.swift */; };
 		4928897424DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4928897224DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.xib */; };
@@ -170,6 +171,7 @@
 		490C958224D6864E002C0F45 /* PrefectureViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrefectureViewController.storyboard; sourceTree = "<group>"; };
 		491EEB9924DFE5D100E07765 /* RegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
 		491EEB9B24DFE5F200E07765 /* RegionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegionViewController.storyboard; sourceTree = "<group>"; };
+		491EEB9D24DFE6D600E07765 /* RegionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionCoordinator.swift; sourceTree = "<group>"; };
 		492630A824D7F46700261690 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		4928897124DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGrapheCollectionViewCell.swift; sourceTree = "<group>"; };
 		4928897224DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarGrapheCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -564,6 +566,7 @@
 				49B2EEE924DA9E8E000CD25D /* TodayCoordinator.swift */,
 				49B2EEEB24DA9F90000CD25D /* PrefectureCoordinator.swift */,
 				49B2EEED24DAA072000CD25D /* SettingsCoordinator.swift */,
+				491EEB9D24DFE6D600E07765 /* RegionCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1018,6 +1021,7 @@
 				49B2EED924DA6EAC000CD25D /* SplashCoordinator.swift in Sources */,
 				49A6753F24D19CDA009EC846 /* HomeViewController.swift in Sources */,
 				4928897724DC3D59002DCCC2 /* CircleGraphCollectionViewCell.swift in Sources */,
+				491EEB9E24DFE6D600E07765 /* RegionCoordinator.swift in Sources */,
 				492630A924D7F46700261690 /* Int+Extension.swift in Sources */,
 				49B2EEE324DA92B7000CD25D /* NavigationCoordinatorProtocol.swift in Sources */,
 				49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */,
