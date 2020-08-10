@@ -12,6 +12,7 @@ final class SplashCoordinator: Coordinator {
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        navigationController.setNavigationBarHidden(true, animated: false)
     }
 
     func start() {
@@ -19,18 +20,18 @@ final class SplashCoordinator: Coordinator {
         guard let splashViewController = storyboard.instantiateInitialViewController() as? SplashViewController else {
             fatalError("failed to SplashViewController instantiate")
         }
-        // splashViewController.delegate = self
+        splashViewController.delegate = self
         splashViewController.coordinator = self
         navigationController.pushViewController(splashViewController, animated: false)
     }
 }
 
-// extension SplashCoordinator: SplashViewControllerDelegate {
-//    func goToHome() {
-//        let todayCoordinator = TodayCoordinator(navigationController: UINavigationController())
-//        let prefectureCoordinator = PrefectureCoordinator(navigationController: UINavigationController())
-//        let settingsCoordinator = SettingsCoordinator(navigationController: UINavigationController())
-//        let homeCoordinator = HomeCoordinator(navigationController: navigationController, childCoordinators: [todayCoordinator, prefectureCoordinator, settingsCoordinator])
-//        homeCoordinator.start()
-//    }
-// }
+extension SplashCoordinator: SplashViewControllerDelegate {
+    func goToHome() {
+        let todayCoordinator = TodayCoordinator(navigationController: UINavigationController())
+        let prefectureCoordinator = PrefectureCoordinator(navigationController: UINavigationController())
+        let settingsCoordinator = SettingsCoordinator(navigationController: UINavigationController())
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController, childCoordinators: [todayCoordinator, prefectureCoordinator, settingsCoordinator])
+        homeCoordinator.start()
+    }
+}

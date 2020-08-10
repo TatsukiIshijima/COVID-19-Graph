@@ -375,9 +375,9 @@
 				49940E4824DC36E100CAC6FA /* Prefecture */,
 				493BC6F324D7DFDF00B581D7 /* Today */,
 				49A6753E24D19CDA009EC846 /* HomeViewController.swift */,
+				4905C65C24D547C7005DE24F /* HomeViewController.storyboard */,
 				4905C65824D53E83005DE24F /* SplashViewController.swift */,
 				4905C65A24D54473005DE24F /* SplashViewController.storyboard */,
-				4905C65C24D547C7005DE24F /* HomeViewController.storyboard */,
 				490C957C24D67DB6002C0F45 /* SettingsViewController.swift */,
 				490C957E24D67DC5002C0F45 /* SettingsViewController.storyboard */,
 			);
