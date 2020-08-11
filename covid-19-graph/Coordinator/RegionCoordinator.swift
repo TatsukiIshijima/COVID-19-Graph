@@ -5,8 +5,9 @@
 
 import UIKit
 
-final class RegionCoordinator: NavigationCoordinator {
-    let navigationController: UINavigationController
+final class RegionCoordinator: Coordinator {
+    var childCoordinators = [Coordinator]()
+    var navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController

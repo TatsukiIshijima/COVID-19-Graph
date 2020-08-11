@@ -6,7 +6,7 @@
 import UIKit
 
 final class HomeCoordinator: Coordinator {
-    weak var parentCoordinator: MainCoordinator?
+    weak var parentCoordinator: AppCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
 

@@ -8,7 +8,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     let appContainer: AppContainer = AppContainer()
-    var mainCoordinator: MainCoordinator?
+    var mainCoordinator: AppCoordinator?
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         let navigationController = UINavigationController()
-        mainCoordinator = MainCoordinator(navigationController: navigationController)
+        mainCoordinator = AppCoordinator(navigationController: navigationController)
         mainCoordinator?.start()
 
         window.rootViewController = navigationController

@@ -6,7 +6,7 @@
 import UIKit
 
 final class SplashCoordinator: Coordinator {
-    weak var parentCoordinator: MainCoordinator?
+    weak var parentCoordinator: AppCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
 
