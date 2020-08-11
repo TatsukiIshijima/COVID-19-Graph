@@ -5,8 +5,9 @@
 
 import UIKit
 
-final class PrefectureCoordinator: NavigationCoordinator {
-    let navigationController: UINavigationController
+final class PrefectureCoordinator: Coordinator {
+    var childCoordinators = [Coordinator]()
+    var navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
