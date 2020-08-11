@@ -6,7 +6,6 @@
 import UIKit
 
 final class HomeCoordinator: Coordinator {
-    weak var parentCoordinator: AppCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
 
@@ -25,6 +24,7 @@ final class HomeCoordinator: Coordinator {
         todayCoordinator.start()
         prefectureCoordinator.start()
         settingsCoordinator.start()
+        homeViewController.coordinator = self
         homeViewController.setViewControllers([todayCoordinator.navigationController, prefectureCoordinator.navigationController, settingsCoordinator.navigationController], animated: false)
         homeViewController.modalPresentationStyle = .fullScreen
         navigationController.present(homeViewController, animated: true, completion: nil)

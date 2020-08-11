@@ -7,6 +7,7 @@ import UIKit
 
 class RegionViewController: UIViewController {
     var prefecture: Prefecture?
+    var coordinator: RegionCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()

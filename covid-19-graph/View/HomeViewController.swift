@@ -9,6 +9,8 @@ import UIKit
 class HomeViewController: UITabBarController {
     private let tabIconSystemName = ["house", "map", "gear"]
 
+    var coordinator: HomeCoordinator?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

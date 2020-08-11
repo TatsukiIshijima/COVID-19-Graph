@@ -18,6 +18,7 @@ final class SettingsCoordinator: Coordinator {
         guard let settingsViewController = storyboard.instantiateInitialViewController() as? SettingsViewController else {
             fatalError("failed to SettingsViewController instantiate")
         }
+        settingsViewController.coordinator = self
         navigationController.pushViewController(settingsViewController, animated: false)
     }
 }

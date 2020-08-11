@@ -18,6 +18,7 @@ final class RegionCoordinator: Coordinator {
         guard let regionViewController = storyboard.instantiateInitialViewController() as? RegionViewController else {
             fatalError("failed to RegionController instantiate")
         }
+        regionViewController.coordinator = self
         navigationController.pushViewController(regionViewController, animated: true)
     }
 }

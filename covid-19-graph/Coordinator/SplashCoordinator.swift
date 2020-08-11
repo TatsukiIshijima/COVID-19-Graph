@@ -6,7 +6,7 @@
 import UIKit
 
 final class SplashCoordinator: Coordinator {
-    weak var parentCoordinator: AppCoordinator?
+    // weak var parentCoordinator: AppCoordinator?
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
 
@@ -20,14 +20,12 @@ final class SplashCoordinator: Coordinator {
         guard let splashViewController = storyboard.instantiateInitialViewController() as? SplashViewController else {
             fatalError("failed to SplashViewController instantiate")
         }
-        splashViewController.delegate = self
+        splashViewController.coordinator = self
         navigationController.pushViewController(splashViewController, animated: false)
     }
-}
 
-extension SplashCoordinator: SplashViewControllerDelegate {
     func goToHome() {
-        print("SplashCoordinator : goToHome called.")
-        parentCoordinator?.launchHome()
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController)
+        homeCoordinator.start()
     }
 }

@@ -20,16 +20,7 @@ class AppCoordinator: NSObject, Coordinator {
 
     private func launchSplash() {
         let splashCoordinator = SplashCoordinator(navigationController: navigationController)
-        splashCoordinator.parentCoordinator = self
-        childCoordinators.append(splashCoordinator)
         splashCoordinator.start()
-    }
-
-    func launchHome() {
-        let homeCoordinator = HomeCoordinator(navigationController: navigationController)
-        homeCoordinator.parentCoordinator = self
-        childCoordinators.append(homeCoordinator)
-        homeCoordinator.start()
     }
 }
 

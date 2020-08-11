@@ -8,6 +8,8 @@ import UIKit
 final class TodayViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
 
+    var coordinator: TodayCoordinator?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

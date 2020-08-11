@@ -5,14 +5,10 @@
 
 import UIKit
 
-protocol PrefectureViewControllerDelegate: AnyObject {
-    func goToRegion(prefecture: Prefecture)
-}
-
 class PrefectureViewController: UIViewController {
     @IBOutlet private weak var japanMapView: JapanMapView!
 
-    weak var delegate: PrefectureViewControllerDelegate?
+    var coordinator: PrefectureCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +39,7 @@ class PrefectureViewController: UIViewController {
         if Prefecture.hokkaido.path.contains(imageTapPoint) {
             print("Hokkaido Tapped!!")
             japanMapView.fillPrefecture()
-            if delegate != nil {
-                print("delegate is not nil.")
-            } else {
-                print("delegate is nil")
-            }
-            delegate?.goToRegion(prefecture: Prefecture.hokkaido)
+            coordinator?.goToRegion(prefecture: Prefecture.hokkaido)
         }
     }
 }

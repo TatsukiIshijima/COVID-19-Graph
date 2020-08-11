@@ -15,9 +15,10 @@ final class TodayCoordinator: Coordinator {
 
     func start() {
         let storyboard = UIStoryboard(resource: R.storyboard.todayViewController)
-        guard let totalViewController = storyboard.instantiateInitialViewController() as? TodayViewController else {
-            fatalError("failed to TotalViewController instantiate")
+        guard let todayViewController = storyboard.instantiateInitialViewController() as? TodayViewController else {
+            fatalError("failed to TodayViewController instantiate")
         }
-        navigationController.pushViewController(totalViewController, animated: true)
+        todayViewController.coordinator = self
+        navigationController.pushViewController(todayViewController, animated: true)
     }
 }

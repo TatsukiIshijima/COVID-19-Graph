@@ -18,14 +18,11 @@ final class PrefectureCoordinator: Coordinator {
         guard let prefectureViewController = storyboard.instantiateInitialViewController() as? PrefectureViewController else {
             fatalError("failed to PrefectureViewController instantiate")
         }
-        prefectureViewController.delegate = self
+        prefectureViewController.coordinator = self
         navigationController.pushViewController(prefectureViewController, animated: false)
     }
-}
 
-extension PrefectureCoordinator: PrefectureViewControllerDelegate {
     func goToRegion(prefecture: Prefecture) {
-        print("goToRegion: \(prefecture)")
         let regionCoordinator = RegionCoordinator(navigationController: navigationController)
         regionCoordinator.start()
     }
