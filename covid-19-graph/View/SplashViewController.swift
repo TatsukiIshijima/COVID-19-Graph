@@ -5,12 +5,11 @@
 
 import UIKit
 
-protocol SplashViewControllerDelegate: class {
+public protocol SplashViewControllerDelegate: AnyObject {
     func goToHome()
 }
 
 class SplashViewController: UIViewController {
-    weak var coordinator: SplashCoordinator?
     weak var delegate: SplashViewControllerDelegate?
 
     override func viewDidLoad() {
@@ -18,6 +17,10 @@ class SplashViewController: UIViewController {
     }
 
     @IBAction func goToHome(_ sender: Any) {
-        delegate?.goToHome()
+        guard let splashViewControllerDelegate = delegate else {
+            print("splashViewControllerDelegate is nil.")
+            return
+        }
+        splashViewControllerDelegate.goToHome()
     }
 }

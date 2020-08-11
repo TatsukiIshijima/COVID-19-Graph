@@ -21,17 +21,12 @@ final class SplashCoordinator: Coordinator {
             fatalError("failed to SplashViewController instantiate")
         }
         splashViewController.delegate = self
-        splashViewController.coordinator = self
         navigationController.pushViewController(splashViewController, animated: false)
     }
 }
 
 extension SplashCoordinator: SplashViewControllerDelegate {
     func goToHome() {
-        let todayCoordinator = TodayCoordinator(navigationController: UINavigationController())
-        let prefectureCoordinator = PrefectureCoordinator(navigationController: UINavigationController())
-        let settingsCoordinator = SettingsCoordinator(navigationController: UINavigationController())
-        let homeCoordinator = HomeCoordinator(navigationController: navigationController, childCoordinators: [todayCoordinator, prefectureCoordinator, settingsCoordinator])
-        homeCoordinator.start()
+        print("SplashCoordinator : goToHome called.")
     }
 }
