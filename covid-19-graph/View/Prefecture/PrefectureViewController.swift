@@ -37,7 +37,6 @@ class PrefectureViewController: UIViewController {
         let imageTapPoint = CGPoint(x: imageWidth / japanMapView.frame.width * originalTapPoint.x, y: imageHeight / japanMapView.frame.height * originalTapPoint.y)
 
         if Prefecture.hokkaido.path.contains(imageTapPoint) {
-            print("Hokkaido Tapped!!")
             japanMapView.fillPrefecture()
             coordinator?.goToRegion(prefecture: Prefecture.hokkaido)
         }

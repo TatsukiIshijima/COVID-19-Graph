@@ -23,7 +23,7 @@ final class PrefectureCoordinator: Coordinator {
     }
 
     func goToRegion(prefecture: Prefecture) {
-        let regionCoordinator = RegionCoordinator(navigationController: navigationController)
+        let regionCoordinator = RegionCoordinator(navigationController: navigationController, prefecture: prefecture)
         regionCoordinator.start()
     }
 }

@@ -20,5 +20,9 @@ class RegionViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [
             .foregroundColor: UIColor.white
         ]
+
+        if let prefecture = self.prefecture {
+            print("\(prefecture)")
+        }
     }
 }

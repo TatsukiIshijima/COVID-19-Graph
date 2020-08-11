@@ -104,7 +104,7 @@ import UIKit
     }
 
     func fillPrefecture() {
-        print("fillPrefecture")
+        // print("fillPrefecture")
         isFill = true
         // 以下で再度drawを呼び出す
         setNeedsDisplay()

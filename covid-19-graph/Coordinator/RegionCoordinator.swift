@@ -8,9 +8,11 @@ import UIKit
 final class RegionCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
+    var prefecture: Prefecture
 
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, prefecture: Prefecture) {
         self.navigationController = navigationController
+        self.prefecture = prefecture
     }
 
     func start() {
@@ -19,6 +21,7 @@ final class RegionCoordinator: Coordinator {
             fatalError("failed to RegionController instantiate")
         }
         regionViewController.coordinator = self
+        regionViewController.prefecture = prefecture
         navigationController.pushViewController(regionViewController, animated: true)
     }
 }
