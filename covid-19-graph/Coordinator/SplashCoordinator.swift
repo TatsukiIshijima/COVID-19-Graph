@@ -28,5 +28,6 @@ final class SplashCoordinator: Coordinator {
 extension SplashCoordinator: SplashViewControllerDelegate {
     func goToHome() {
         print("SplashCoordinator : goToHome called.")
+        parentCoordinator?.launchHome()
     }
 }

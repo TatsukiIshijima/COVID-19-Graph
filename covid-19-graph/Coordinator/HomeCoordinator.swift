@@ -5,13 +5,13 @@
 
 import UIKit
 
-final class HomeCoordinator: NavigationCoordinator {
-    let navigationController: UINavigationController
-    private let childCoordinators: [CoordinatorProtocol]
+final class HomeCoordinator: Coordinator {
+    weak var parentCoordinator: MainCoordinator?
+    var childCoordinators = [Coordinator]()
+    var navigationController: UINavigationController
 
-    init(navigationController: UINavigationController, childCoordinators: [CoordinatorProtocol]) {
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.childCoordinators = childCoordinators
     }
 
     func start() {
@@ -19,10 +19,10 @@ final class HomeCoordinator: NavigationCoordinator {
         guard let homeViewController = storyboard.instantiateInitialViewController() as? HomeViewController else {
             fatalError("failed to HomeViewController instantiate")
         }
-        childCoordinators.forEach { coordinator in
-            coordinator.start()
-        }
-        homeViewController.setViewControllers(childCoordinators.map { $0.viewController }, animated: false)
+        //        childCoordinators.forEach { coordinator in
+        //            coordinator.start()
+        //        }
+        //        homeViewController.setViewControllers(childCoordinators.map { $0.viewController }, animated: false)
         homeViewController.modalPresentationStyle = .fullScreen
         navigationController.present(homeViewController, animated: true, completion: nil)
     }
