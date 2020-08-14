@@ -7,8 +7,8 @@ import Alamofire
 import Foundation
 import ReactiveSwift
 
-public final class COVID19Repository {
-    var client: COVID19Client
+public class COVID19Repository {
+    private let client: COVID19Client
 
     public init(client: COVID19Client) {
         self.client = client
