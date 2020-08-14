@@ -3,6 +3,7 @@
 //  covid-19-graph
 //
 
+import SVProgressHUD
 import UIKit
 
 final class TodayViewController: UIViewController {
@@ -16,20 +17,6 @@ final class TodayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            fatalError("AppDelegate is nil.")
-        }
-
-        appContainer = appDelegate.appContainer
-
-        guard let appContainer = self.appContainer else {
-            fatalError("AppContaner is nil.")
-        }
-
-        appContainer.todayContainer = TodayContainer(repository: appContainer.covid19Repository)
-        viewModel = appContainer.todayContainer?.create()
-        viewModel?.fetchTotal()
-
         // TODO: この辺りはTabBarで使用する画面としてまとめたい
         navigationController?.navigationBar.barTintColor = UIColor(named: R.color.primaryColor.name)
         navigationController?.navigationBar.tintColor = .white
@@ -42,6 +29,38 @@ final class TodayViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(R.nib.todayCollectionViewCell)
+
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError("AppDelegate is nil.")
+        }
+
+        appContainer = appDelegate.appContainer
+
+        guard let appContainer = self.appContainer else {
+            fatalError("AppContaner is nil.")
+        }
+
+        appContainer.todayContainer = TodayContainer(repository: appContainer.covid19Repository)
+        viewModel = appContainer.todayContainer?.create()
+
+        guard let viewModel = viewModel else {
+            fatalError("TotalViewModel is nil.")
+        }
+
+        viewModel.totalProperty.signal.observeValues { total in
+            print(total ?? "total is nil.")
+        }
+        viewModel.totalHistoryProperty.signal.observeValues { history in
+            print(history ?? "history is nil.")
+        }
+        viewModel.totalErrorProperty.signal.observeValues { error in
+            print(error ?? "total error is nil.")
+        }
+        viewModel.loadingProperty.signal.observeValues { isLoading in
+            isLoading ? SVProgressHUD.show() : SVProgressHUD.dismiss()
+        }
+
+        viewModel.fetchTotal()
     }
 
     override func viewWillDisappear(_ animated: Bool) {

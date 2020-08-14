@@ -20,10 +20,9 @@ public final class TodayUseCase {
         fetchTotalZip.startWithResult { [weak self] result in
             switch result {
             case let .success(response):
-                self?.todayView.showTodayTotal()
+                self?.todayView.showTodayTotal(response: response)
             case let .failure(error):
-                print("\(error)")
-                self?.todayView.showError()
+                self?.todayView.showError(error: error)
             }
             self?.todayView.hideLoading()
         }
@@ -31,8 +30,8 @@ public final class TodayUseCase {
 }
 
 public protocol TodayView {
-    func showTodayTotal()
-    func showError()
+    func showTodayTotal(response: (TotalResponse, TotalHistoryResponse))
+    func showError(error: Error)
     func showLoading()
     func hideLoading()
 }
