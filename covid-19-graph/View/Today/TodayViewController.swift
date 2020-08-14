@@ -6,54 +6,29 @@
 import UIKit
 
 final class TodayViewController: UIViewController {
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
+
+    private var appContainer: AppContainer?
+    private var viewModel: TodayViewModel?
 
     var coordinator: TodayCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        /*
-         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-         fatalError("AppDelegate is nil.")
-         }
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError("AppDelegate is nil.")
+        }
 
-         appDelegate.appContainer.covid19Repository.fetchTotal().startWithResult { result in
-         switch result {
-         case let .success(total):
-         print("FetchTotal Success \(total.date)")
-         case let .failure(error):
-         print("FetchTotal Error \(error)")
-         }
-         }
+        appContainer = appDelegate.appContainer
 
-         appDelegate.appContainer.covid19Repository.fetchTotalHistory().startWithResult { result in
-         switch result {
-         case let .success(totalHistory):
-         print("FetchTotalHistory Success \(totalHistory.history.count)")
-         case let .failure(error):
-         print("FetchTotalHistory Error \(error)")
-         }
-         }
+        guard let appContainer = self.appContainer else {
+            fatalError("AppContaner is nil.")
+        }
 
-         appDelegate.appContainer.covid19Repository.fetchTotalPrediction().startWithResult { result in
-         switch result {
-         case let .success(totalPrediction):
-         print("FetchTotalPrediction Success \(totalPrediction.total.count)")
-         case let .failure(error):
-         print("FetchTotalPrediction Error \(error)")
-         }
-         }
-
-         appDelegate.appContainer.covid19Repository.fetchStatistics().startWithResult { result in
-         switch result {
-         case let .success(prefecture):
-         print("FetchStatistics Success \(prefecture.all.count) \(prefecture.all[0].male.generationsCount.generation00s)")
-         case let .failure(error):
-         print("FetchStatistics Error \(error)")
-         }
-         }
-         */
+        appContainer.todayContainer = TodayContainer(repository: appContainer.covid19Repository)
+        viewModel = appContainer.todayContainer?.create()
+        viewModel?.fetchTotal()
 
         // TODO: この辺りはTabBarで使用する画面としてまとめたい
         navigationController?.navigationBar.barTintColor = UIColor(named: R.color.primaryColor.name)
@@ -66,8 +41,12 @@ final class TodayViewController: UIViewController {
 
         collectionView.delegate = self
         collectionView.dataSource = self
-
         collectionView.register(R.nib.todayCollectionViewCell)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        appContainer?.todayContainer = nil
     }
 }
 

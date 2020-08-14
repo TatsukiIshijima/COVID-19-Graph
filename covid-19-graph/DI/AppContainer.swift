@@ -4,12 +4,13 @@
 //
 
 import Core
-import Foundation
 
-class AppContainer {
-    private let covid19Client = COVID19Client()
+final class AppContainer {
+    private let covid19Client: COVID19Client = COVID19Client()
 
     let covid19Repository: COVID19Repository
+
+    var todayContainer: TodayContainer?
 
     init() {
         covid19Repository = COVID19Repository(client: covid19Client)
