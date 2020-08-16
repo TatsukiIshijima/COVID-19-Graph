@@ -4,7 +4,7 @@
 //
 
 public struct PrefectureResponse: APIResponse {
-    let id: String
+    let id: Int
     let nameJa: String
     let population: Int
     let cases: Int
