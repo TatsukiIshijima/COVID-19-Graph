@@ -3,6 +3,7 @@
 //  covid-19-graph
 //
 
+import Core
 import SVProgressHUD
 import UIKit
 
@@ -11,6 +12,7 @@ final class TodayViewController: UIViewController {
 
     private var appContainer: AppContainer?
     private var viewModel: TodayViewModel?
+    private var todays: [TodayModel] = []
 
     var coordinator: TodayCoordinator?
 
@@ -47,11 +49,11 @@ final class TodayViewController: UIViewController {
             fatalError("TotalViewModel is nil.")
         }
 
-        viewModel.totalProperty.signal.observeValues { total in
-            print(total ?? "total is nil.")
-        }
-        viewModel.totalHistoryProperty.signal.observeValues { history in
-            print(history ?? "history is nil.")
+        viewModel.todayModelsProperty.signal.observeValues { [weak self] value in
+            self?.todays = value
+            self?.todays.forEach { today in
+                print("\(today.num), \(today.history.count)")
+            }
         }
         viewModel.totalErrorProperty.signal.observeValues { error in
             print(error ?? "total error is nil.")

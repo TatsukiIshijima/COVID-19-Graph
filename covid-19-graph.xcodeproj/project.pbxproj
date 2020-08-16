@@ -38,6 +38,7 @@
 		492C377B24DA41580083CEEE /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 492C376524DA41570083CEEE /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		492C379024DA43DF0083CEEE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; };
 		492C379124DA43DF0083CEEE /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; };
+		4933110124E8F4E100E0347B /* TodayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933110024E8F4E100E0347B /* TodayModel.swift */; };
 		493578CC24E14435007FB3EA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493578CB24E14435007FB3EA /* Coordinator.swift */; };
 		493578CE24E14484007FB3EA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493578CD24E14484007FB3EA /* AppCoordinator.swift */; };
 		4935913324E67500006519EB /* TodayContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935913224E67500006519EB /* TodayContainer.swift */; };
@@ -189,6 +190,7 @@
 		492C376D24DA41570083CEEE /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		492C377424DA41580083CEEE /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		492C377624DA41580083CEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4933110024E8F4E100E0347B /* TodayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayModel.swift; sourceTree = "<group>"; };
 		493578CB24E14435007FB3EA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		493578CD24E14484007FB3EA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		4935913224E67500006519EB /* TodayContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayContainer.swift; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 		492C376624DA41570083CEEE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				493310FF24E8F4C300E0347B /* Model */,
 				491367C924E275CC0014E855 /* UseCase */,
 				49B57D2B24D4003D00D3E828 /* Repository */,
 				49B57D1F24D3C3DC00D3E828 /* API */,
@@ -429,6 +432,14 @@
 				492C377624DA41580083CEEE /* Info.plist */,
 			);
 			path = CoreTests;
+			sourceTree = "<group>";
+		};
+		493310FF24E8F4C300E0347B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4933110024E8F4E100E0347B /* TodayModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		493BC6F324D7DFDF00B581D7 /* Today */ = {
@@ -1005,6 +1016,7 @@
 				49B2EEFA24DAEBED000CD25D /* COVID19Client.swift in Sources */,
 				49B2EEF524DAEBAB000CD25D /* COVID19Repository.swift in Sources */,
 				491367CB24E276180014E855 /* TodayUseCase.swift in Sources */,
+				4933110124E8F4E100E0347B /* TodayModel.swift in Sources */,
 				496C1E2124DB923500521D25 /* APIRequest.swift in Sources */,
 				4936CCD124E54A9200474887 /* APIConstants.swift in Sources */,
 				49B2EEFC24DAEF40000CD25D /* TotalPredictionResponse.swift in Sources */,
