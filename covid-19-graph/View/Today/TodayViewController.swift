@@ -51,9 +51,7 @@ final class TodayViewController: UIViewController {
 
         viewModel.todayModelsProperty.signal.observeValues { [weak self] value in
             self?.todays = value
-            self?.todays.forEach { today in
-                print("\(today.num), \(today.history.count)")
-            }
+            self?.collectionView.reloadData()
         }
         viewModel.totalErrorProperty.signal.observeValues { error in
             print(error ?? "total error is nil.")
@@ -75,7 +73,7 @@ extension TodayViewController: UICollectionViewDelegate {}
 
 extension TodayViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return todays.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -83,19 +81,26 @@ extension TodayViewController: UICollectionViewDataSource {
             fatalError("failed to dequeue with \(R.reuseIdentifier.todayCollectionViewCell)")
         }
         var color: UIColor = .gray
+        var title: String = ""
         switch indexPath.row {
         case 0:
             color = R.color.orange() ?? .gray
+            title = "検査人数"
         case 1:
             color = R.color.primaryColor() ?? .gray
+            title = "感染者数"
         case 2:
             color = R.color.green() ?? .gray
+            title = "回復者数"
         case 3:
             color = R.color.navy() ?? .gray
-        default:
-            color = .gray
+            title = "死亡者数"
+        default: break
         }
-        todayCollectionViewCell.setContent(backgroundColor: color, num: 1000, title: "参加人数")
+        todayCollectionViewCell.setContent(backgroundColor: color,
+                                           num: todays[indexPath.row].num,
+                                           rawData: todays[indexPath.row].history,
+                                           title: title)
         return todayCollectionViewCell
     }
 }
