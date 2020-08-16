@@ -6,7 +6,7 @@
 import Foundation
 
 public struct TotalHistoryResponse {
-    public let history: [TotalResponse]
+    let history: [TotalResponse]
     
     init(history: [TotalResponse]) {
         self.history = history
