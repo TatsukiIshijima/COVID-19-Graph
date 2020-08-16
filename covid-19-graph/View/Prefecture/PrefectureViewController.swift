@@ -3,6 +3,7 @@
 //  covid-19-graph
 //
 
+import SVProgressHUD
 import UIKit
 
 class PrefectureViewController: UIViewController {
@@ -40,6 +41,16 @@ class PrefectureViewController: UIViewController {
 
         guard let viewModel = viewModel else {
             fatalError("PrefectureViewModel is nil.")
+        }
+
+        viewModel.alertMapErrorProperty.signal.observeValues { error in
+            guard let error = error else {
+                return
+            }
+            print("AlertMapError : \(error)")
+        }
+        viewModel.loadingProperty.signal.observeValues { isLoading in
+            isLoading ? SVProgressHUD.show() : SVProgressHUD.dismiss()
         }
 
         viewModel.drawPrefectures()
