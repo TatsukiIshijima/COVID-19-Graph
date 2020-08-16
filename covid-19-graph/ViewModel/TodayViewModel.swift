@@ -11,24 +11,20 @@ final class TodayViewModel {
     // ローカル変数の場合では、クロージャに入った瞬間に解放されてしまうため
     private let covid19Repository: COVID19Repository
     private lazy var todayUseCase: TodayUseCase = TodayUseCase(todayView: self, covid19Repository: self.covid19Repository)
-    private let totalMutableProperty: MutableProperty<TotalResponse?>
-    private let totalHistoryMutableProperty: MutableProperty<TotalHistoryResponse?>
+    private let todayModelsMutableProperty: MutableProperty<[TodayModel]>
     private let totalErrorMutableProperty: MutableProperty<Error?>
     private let loadingMutableProperty: MutableProperty<Bool>
 
-    let totalProperty: Property<TotalResponse?>
-    let totalHistoryProperty: Property<TotalHistoryResponse?>
+    let todayModelsProperty: Property<[TodayModel]>
     let totalErrorProperty: Property<Error?>
     let loadingProperty: Property<Bool>
 
     init(repository: COVID19Repository) {
         covid19Repository = repository
-        totalMutableProperty = MutableProperty(nil)
-        totalHistoryMutableProperty = MutableProperty(nil)
+        todayModelsMutableProperty = MutableProperty([])
         totalErrorMutableProperty = MutableProperty(nil)
         loadingMutableProperty = MutableProperty(false)
-        totalProperty = Property(capturing: totalMutableProperty)
-        totalHistoryProperty = Property(capturing: totalHistoryMutableProperty)
+        todayModelsProperty = Property(capturing: todayModelsMutableProperty)
         totalErrorProperty = Property(capturing: totalErrorMutableProperty)
         loadingProperty = Property(capturing: loadingMutableProperty)
     }
@@ -55,9 +51,8 @@ extension TodayViewModel: TodayView {
         loadingMutableProperty.value = false
     }
 
-    func showTodayTotal(response: (TotalResponse, TotalHistoryResponse)) {
+    func showTodayTotal(todayModels: [TodayModel]) {
         print("TodayViewModel: showTodayTotal")
-        totalMutableProperty.value = response.0
-        totalHistoryMutableProperty.value = response.1
+        todayModelsMutableProperty.value = todayModels
     }
 }

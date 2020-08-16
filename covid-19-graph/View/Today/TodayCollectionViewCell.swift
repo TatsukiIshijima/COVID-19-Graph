@@ -15,7 +15,7 @@ class TodayCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
-    func setContent(backgroundColor: UIColor, num: Int, title: String) {
+    func setContent(backgroundColor: UIColor, num: Int, rawData: [Int], title: String) {
         contentView.layer.masksToBounds = true
         contentView.layer.cornerRadius = 10.0
 
@@ -33,13 +33,10 @@ class TodayCollectionViewCell: UICollectionViewCell {
         barChartView.backgroundColor = backgroundColor
 
         setBarChartAppearance()
-        setBarChartData()
+        setBarChartData(rawData: rawData)
     }
 
-    private func setBarChartData() {
-        // Y軸データ
-        let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40, 55, 60, 65, 70, 75, 100]
-
+    private func setBarChartData(rawData: [Int]) {
         let dataEntries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
 
         // グラフセット
