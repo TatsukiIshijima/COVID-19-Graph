@@ -42,6 +42,8 @@
 		4933110324E918BD00E0347B /* AlertMapUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933110224E918BD00E0347B /* AlertMapUseCase.swift */; };
 		4933110624E91A9D00E0347B /* PrefectureResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933110524E91A9D00E0347B /* PrefectureResponse.swift */; };
 		4933110824E91BCD00E0347B /* PrefecturesListReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933110724E91BCD00E0347B /* PrefecturesListReponse.swift */; };
+		4933110A24E95D2900E0347B /* PrefectureContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933110924E95D2900E0347B /* PrefectureContainer.swift */; };
+		4933110C24E95DA900E0347B /* PrefectureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933110B24E95DA900E0347B /* PrefectureViewModel.swift */; };
 		493578CC24E14435007FB3EA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493578CB24E14435007FB3EA /* Coordinator.swift */; };
 		493578CE24E14484007FB3EA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493578CD24E14484007FB3EA /* AppCoordinator.swift */; };
 		4935913324E67500006519EB /* TodayContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935913224E67500006519EB /* TodayContainer.swift */; };
@@ -197,6 +199,8 @@
 		4933110224E918BD00E0347B /* AlertMapUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMapUseCase.swift; sourceTree = "<group>"; };
 		4933110524E91A9D00E0347B /* PrefectureResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureResponse.swift; sourceTree = "<group>"; };
 		4933110724E91BCD00E0347B /* PrefecturesListReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefecturesListReponse.swift; sourceTree = "<group>"; };
+		4933110924E95D2900E0347B /* PrefectureContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureContainer.swift; sourceTree = "<group>"; };
+		4933110B24E95DA900E0347B /* PrefectureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureViewModel.swift; sourceTree = "<group>"; };
 		493578CB24E14435007FB3EA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		493578CD24E14484007FB3EA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		4935913224E67500006519EB /* TodayContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayContainer.swift; sourceTree = "<group>"; };
@@ -407,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				491367CD24E277280014E855 /* TodayViewModel.swift */,
+				4933110B24E95DA900E0347B /* PrefectureViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -667,6 +672,7 @@
 			children = (
 				49B57D3124D43D0100D3E828 /* AppContainer.swift */,
 				4935913224E67500006519EB /* TodayContainer.swift */,
+				4933110924E95D2900E0347B /* PrefectureContainer.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -1057,6 +1063,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4933110A24E95D2900E0347B /* PrefectureContainer.swift in Sources */,
 				496BF46C24DEA97F0036DDC6 /* Tyugoku.swift in Sources */,
 				496BF46824DEA97F0036DDC6 /* Kyushu.swift in Sources */,
 				496BF46B24DEA97F0036DDC6 /* Tyubu.swift in Sources */,
@@ -1089,6 +1096,7 @@
 				496BF46A24DEA97F0036DDC6 /* Shikoku.swift in Sources */,
 				4935913324E67500006519EB /* TodayContainer.swift in Sources */,
 				4905C65924D53E83005DE24F /* SplashViewController.swift in Sources */,
+				4933110C24E95DA900E0347B /* PrefectureViewModel.swift in Sources */,
 				49B2EEEA24DA9E8E000CD25D /* TodayCoordinator.swift in Sources */,
 				4905C66324D59BCD005DE24F /* R.generated.swift in Sources */,
 				496BF46024DEA4960036DDC6 /* Kanto.swift in Sources */,
