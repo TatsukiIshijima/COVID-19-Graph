@@ -29,4 +29,8 @@ public class COVID19Repository {
     public func fetchStatistics() -> SignalProducer<PrefectureStatisticsResponse, Error> {
         return client.requestStatistics()
     }
+
+    public func fetchPrefecture() -> SignalProducer<PrefectureListResponse, Error> {
+        return client.requestPrefectures()
+    }
 }

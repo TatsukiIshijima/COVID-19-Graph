@@ -25,4 +25,8 @@ public final class COVID19Client: APIClient {
     public func requestStatistics() -> SignalProducer<PrefectureStatisticsResponse, Error> {
         return getRequest(APIRouter.statistics)
     }
+
+    public func requestPrefectures() -> SignalProducer<PrefectureListResponse, Error> {
+        return getRequest(APIRouter.prefectures)
+    }
 }
