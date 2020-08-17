@@ -17,7 +17,8 @@ public final class AlertMapUseCase {
         covid19Repository.fetchPrefecture().startWithResult { [weak self] result in
             switch result {
             case let .success(response):
-                print("\(response)")
+                // print("\(response)")
+                print(response.toJapanMapModel())
                 self?.alertMapView.fillPrefectures()
             case let .failure(error):
                 self?.alertMapView.showError(error: error)
