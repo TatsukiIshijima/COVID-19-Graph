@@ -3,7 +3,7 @@
 //  Core
 //
 
-public final class AlertMapUseCase {
+public final class JapanMapUseCase {
     private let alertMapView: AlertMapView
     private let covid19Repository: COVID19Repository
 

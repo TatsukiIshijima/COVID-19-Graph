@@ -42,7 +42,7 @@
 		4931811924EAA09100379354 /* RegionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931811824EAA09100379354 /* RegionModel.swift */; };
 		4931811B24EAA0B900379354 /* PrefectureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931811A24EAA0B900379354 /* PrefectureModel.swift */; };
 		4933110124E8F4E100E0347B /* TodayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933110024E8F4E100E0347B /* TodayModel.swift */; };
-		4933110324E918BD00E0347B /* AlertMapUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933110224E918BD00E0347B /* AlertMapUseCase.swift */; };
+		4933110324E918BD00E0347B /* JapanMapUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933110224E918BD00E0347B /* JapanMapUseCase.swift */; };
 		4933110624E91A9D00E0347B /* PrefectureResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933110524E91A9D00E0347B /* PrefectureResponse.swift */; };
 		4933110824E91BCD00E0347B /* PrefecturesListReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933110724E91BCD00E0347B /* PrefecturesListReponse.swift */; };
 		4933110A24E95D2900E0347B /* PrefectureContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4933110924E95D2900E0347B /* PrefectureContainer.swift */; };
@@ -202,7 +202,7 @@
 		4931811824EAA09100379354 /* RegionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionModel.swift; sourceTree = "<group>"; };
 		4931811A24EAA0B900379354 /* PrefectureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureModel.swift; sourceTree = "<group>"; };
 		4933110024E8F4E100E0347B /* TodayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayModel.swift; sourceTree = "<group>"; };
-		4933110224E918BD00E0347B /* AlertMapUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMapUseCase.swift; sourceTree = "<group>"; };
+		4933110224E918BD00E0347B /* JapanMapUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapanMapUseCase.swift; sourceTree = "<group>"; };
 		4933110524E91A9D00E0347B /* PrefectureResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureResponse.swift; sourceTree = "<group>"; };
 		4933110724E91BCD00E0347B /* PrefecturesListReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefecturesListReponse.swift; sourceTree = "<group>"; };
 		4933110924E95D2900E0347B /* PrefectureContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureContainer.swift; sourceTree = "<group>"; };
@@ -408,7 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				491367CA24E276180014E855 /* TodayUseCase.swift */,
-				4933110224E918BD00E0347B /* AlertMapUseCase.swift */,
+				4933110224E918BD00E0347B /* JapanMapUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -1052,7 +1052,7 @@
 				491367CB24E276180014E855 /* TodayUseCase.swift in Sources */,
 				4933110124E8F4E100E0347B /* TodayModel.swift in Sources */,
 				496C1E2124DB923500521D25 /* APIRequest.swift in Sources */,
-				4933110324E918BD00E0347B /* AlertMapUseCase.swift in Sources */,
+				4933110324E918BD00E0347B /* JapanMapUseCase.swift in Sources */,
 				4936CCD124E54A9200474887 /* APIConstants.swift in Sources */,
 				49B2EEFC24DAEF40000CD25D /* TotalPredictionResponse.swift in Sources */,
 				4931811924EAA09100379354 /* RegionModel.swift in Sources */,

@@ -8,7 +8,7 @@ import ReactiveSwift
 
 final class PrefectureViewModel {
     private let covid19Repository: COVID19Repository
-    private lazy var alertMapUseCase: AlertMapUseCase = AlertMapUseCase(alertMapView: self, covid19Repository: self.covid19Repository)
+    private lazy var alertMapUseCase: JapanMapUseCase = JapanMapUseCase(alertMapView: self, covid19Repository: self.covid19Repository)
 
     private let alertMapErrorMutableProperty: MutableProperty<Error?>
     private let loadingMutableProperty: MutableProperty<Bool>
