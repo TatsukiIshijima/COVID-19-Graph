@@ -4,7 +4,7 @@
 //
 
 public struct RegionModel {
-    enum RegionName: String {
+    public enum RegionName: String {
         case hokkaido = "北海道"
         case tohoku = "東北"
         case kanto = "関東"
@@ -15,5 +15,5 @@ public struct RegionModel {
         case kyushu = "九州"
     }
 
-    let prefectures: [RegionName: [PrefectureModel]]
+    public let prefectures: [RegionName: [PrefectureModel]]
 }

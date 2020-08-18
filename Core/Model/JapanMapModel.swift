@@ -4,12 +4,12 @@
 //
 
 public struct JapanMapModel {
-    let hokkaido: RegionModel
-    let tohoku: RegionModel
-    let kanto: RegionModel
-    let tyubu: RegionModel
-    let kinki: RegionModel
-    let tyugoku: RegionModel
-    let shikoku: RegionModel
-    let kyusyu: RegionModel
+    public let hokkaido: RegionModel
+    public let tohoku: RegionModel
+    public let kanto: RegionModel
+    public let tyubu: RegionModel
+    public let kinki: RegionModel
+    public let tyugoku: RegionModel
+    public let shikoku: RegionModel
+    public let kyusyu: RegionModel
 }

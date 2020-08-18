@@ -54,14 +54,14 @@ public struct PrefectureModel {
         case okinawa = "沖縄"
     }
 
-    let id: Int
-    let name: PrefectureName
-    let population: Int
-    let cases: Int
-    let deaths: Int
-    let pcr: Int
-    let hospitalize: Int
-    let severe: Int
-    let discharge: Int
-    let symptomConfirming: Int
+    public let id: Int
+    public let name: PrefectureName
+    public let population: Int
+    public let cases: Int
+    public let deaths: Int
+    public let pcr: Int
+    public let hospitalize: Int
+    public let severe: Int
+    public let discharge: Int
+    public let symptomConfirming: Int
 }
