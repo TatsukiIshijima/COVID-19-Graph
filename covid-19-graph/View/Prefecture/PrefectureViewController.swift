@@ -43,7 +43,61 @@ class PrefectureViewController: UIViewController {
             fatalError("PrefectureViewModel is nil.")
         }
 
-        viewModel.alertMapErrorProperty.signal.observeValues { error in
+        viewModel.japanMapDataProperty.signal.observeValues { [weak self] japanMapModel in
+            guard let model = japanMapModel else {
+                return
+            }
+            // TODO: データ構造変更
+            self?.japanMapView.reDraw(hokkaidoColor: viewModel.toLegendColor(number: 1618),
+                                      aomoriColor: viewModel.toLegendColor(number: 33),
+                                      akitaColor: viewModel.toLegendColor(number: 42),
+                                      iwateColor: viewModel.toLegendColor(number: 9),
+                                      yamagataColor: viewModel.toLegendColor(number: 76),
+                                      miyagiColor: viewModel.toLegendColor(number: 186),
+                                      fukushimaColor: viewModel.toLegendColor(number: 109),
+                                      ibarakiColor: viewModel.toLegendColor(number: 463),
+                                      chibaColor: viewModel.toLegendColor(number: 2518),
+                                      tochigiColor: viewModel.toLegendColor(number: 282),
+                                      gunmaColor: viewModel.toLegendColor(number: 321),
+                                      saitamaColor: viewModel.toLegendColor(number: 3276),
+                                      tokyoColor: viewModel.toLegendColor(number: 18082),
+                                      kanagawaColor: viewModel.toLegendColor(number: 3982),
+                                      yamanashiColor: viewModel.toLegendColor(number: 148),
+                                      nigataColor: viewModel.toLegendColor(number: 132),
+                                      shizuokaColor: viewModel.toLegendColor(number: 424),
+                                      naganoColor: viewModel.toLegendColor(number: 150),
+                                      aichiColor: viewModel.toLegendColor(number: 3841),
+                                      gifuColor: viewModel.toLegendColor(number: 520),
+                                      toyamaColor: viewModel.toLegendColor(number: 323),
+                                      ishikawaColor: viewModel.toLegendColor(number: 486),
+                                      fukuiColor: viewModel.toLegendColor(number: 155),
+                                      mieColor: viewModel.toLegendColor(number: 285),
+                                      shigaColor: viewModel.toLegendColor(number: 354),
+                                      naraColor: viewModel.toLegendColor(number: 429),
+                                      wakayamaColor: viewModel.toLegendColor(number: 209),
+                                      osakaColor: viewModel.toLegendColor(number: 7101),
+                                      kyotoColor: viewModel.toLegendColor(number: 1164),
+                                      hyogoColor: viewModel.toLegendColor(number: 1949),
+                                      shimaneColor: viewModel.toLegendColor(number: 133),
+                                      tottoriColor: viewModel.toLegendColor(number: 21),
+                                      okayamaColor: viewModel.toLegendColor(number: 127),
+                                      hiroshimaColor: viewModel.toLegendColor(number: 431),
+                                      yamaguchiColor: viewModel.toLegendColor(number: 82),
+                                      kagawaColor: viewModel.toLegendColor(number: 68),
+                                      tokushimaColor: viewModel.toLegendColor(number: 95),
+                                      kochiColor: viewModel.toLegendColor(number: 103),
+                                      ehimeColor: viewModel.toLegendColor(number: 110),
+                                      oitaColor: viewModel.toLegendColor(number: 120),
+                                      miyazakiColor: viewModel.toLegendColor(number: 315),
+                                      kagoshimaColor: viewModel.toLegendColor(number: 335),
+                                      kumamotoColor: viewModel.toLegendColor(number: 416),
+                                      fukuokaColor: viewModel.toLegendColor(number: 3717),
+                                      sagaColor: viewModel.toLegendColor(number: 197),
+                                      nagasakiColor: viewModel.toLegendColor(number: 189),
+                                      okinawaColor: viewModel.toLegendColor(number: 1689))
+        }
+
+        viewModel.japanMapDataErrorProperty.signal.observeValues { error in
             guard let error = error else {
                 return
             }
@@ -75,8 +129,10 @@ class PrefectureViewController: UIViewController {
         let imageTapPoint = CGPoint(x: imageWidth / japanMapView.frame.width * originalTapPoint.x, y: imageHeight / japanMapView.frame.height * originalTapPoint.y)
 
         if Prefecture.hokkaido.path.contains(imageTapPoint) {
-            japanMapView.fillPrefecture()
-            coordinator?.goToRegion(prefecture: Prefecture.hokkaido)
+            japanMapView.reDraw(hokkaidoColor: .red,
+                                yamagataColor: .yellow,
+                                miyagiColor: .red)
+            // coordinator?.goToRegion(prefecture: Prefecture.hokkaido)
         }
     }
 }

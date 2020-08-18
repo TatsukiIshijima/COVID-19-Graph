@@ -17,9 +17,8 @@ public final class JapanMapUseCase {
         covid19Repository.fetchPrefecture().startWithResult { [weak self] result in
             switch result {
             case let .success(response):
-                // print("\(response)")
                 print(response.toJapanMapModel())
-                self?.alertMapView.fillPrefectures()
+                self?.alertMapView.fillPrefectures(model: response.toJapanMapModel())
             case let .failure(error):
                 self?.alertMapView.showError(error: error)
             }
@@ -29,7 +28,7 @@ public final class JapanMapUseCase {
 }
 
 public protocol AlertMapView {
-    func fillPrefectures()
+    func fillPrefectures(model: JapanMapModel)
     func showError(error: Error)
     func showLoading()
     func hideLoading()
