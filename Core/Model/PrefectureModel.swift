@@ -4,7 +4,7 @@
 //
 
 public struct PrefectureModel {
-    public enum PrefectureName: String {
+    public enum Name: String {
         case hokkaido = "北海道"
         case aomori = "青森"
         case akita = "秋田"
@@ -55,7 +55,7 @@ public struct PrefectureModel {
     }
 
     public let id: Int
-    public let name: PrefectureName
+    public let name: Name
     public let population: Int
     public let cases: Int
     public let deaths: Int
