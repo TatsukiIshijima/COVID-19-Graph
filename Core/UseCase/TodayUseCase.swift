@@ -31,7 +31,7 @@ public final class TodayUseCase {
         }
     }
 
-    func toTodayModels(response: (TotalResponse, TotalHistoryResponse)) -> [TodayModel] {
+    private func toTodayModels(response: (TotalResponse, TotalHistoryResponse)) -> [TodayModel] {
         var models: [TodayModel] = []
         let pcrs = response.1.history.compactMap { $0.pcr }.suffix(30)
         let positives = response.1.history.compactMap { $0.positive }.suffix(30)
