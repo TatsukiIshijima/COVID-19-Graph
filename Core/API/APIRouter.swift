@@ -10,6 +10,7 @@ enum APIRouter: URLRequestConvertible {
     case total(history: Bool = false, predict: Bool = false)
     case statistics
     case positives
+    case prefectures
 
     private var method: HTTPMethod {
         switch self {
@@ -26,6 +27,8 @@ enum APIRouter: URLRequestConvertible {
             return "statistics"
         case .positives:
             return "positives"
+        case .prefectures:
+            return "prefectures"
         }
     }
 

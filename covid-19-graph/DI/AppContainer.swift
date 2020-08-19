@@ -11,6 +11,7 @@ final class AppContainer {
     let covid19Repository: COVID19Repository
 
     var todayContainer: TodayContainer?
+    var prefectureContainer: PrefectureContainer?
 
     init() {
         covid19Repository = COVID19Repository(client: covid19Client)
