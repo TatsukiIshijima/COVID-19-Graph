@@ -21,17 +21,17 @@ extension PrefectureListResponse: APIResponse {
 
 extension PrefectureListResponse {
     public func toJapanMapModel() -> JapanMapModel {
-        var hokkaidoRegion: [PrefectureModel] = []
-        var tohokuRegion: [PrefectureModel] = []
-        var kantoRegion: [PrefectureModel] = []
-        var tyubuRegion: [PrefectureModel] = []
-        var kinkiRegion: [PrefectureModel] = []
-        var tyugokuRegion: [PrefectureModel] = []
-        var shikokuRegion: [PrefectureModel] = []
-        var kyusyuRegion: [PrefectureModel] = []
+        var hokkaidoRegion: [PrefectureModel.Name: PrefectureModel] = [:]
+        var tohokuRegion: [PrefectureModel.Name: PrefectureModel] = [:]
+        var kantoRegion: [PrefectureModel.Name: PrefectureModel] = [:]
+        var tyubuRegion: [PrefectureModel.Name: PrefectureModel] = [:]
+        var kinkiRegion: [PrefectureModel.Name: PrefectureModel] = [:]
+        var tyugokuRegion: [PrefectureModel.Name: PrefectureModel] = [:]
+        var shikokuRegion: [PrefectureModel.Name: PrefectureModel] = [:]
+        var kyusyuRegion: [PrefectureModel.Name: PrefectureModel] = [:]
         
         list.forEach { response in
-            let prefectureName = PrefectureModel.PrefectureName(rawValue: response.nameJa)
+            let prefectureName = PrefectureModel.Name(rawValue: response.nameJa)
             guard let name = prefectureName else {
                 print("\(response.nameJa) is not found.")
                 return
@@ -49,7 +49,7 @@ extension PrefectureListResponse {
                                              symptomConfirming: response.symptomConfirming)
             
             if prefecture.name == .hokkaido {
-                hokkaidoRegion.append(prefecture)
+                hokkaidoRegion.updateValue(prefecture, forKey: prefecture.name)
             } else if prefecture.name == .aomori ||
                 prefecture.name == .akita ||
                 prefecture.name == .iwate ||
@@ -57,7 +57,7 @@ extension PrefectureListResponse {
                 prefecture.name == .miyagi ||
                 prefecture.name == .fukushima
             {
-                tohokuRegion.append(prefecture)
+                tohokuRegion.updateValue(prefecture, forKey: prefecture.name)
             } else if prefecture.name == .ibaraki ||
                 prefecture.name == .chiba ||
                 prefecture.name == .tochigi ||
@@ -66,7 +66,7 @@ extension PrefectureListResponse {
                 prefecture.name == .tokyo ||
                 prefecture.name == .kanagawa
             {
-                kantoRegion.append(prefecture)
+                kantoRegion.updateValue(prefecture, forKey: prefecture.name)
             } else if prefecture.name == .yamanashi ||
                 prefecture.name == .nigata ||
                 prefecture.name == .shizuoka ||
@@ -77,7 +77,7 @@ extension PrefectureListResponse {
                 prefecture.name == .ishikawa ||
                 prefecture.name == .fukui
             {
-                tyubuRegion.append(prefecture)
+                tyubuRegion.updateValue(prefecture, forKey: prefecture.name)
             } else if prefecture.name == .mie ||
                 prefecture.name == .shiga ||
                 prefecture.name == .nara ||
@@ -86,20 +86,20 @@ extension PrefectureListResponse {
                 prefecture.name == .kyoto ||
                 prefecture.name == .hyugo
             {
-                kinkiRegion.append(prefecture)
+                kinkiRegion.updateValue(prefecture, forKey: prefecture.name)
             } else if prefecture.name == .shimane ||
                 prefecture.name == .tottori ||
                 prefecture.name == .okayama ||
                 prefecture.name == .hiroshima ||
                 prefecture.name == .yamaguchi
             {
-                tyugokuRegion.append(prefecture)
+                tyugokuRegion.updateValue(prefecture, forKey: prefecture.name)
             } else if prefecture.name == .kagawa ||
                 prefecture.name == .tokushima ||
                 prefecture.name == .kouchi ||
                 prefecture.name == .ehime
             {
-                shikokuRegion.append(prefecture)
+                shikokuRegion.updateValue(prefecture, forKey: prefecture.name)
             } else if prefecture.name == .oita ||
                 prefecture.name == .miyazaki ||
                 prefecture.name == .kagoshima ||
@@ -109,16 +109,16 @@ extension PrefectureListResponse {
                 prefecture.name == .nagasaki ||
                 prefecture.name == .okinawa
             {
-                kyusyuRegion.append(prefecture)
+                kyusyuRegion.updateValue(prefecture, forKey: prefecture.name)
             }
         }
-        return JapanMapModel(hokkaido: RegionModel(prefectures: [.hokkaido: hokkaidoRegion]),
-                             tohoku: RegionModel(prefectures: [.tohoku: tohokuRegion]),
-                             kanto: RegionModel(prefectures: [.kanto: kantoRegion]),
-                             tyubu: RegionModel(prefectures: [.tyubu: tyubuRegion]),
-                             kinki: RegionModel(prefectures: [.kinki: kinkiRegion]),
-                             tyugoku: RegionModel(prefectures: [.tyugoku: tyugokuRegion]),
-                             shikoku: RegionModel(prefectures: [.shikoku: shikokuRegion]),
-                             kyusyu: RegionModel(prefectures: [.kyushu: kyusyuRegion]))
+        return JapanMapModel(hokkaido: RegionModel(prefectures: hokkaidoRegion),
+                             tohoku: RegionModel(prefectures: tohokuRegion),
+                             kanto: RegionModel(prefectures: kantoRegion),
+                             tyubu: RegionModel(prefectures: tyubuRegion),
+                             kinki: RegionModel(prefectures: kinkiRegion),
+                             tyugoku: RegionModel(prefectures: tyugokuRegion),
+                             shikoku: RegionModel(prefectures: shikokuRegion),
+                             kyusyu: RegionModel(prefectures: kyusyuRegion))
     }
 }
