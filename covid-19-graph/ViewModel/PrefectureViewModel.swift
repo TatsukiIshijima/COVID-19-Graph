@@ -9,7 +9,7 @@ import UIKit
 
 final class PrefectureViewModel {
     private let covid19Repository: COVID19Repository
-    private lazy var alertMapUseCase: JapanMapUseCase = JapanMapUseCase(alertMapView: self, covid19Repository: self.covid19Repository)
+    private lazy var japanMapUseCase: JapanMapUseCase = JapanMapUseCase(alertMapView: self, covid19Repository: self.covid19Repository)
 
     private let japanMapDataMutableProperty: MutableProperty<JapanMapModel?>
     private let japanMapDataErrorMutableProperty: MutableProperty<Error?>
@@ -32,7 +32,7 @@ final class PrefectureViewModel {
     }
 
     func drawPrefectures() {
-        alertMapUseCase.execute()
+        japanMapUseCase.execute()
     }
 
     func toLegendColor(number: Int) -> UIColor {
@@ -54,7 +54,7 @@ final class PrefectureViewModel {
     }
 }
 
-extension PrefectureViewModel: AlertMapView {
+extension PrefectureViewModel: PrefectureView {
     func fillPrefectures(model: JapanMapModel) {
         japanMapDataMutableProperty.value = model
     }

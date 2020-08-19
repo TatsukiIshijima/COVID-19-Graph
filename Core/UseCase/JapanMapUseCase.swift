@@ -4,30 +4,30 @@
 //
 
 public final class JapanMapUseCase {
-    private let alertMapView: AlertMapView
+    private let prefectureView: PrefectureView
     private let covid19Repository: COVID19Repository
 
-    public init(alertMapView: AlertMapView, covid19Repository: COVID19Repository) {
-        self.alertMapView = alertMapView
+    public init(alertMapView: PrefectureView, covid19Repository: COVID19Repository) {
+        prefectureView = alertMapView
         self.covid19Repository = covid19Repository
     }
 
     public func execute() {
-        alertMapView.showLoading()
+        prefectureView.showLoading()
         covid19Repository.fetchPrefecture().startWithResult { [weak self] result in
             switch result {
             case let .success(response):
                 print(response.toJapanMapModel())
-                self?.alertMapView.fillPrefectures(model: response.toJapanMapModel())
+                self?.prefectureView.fillPrefectures(model: response.toJapanMapModel())
             case let .failure(error):
-                self?.alertMapView.showError(error: error)
+                self?.prefectureView.showError(error: error)
             }
-            self?.alertMapView.hideLoading()
+            self?.prefectureView.hideLoading()
         }
     }
 }
 
-public protocol AlertMapView {
+public protocol PrefectureView {
     func fillPrefectures(model: JapanMapModel)
     func showError(error: Error)
     func showLoading()
