@@ -82,12 +82,12 @@ class PrefectureViewController: UIViewController {
 
         let imageTapPoint = CGPoint(x: imageWidth / japanMapView.frame.width * originalTapPoint.x, y: imageHeight / japanMapView.frame.height * originalTapPoint.y)
 
-//        if Prefecture.hokkaido.path.contains(imageTapPoint) {
-//            japanMapView.reDraw(hokkaidoColor: .red,
-//                                yamagataColor: .yellow,
-//                                miyagiColor: .red)
-//            coordinator?.goToRegion(prefecture: Prefecture.hokkaido)
-//        }
+        //        if Prefecture.hokkaido.path.contains(imageTapPoint) {
+        //            japanMapView.reDraw(hokkaidoColor: .red,
+        //                                yamagataColor: .yellow,
+        //                                miyagiColor: .red)
+        //            coordinator?.goToRegion(prefecture: Prefecture.hokkaido)
+        //        }
     }
 }
 
