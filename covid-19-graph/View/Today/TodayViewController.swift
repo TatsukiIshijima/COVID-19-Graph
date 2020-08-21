@@ -31,6 +31,9 @@ final class TodayViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(R.nib.todayCollectionViewCell)
+        collectionView.register(UINib(resource: R.nib.todayCollectionReusableView),
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: R.reuseIdentifier.todayCollectionReusableView.identifier)
 
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             fatalError("AppDelegate is nil.")
@@ -72,6 +75,24 @@ final class TodayViewController: UIViewController {
 extension TodayViewController: UICollectionViewDelegate {}
 
 extension TodayViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: R.reuseIdentifier.todayCollectionReusableView, for: indexPath) else {
+            fatalError("Cloud not get TodayCollectionResuableView")
+        }
+        return header
+    }
+
+    // ヘッダーの高さ
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        let width: CGFloat = UIScreen.main.bounds.width - 48
+        let height: CGFloat = 225
+        return CGSize(width: width, height: height)
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return todays.count
     }
