@@ -22,8 +22,8 @@ final class TodayViewController: UIViewController {
         // TODO: この辺りはTabBarで使用する画面としてまとめたい
         navigationController?.navigationBar.barTintColor = UIColor(named: R.color.primaryColor.name)
         navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationItem.largeTitleDisplayMode = .always
+        // navigationController?.navigationBar.prefersLargeTitles = true
+        // navigationController?.navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.titleTextAttributes = [
             .foregroundColor: UIColor.white
         ]
@@ -86,13 +86,6 @@ extension TodayViewController: UICollectionViewDataSource {
         return header
     }
 
-    // ヘッダーの高さ
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        let width: CGFloat = UIScreen.main.bounds.width - 48
-        let height: CGFloat = 225
-        return CGSize(width: width, height: height)
-    }
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return todays.count
     }
@@ -131,6 +124,13 @@ extension TodayViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width: CGFloat = UIScreen.main.bounds.width - 48
         let height: CGFloat = 125
+        return CGSize(width: width, height: height)
+    }
+
+    // ヘッダーの大きさ設定
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        let width: CGFloat = UIScreen.main.bounds.width
+        let height: CGFloat = 225
         return CGSize(width: width, height: height)
     }
 
