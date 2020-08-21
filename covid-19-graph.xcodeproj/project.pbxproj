@@ -100,6 +100,8 @@
 		49B57D2724D3E7AE00D3E828 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; };
 		49B57D2824D3E7AE00D3E828 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49B57D3224D43D0100D3E828 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D3124D43D0100D3E828 /* AppContainer.swift */; };
+		49FCA84024EFE744007EE42B /* TodayCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCA83E24EFE744007EE42B /* TodayCollectionReusableView.swift */; };
+		49FCA84124EFE744007EE42B /* TodayCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49FCA83F24EFE744007EE42B /* TodayCollectionReusableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,6 +278,8 @@
 		49B57D2C24D4007400D3E828 /* COVID19Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID19Repository.swift; sourceTree = "<group>"; };
 		49B57D2E24D40F8500D3E828 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		49B57D3124D43D0100D3E828 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		49FCA83E24EFE744007EE42B /* TodayCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionReusableView.swift; sourceTree = "<group>"; };
+		49FCA83F24EFE744007EE42B /* TodayCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCollectionReusableView.xib; sourceTree = "<group>"; };
 		4C31CF853D82EA2FA46CD902 /* Pods-covid-19-graphTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.release.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.release.xcconfig"; sourceTree = "<group>"; };
 		515B835AFFE4F6F0710BE1CA /* Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig"; sourceTree = "<group>"; };
 		670A691A8C43BAC680571B29 /* Pods-covid-19-graph-covid-19-graphUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.release.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -479,6 +483,8 @@
 				4905C66A24D5A0E7005DE24F /* TodayViewController.storyboard */,
 				49940E4424DBEA2600CAC6FA /* TodayCollectionViewCell.swift */,
 				49940E4524DBEA2600CAC6FA /* TodayCollectionViewCell.xib */,
+				49FCA83E24EFE744007EE42B /* TodayCollectionReusableView.swift */,
+				49FCA83F24EFE744007EE42B /* TodayCollectionReusableView.xib */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -878,6 +884,7 @@
 				4905C66B24D5A0E7005DE24F /* TodayViewController.storyboard in Resources */,
 				4905C65B24D54473005DE24F /* SplashViewController.storyboard in Resources */,
 				49A6754424D19CDE009EC846 /* Assets.xcassets in Resources */,
+				49FCA84124EFE744007EE42B /* TodayCollectionReusableView.xib in Resources */,
 				490C957F24D67DC5002C0F45 /* SettingsViewController.storyboard in Resources */,
 				491EEB9C24DFE5F200E07765 /* RegionViewController.storyboard in Resources */,
 				49940E4724DBEA2600CAC6FA /* TodayCollectionViewCell.xib in Resources */,
@@ -1086,6 +1093,7 @@
 				493578CC24E14435007FB3EA /* Coordinator.swift in Sources */,
 				491EEB9E24DFE6D600E07765 /* RegionCoordinator.swift in Sources */,
 				492630A924D7F46700261690 /* Int+Extension.swift in Sources */,
+				49FCA84024EFE744007EE42B /* TodayCollectionReusableView.swift in Sources */,
 				49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */,
 				4905C66724D5A087005DE24F /* TodayViewController.swift in Sources */,
 				496BF46E24DEE5130036DDC6 /* Prefecture.swift in Sources */,
