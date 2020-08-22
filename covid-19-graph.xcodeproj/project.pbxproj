@@ -96,6 +96,8 @@
 		49FCA84024EFE744007EE42B /* TodayCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCA83E24EFE744007EE42B /* TodayCollectionReusableView.swift */; };
 		49FCA84124EFE744007EE42B /* TodayCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49FCA83F24EFE744007EE42B /* TodayCollectionReusableView.xib */; };
 		49FCA84324F0A64F007EE42B /* Segmentio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FCA84224F0A64F007EE42B /* Segmentio.framework */; };
+		49FCA84524F0B3BE007EE42B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; };
+		49FCA84624F0B3BE007EE42B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +146,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				492C377B24DA41580083CEEE /* Core.framework in Embed Frameworks */,
+				49FCA84624F0B3BE007EE42B /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +318,7 @@
 				4928897A24DC497B002DCCC2 /* Charts.framework in Frameworks */,
 				495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */,
 				495BCD2324D3BB9500D166A8 /* ReactiveSwift.framework in Frameworks */,
+				49FCA84524F0B3BE007EE42B /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -973,6 +977,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Charts.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Segmentio.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			name = "Run Settings Script";
 			outputFileListPaths = (
