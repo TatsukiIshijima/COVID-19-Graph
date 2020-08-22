@@ -4,10 +4,12 @@
 //
 
 import Core
+import Segmentio
 import SVProgressHUD
 import UIKit
 
 class PrefectureViewController: UIViewController {
+    @IBOutlet private weak var segmentioView: Segmentio!
     @IBOutlet private weak var japanMapView: JapanMapView!
 
     private var appContainer: AppContainer?
@@ -18,14 +20,22 @@ class PrefectureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        guard let navigationController = self.navigationController
+            else {
+                fatalError("Cloud not get NavigationController.")
+        }
+
         // TODO: この辺りはTabBarで使用する画面としてまとめたい
-        navigationController?.navigationBar.barTintColor = UIColor(named: R.color.primaryColor.name)
-        navigationController?.navigationBar.tintColor = .white
-        // navigationController?.navigationBar.prefersLargeTitles = true
-        // navigationController?.navigationItem.largeTitleDisplayMode = .always
-        navigationController?.navigationBar.titleTextAttributes = [
+        title = R.string.localizable.prefectureTitle()
+        navigationController.navigationBar.barTintColor = R.color.primaryColor()!
+        navigationController.navigationBar.tintColor = .white
+        navigationController.navigationBar.titleTextAttributes = [
             .foregroundColor: UIColor.white
         ]
+        // NavigationBarの下線を削除
+        navigationController.navigationBar.shadowImage = UIImage()
+
+        setupSegmentio()
 
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             fatalError("AppDelegate is nil.")
@@ -88,6 +98,57 @@ class PrefectureViewController: UIViewController {
         //                                miyagiColor: .red)
         //            coordinator?.goToRegion(prefecture: Prefecture.hokkaido)
         //        }
+    }
+}
+
+extension PrefectureViewController {
+    // Segmentio設定
+    private func setupSegmentio() {
+        let segmentioStates = SegmentioStates(
+            defaultState: SegmentioState(
+                backgroundColor: .clear,
+                titleFont: UIFont.systemFont(ofSize: 14),
+                titleTextColor: .white
+            ),
+            selectedState: SegmentioState(
+                backgroundColor: R.color.secondaryColor()!,
+                titleFont: UIFont.boldSystemFont(ofSize: 16),
+                titleTextColor: .white
+            ),
+            highlightedState: SegmentioState(
+                backgroundColor: UIColor.white.withAlphaComponent(0.6),
+                titleFont: UIFont.boldSystemFont(ofSize: 16),
+                titleTextColor: .white
+            )
+        )
+        let indicatorOptions = SegmentioIndicatorOptions(type: .bottom,
+                                                         ratio: 1,
+                                                         height: 5,
+                                                         color: .orange)
+        let horizontalSeparatorOptions = SegmentioHorizontalSeparatorOptions(type: .none,
+                                                                             height: 0,
+                                                                             color: .clear)
+        let segmentioOptions = SegmentioOptions(backgroundColor: R.color.primaryColor()!,
+                                                segmentPosition: .dynamic,
+                                                scrollEnabled: true,
+                                                indicatorOptions: indicatorOptions,
+                                                horizontalSeparatorOptions: horizontalSeparatorOptions,
+                                                verticalSeparatorOptions: nil,
+                                                imageContentMode: .center,
+                                                labelTextAlignment: .center,
+                                                labelTextNumberOfLines: 1,
+                                                segmentStates: segmentioStates,
+                                                animationDuration: 0.1)
+
+        segmentioView.setup(content: [SegmentioItem(title: R.string.localizable.currentTitle(), image: nil),
+                                      SegmentioItem(title: R.string.localizable.totalTitle(), image: nil)],
+                            style: .onlyLabel,
+                            options: segmentioOptions)
+
+        segmentioView.selectedSegmentioIndex = 0
+
+        segmentioView.valueDidChange = { _, _ in
+        }
     }
 }
 

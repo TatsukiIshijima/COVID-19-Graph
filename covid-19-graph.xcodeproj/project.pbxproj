@@ -11,7 +11,6 @@
 		4905C65B24D54473005DE24F /* SplashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905C65A24D54473005DE24F /* SplashViewController.storyboard */; };
 		4905C65D24D547C7005DE24F /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905C65C24D547C7005DE24F /* HomeViewController.storyboard */; };
 		4905C65F24D553B5005DE24F /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4905C65E24D553B5005DE24F /* Rswift.framework */; };
-		4905C66024D553B5005DE24F /* Rswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4905C65E24D553B5005DE24F /* Rswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4905C66324D59BCD005DE24F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905C66224D59BCD005DE24F /* R.generated.swift */; };
 		4905C66724D5A087005DE24F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905C66624D5A087005DE24F /* TodayViewController.swift */; };
 		4905C66B24D5A0E7005DE24F /* TodayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905C66A24D5A0E7005DE24F /* TodayViewController.storyboard */; };
@@ -30,7 +29,6 @@
 		4928897724DC3D59002DCCC2 /* CircleGraphCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4928897524DC3D59002DCCC2 /* CircleGraphCollectionViewCell.swift */; };
 		4928897824DC3D59002DCCC2 /* CircleGraphCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4928897624DC3D59002DCCC2 /* CircleGraphCollectionViewCell.xib */; };
 		4928897A24DC497B002DCCC2 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4928897924DC497B002DCCC2 /* Charts.framework */; };
-		4928897B24DC497B002DCCC2 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4928897924DC497B002DCCC2 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		492C376E24DA41580083CEEE /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492C376524DA41570083CEEE /* Core.framework */; };
 		492C377524DA41580083CEEE /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492C377424DA41580083CEEE /* CoreTests.swift */; };
 		492C377724DA41580083CEEE /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 492C376724DA41570083CEEE /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,11 +53,8 @@
 		4942934E24DD498C006B5C58 /* JapanMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942934D24DD498C006B5C58 /* JapanMap.swift */; };
 		4942935024DD4BD8006B5C58 /* JapanMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942934F24DD4BD8006B5C58 /* JapanMapView.swift */; };
 		495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; };
-		495BCD2224D3BB9500D166A8 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D624D1B2D400C391EA /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		495BCD2324D3BB9500D166A8 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; };
-		495BCD2424D3BB9500D166A8 /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D524D1B2D400C391EA /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		495BCD2524D3BB9500D166A8 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */; };
-		495BCD2624D3BB9500D166A8 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 494DB3D124D1A90B00C391EA /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		496BF46024DEA4960036DDC6 /* Kanto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496BF45D24DEA4950036DDC6 /* Kanto.swift */; };
 		496BF46124DEA4960036DDC6 /* Tohoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496BF45E24DEA4960036DDC6 /* Tohoku.swift */; };
 		496BF46224DEA4960036DDC6 /* Hokkaido.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496BF45F24DEA4960036DDC6 /* Hokkaido.swift */; };
@@ -97,11 +92,13 @@
 		49B2EEFA24DAEBED000CD25D /* COVID19Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D2924D3E9F700D3E828 /* COVID19Client.swift */; };
 		49B2EEFC24DAEF40000CD25D /* TotalPredictionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEFB24DAEF40000CD25D /* TotalPredictionResponse.swift */; };
 		49B2EEFE24DAEF9C000CD25D /* PredictionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEFD24DAEF9C000CD25D /* PredictionResponse.swift */; };
-		49B57D2724D3E7AE00D3E828 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; };
-		49B57D2824D3E7AE00D3E828 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49B57D3224D43D0100D3E828 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D3124D43D0100D3E828 /* AppContainer.swift */; };
 		49FCA84024EFE744007EE42B /* TodayCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCA83E24EFE744007EE42B /* TodayCollectionReusableView.swift */; };
 		49FCA84124EFE744007EE42B /* TodayCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49FCA83F24EFE744007EE42B /* TodayCollectionReusableView.xib */; };
+		49FCA84324F0A64F007EE42B /* Segmentio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FCA84224F0A64F007EE42B /* Segmentio.framework */; };
+		49FCA84524F0B3BE007EE42B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; };
+		49FCA84624F0B3BE007EE42B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49FCA84C24F145C2007EE42B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49FCA84E24F145C2007EE42B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,13 +146,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				495BCD2224D3BB9500D166A8 /* ReactiveCocoa.framework in Embed Frameworks */,
 				492C377B24DA41580083CEEE /* Core.framework in Embed Frameworks */,
-				495BCD2624D3BB9500D166A8 /* SVProgressHUD.framework in Embed Frameworks */,
-				4928897B24DC497B002DCCC2 /* Charts.framework in Embed Frameworks */,
-				495BCD2424D3BB9500D166A8 /* ReactiveSwift.framework in Embed Frameworks */,
-				4905C66024D553B5005DE24F /* Rswift.framework in Embed Frameworks */,
-				49B57D2824D3E7AE00D3E828 /* Alamofire.framework in Embed Frameworks */,
+				49FCA84624F0B3BE007EE42B /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +272,10 @@
 		49B57D3124D43D0100D3E828 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		49FCA83E24EFE744007EE42B /* TodayCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionReusableView.swift; sourceTree = "<group>"; };
 		49FCA83F24EFE744007EE42B /* TodayCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCollectionReusableView.xib; sourceTree = "<group>"; };
+		49FCA84224F0A64F007EE42B /* Segmentio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Segmentio.framework; path = Carthage/Build/iOS/Segmentio.framework; sourceTree = "<group>"; };
+		49FCA84924F14567007EE42B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		49FCA84D24F145C2007EE42B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		49FCA84F24F145E0007EE42B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C31CF853D82EA2FA46CD902 /* Pods-covid-19-graphTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.release.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.release.xcconfig"; sourceTree = "<group>"; };
 		515B835AFFE4F6F0710BE1CA /* Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig"; sourceTree = "<group>"; };
 		670A691A8C43BAC680571B29 /* Pods-covid-19-graph-covid-19-graphUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.release.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -321,11 +317,12 @@
 			files = (
 				495BCD2524D3BB9500D166A8 /* SVProgressHUD.framework in Frameworks */,
 				492C377A24DA41580083CEEE /* Core.framework in Frameworks */,
+				49FCA84324F0A64F007EE42B /* Segmentio.framework in Frameworks */,
 				4905C65F24D553B5005DE24F /* Rswift.framework in Frameworks */,
 				4928897A24DC497B002DCCC2 /* Charts.framework in Frameworks */,
 				495BCD2124D3BB9500D166A8 /* ReactiveCocoa.framework in Frameworks */,
-				49B57D2724D3E7AE00D3E828 /* Alamofire.framework in Frameworks */,
 				495BCD2324D3BB9500D166A8 /* ReactiveSwift.framework in Frameworks */,
+				49FCA84524F0B3BE007EE42B /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +346,7 @@
 		47D8F619B6CBE1BB2DD3D646 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49FCA84224F0A64F007EE42B /* Segmentio.framework */,
 				4928897924DC497B002DCCC2 /* Charts.framework */,
 				4936667A24D992AF00A2BBA0 /* Core.framework */,
 				4905C65E24D553B5005DE24F /* Rswift.framework */,
@@ -503,6 +501,7 @@
 				4942934D24DD498C006B5C58 /* JapanMap.swift */,
 				49A6754324D19CDE009EC846 /* Assets.xcassets */,
 				496BF46D24DEE5130036DDC6 /* Prefecture.swift */,
+				49FCA84E24F145C2007EE42B /* Localizable.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -842,6 +841,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 49A6752E24D19CDA009EC846;
 			productRefGroup = 49A6753824D19CDA009EC846 /* Products */;
@@ -879,6 +879,7 @@
 				4928897824DC3D59002DCCC2 /* CircleGraphCollectionViewCell.xib in Resources */,
 				498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */,
 				490C958324D6864E002C0F45 /* PrefectureViewController.storyboard in Resources */,
+				49FCA84C24F145C2007EE42B /* Localizable.strings in Resources */,
 				4905C65D24D547C7005DE24F /* HomeViewController.storyboard in Resources */,
 				49A6754724D19CDE009EC846 /* LaunchScreen.storyboard in Resources */,
 				4905C66B24D5A0E7005DE24F /* TodayViewController.storyboard in Resources */,
@@ -980,9 +981,10 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Charts.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Segmentio.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			name = "Run Settings Script";
 			outputFileListPaths = (
@@ -1174,8 +1176,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				49A6754624D19CDE009EC846 /* Base */,
+				49FCA84924F14567007EE42B /* ja */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		49FCA84E24F145C2007EE42B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49FCA84D24F145C2007EE42B /* ja */,
+				49FCA84F24F145E0007EE42B /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1640,6 +1652,7 @@
 			baseConfigurationReference = 498EDF1E24D2FBE3000CB11B /* Debug-Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1773,6 +1786,7 @@
 			baseConfigurationReference = 498EDF1F24D2FBF1000CB11B /* Debug-Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1905,6 +1919,7 @@
 			baseConfigurationReference = 498EDF2024D2FC02000CB11B /* Debug-Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2037,6 +2052,7 @@
 			baseConfigurationReference = 498EDF2124D2FC15000CB11B /* Release-Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2164,6 +2180,7 @@
 			baseConfigurationReference = 498EDF2224D2FC23000CB11B /* Release-Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2290,6 +2307,7 @@
 			baseConfigurationReference = 498EDF2324D2FC32000CB11B /* Release-Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2415,6 +2433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2475,6 +2494,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

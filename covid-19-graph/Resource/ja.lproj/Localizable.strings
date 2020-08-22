@@ -1,0 +1,8 @@
+"todayTitle" = "本日の状況";
+"prefectureTitle" = "感染状況";
+"pcrNumTitle" = "検査人数";
+"positiveNumTitle" = "感染者数";
+"dischargeNumTitle" = "退院者数";
+"deathNumTitle" = "死亡者数";
+"currentTitle" = "現在";
+"totalTitle" = "累計";

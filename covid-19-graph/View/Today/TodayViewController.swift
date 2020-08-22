@@ -20,10 +20,9 @@ final class TodayViewController: UIViewController {
         super.viewDidLoad()
 
         // TODO: この辺りはTabBarで使用する画面としてまとめたい
+        title = R.string.localizable.todayTitle()
         navigationController?.navigationBar.barTintColor = UIColor(named: R.color.primaryColor.name)
         navigationController?.navigationBar.tintColor = .white
-        // navigationController?.navigationBar.prefersLargeTitles = true
-        // navigationController?.navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.titleTextAttributes = [
             .foregroundColor: UIColor.white
         ]
@@ -98,17 +97,17 @@ extension TodayViewController: UICollectionViewDataSource {
         var title: String = ""
         switch indexPath.row {
         case 0:
-            color = R.color.orange() ?? .gray
-            title = "検査人数"
+            color = R.color.orange()!
+            title = R.string.localizable.pcrNumTitle()
         case 1:
-            color = R.color.primaryColor() ?? .gray
-            title = "感染者数"
+            color = R.color.primaryColor()!
+            title = R.string.localizable.positiveNumTitle()
         case 2:
-            color = R.color.green() ?? .gray
-            title = "回復者数"
+            color = R.color.green()!
+            title = R.string.localizable.dischargeNumTitle()
         case 3:
-            color = R.color.navy() ?? .gray
-            title = "死亡者数"
+            color = R.color.navy()!
+            title = R.string.localizable.deathNumTitle()
         default: break
         }
         todayCollectionViewCell.setContent(backgroundColor: color,
