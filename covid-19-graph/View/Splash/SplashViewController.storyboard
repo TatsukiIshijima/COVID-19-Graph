@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,26 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Splash" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iT5-zT-Yxs">
-                                <rect key="frame" x="181" y="438" width="52" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C O N A V" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iT5-zT-Yxs">
+                                <rect key="frame" x="114" y="423" width="186" height="50.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                <color key="textColor" name="PrimaryColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="距離を取ろう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzy-cd-Trp">
+                                <rect key="frame" x="155" y="501.5" width="104" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keh-Ju-qwX">
-                                <rect key="frame" x="184" y="503.5" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="goToHome:" destination="qo5-p6-S7i" eventType="touchUpInside" id="q9g-1G-j60"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Uzy-cd-Trp" firstAttribute="centerX" secondItem="IO8-nH-ekn" secondAttribute="centerX" id="2Z3-dw-4rp"/>
                             <constraint firstItem="iT5-zT-Yxs" firstAttribute="centerX" secondItem="IO8-nH-ekn" secondAttribute="centerX" id="92o-hb-uS6"/>
-                            <constraint firstItem="keh-Ju-qwX" firstAttribute="centerX" secondItem="IO8-nH-ekn" secondAttribute="centerX" id="ElQ-tB-M2G"/>
+                            <constraint firstItem="Uzy-cd-Trp" firstAttribute="top" secondItem="iT5-zT-Yxs" secondAttribute="bottom" constant="28" id="9jk-mC-gg9"/>
                             <constraint firstItem="iT5-zT-Yxs" firstAttribute="centerY" secondItem="IO8-nH-ekn" secondAttribute="centerY" id="Sfz-bb-C3t"/>
-                            <constraint firstItem="keh-Ju-qwX" firstAttribute="top" secondItem="iT5-zT-Yxs" secondAttribute="bottom" constant="45" id="qWa-yW-Xd4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2qJ-UZ-47C"/>
                     </view>
@@ -44,4 +44,9 @@
             <point key="canvasLocation" x="-14" y="-252"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="PrimaryColor">
+            <color red="0.8666666666666667" green="0.29411764705882354" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
