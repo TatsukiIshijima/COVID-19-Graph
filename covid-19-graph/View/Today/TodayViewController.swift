@@ -20,6 +20,7 @@ final class TodayViewController: UIViewController {
         super.viewDidLoad()
 
         // TODO: この辺りはTabBarで使用する画面としてまとめたい
+        title = R.string.localizable.todayTitle()
         navigationController?.navigationBar.barTintColor = UIColor(named: R.color.primaryColor.name)
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.titleTextAttributes = [

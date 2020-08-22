@@ -7,7 +7,7 @@ import Core
 import UIKit
 
 class HomeViewController: UITabBarController {
-    private let tabIconSystemName = ["house", "map", "gear"]
+    private let tabIconSystemName = ["calendar", "map", "gear"]
 
     var coordinator: HomeCoordinator?
 
@@ -30,6 +30,6 @@ class HomeViewController: UITabBarController {
 
 extension HomeViewController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("didSelect selectedIndex=\(selectedIndex)")
+        //print("didSelect selectedIndex=\(selectedIndex)")
     }
 }

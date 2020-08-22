@@ -26,6 +26,7 @@ class PrefectureViewController: UIViewController {
         }
 
         // TODO: この辺りはTabBarで使用する画面としてまとめたい
+        title = R.string.localizable.prefectureTitle()
         navigationController.navigationBar.barTintColor = R.color.primaryColor()!
         navigationController.navigationBar.tintColor = .white
         navigationController.navigationBar.titleTextAttributes = [
