@@ -388,12 +388,10 @@
 		4905C65724D53D8B005DE24F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				49FCA85124F15633007EE42B /* Splash */,
+				49FCA85024F15623007EE42B /* Home */,
 				493BC6F324D7DFDF00B581D7 /* Today */,
 				49940E4824DC36E100CAC6FA /* Prefecture */,
-				49A6753E24D19CDA009EC846 /* HomeViewController.swift */,
-				4905C65C24D547C7005DE24F /* HomeViewController.storyboard */,
-				4905C65824D53E83005DE24F /* SplashViewController.swift */,
-				4905C65A24D54473005DE24F /* SplashViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -680,6 +678,24 @@
 				4933110924E95D2900E0347B /* PrefectureContainer.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		49FCA85024F15623007EE42B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				49A6753E24D19CDA009EC846 /* HomeViewController.swift */,
+				4905C65C24D547C7005DE24F /* HomeViewController.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		49FCA85124F15633007EE42B /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				4905C65824D53E83005DE24F /* SplashViewController.swift */,
+				4905C65A24D54473005DE24F /* SplashViewController.storyboard */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
