@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("Window is nil.")
         }
 
+        UINavigationBar.appearance().isTranslucent = false
         let navigationController = UINavigationController()
         mainCoordinator = AppCoordinator(navigationController: navigationController)
         mainCoordinator?.start()
