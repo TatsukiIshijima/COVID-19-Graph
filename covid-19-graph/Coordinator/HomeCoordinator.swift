@@ -20,12 +20,10 @@ final class HomeCoordinator: Coordinator {
         }
         let todayCoordinator = TodayCoordinator(navigationController: UINavigationController())
         let prefectureCoordinator = PrefectureCoordinator(navigationController: UINavigationController())
-        let settingsCoordinator = SettingsCoordinator(navigationController: UINavigationController())
         todayCoordinator.start()
         prefectureCoordinator.start()
-        settingsCoordinator.start()
         homeViewController.coordinator = self
-        homeViewController.setViewControllers([todayCoordinator.navigationController, prefectureCoordinator.navigationController, settingsCoordinator.navigationController], animated: false)
+        homeViewController.setViewControllers([todayCoordinator.navigationController, prefectureCoordinator.navigationController], animated: false)
         homeViewController.modalPresentationStyle = .fullScreen
         navigationController.present(homeViewController, animated: true, completion: nil)
     }
