@@ -12,7 +12,11 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func goToHome(_ sender: Any) {
-        coordinator?.goToHome()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            self?.coordinator?.goToHome()
+        }
     }
 }
