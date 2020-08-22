@@ -14,8 +14,6 @@
 		4905C66324D59BCD005DE24F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905C66224D59BCD005DE24F /* R.generated.swift */; };
 		4905C66724D5A087005DE24F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905C66624D5A087005DE24F /* TodayViewController.swift */; };
 		4905C66B24D5A0E7005DE24F /* TodayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905C66A24D5A0E7005DE24F /* TodayViewController.storyboard */; };
-		490C957D24D67DB6002C0F45 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C957C24D67DB6002C0F45 /* SettingsViewController.swift */; };
-		490C957F24D67DC5002C0F45 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C957E24D67DC5002C0F45 /* SettingsViewController.storyboard */; };
 		490C958124D68630002C0F45 /* PrefectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C958024D6862F002C0F45 /* PrefectureViewController.swift */; };
 		490C958324D6864E002C0F45 /* PrefectureViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490C958224D6864E002C0F45 /* PrefectureViewController.storyboard */; };
 		491367CB24E276180014E855 /* TodayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491367CA24E276180014E855 /* TodayUseCase.swift */; };
@@ -83,7 +81,6 @@
 		49B2EEE824DA9BA5000CD25D /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE724DA9BA5000CD25D /* HomeCoordinator.swift */; };
 		49B2EEEA24DA9E8E000CD25D /* TodayCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEE924DA9E8E000CD25D /* TodayCoordinator.swift */; };
 		49B2EEEC24DA9F90000CD25D /* PrefectureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEEB24DA9F90000CD25D /* PrefectureCoordinator.swift */; };
-		49B2EEEE24DAA072000CD25D /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEED24DAA072000CD25D /* SettingsCoordinator.swift */; };
 		49B2EEF424DAEB5E000CD25D /* TotalHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEF324DAEB5E000CD25D /* TotalHistoryResponse.swift */; };
 		49B2EEF524DAEBAB000CD25D /* COVID19Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D2C24D4007400D3E828 /* COVID19Repository.swift */; };
 		49B2EEF624DAEBB8000CD25D /* TotalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D2424D3C89400D3E828 /* TotalResponse.swift */; };
@@ -171,8 +168,6 @@
 		4905C66224D59BCD005DE24F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		4905C66624D5A087005DE24F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		4905C66A24D5A0E7005DE24F /* TodayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TodayViewController.storyboard; sourceTree = "<group>"; };
-		490C957C24D67DB6002C0F45 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		490C957E24D67DC5002C0F45 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		490C958024D6862F002C0F45 /* PrefectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureViewController.swift; sourceTree = "<group>"; };
 		490C958224D6864E002C0F45 /* PrefectureViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrefectureViewController.storyboard; sourceTree = "<group>"; };
 		491367CA24E276180014E855 /* TodayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayUseCase.swift; sourceTree = "<group>"; };
@@ -259,7 +254,6 @@
 		49B2EEE724DA9BA5000CD25D /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		49B2EEE924DA9E8E000CD25D /* TodayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCoordinator.swift; sourceTree = "<group>"; };
 		49B2EEEB24DA9F90000CD25D /* PrefectureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureCoordinator.swift; sourceTree = "<group>"; };
-		49B2EEED24DAA072000CD25D /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		49B2EEF324DAEB5E000CD25D /* TotalHistoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHistoryResponse.swift; sourceTree = "<group>"; };
 		49B2EEFB24DAEF40000CD25D /* TotalPredictionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalPredictionResponse.swift; sourceTree = "<group>"; };
 		49B2EEFD24DAEF9C000CD25D /* PredictionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionResponse.swift; sourceTree = "<group>"; };
@@ -400,8 +394,6 @@
 				4905C65C24D547C7005DE24F /* HomeViewController.storyboard */,
 				4905C65824D53E83005DE24F /* SplashViewController.swift */,
 				4905C65A24D54473005DE24F /* SplashViewController.storyboard */,
-				490C957C24D67DB6002C0F45 /* SettingsViewController.swift */,
-				490C957E24D67DC5002C0F45 /* SettingsViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -633,7 +625,6 @@
 				49B2EEE724DA9BA5000CD25D /* HomeCoordinator.swift */,
 				49B2EEE924DA9E8E000CD25D /* TodayCoordinator.swift */,
 				49B2EEEB24DA9F90000CD25D /* PrefectureCoordinator.swift */,
-				49B2EEED24DAA072000CD25D /* SettingsCoordinator.swift */,
 				491EEB9D24DFE6D600E07765 /* RegionCoordinator.swift */,
 				493578CB24E14435007FB3EA /* Coordinator.swift */,
 				493578CD24E14484007FB3EA /* AppCoordinator.swift */,
@@ -886,7 +877,6 @@
 				4905C65B24D54473005DE24F /* SplashViewController.storyboard in Resources */,
 				49A6754424D19CDE009EC846 /* Assets.xcassets in Resources */,
 				49FCA84124EFE744007EE42B /* TodayCollectionReusableView.xib in Resources */,
-				490C957F24D67DC5002C0F45 /* SettingsViewController.storyboard in Resources */,
 				491EEB9C24DFE5F200E07765 /* RegionViewController.storyboard in Resources */,
 				49940E4724DBEA2600CAC6FA /* TodayCollectionViewCell.xib in Resources */,
 				4928897424DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.xib in Resources */,
@@ -1110,10 +1100,8 @@
 				491367CE24E277280014E855 /* TodayViewModel.swift in Sources */,
 				4942934E24DD498C006B5C58 /* JapanMap.swift in Sources */,
 				4928897324DC3C6B002DCCC2 /* BarGrapheCollectionViewCell.swift in Sources */,
-				49B2EEEE24DAA072000CD25D /* SettingsCoordinator.swift in Sources */,
 				491EEB9A24DFE5D100E07765 /* RegionViewController.swift in Sources */,
 				49A6753D24D19CDA009EC846 /* SceneDelegate.swift in Sources */,
-				490C957D24D67DB6002C0F45 /* SettingsViewController.swift in Sources */,
 				49B2EEE824DA9BA5000CD25D /* HomeCoordinator.swift in Sources */,
 				496BF46A24DEA97F0036DDC6 /* Shikoku.swift in Sources */,
 				4935913324E67500006519EB /* TodayContainer.swift in Sources */,
