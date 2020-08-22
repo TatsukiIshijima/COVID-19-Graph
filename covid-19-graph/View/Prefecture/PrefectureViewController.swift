@@ -148,7 +148,6 @@ extension PrefectureViewController {
         segmentioView.selectedSegmentioIndex = 0
 
         segmentioView.valueDidChange = { _, _ in
-            
         }
     }
 }

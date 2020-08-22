@@ -8,6 +8,7 @@ import UIKit
 
 class HomeViewController: UITabBarController {
     private let tabIconSystemName = ["calendar", "map", "gear"]
+    private let tabItemName = [R.string.localizable.todayTitle(), R.string.localizable.prefectureTitle(), "設定"]
 
     var coordinator: HomeCoordinator?
 
@@ -16,6 +17,8 @@ class HomeViewController: UITabBarController {
 
         delegate = self
 
+        UITabBar.appearance().tintColor = R.color.primaryColor()!
+
         setTabItems()
     }
 
@@ -23,6 +26,7 @@ class HomeViewController: UITabBarController {
         if let tabBarItems = tabBar.items {
             for (index, item) in tabBarItems.enumerated() {
                 item.image = UIImage(systemName: tabIconSystemName[index])
+                item.title = tabItemName[index]
             }
         }
     }
