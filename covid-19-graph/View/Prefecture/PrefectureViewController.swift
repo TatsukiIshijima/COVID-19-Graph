@@ -140,8 +140,8 @@ extension PrefectureViewController {
                                                 segmentStates: segmentioStates,
                                                 animationDuration: 0.1)
 
-        segmentioView.setup(content: [SegmentioItem(title: "現在", image: nil),
-                                      SegmentioItem(title: "累計", image: nil)],
+        segmentioView.setup(content: [SegmentioItem(title: R.string.localizable.currentTitle(), image: nil),
+                                      SegmentioItem(title: R.string.localizable.totalTitle(), image: nil)],
                             style: .onlyLabel,
                             options: segmentioOptions)
 

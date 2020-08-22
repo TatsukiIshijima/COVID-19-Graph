@@ -1,2 +1,8 @@
 "todayTitle" = "Today";
 "prefectureTitle" = "pandemic";
+"pcrNumTitle" = "PCR";
+"positiveNumTitle" = "Positive";
+"dischargeNumTitle" = "Discharge";
+"deathNumTitle" = "Death";
+"currentTitle" = "Current";
+"totalTitle" = "Total";

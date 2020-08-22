@@ -30,6 +30,6 @@ class HomeViewController: UITabBarController {
 
 extension HomeViewController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        //print("didSelect selectedIndex=\(selectedIndex)")
+        // print("didSelect selectedIndex=\(selectedIndex)")
     }
 }
