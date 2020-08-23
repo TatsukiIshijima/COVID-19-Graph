@@ -6,3 +6,13 @@
 "deathNumTitle" = "死亡者数";
 "currentTitle" = "現在";
 "totalTitle" = "累計";
+"positiveButton" = "OK";
+"negativeButton" = "キャンセル";
+"retryButton" = "リトライ";
+"generalErrorTitle" = "エラー";
+"generalErrorMessage" = "予期しないエラーが発生しました。\nエラーコード：%@";
+"apiErrorTitle" = "通信エラー";
+"timeoutMessage" = "タイムアウトしました。";
+"forbiddenMessage" = "アクセスが許可されていません。";
+"notFoundMessage" = "データ取得先が見つかりません";
+"internalServerErrorMessage" = "サーバーエラーです。しばらくしてからもう一度アクセスしてください。";
