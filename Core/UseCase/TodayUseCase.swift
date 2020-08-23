@@ -25,6 +25,23 @@ public final class TodayUseCase {
                     usecase.todayView.showTodayTotal(todayModels: models)
                 }
             case let .failure(error):
+                if let decodeError = error as? DecodingError {
+                    print("DecodeError \(decodeError)")
+                }
+                if let apiError = error as? APIError {
+                    switch apiError {
+                    case .timeout:
+                        print("Timeout")
+                    case .noResponse:
+                        print("NoReponse")
+                    case .forbidden:
+                        print("Forbidden")
+                    case .notFound:
+                        print("NotFound")
+                    case .internalServerError:
+                        print("InternalServerError")
+                    }
+                }
                 self?.todayView.showError(error: error)
             }
             self?.todayView.hideLoading()

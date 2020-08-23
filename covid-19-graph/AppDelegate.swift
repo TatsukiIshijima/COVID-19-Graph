@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("Window is nil.")
         }
 
+        // NavigationBarの背景色が薄くなってしまうのを防ぐ設定
         UINavigationBar.appearance().isTranslucent = false
         let navigationController = UINavigationController()
         mainCoordinator = AppCoordinator(navigationController: navigationController)
@@ -43,4 +44,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
      }
      */
+}
+
+extension AppDelegate {
+    static var shared: AppDelegate {
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError("Cloud not get AppDelegate.")
+        }
+        return delegate
+    }
 }

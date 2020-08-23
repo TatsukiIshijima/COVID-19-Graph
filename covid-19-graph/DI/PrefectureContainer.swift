@@ -12,8 +12,10 @@ final class PrefectureContainer {
     init(respository: COVID19Repository) {
         covid19Repository = respository
     }
+}
 
-    func create() -> PrefectureViewModel {
-        return PrefectureViewModel(repository: covid19Repository)
+extension PrefectureContainer: Factory {
+    func build<T>() -> T? where T: BaseViewModel {
+        return PrefectureViewModel(repository: covid19Repository) as? T
     }
 }

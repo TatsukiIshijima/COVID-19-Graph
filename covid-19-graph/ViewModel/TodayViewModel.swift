@@ -6,7 +6,7 @@
 import Core
 import ReactiveSwift
 
-final class TodayViewModel {
+final class TodayViewModel: BaseViewModel {
     // usecaseをメンバとして持たせるのはexecuteのクロージャで weak self を使用していて、
     // ローカル変数の場合では、クロージャに入った瞬間に解放されてしまうため
     private let covid19Repository: COVID19Repository

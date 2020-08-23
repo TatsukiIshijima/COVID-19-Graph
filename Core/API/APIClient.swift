@@ -8,7 +8,7 @@ import Foundation
 import ReactiveSwift
 
 public class APIClient {
-    func getRequest<Response>(_ urlConvertible: URLRequestConvertible) -> SignalProducer<Response, Error> where Response: APIResponse {
+    func request<Response>(_ urlConvertible: URLRequestConvertible) -> SignalProducer<Response, Error> where Response: APIResponse {
         return SignalProducer { observer, lifetime in
             if let url = urlConvertible.urlRequest?.url?.absoluteString {
                 print("URL : \(url)")
@@ -17,8 +17,7 @@ public class APIClient {
                 switch response.result {
                 case .success:
                     guard let data = response.data else {
-                        // TODO: エラー送信
-                        print("response data is nil")
+                        observer.send(error: APIError.noResponse)
                         return
                     }
                     do {
@@ -29,22 +28,33 @@ public class APIClient {
                         observer.send(error: error)
                     }
                 case let .failure(error):
-                    observer.send(error: error)
+                    if error._code == NSURLErrorTimedOut {
+                        observer.send(error: APIError.timeout)
+                        return
+                    }
+                    switch response.response?.statusCode {
+                    case 403:
+                        observer.send(error: APIError.forbidden)
+                    case 404:
+                        observer.send(error: APIError.notFound)
+                    case 500:
+                        observer.send(error: APIError.internalServerError)
+                    default:
+                        observer.send(error: error)
+                    }
                 }
             }
-            //            .responseString { response in
-            //                switch response.result {
-            //                case let .success(value):
-            //                    print(value)
-            //                case let .failure(error):
-            //                    print(error)
-            //                }
-            //            }
             lifetime.observeEnded {
                 request.cancel()
             }
         }
     }
+}
 
-    func post() {}
+public enum APIError: Error {
+    case timeout
+    case noResponse
+    case forbidden
+    case notFound
+    case internalServerError
 }
