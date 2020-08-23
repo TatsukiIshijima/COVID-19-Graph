@@ -8,39 +8,32 @@ import Segmentio
 import SVProgressHUD
 import UIKit
 
-class PrefectureViewController: UIViewController {
+class PrefectureViewController: ErrorViewController<PrefectureViewModel> {
     @IBOutlet private weak var segmentioView: Segmentio!
     @IBOutlet private weak var japanMapView: JapanMapView!
-
-    private var viewModel: PrefectureViewModel?
 
     var coordinator: PrefectureCoordinator?
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        guard let navigationController = self.navigationController
-            else {
-                fatalError("Cloud not get NavigationController.")
-        }
-
-        // TODO: この辺りはTabBarで使用する画面としてまとめたい
         title = R.string.localizable.prefectureTitle()
-        navigationController.navigationBar.barTintColor = R.color.primaryColor()!
-        navigationController.navigationBar.tintColor = .white
-        navigationController.navigationBar.titleTextAttributes = [
-            .foregroundColor: UIColor.white
-        ]
         // NavigationBarの下線を削除
-        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.shadowImage = UIImage()
 
         setupSegmentio()
 
         viewModel = AppDelegate.shared.appContainer.prefectureContainer?.build()
 
+        retryAction = { [weak self] (_: UIAlertAction!) -> Void in
+            self?.viewModel?.drawPrefectures()
+        }
+
         guard let viewModel = viewModel else {
             fatalError("PrefectureViewModel is nil.")
         }
+
+        // ErrorViewControllerのErrorProperty購読のためにはViewModelが
+        // 生成されている必要があるので、ここでsuperを呼び出す
+        super.viewDidLoad()
 
         viewModel.japanMapDataProperty.signal.observeValues { [weak self] japanMapModel in
             guard let model = japanMapModel else {
@@ -49,12 +42,6 @@ class PrefectureViewController: UIViewController {
             self?.drawJapanMap(model: model)
         }
 
-        viewModel.japanMapDataErrorProperty.signal.observeValues { error in
-            guard let error = error else {
-                return
-            }
-            print("AlertMapError : \(error)")
-        }
         viewModel.loadingProperty.signal.observeValues { isLoading in
             isLoading ? SVProgressHUD.show() : SVProgressHUD.dismiss()
         }

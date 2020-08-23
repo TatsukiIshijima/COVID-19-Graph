@@ -7,24 +7,15 @@ import Core
 import SVProgressHUD
 import UIKit
 
-final class TodayViewController: UIViewController {
+final class TodayViewController: ErrorViewController<TodayViewModel> {
     @IBOutlet private weak var collectionView: UICollectionView!
 
-    private var viewModel: TodayViewModel?
     private var todays: [TodayModel] = []
 
     var coordinator: TodayCoordinator?
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // TODO: この辺りはTabBarで使用する画面としてまとめたい
         title = R.string.localizable.todayTitle()
-        navigationController?.navigationBar.barTintColor = R.color.primaryColor()!
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.titleTextAttributes = [
-            .foregroundColor: UIColor.white
-        ]
 
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -35,16 +26,21 @@ final class TodayViewController: UIViewController {
 
         viewModel = AppDelegate.shared.appContainer.todayContainer?.build()
 
+        retryAction = { [weak self] (_: UIAlertAction!) -> Void in
+            self?.viewModel?.fetchTotal()
+        }
+
         guard let viewModel = viewModel else {
             fatalError("TotalViewModel is nil.")
         }
 
+        // ErrorViewControllerのErrorProperty購読のためにはViewModelが
+        // 生成されている必要があるので、ここでsuperを呼び出す
+        super.viewDidLoad()
+
         viewModel.todayModelsProperty.signal.observeValues { [weak self] value in
             self?.todays = value
             self?.collectionView.reloadData()
-        }
-        viewModel.totalErrorProperty.signal.observeValues { error in
-            print(error ?? "total error is nil.")
         }
         viewModel.loadingProperty.signal.observeValues { isLoading in
             isLoading ? SVProgressHUD.show() : SVProgressHUD.dismiss()

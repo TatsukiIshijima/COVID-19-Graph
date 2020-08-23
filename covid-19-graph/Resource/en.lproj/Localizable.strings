@@ -6,3 +6,13 @@
 "deathNumTitle" = "Death";
 "currentTitle" = "Current";
 "totalTitle" = "Total";
+"positiveButton" = "OK";
+"negativeButton" = "Cancel";
+"retryButton" = "Retry";
+"generalErrorTitle" = "Error";
+"generalErrorMessage" = "Unexpected error occured。\nError Code:%@";
+"apiErrorTitle" = "NetworkError";
+"timeoutMessage" = "Timeout.";
+"forbiddenMessage" = "Forbiddden.";
+"notFoundMessage" = "NotFound.";
+"internalServerErrorMessage" = "InternalServerError.";
