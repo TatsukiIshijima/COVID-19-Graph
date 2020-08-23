@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("Window is nil.")
         }
 
+        // NavigationBarの背景色が薄くなってしまうのを防ぐ設定
         UINavigationBar.appearance().isTranslucent = false
         let navigationController = UINavigationController()
         mainCoordinator = AppCoordinator(navigationController: navigationController)
