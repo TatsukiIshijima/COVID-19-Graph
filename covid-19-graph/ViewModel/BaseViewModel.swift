@@ -9,7 +9,7 @@ import ReactiveSwift
 protocol BaseViewModel {}
 
 class ErrorViewModel: BaseViewModel {
-    let errorMutableProperty: MutableProperty<Error?>
+    private let errorMutableProperty: MutableProperty<Error?>
     let errorProperty: Property<Error?>
 
     init() {
