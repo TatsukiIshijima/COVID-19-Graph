@@ -23,6 +23,10 @@ class PrefectureViewController: ErrorViewController<PrefectureViewModel> {
 
         viewModel = AppDelegate.shared.appContainer.prefectureContainer?.build()
 
+        retryAction = { [weak self] (_: UIAlertAction!) -> Void in
+            self?.viewModel?.drawPrefectures()
+        }
+
         guard let viewModel = viewModel else {
             fatalError("PrefectureViewModel is nil.")
         }

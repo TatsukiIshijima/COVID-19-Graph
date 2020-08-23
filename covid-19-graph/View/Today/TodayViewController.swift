@@ -26,6 +26,10 @@ final class TodayViewController: ErrorViewController<TodayViewModel> {
 
         viewModel = AppDelegate.shared.appContainer.todayContainer?.build()
 
+        retryAction = { [weak self] (_: UIAlertAction!) -> Void in
+            self?.viewModel?.fetchTotal()
+        }
+
         guard let viewModel = viewModel else {
             fatalError("TotalViewModel is nil.")
         }
