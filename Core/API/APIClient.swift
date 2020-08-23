@@ -28,6 +28,10 @@ public class APIClient {
                         observer.send(error: error)
                     }
                 case let .failure(error):
+                    if error._code == NSURLErrorTimedOut {
+                        observer.send(error: APIError.timeout)
+                        return
+                    }
                     switch response.response?.statusCode {
                     case 403:
                         observer.send(error: APIError.forbidden)
@@ -48,6 +52,7 @@ public class APIClient {
 }
 
 public enum APIError: Error {
+    case timeout
     case noResponse
     case forbidden
     case notFound
