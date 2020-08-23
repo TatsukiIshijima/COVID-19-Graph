@@ -79,9 +79,6 @@ public final class TodayUseCase {
     }
 }
 
-public protocol TodayView {
+public protocol TodayView: ErrorView, LoadingView {
     func showTodayTotal(todayModels: [TodayModel])
-    func showError(error: Error)
-    func showLoading()
-    func hideLoading()
 }

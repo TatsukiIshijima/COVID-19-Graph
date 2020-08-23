@@ -27,9 +27,6 @@ public final class JapanMapUseCase {
     }
 }
 
-public protocol PrefectureView {
+public protocol PrefectureView: ErrorView, LoadingView {
     func fillPrefectures(model: JapanMapModel)
-    func showError(error: Error)
-    func showLoading()
-    func hideLoading()
 }
