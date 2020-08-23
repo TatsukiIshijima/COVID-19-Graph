@@ -17,8 +17,7 @@ public class APIClient {
                 switch response.result {
                 case .success:
                     guard let data = response.data else {
-                        // TODO: エラー送信
-                        print("response data is nil")
+                        observer.send(error: APIError.noResponse)
                         return
                     }
                     do {
@@ -29,7 +28,16 @@ public class APIClient {
                         observer.send(error: error)
                     }
                 case let .failure(error):
-                    observer.send(error: error)
+                    switch response.response?.statusCode {
+                    case 403:
+                        observer.send(error: APIError.forbidden)
+                    case 404:
+                        observer.send(error: APIError.notFound)
+                    case 500:
+                        observer.send(error: APIError.internalServerError)
+                    default:
+                        observer.send(error: error)
+                    }
                 }
             }
             lifetime.observeEnded {
@@ -37,4 +45,11 @@ public class APIClient {
             }
         }
     }
+}
+
+public enum APIError: Error {
+    case noResponse
+    case forbidden
+    case notFound
+    case internalServerError
 }
