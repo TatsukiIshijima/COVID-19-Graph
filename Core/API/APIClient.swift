@@ -8,7 +8,7 @@ import Foundation
 import ReactiveSwift
 
 public class APIClient {
-    func getRequest<Response>(_ urlConvertible: URLRequestConvertible) -> SignalProducer<Response, Error> where Response: APIResponse {
+    func request<Response>(_ urlConvertible: URLRequestConvertible) -> SignalProducer<Response, Error> where Response: APIResponse {
         return SignalProducer { observer, lifetime in
             if let url = urlConvertible.urlRequest?.url?.absoluteString {
                 print("URL : \(url)")
@@ -32,19 +32,9 @@ public class APIClient {
                     observer.send(error: error)
                 }
             }
-            //            .responseString { response in
-            //                switch response.result {
-            //                case let .success(value):
-            //                    print(value)
-            //                case let .failure(error):
-            //                    print(error)
-            //                }
-            //            }
             lifetime.observeEnded {
                 request.cancel()
             }
         }
     }
-
-    func post() {}
 }

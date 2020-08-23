@@ -19,6 +19,12 @@ enum APIRouter: URLRequestConvertible {
         }
     }
 
+    private var headers: HTTPHeaders {
+        var headers: [HTTPHeader] = []
+        headers.append(HTTPHeader.contentType(APIConstants.ContentType.json.rawValue))
+        return HTTPHeaders(headers)
+    }
+
     private var path: String {
         switch self {
         case .total:
@@ -49,7 +55,8 @@ enum APIRouter: URLRequestConvertible {
         let url = try APIConstants.baseUrl.asURL()
         var urlRequest = URLRequest(url: url.appendingPathComponent(APIConstants.version).appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue
-        urlRequest.headers = [APIConstants.HttpHeaderField.contentType.rawValue: APIConstants.ContentType.json.rawValue]
+        urlRequest.headers = headers
+        urlRequest.timeoutInterval = 5
 
         let encoding: ParameterEncoding = {
             switch method {

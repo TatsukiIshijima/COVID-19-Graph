@@ -12,10 +12,6 @@ struct APIConstants {
         static let predict = "predict"
     }
 
-    enum HttpHeaderField: String {
-        case contentType = "Content-Type"
-    }
-
     enum ContentType: String {
         case json = "application/json"
     }
