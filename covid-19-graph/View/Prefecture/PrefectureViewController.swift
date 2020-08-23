@@ -49,11 +49,10 @@ class PrefectureViewController: UIViewController {
             self?.drawJapanMap(model: model)
         }
 
-        viewModel.japanMapDataErrorProperty.signal.observeValues { error in
-            guard let error = error else {
-                return
+        viewModel.errorProperty.signal.observeValues { error in
+            if let error = error {
+                print("PrefectureViewError: \(error)")
             }
-            print("AlertMapError : \(error)")
         }
         viewModel.loadingProperty.signal.observeValues { isLoading in
             isLoading ? SVProgressHUD.show() : SVProgressHUD.dismiss()

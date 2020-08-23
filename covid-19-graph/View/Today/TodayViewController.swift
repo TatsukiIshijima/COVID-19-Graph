@@ -43,8 +43,10 @@ final class TodayViewController: UIViewController {
             self?.todays = value
             self?.collectionView.reloadData()
         }
-        viewModel.totalErrorProperty.signal.observeValues { error in
-            print(error ?? "total error is nil.")
+        viewModel.errorProperty.signal.observeValues { error in
+            if let error = error {
+                print("TotalViewError: \(error)")
+            }
         }
         viewModel.loadingProperty.signal.observeValues { isLoading in
             isLoading ? SVProgressHUD.show() : SVProgressHUD.dismiss()
