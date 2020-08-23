@@ -44,3 +44,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      }
      */
 }
+
+extension AppDelegate {
+    static var shared: AppDelegate {
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError("Cloud not get AppDelegate.")
+        }
+        return delegate
+    }
+}

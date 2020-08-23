@@ -7,7 +7,7 @@ import Core
 import ReactiveSwift
 import UIKit
 
-final class PrefectureViewModel {
+final class PrefectureViewModel: BaseViewModel {
     private let covid19Repository: COVID19Repository
     private lazy var japanMapUseCase: JapanMapUseCase = JapanMapUseCase(alertMapView: self, covid19Repository: self.covid19Repository)
 

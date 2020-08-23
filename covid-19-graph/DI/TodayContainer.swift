@@ -17,8 +17,10 @@ final class TodayContainer {
     init(repository: COVID19Repository) {
         covid19Repository = repository
     }
+}
 
-    func create() -> TodayViewModel {
-        return TodayViewModel(repository: covid19Repository)
+extension TodayContainer: Factory {
+    func build<T>() -> T? where T: BaseViewModel {
+        return TodayViewModel(repository: covid19Repository) as? T
     }
 }

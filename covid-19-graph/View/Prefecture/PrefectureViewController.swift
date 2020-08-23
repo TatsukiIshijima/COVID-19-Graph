@@ -12,7 +12,6 @@ class PrefectureViewController: UIViewController {
     @IBOutlet private weak var segmentioView: Segmentio!
     @IBOutlet private weak var japanMapView: JapanMapView!
 
-    private var appContainer: AppContainer?
     private var viewModel: PrefectureViewModel?
 
     var coordinator: PrefectureCoordinator?
@@ -37,18 +36,7 @@ class PrefectureViewController: UIViewController {
 
         setupSegmentio()
 
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            fatalError("AppDelegate is nil.")
-        }
-
-        appContainer = appDelegate.appContainer
-
-        guard let appContainer = self.appContainer else {
-            fatalError("AppContainer is nil.")
-        }
-
-        appContainer.prefectureContainer = PrefectureContainer(respository: appContainer.covid19Repository)
-        viewModel = appContainer.prefectureContainer?.create()
+        viewModel = AppDelegate.shared.appContainer.prefectureContainer?.build()
 
         guard let viewModel = viewModel else {
             fatalError("PrefectureViewModel is nil.")
@@ -71,17 +59,25 @@ class PrefectureViewController: UIViewController {
             isLoading ? SVProgressHUD.show() : SVProgressHUD.dismiss()
         }
 
-        viewModel.drawPrefectures()
-
         japanMapView.isUserInteractionEnabled = true
 
         let selector = #selector(PrefectureViewController.tapAction(_:))
         japanMapView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: selector))
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        appContainer?.prefectureContainer = nil
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        guard let viewModel = viewModel else {
+            fatalError("PrefectureViewModel is nil.")
+        }
+
+        viewModel.drawPrefectures()
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        AppDelegate.shared.appContainer.prefectureContainer = nil
     }
 
     @objc private func tapAction(_ sender: UITapGestureRecognizer) {

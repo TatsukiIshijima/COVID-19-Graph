@@ -86,6 +86,7 @@
 		49B2EEFC24DAEF40000CD25D /* TotalPredictionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEFB24DAEF40000CD25D /* TotalPredictionResponse.swift */; };
 		49B2EEFE24DAEF9C000CD25D /* PredictionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B2EEFD24DAEF9C000CD25D /* PredictionResponse.swift */; };
 		49B57D3224D43D0100D3E828 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B57D3124D43D0100D3E828 /* AppContainer.swift */; };
+		49B9851224F202FB00E7CF2C /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B9851124F202FB00E7CF2C /* BaseViewModel.swift */; };
 		49FCA84024EFE744007EE42B /* TodayCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FCA83E24EFE744007EE42B /* TodayCollectionReusableView.swift */; };
 		49FCA84124EFE744007EE42B /* TodayCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49FCA83F24EFE744007EE42B /* TodayCollectionReusableView.xib */; };
 		49FCA84324F0A64F007EE42B /* Segmentio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FCA84224F0A64F007EE42B /* Segmentio.framework */; };
@@ -256,6 +257,7 @@
 		49B57D2C24D4007400D3E828 /* COVID19Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID19Repository.swift; sourceTree = "<group>"; };
 		49B57D2E24D40F8500D3E828 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		49B57D3124D43D0100D3E828 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		49B9851124F202FB00E7CF2C /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		49FCA83E24EFE744007EE42B /* TodayCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionReusableView.swift; sourceTree = "<group>"; };
 		49FCA83F24EFE744007EE42B /* TodayCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCollectionReusableView.xib; sourceTree = "<group>"; };
 		49FCA84224F0A64F007EE42B /* Segmentio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Segmentio.framework; path = Carthage/Build/iOS/Segmentio.framework; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 			children = (
 				491367CD24E277280014E855 /* TodayViewModel.swift */,
 				4933110B24E95DA900E0347B /* PrefectureViewModel.swift */,
+				49B9851124F202FB00E7CF2C /* BaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1107,6 +1110,7 @@
 				4935913324E67500006519EB /* TodayContainer.swift in Sources */,
 				4905C65924D53E83005DE24F /* SplashViewController.swift in Sources */,
 				4933110C24E95DA900E0347B /* PrefectureViewModel.swift in Sources */,
+				49B9851224F202FB00E7CF2C /* BaseViewModel.swift in Sources */,
 				49B2EEEA24DA9E8E000CD25D /* TodayCoordinator.swift in Sources */,
 				4905C66324D59BCD005DE24F /* R.generated.swift in Sources */,
 				496BF46024DEA4960036DDC6 /* Kanto.swift in Sources */,

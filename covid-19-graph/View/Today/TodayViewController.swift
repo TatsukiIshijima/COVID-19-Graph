@@ -10,7 +10,6 @@ import UIKit
 final class TodayViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
 
-    private var appContainer: AppContainer?
     private var viewModel: TodayViewModel?
     private var todays: [TodayModel] = []
 
@@ -34,18 +33,7 @@ final class TodayViewController: UIViewController {
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: R.reuseIdentifier.todayCollectionReusableView.identifier)
 
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            fatalError("AppDelegate is nil.")
-        }
-
-        appContainer = appDelegate.appContainer
-
-        guard let appContainer = self.appContainer else {
-            fatalError("AppContaner is nil.")
-        }
-
-        appContainer.todayContainer = TodayContainer(repository: appContainer.covid19Repository)
-        viewModel = appContainer.todayContainer?.create()
+        viewModel = AppDelegate.shared.appContainer.todayContainer?.build()
 
         guard let viewModel = viewModel else {
             fatalError("TotalViewModel is nil.")
@@ -61,13 +49,21 @@ final class TodayViewController: UIViewController {
         viewModel.loadingProperty.signal.observeValues { isLoading in
             isLoading ? SVProgressHUD.show() : SVProgressHUD.dismiss()
         }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        guard let viewModel = viewModel else {
+            fatalError("TotalViewModel is nil.")
+        }
 
         viewModel.fetchTotal()
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        appContainer?.todayContainer = nil
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        AppDelegate.shared.appContainer.todayContainer = nil
     }
 }
 
