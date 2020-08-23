@@ -63,14 +63,6 @@ class PrefectureViewController: UIViewController {
 
         let selector = #selector(PrefectureViewController.tapAction(_:))
         japanMapView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: selector))
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        guard let viewModel = viewModel else {
-            fatalError("PrefectureViewModel is nil.")
-        }
 
         viewModel.drawPrefectures()
     }

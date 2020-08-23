@@ -20,7 +20,7 @@ final class TodayViewController: UIViewController {
 
         // TODO: この辺りはTabBarで使用する画面としてまとめたい
         title = R.string.localizable.todayTitle()
-        navigationController?.navigationBar.barTintColor = UIColor(named: R.color.primaryColor.name)
+        navigationController?.navigationBar.barTintColor = R.color.primaryColor()!
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.titleTextAttributes = [
             .foregroundColor: UIColor.white
@@ -48,14 +48,6 @@ final class TodayViewController: UIViewController {
         }
         viewModel.loadingProperty.signal.observeValues { isLoading in
             isLoading ? SVProgressHUD.show() : SVProgressHUD.dismiss()
-        }
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        guard let viewModel = viewModel else {
-            fatalError("TotalViewModel is nil.")
         }
 
         viewModel.fetchTotal()
