@@ -3,10 +3,11 @@
 //  covid-19-graph
 //
 
+import Core
 import UIKit
 
 class RegionViewController: UIViewController {
-    var prefecture: Prefecture?
+    var region: RegionModel?
     var coordinator: RegionCoordinator?
 
     override func viewDidLoad() {
@@ -21,8 +22,8 @@ class RegionViewController: UIViewController {
             .foregroundColor: UIColor.white
         ]
 
-        if let prefecture = self.prefecture {
-            print("\(prefecture)")
+        if let region = self.region {
+            print("\(region)")
         }
     }
 }

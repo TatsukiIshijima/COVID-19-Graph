@@ -67,12 +67,69 @@ class PrefectureViewController: ErrorViewController<PrefectureViewModel> {
 
         let imageTapPoint = CGPoint(x: imageWidth / japanMapView.frame.width * originalTapPoint.x, y: imageHeight / japanMapView.frame.height * originalTapPoint.y)
 
-        //        if Prefecture.hokkaido.path.contains(imageTapPoint) {
-        //            japanMapView.reDraw(hokkaidoColor: .red,
-        //                                yamagataColor: .yellow,
-        //                                miyagiColor: .red)
-        //            coordinator?.goToRegion(prefecture: Prefecture.hokkaido)
-        //        }
+        var selectedResion: RegionModel?
+
+        // FIXME: 北海道,沖縄が反応しない
+        if Prefecture.hokkaido.path.contains(imageTapPoint) {
+            selectedResion = japanMapModel?.hokkaido
+        } else if Prefecture.aomori.path.contains(imageTapPoint) ||
+            Prefecture.akita.path.contains(imageTapPoint) ||
+            Prefecture.iwate.path.contains(imageTapPoint) ||
+            Prefecture.yamagata.path.contains(imageTapPoint) ||
+            Prefecture.miyagi.path.contains(imageTapPoint) ||
+            Prefecture.fukushima.path.contains(imageTapPoint) {
+            selectedResion = japanMapModel?.tohoku
+        } else if Prefecture.ibaraki.path.contains(imageTapPoint) ||
+            Prefecture.chiba.path.contains(imageTapPoint) ||
+            Prefecture.tochigi.path.contains(imageTapPoint) ||
+            Prefecture.gunma.path.contains(imageTapPoint) ||
+            Prefecture.saitama.path.contains(imageTapPoint) ||
+            Prefecture.tokyo.path.contains(imageTapPoint) ||
+            Prefecture.kanagawa.path.contains(imageTapPoint) {
+            selectedResion = japanMapModel?.kanto
+        } else if Prefecture.yamanashi.path.contains(imageTapPoint) ||
+            Prefecture.niigata.path.contains(imageTapPoint) ||
+            Prefecture.shizuoka.path.contains(imageTapPoint) ||
+            Prefecture.nagano.path.contains(imageTapPoint) ||
+            Prefecture.aichi.path.contains(imageTapPoint) ||
+            Prefecture.gufu.path.contains(imageTapPoint) ||
+            Prefecture.toyama.path.contains(imageTapPoint) ||
+            Prefecture.ishikawa.path.contains(imageTapPoint) ||
+            Prefecture.fukui.path.contains(imageTapPoint) {
+            selectedResion = japanMapModel?.tyubu
+        } else if Prefecture.mie.path.contains(imageTapPoint) ||
+            Prefecture.shiga.path.contains(imageTapPoint) ||
+            Prefecture.nara.path.contains(imageTapPoint) ||
+            Prefecture.wakayama.path.contains(imageTapPoint) ||
+            Prefecture.osaka.path.contains(imageTapPoint) ||
+            Prefecture.kyoto.path.contains(imageTapPoint) ||
+            Prefecture.hyogo.path.contains(imageTapPoint) {
+            selectedResion = japanMapModel?.kinki
+        } else if Prefecture.shimane.path.contains(imageTapPoint) ||
+            Prefecture.tottori.path.contains(imageTapPoint) ||
+            Prefecture.okayama.path.contains(imageTapPoint) ||
+            Prefecture.hiroshima.path.contains(imageTapPoint) ||
+            Prefecture.yamaguchi.path.contains(imageTapPoint) {
+            selectedResion = japanMapModel?.tyugoku
+        } else if Prefecture.kagawa.path.contains(imageTapPoint) ||
+            Prefecture.tokushima.path.contains(imageTapPoint) ||
+            Prefecture.kochi.path.contains(imageTapPoint) ||
+            Prefecture.ehime.path.contains(imageTapPoint) {
+            selectedResion = japanMapModel?.shikoku
+        } else if Prefecture.oita.path.contains(imageTapPoint) ||
+            Prefecture.miyazaki.path.contains(imageTapPoint) ||
+            Prefecture.kagoshima.path.contains(imageTapPoint) ||
+            Prefecture.kumamoto.path.contains(imageTapPoint) ||
+            Prefecture.fukuoka.path.contains(imageTapPoint) ||
+            Prefecture.saga.path.contains(imageTapPoint) ||
+            Prefecture.nagasaki.path.contains(imageTapPoint) ||
+            Prefecture.okinawa.path.contains(imageTapPoint) {
+            selectedResion = japanMapModel?.kyusyu
+        }
+
+        if let region = selectedResion {
+            coordinator?.goToRegion(region: region)
+        }
     }
 }
 

@@ -3,6 +3,7 @@
 //  covid-19-graph
 //
 
+import Core
 import UIKit
 
 final class PrefectureCoordinator: Coordinator {
@@ -22,8 +23,8 @@ final class PrefectureCoordinator: Coordinator {
         navigationController.pushViewController(prefectureViewController, animated: false)
     }
 
-    func goToRegion(prefecture: Prefecture) {
-        let regionCoordinator = RegionCoordinator(navigationController: navigationController, prefecture: prefecture)
+    func goToRegion(region: RegionModel) {
+        let regionCoordinator = RegionCoordinator(navigationController: navigationController, region: region)
         regionCoordinator.start()
     }
 }
