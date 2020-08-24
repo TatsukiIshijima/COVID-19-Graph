@@ -12,6 +12,8 @@ class PrefectureViewController: ErrorViewController<PrefectureViewModel> {
     @IBOutlet private weak var segmentioView: Segmentio!
     @IBOutlet private weak var japanMapView: JapanMapView!
 
+    private var japanMapModel: JapanMapModel?
+
     var coordinator: PrefectureCoordinator?
 
     override func viewDidLoad() {
@@ -36,10 +38,8 @@ class PrefectureViewController: ErrorViewController<PrefectureViewModel> {
         super.viewDidLoad()
 
         viewModel.japanMapDataProperty.signal.observeValues { [weak self] japanMapModel in
-            guard let model = japanMapModel else {
-                return
-            }
-            self?.drawJapanMap(model: model)
+            self?.japanMapModel = japanMapModel
+            self?.drawJapanMap(isHospitalize: true)
         }
 
         viewModel.loadingProperty.signal.observeValues { isLoading in
@@ -122,115 +122,116 @@ extension PrefectureViewController {
 
         segmentioView.selectedSegmentioIndex = 0
 
-        segmentioView.valueDidChange = { _, _ in
+        segmentioView.valueDidChange = { [weak self] _, index in
+            self?.drawJapanMap(isHospitalize: index == 0)
         }
     }
 }
 
 extension PrefectureViewController {
-    private func drawJapanMap(model: JapanMapModel) {
-        guard let hokkaido = model.hokkaido.prefectures[.hokkaido],
-            let aomori = model.tohoku.prefectures[.aomori],
-            let akita = model.tohoku.prefectures[.akita],
-            let iwate = model.tohoku.prefectures[.iwate],
-            let yamagata = model.tohoku.prefectures[.yamagata],
-            let miyagi = model.tohoku.prefectures[.miyagi],
-            let fukushima = model.tohoku.prefectures[.fukushima],
-            let ibaraki = model.kanto.prefectures[.ibaraki],
-            let chiba = model.kanto.prefectures[.chiba],
-            let tochigi = model.kanto.prefectures[.tochigi],
-            let gunma = model.kanto.prefectures[.gunma],
-            let saitama = model.kanto.prefectures[.saitama],
-            let tokyo = model.kanto.prefectures[.tokyo],
-            let kanagawa = model.kanto.prefectures[.kanagawa],
-            let yamanashi = model.tyubu.prefectures[.yamanashi],
-            let nigata = model.tyubu.prefectures[.nigata],
-            let shizuoka = model.tyubu.prefectures[.shizuoka],
-            let nagano = model.tyubu.prefectures[.nagano],
-            let aichi = model.tyubu.prefectures[.aichi],
-            let gifu = model.tyubu.prefectures[.gifu],
-            let toyama = model.tyubu.prefectures[.toyama],
-            let ishikawa = model.tyubu.prefectures[.ishikawa],
-            let fukui = model.tyubu.prefectures[.fukui],
-            let mie = model.kinki.prefectures[.mie],
-            let shiga = model.kinki.prefectures[.shiga],
-            let nara = model.kinki.prefectures[.nara],
-            let wakayama = model.kinki.prefectures[.wakayama],
-            let osaka = model.kinki.prefectures[.osaka],
-            let kyoto = model.kinki.prefectures[.kyoto],
-            let hyogo = model.kinki.prefectures[.hyugo],
-            let shimane = model.tyugoku.prefectures[.shimane],
-            let tottori = model.tyugoku.prefectures[.tottori],
-            let okayama = model.tyugoku.prefectures[.okayama],
-            let hiroshima = model.tyugoku.prefectures[.hiroshima],
-            let yamaguchi = model.tyugoku.prefectures[.yamaguchi],
-            let kagawa = model.shikoku.prefectures[.kagawa],
-            let tokushima = model.shikoku.prefectures[.tokushima],
-            let kochi = model.shikoku.prefectures[.kouchi],
-            let ehime = model.shikoku.prefectures[.ehime],
-            let oita = model.kyusyu.prefectures[.oita],
-            let miyazaki = model.kyusyu.prefectures[.miyazaki],
-            let kagoshima = model.kyusyu.prefectures[.kagoshima],
-            let kumamoto = model.kyusyu.prefectures[.kumamoto],
-            let fukuoka = model.kyusyu.prefectures[.fukuoka],
-            let saga = model.kyusyu.prefectures[.saga],
-            let nagasaki = model.kyusyu.prefectures[.nagasaki],
-            let okinawa = model.kyusyu.prefectures[.okinawa]
+    private func drawJapanMap(isHospitalize: Bool) {
+        guard let hokkaido = japanMapModel?.hokkaido.prefectures[.hokkaido],
+            let aomori = japanMapModel?.tohoku.prefectures[.aomori],
+            let akita = japanMapModel?.tohoku.prefectures[.akita],
+            let iwate = japanMapModel?.tohoku.prefectures[.iwate],
+            let yamagata = japanMapModel?.tohoku.prefectures[.yamagata],
+            let miyagi = japanMapModel?.tohoku.prefectures[.miyagi],
+            let fukushima = japanMapModel?.tohoku.prefectures[.fukushima],
+            let ibaraki = japanMapModel?.kanto.prefectures[.ibaraki],
+            let chiba = japanMapModel?.kanto.prefectures[.chiba],
+            let tochigi = japanMapModel?.kanto.prefectures[.tochigi],
+            let gunma = japanMapModel?.kanto.prefectures[.gunma],
+            let saitama = japanMapModel?.kanto.prefectures[.saitama],
+            let tokyo = japanMapModel?.kanto.prefectures[.tokyo],
+            let kanagawa = japanMapModel?.kanto.prefectures[.kanagawa],
+            let yamanashi = japanMapModel?.tyubu.prefectures[.yamanashi],
+            let nigata = japanMapModel?.tyubu.prefectures[.nigata],
+            let shizuoka = japanMapModel?.tyubu.prefectures[.shizuoka],
+            let nagano = japanMapModel?.tyubu.prefectures[.nagano],
+            let aichi = japanMapModel?.tyubu.prefectures[.aichi],
+            let gifu = japanMapModel?.tyubu.prefectures[.gifu],
+            let toyama = japanMapModel?.tyubu.prefectures[.toyama],
+            let ishikawa = japanMapModel?.tyubu.prefectures[.ishikawa],
+            let fukui = japanMapModel?.tyubu.prefectures[.fukui],
+            let mie = japanMapModel?.kinki.prefectures[.mie],
+            let shiga = japanMapModel?.kinki.prefectures[.shiga],
+            let nara = japanMapModel?.kinki.prefectures[.nara],
+            let wakayama = japanMapModel?.kinki.prefectures[.wakayama],
+            let osaka = japanMapModel?.kinki.prefectures[.osaka],
+            let kyoto = japanMapModel?.kinki.prefectures[.kyoto],
+            let hyogo = japanMapModel?.kinki.prefectures[.hyugo],
+            let shimane = japanMapModel?.tyugoku.prefectures[.shimane],
+            let tottori = japanMapModel?.tyugoku.prefectures[.tottori],
+            let okayama = japanMapModel?.tyugoku.prefectures[.okayama],
+            let hiroshima = japanMapModel?.tyugoku.prefectures[.hiroshima],
+            let yamaguchi = japanMapModel?.tyugoku.prefectures[.yamaguchi],
+            let kagawa = japanMapModel?.shikoku.prefectures[.kagawa],
+            let tokushima = japanMapModel?.shikoku.prefectures[.tokushima],
+            let kochi = japanMapModel?.shikoku.prefectures[.kouchi],
+            let ehime = japanMapModel?.shikoku.prefectures[.ehime],
+            let oita = japanMapModel?.kyusyu.prefectures[.oita],
+            let miyazaki = japanMapModel?.kyusyu.prefectures[.miyazaki],
+            let kagoshima = japanMapModel?.kyusyu.prefectures[.kagoshima],
+            let kumamoto = japanMapModel?.kyusyu.prefectures[.kumamoto],
+            let fukuoka = japanMapModel?.kyusyu.prefectures[.fukuoka],
+            let saga = japanMapModel?.kyusyu.prefectures[.saga],
+            let nagasaki = japanMapModel?.kyusyu.prefectures[.nagasaki],
+            let okinawa = japanMapModel?.kyusyu.prefectures[.okinawa]
             else {
                 return
         }
 
         guard let viewModel = self.viewModel else {
-            return
+            fatalError("Could not get PrefectureViewModel.")
         }
 
-        // hospitalize が現在 positive が累計
-        japanMapView.reDraw(hokkaidoColor: viewModel.toLegendColor(number: hokkaido.hospitalize),
-                            aomoriColor: viewModel.toLegendColor(number: aomori.hospitalize),
-                            akitaColor: viewModel.toLegendColor(number: akita.hospitalize),
-                            iwateColor: viewModel.toLegendColor(number: iwate.hospitalize),
-                            yamagataColor: viewModel.toLegendColor(number: yamagata.hospitalize),
-                            miyagiColor: viewModel.toLegendColor(number: miyagi.hospitalize),
-                            fukushimaColor: viewModel.toLegendColor(number: fukushima.hospitalize),
-                            ibarakiColor: viewModel.toLegendColor(number: ibaraki.hospitalize),
-                            chibaColor: viewModel.toLegendColor(number: chiba.hospitalize),
-                            tochigiColor: viewModel.toLegendColor(number: tochigi.hospitalize),
-                            gunmaColor: viewModel.toLegendColor(number: gunma.hospitalize),
-                            saitamaColor: viewModel.toLegendColor(number: saitama.hospitalize),
-                            tokyoColor: viewModel.toLegendColor(number: tokyo.hospitalize),
-                            kanagawaColor: viewModel.toLegendColor(number: kanagawa.hospitalize),
-                            yamanashiColor: viewModel.toLegendColor(number: yamanashi.hospitalize),
-                            nigataColor: viewModel.toLegendColor(number: nigata.hospitalize),
-                            shizuokaColor: viewModel.toLegendColor(number: shizuoka.hospitalize),
-                            naganoColor: viewModel.toLegendColor(number: nagano.hospitalize),
-                            aichiColor: viewModel.toLegendColor(number: aichi.hospitalize),
-                            gifuColor: viewModel.toLegendColor(number: gifu.hospitalize),
-                            toyamaColor: viewModel.toLegendColor(number: toyama.hospitalize),
-                            ishikawaColor: viewModel.toLegendColor(number: ishikawa.hospitalize),
-                            fukuiColor: viewModel.toLegendColor(number: fukui.hospitalize),
-                            mieColor: viewModel.toLegendColor(number: mie.hospitalize),
-                            shigaColor: viewModel.toLegendColor(number: shiga.hospitalize),
-                            naraColor: viewModel.toLegendColor(number: nara.hospitalize),
-                            wakayamaColor: viewModel.toLegendColor(number: wakayama.hospitalize),
-                            osakaColor: viewModel.toLegendColor(number: osaka.hospitalize),
-                            kyotoColor: viewModel.toLegendColor(number: kyoto.hospitalize),
-                            hyogoColor: viewModel.toLegendColor(number: hyogo.hospitalize),
-                            shimaneColor: viewModel.toLegendColor(number: shimane.hospitalize),
-                            tottoriColor: viewModel.toLegendColor(number: tottori.hospitalize),
-                            okayamaColor: viewModel.toLegendColor(number: okayama.hospitalize),
-                            hiroshimaColor: viewModel.toLegendColor(number: hiroshima.hospitalize),
-                            yamaguchiColor: viewModel.toLegendColor(number: yamaguchi.hospitalize),
-                            kagawaColor: viewModel.toLegendColor(number: kagawa.hospitalize),
-                            tokushimaColor: viewModel.toLegendColor(number: tokushima.hospitalize),
-                            kochiColor: viewModel.toLegendColor(number: kochi.hospitalize),
-                            ehimeColor: viewModel.toLegendColor(number: ehime.hospitalize),
-                            oitaColor: viewModel.toLegendColor(number: oita.hospitalize),
-                            miyazakiColor: viewModel.toLegendColor(number: miyazaki.hospitalize),
-                            kagoshimaColor: viewModel.toLegendColor(number: kagoshima.hospitalize),
-                            kumamotoColor: viewModel.toLegendColor(number: kumamoto.hospitalize),
-                            fukuokaColor: viewModel.toLegendColor(number: fukuoka.hospitalize),
-                            sagaColor: viewModel.toLegendColor(number: saga.hospitalize),
-                            nagasakiColor: viewModel.toLegendColor(number: nagasaki.hospitalize),
-                            okinawaColor: viewModel.toLegendColor(number: okinawa.hospitalize))
+        // hospitalize が現在 cases が累計
+        japanMapView.reDraw(hokkaidoColor: viewModel.toLegendColor(number: isHospitalize ? hokkaido.hospitalize : hokkaido.cases),
+                            aomoriColor: viewModel.toLegendColor(number: isHospitalize ? aomori.hospitalize : aomori.cases),
+                            akitaColor: viewModel.toLegendColor(number: isHospitalize ? akita.hospitalize : akita.cases),
+                            iwateColor: viewModel.toLegendColor(number: isHospitalize ? iwate.hospitalize : iwate.cases),
+                            yamagataColor: viewModel.toLegendColor(number: isHospitalize ? yamagata.hospitalize : yamagata.cases),
+                            miyagiColor: viewModel.toLegendColor(number: isHospitalize ? miyagi.hospitalize : miyagi.cases),
+                            fukushimaColor: viewModel.toLegendColor(number: isHospitalize ? fukushima.hospitalize : fukushima.cases),
+                            ibarakiColor: viewModel.toLegendColor(number: isHospitalize ? ibaraki.hospitalize : ibaraki.cases),
+                            chibaColor: viewModel.toLegendColor(number: isHospitalize ? chiba.hospitalize : chiba.cases),
+                            tochigiColor: viewModel.toLegendColor(number: isHospitalize ? tochigi.hospitalize : tochigi.cases),
+                            gunmaColor: viewModel.toLegendColor(number: isHospitalize ? gunma.hospitalize : gunma.cases),
+                            saitamaColor: viewModel.toLegendColor(number: isHospitalize ? saitama.hospitalize : saitama.cases),
+                            tokyoColor: viewModel.toLegendColor(number: isHospitalize ? tokyo.hospitalize : tokyo.cases),
+                            kanagawaColor: viewModel.toLegendColor(number: isHospitalize ? kanagawa.hospitalize : kanagawa.cases),
+                            yamanashiColor: viewModel.toLegendColor(number: isHospitalize ? yamanashi.hospitalize : yamanashi.cases),
+                            nigataColor: viewModel.toLegendColor(number: isHospitalize ? nigata.hospitalize : nigata.cases),
+                            shizuokaColor: viewModel.toLegendColor(number: isHospitalize ? shizuoka.hospitalize : shizuoka.cases),
+                            naganoColor: viewModel.toLegendColor(number: isHospitalize ? nagano.hospitalize : nagano.cases),
+                            aichiColor: viewModel.toLegendColor(number: isHospitalize ? aichi.hospitalize : aichi.cases),
+                            gifuColor: viewModel.toLegendColor(number: isHospitalize ? gifu.hospitalize : gifu.cases),
+                            toyamaColor: viewModel.toLegendColor(number: isHospitalize ? toyama.hospitalize : toyama.cases),
+                            ishikawaColor: viewModel.toLegendColor(number: isHospitalize ? ishikawa.hospitalize : ishikawa.cases),
+                            fukuiColor: viewModel.toLegendColor(number: isHospitalize ? fukui.hospitalize : fukui.cases),
+                            mieColor: viewModel.toLegendColor(number: isHospitalize ? mie.hospitalize : mie.cases),
+                            shigaColor: viewModel.toLegendColor(number: isHospitalize ? shiga.hospitalize : shiga.cases),
+                            naraColor: viewModel.toLegendColor(number: isHospitalize ? nara.hospitalize : nara.cases),
+                            wakayamaColor: viewModel.toLegendColor(number: isHospitalize ? wakayama.hospitalize : wakayama.cases),
+                            osakaColor: viewModel.toLegendColor(number: isHospitalize ? osaka.hospitalize : osaka.cases),
+                            kyotoColor: viewModel.toLegendColor(number: isHospitalize ? kyoto.hospitalize : kyoto.cases),
+                            hyogoColor: viewModel.toLegendColor(number: isHospitalize ? hyogo.hospitalize : hyogo.cases),
+                            shimaneColor: viewModel.toLegendColor(number: isHospitalize ? shimane.hospitalize : shimane.cases),
+                            tottoriColor: viewModel.toLegendColor(number: isHospitalize ? tottori.hospitalize : tottori.cases),
+                            okayamaColor: viewModel.toLegendColor(number: isHospitalize ? okayama.hospitalize : okayama.cases),
+                            hiroshimaColor: viewModel.toLegendColor(number: isHospitalize ? hiroshima.hospitalize : hiroshima.cases),
+                            yamaguchiColor: viewModel.toLegendColor(number: isHospitalize ? yamaguchi.hospitalize : yamaguchi.cases),
+                            kagawaColor: viewModel.toLegendColor(number: isHospitalize ? kagawa.hospitalize : kagawa.cases),
+                            tokushimaColor: viewModel.toLegendColor(number: isHospitalize ? tokushima.hospitalize : tokushima.cases),
+                            kochiColor: viewModel.toLegendColor(number: isHospitalize ? kochi.hospitalize : kochi.cases),
+                            ehimeColor: viewModel.toLegendColor(number: isHospitalize ? ehime.hospitalize : ehime.cases),
+                            oitaColor: viewModel.toLegendColor(number: isHospitalize ? oita.hospitalize : oita.cases),
+                            miyazakiColor: viewModel.toLegendColor(number: isHospitalize ? miyazaki.hospitalize : miyazaki.cases),
+                            kagoshimaColor: viewModel.toLegendColor(number: isHospitalize ? kagoshima.hospitalize : kagoshima.cases),
+                            kumamotoColor: viewModel.toLegendColor(number: isHospitalize ? kumamoto.hospitalize : kumamoto.cases),
+                            fukuokaColor: viewModel.toLegendColor(number: isHospitalize ? fukuoka.hospitalize : fukuoka.cases),
+                            sagaColor: viewModel.toLegendColor(number: isHospitalize ? saga.hospitalize : saga.cases),
+                            nagasakiColor: viewModel.toLegendColor(number: isHospitalize ? nagasaki.hospitalize : nagasaki.cases),
+                            okinawaColor: viewModel.toLegendColor(number: isHospitalize ? okinawa.hospitalize : okinawa.cases))
     }
 }
