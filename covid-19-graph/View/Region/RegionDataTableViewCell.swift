@@ -6,7 +6,7 @@
 import Core
 import UIKit
 
-class RegionDataTableViewCell: UITableViewCell {
+final class RegionDataTableViewCell: UITableViewCell {
     @IBOutlet private weak var prefectureName: UILabel!
     @IBOutlet private weak var primaryNumber: UILabel!
     @IBOutlet private weak var secondaryNumber: UILabel!
@@ -22,5 +22,8 @@ class RegionDataTableViewCell: UITableViewCell {
 
     func setContent(prefecture: PrefectureModel) {
         prefectureName.text = prefecture.name.rawValue
+        primaryNumber.text = prefecture.cases.toCommaSeperateString
+        secondaryNumber.text = prefecture.hospitalize.toCommaSeperateString
+        tertiaryNumber.text = prefecture.pcr.toCommaSeperateString
     }
 }

@@ -69,7 +69,7 @@ class PrefectureViewController: ErrorViewController<PrefectureViewModel> {
 
         var selectedResion: RegionModel?
 
-        // FIXME: 北海道,沖縄が反応しない
+        // FIXME: 北海道,四国,沖縄が反応しない
         if Prefecture.hokkaido.path.contains(imageTapPoint) {
             selectedResion = japanMapModel?.hokkaido
         } else if Prefecture.aomori.path.contains(imageTapPoint) ||

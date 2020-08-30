@@ -14,7 +14,7 @@ final class RegionDataHeaderView: UITableViewHeaderFooterView {
         super.awakeFromNib()
 
         primaryText.text = R.string.localizable.totalPositivesTitle()
-        secondaryText.text = R.string.localizable.newPositivesTitle()
+        secondaryText.text = R.string.localizable.currentPositivesTitle()
         tertiaryText.text = R.string.localizable.pcrTitle()
     }
 }

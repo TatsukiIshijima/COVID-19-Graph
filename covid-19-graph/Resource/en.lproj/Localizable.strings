@@ -18,5 +18,5 @@
 "notFoundMessage" = "NotFound.";
 "internalServerErrorMessage" = "InternalServerError.";
 "totalPositivesTitle" = "Total";
-"newPositivesTitle" = "New";
+"currentPositivesTitle" = "Current";
 "pcrTitle" = "PCR";

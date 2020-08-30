@@ -18,5 +18,5 @@
 "notFoundMessage" = "データ取得先が見つかりません";
 "internalServerErrorMessage" = "サーバーエラーです。しばらくしてからもう一度アクセスしてください。";
 "totalPositivesTitle" = "累計\n感染者";
-"newPositivesTitle" = "新規\n感染者";
+"currentPositivesTitle" = "現在の\n感染者";
 "pcrTitle" = "PCR\n検査";
