@@ -10,7 +10,7 @@ excluded:
     - covid-19-graph/Resource
 
 opt_in_rules:
-    - force_unwrapping
+#    - force_unwrapping
     
 variable_name:
     min_length:
@@ -21,16 +21,16 @@ variable_name:
     - URLResponse
     
 function_body_length:
-    warning: 50
-    error: 100
+    warning: 100
+#    error: 150
 
 type_body_length:
-    warning: 300
-    error: 500
+    warning: 400
+#   error: 600
     
 file_length:
     warning: 500
-    error: 1000
+#    error: 1000
     
 force_cast: warning
 
