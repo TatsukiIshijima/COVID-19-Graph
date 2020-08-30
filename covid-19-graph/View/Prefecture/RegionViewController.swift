@@ -7,6 +7,9 @@ import Core
 import UIKit
 
 final class RegionViewController: UIViewController {
+    // 画面の横幅とTableViewの縦幅をイコールにすると高さ変更が効かなかったので
+    // 一旦定数指定し、その後変更するようにする
+    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     private var regionDataViewController: RegionDataViewController?
 
     var region: RegionModel?
@@ -14,17 +17,16 @@ final class RegionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
 
         guard let viewController = regionDataViewController,
             let region = self.region
             else {
                 fatalError("RegionDataViewController or RegionModel is nil.")
         }
-        viewController.reloadData(prefectures: Array(region.prefectures.values))
+        tableViewHeight.constant = CGFloat(region.prefectures.count * 44)
+        viewController.reloadData(prefectures: Array(region.prefectures.values.sorted(by: { (first, second) -> Bool in
+            first.id < second.id
+        })))
     }
 }
 

@@ -14,6 +14,7 @@ class RegionDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.isScrollEnabled = false
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(R.nib.regionDataTableViewCell)
