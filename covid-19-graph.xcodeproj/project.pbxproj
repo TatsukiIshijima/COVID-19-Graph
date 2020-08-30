@@ -398,6 +398,7 @@
 				49FCA85024F15623007EE42B /* Home */,
 				493BC6F324D7DFDF00B581D7 /* Today */,
 				49940E4824DC36E100CAC6FA /* Prefecture */,
+				49939AB324FB6AC100DF3F5C /* Region */,
 				49B9851724F24E7C00E7CF2C /* ErrorViewController.swift */,
 			);
 			path = View;
@@ -546,17 +547,24 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		49939AB324FB6AC100DF3F5C /* Region */ = {
+			isa = PBXGroup;
+			children = (
+				491EEB9924DFE5D100E07765 /* RegionViewController.swift */,
+				491EEB9B24DFE5F200E07765 /* RegionViewController.storyboard */,
+				49939AAD24FB413C00DF3F5C /* RegionDataViewController.swift */,
+				49939AAF24FB418100DF3F5C /* RegionDataTableViewCell.swift */,
+				49939AB024FB418100DF3F5C /* RegionDataTableViewCell.xib */,
+			);
+			path = Region;
+			sourceTree = "<group>";
+		};
 		49940E4824DC36E100CAC6FA /* Prefecture */ = {
 			isa = PBXGroup;
 			children = (
 				490C958024D6862F002C0F45 /* PrefectureViewController.swift */,
 				490C958224D6864E002C0F45 /* PrefectureViewController.storyboard */,
 				4942934F24DD4BD8006B5C58 /* JapanMapView.swift */,
-				491EEB9924DFE5D100E07765 /* RegionViewController.swift */,
-				491EEB9B24DFE5F200E07765 /* RegionViewController.storyboard */,
-				49939AAD24FB413C00DF3F5C /* RegionDataViewController.swift */,
-				49939AAF24FB418100DF3F5C /* RegionDataTableViewCell.swift */,
-				49939AB024FB418100DF3F5C /* RegionDataTableViewCell.xib */,
 			);
 			path = Prefecture;
 			sourceTree = "<group>";
