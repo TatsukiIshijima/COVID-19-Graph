@@ -54,11 +54,6 @@ class PrefectureViewController: ErrorViewController<PrefectureViewModel> {
         viewModel.drawPrefectures()
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        AppDelegate.shared.appContainer.prefectureContainer = nil
-    }
-
     @objc private func tapAction(_ sender: UITapGestureRecognizer) {
         let originalTapPoint = sender.location(in: japanMapView)
         // 以下は元画像のサイズ
