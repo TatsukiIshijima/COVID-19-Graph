@@ -69,6 +69,7 @@
                         <viewLayoutGuide key="safeArea" id="zsF-Y2-aXd"/>
                     </view>
                     <connections>
+                        <outlet property="regionView" destination="ryo-EB-eqa" id="dxK-7m-XtS"/>
                         <outlet property="tableViewHeight" destination="3hB-TP-jcW" id="17k-L5-J9I"/>
                     </connections>
                 </viewController>

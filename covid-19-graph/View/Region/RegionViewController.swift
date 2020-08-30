@@ -9,7 +9,8 @@ import UIKit
 final class RegionViewController: UIViewController {
     // 画面の横幅とTableViewの縦幅をイコールにすると高さ変更が効かなかったので
     // 一旦定数指定し、その後変更するようにする
-    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var regionView: UIView!
     private var regionDataViewController: RegionDataViewController?
 
     var region: RegionModel?
@@ -29,6 +30,8 @@ final class RegionViewController: UIViewController {
         viewController.reloadData(prefectures: Array(region.prefectures.values.sorted(by: { (first, second) -> Bool in
             first.id < second.id
         })))
+
+        // regionView.addSubview(TohokuMapView(originalWidth: 185, originalHeight: 235))
     }
 }
 
