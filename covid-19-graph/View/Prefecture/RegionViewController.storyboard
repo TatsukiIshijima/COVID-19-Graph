@@ -28,7 +28,7 @@
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fxx-Jn-7rP">
                                                 <rect key="frame" x="0.0" y="414" width="414" height="414"/>
                                                 <connections>
-                                                    <segue destination="dde-1s-5KT" kind="embed" id="Gyf-OV-CVX"/>
+                                                    <segue destination="dde-1s-5KT" kind="embed" identifier="RegionDataSegue" id="Gyf-OV-CVX"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -71,15 +71,15 @@
             </objects>
             <point key="canvasLocation" x="-494.20289855072468" y="105.80357142857143"/>
         </scene>
-        <!--View Controller-->
+        <!--Region Data View Controller-->
         <scene sceneID="zDW-Qu-d5l">
             <objects>
-                <viewController id="dde-1s-5KT" sceneMemberID="viewController">
+                <viewController id="dde-1s-5KT" customClass="RegionDataViewController" customModule="covid_19_graph" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Lu-Ni-g0i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PZH-ma-Jki">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PZH-ma-Jki">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
@@ -92,10 +92,13 @@
                             <constraint firstItem="PZH-ma-Jki" firstAttribute="top" secondItem="4Lu-Ni-g0i" secondAttribute="top" id="nwf-6o-NIt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="PZH-ma-Jki" id="A80-7l-4MJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dap-Kp-NQ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="373.91304347826087" y="267.85714285714283"/>
+            <point key="canvasLocation" x="349" y="106"/>
         </scene>
     </scenes>
 </document>
