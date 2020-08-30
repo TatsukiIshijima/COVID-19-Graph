@@ -19,14 +19,14 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bd-Qx-KBM" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="844"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="740.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryo-EB-eqa" userLabel="RegionView">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="310.5"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fxx-Jn-7rP">
-                                                <rect key="frame" x="0.0" y="414" width="414" height="414"/>
+                                                <rect key="frame" x="0.0" y="310.5" width="414" height="414"/>
                                                 <connections>
                                                     <segue destination="dde-1s-5KT" kind="embed" identifier="RegionDataSegue" id="Gyf-OV-CVX"/>
                                                 </connections>
@@ -46,10 +46,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="leading" secondItem="KWH-En-TIg" secondAttribute="leading" id="0wP-QQ-z9u"/>
-                                    <constraint firstItem="9bd-Qx-KBM" firstAttribute="trailing" secondItem="KWH-En-TIg" secondAttribute="trailing" constant="414" id="AlZ-Pk-bYY"/>
+                                    <constraint firstItem="9bd-Qx-KBM" firstAttribute="trailing" secondItem="KWH-En-TIg" secondAttribute="trailing" id="AlZ-Pk-bYY"/>
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="width" secondItem="wmg-4T-M41" secondAttribute="width" id="Dww-Vg-pUi"/>
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="top" secondItem="KWH-En-TIg" secondAttribute="top" id="S0p-bK-Cqb"/>
-                                    <constraint firstItem="9bd-Qx-KBM" firstAttribute="bottom" secondItem="KWH-En-TIg" secondAttribute="bottom" constant="462" id="duZ-jp-VFA"/>
+                                    <constraint firstItem="9bd-Qx-KBM" firstAttribute="bottom" secondItem="KWH-En-TIg" secondAttribute="bottom" id="duZ-jp-VFA"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="KWH-En-TIg"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="wmg-4T-M41"/>
@@ -60,12 +60,15 @@
                             <constraint firstItem="yQl-RL-Nu0" firstAttribute="leading" secondItem="zsF-Y2-aXd" secondAttribute="leading" id="0Mf-iK-FG6"/>
                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="height" secondItem="Cd8-aq-gHD" secondAttribute="width" id="1Xd-YV-46M"/>
                             <constraint firstItem="yQl-RL-Nu0" firstAttribute="bottom" secondItem="zsF-Y2-aXd" secondAttribute="bottom" id="5oe-sD-DSn"/>
-                            <constraint firstItem="ryo-EB-eqa" firstAttribute="height" secondItem="Cd8-aq-gHD" secondAttribute="width" id="8hL-pT-W8m"/>
+                            <constraint firstItem="ryo-EB-eqa" firstAttribute="height" secondItem="Cd8-aq-gHD" secondAttribute="width" multiplier="0.75" id="8hL-pT-W8m"/>
                             <constraint firstItem="yQl-RL-Nu0" firstAttribute="trailing" secondItem="zsF-Y2-aXd" secondAttribute="trailing" id="QsQ-Cr-Jau"/>
                             <constraint firstItem="yQl-RL-Nu0" firstAttribute="top" secondItem="zsF-Y2-aXd" secondAttribute="top" id="vQf-Rr-9c4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zsF-Y2-aXd"/>
                     </view>
+                    <connections>
+                        <outlet property="regionDataTableViewHeight" destination="1Xd-YV-46M" id="15b-Vm-SRI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="454-tb-99N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,6 +94,7 @@
                             <constraint firstItem="PZH-ma-Jki" firstAttribute="leading" secondItem="4Lu-Ni-g0i" secondAttribute="leading" id="KpK-zK-rqf"/>
                             <constraint firstItem="PZH-ma-Jki" firstAttribute="top" secondItem="4Lu-Ni-g0i" secondAttribute="top" id="nwf-6o-NIt"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="um7-JU-GH1"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="PZH-ma-Jki" id="A80-7l-4MJ"/>
