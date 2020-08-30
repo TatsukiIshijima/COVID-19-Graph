@@ -3,16 +3,17 @@
 //  covid-19-graph
 //
 
+import Core
 import UIKit
 
 final class RegionCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    var prefecture: Prefecture
+    var region: RegionModel
 
-    init(navigationController: UINavigationController, prefecture: Prefecture) {
+    init(navigationController: UINavigationController, region: RegionModel) {
         self.navigationController = navigationController
-        self.prefecture = prefecture
+        self.region = region
     }
 
     func start() {
@@ -21,7 +22,7 @@ final class RegionCoordinator: Coordinator {
             fatalError("failed to RegionController instantiate")
         }
         regionViewController.coordinator = self
-        regionViewController.prefecture = prefecture
+        regionViewController.region = region
         navigationController.pushViewController(regionViewController, animated: true)
     }
 }

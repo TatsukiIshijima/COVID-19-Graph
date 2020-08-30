@@ -5689,8 +5689,6 @@ extension Prefecture {
             oKINAWAPath.addLine(to: CGPoint(x: 57.15, y: 135.78))
             oKINAWAPath.close()
             return oKINAWAPath
-        default:
-            return UIBezierPath()
         }
     }
 }

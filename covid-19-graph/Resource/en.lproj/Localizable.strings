@@ -1,5 +1,6 @@
 "todayTitle" = "Today";
 "prefectureTitle" = "pandemic";
+"regionTitle" = "region";
 "pcrNumTitle" = "PCR";
 "positiveNumTitle" = "Positive";
 "dischargeNumTitle" = "Discharge";
@@ -16,3 +17,6 @@
 "forbiddenMessage" = "Forbiddden.";
 "notFoundMessage" = "NotFound.";
 "internalServerErrorMessage" = "InternalServerError.";
+"totalPositivesTitle" = "Total";
+"currentPositivesTitle" = "Current";
+"pcrTitle" = "PCR";

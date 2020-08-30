@@ -56,12 +56,20 @@ public struct PrefectureModel {
 
     public let id: Int
     public let name: Name
+    // 人口
     public let population: Int
+    // 累計の感染者数
     public let cases: Int
+    // 死亡者数
     public let deaths: Int
+    // PCR検査人数
     public let pcr: Int
+    // 現在の感染者数
     public let hospitalize: Int
+    // 重傷者数
     public let severe: Int
+    // 退院者数
     public let discharge: Int
+    // 確認中
     public let symptomConfirming: Int
 }

@@ -48,11 +48,6 @@ final class TodayViewController: ErrorViewController<TodayViewModel> {
 
         viewModel.fetchTotal()
     }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        AppDelegate.shared.appContainer.todayContainer = nil
-    }
 }
 
 extension TodayViewController: UICollectionViewDelegate {}

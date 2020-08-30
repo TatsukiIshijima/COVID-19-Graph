@@ -64,6 +64,11 @@
 		496C1E2924DBC9EF00521D25 /* StatisticsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C1E2824DBC9EF00521D25 /* StatisticsResponse.swift */; };
 		496C1E2B24DBCAE800521D25 /* PrefectureStatisticsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C1E2A24DBCAE800521D25 /* PrefectureStatisticsResponse.swift */; };
 		498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 498EDF1624D2F730000CB11B /* .swiftlint.yml */; };
+		49939AAE24FB413C00DF3F5C /* RegionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49939AAD24FB413C00DF3F5C /* RegionDataViewController.swift */; };
+		49939AB124FB418100DF3F5C /* RegionDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49939AAF24FB418100DF3F5C /* RegionDataTableViewCell.swift */; };
+		49939AB224FB418100DF3F5C /* RegionDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49939AB024FB418100DF3F5C /* RegionDataTableViewCell.xib */; };
+		49939AB524FB6C5900DF3F5C /* RegionDataHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49939AB424FB6C5900DF3F5C /* RegionDataHeaderView.swift */; };
+		49939AB724FB6C8000DF3F5C /* RegionDataHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49939AB624FB6C8000DF3F5C /* RegionDataHeaderView.xib */; };
 		49940E4624DBEA2600CAC6FA /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49940E4424DBEA2600CAC6FA /* TodayCollectionViewCell.swift */; };
 		49940E4724DBEA2600CAC6FA /* TodayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49940E4524DBEA2600CAC6FA /* TodayCollectionViewCell.xib */; };
 		49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753A24D19CDA009EC846 /* AppDelegate.swift */; };
@@ -231,6 +236,11 @@
 		498EDF2124D2FC15000CB11B /* Release-Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release-Development.xcconfig"; sourceTree = "<group>"; };
 		498EDF2224D2FC23000CB11B /* Release-Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release-Staging.xcconfig"; sourceTree = "<group>"; };
 		498EDF2324D2FC32000CB11B /* Release-Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release-Production.xcconfig"; sourceTree = "<group>"; };
+		49939AAD24FB413C00DF3F5C /* RegionDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionDataViewController.swift; sourceTree = "<group>"; };
+		49939AAF24FB418100DF3F5C /* RegionDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionDataTableViewCell.swift; sourceTree = "<group>"; };
+		49939AB024FB418100DF3F5C /* RegionDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegionDataTableViewCell.xib; sourceTree = "<group>"; };
+		49939AB424FB6C5900DF3F5C /* RegionDataHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionDataHeaderView.swift; sourceTree = "<group>"; };
+		49939AB624FB6C8000DF3F5C /* RegionDataHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegionDataHeaderView.xib; sourceTree = "<group>"; };
 		49940E4424DBEA2600CAC6FA /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
 		49940E4524DBEA2600CAC6FA /* TodayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCollectionViewCell.xib; sourceTree = "<group>"; };
 		49A6753724D19CDA009EC846 /* covid-19-graph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "covid-19-graph.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -392,6 +402,7 @@
 				49FCA85024F15623007EE42B /* Home */,
 				493BC6F324D7DFDF00B581D7 /* Today */,
 				49940E4824DC36E100CAC6FA /* Prefecture */,
+				49939AB324FB6AC100DF3F5C /* Region */,
 				49B9851724F24E7C00E7CF2C /* ErrorViewController.swift */,
 			);
 			path = View;
@@ -540,14 +551,26 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		49939AB324FB6AC100DF3F5C /* Region */ = {
+			isa = PBXGroup;
+			children = (
+				491EEB9924DFE5D100E07765 /* RegionViewController.swift */,
+				491EEB9B24DFE5F200E07765 /* RegionViewController.storyboard */,
+				49939AAD24FB413C00DF3F5C /* RegionDataViewController.swift */,
+				49939AAF24FB418100DF3F5C /* RegionDataTableViewCell.swift */,
+				49939AB024FB418100DF3F5C /* RegionDataTableViewCell.xib */,
+				49939AB424FB6C5900DF3F5C /* RegionDataHeaderView.swift */,
+				49939AB624FB6C8000DF3F5C /* RegionDataHeaderView.xib */,
+			);
+			path = Region;
+			sourceTree = "<group>";
+		};
 		49940E4824DC36E100CAC6FA /* Prefecture */ = {
 			isa = PBXGroup;
 			children = (
 				490C958024D6862F002C0F45 /* PrefectureViewController.swift */,
 				490C958224D6864E002C0F45 /* PrefectureViewController.storyboard */,
 				4942934F24DD4BD8006B5C58 /* JapanMapView.swift */,
-				491EEB9924DFE5D100E07765 /* RegionViewController.swift */,
-				491EEB9B24DFE5F200E07765 /* RegionViewController.storyboard */,
 			);
 			path = Prefecture;
 			sourceTree = "<group>";
@@ -884,10 +907,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */,
+				49939AB724FB6C8000DF3F5C /* RegionDataHeaderView.xib in Resources */,
 				490C958324D6864E002C0F45 /* PrefectureViewController.storyboard in Resources */,
 				49FCA84C24F145C2007EE42B /* Localizable.strings in Resources */,
 				4905C65D24D547C7005DE24F /* HomeViewController.storyboard in Resources */,
 				49A6754724D19CDE009EC846 /* LaunchScreen.storyboard in Resources */,
+				49939AB224FB418100DF3F5C /* RegionDataTableViewCell.xib in Resources */,
 				4905C66B24D5A0E7005DE24F /* TodayViewController.storyboard in Resources */,
 				4905C65B24D54473005DE24F /* SplashViewController.storyboard in Resources */,
 				49A6754424D19CDE009EC846 /* Assets.xcassets in Resources */,
@@ -1091,6 +1116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4933110A24E95D2900E0347B /* PrefectureContainer.swift in Sources */,
+				49939AB524FB6C5900DF3F5C /* RegionDataHeaderView.swift in Sources */,
 				496BF46C24DEA97F0036DDC6 /* Tyugoku.swift in Sources */,
 				496BF46824DEA97F0036DDC6 /* Kyushu.swift in Sources */,
 				496BF46B24DEA97F0036DDC6 /* Tyubu.swift in Sources */,
@@ -1099,6 +1125,7 @@
 				49A6753F24D19CDA009EC846 /* HomeViewController.swift in Sources */,
 				493578CC24E14435007FB3EA /* Coordinator.swift in Sources */,
 				491EEB9E24DFE6D600E07765 /* RegionCoordinator.swift in Sources */,
+				49939AAE24FB413C00DF3F5C /* RegionDataViewController.swift in Sources */,
 				492630A924D7F46700261690 /* Int+Extension.swift in Sources */,
 				49FCA84024EFE744007EE42B /* TodayCollectionReusableView.swift in Sources */,
 				49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */,
@@ -1124,6 +1151,7 @@
 				4933110C24E95DA900E0347B /* PrefectureViewModel.swift in Sources */,
 				49B9851224F202FB00E7CF2C /* BaseViewModel.swift in Sources */,
 				49B2EEEA24DA9E8E000CD25D /* TodayCoordinator.swift in Sources */,
+				49939AB124FB418100DF3F5C /* RegionDataTableViewCell.swift in Sources */,
 				4905C66324D59BCD005DE24F /* R.generated.swift in Sources */,
 				496BF46024DEA4960036DDC6 /* Kanto.swift in Sources */,
 			);
