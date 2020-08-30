@@ -18,6 +18,8 @@ final class RegionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = R.string.localizable.prefectureTitle()
+
         guard let viewController = regionDataViewController,
             let region = self.region
             else {

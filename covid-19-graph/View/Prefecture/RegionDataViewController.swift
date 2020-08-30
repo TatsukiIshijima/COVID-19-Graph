@@ -37,6 +37,9 @@ extension RegionDataViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.regionDataTableViewCell, for: indexPath) else {
             fatalError("failed to dequeue with \(R.reuseIdentifier.regionDataTableViewCell)")
         }
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = R.color.primaryColor()?.withAlphaComponent(0.1)
+        }
         // 下線の左余白をなくす
         cell.separatorInset = .zero
         cell.setContent(prefecture: prefectures[indexPath.row])
