@@ -13,8 +13,8 @@ final class RegionDataHeaderView: UITableViewHeaderFooterView {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        primaryText.text = "累計\n感染者"
-        secondaryText.text = "新規\n感染者"
-        tertiaryText.text = "PCR\n検査"
+        primaryText.text = R.string.localizable.totalPositivesTitle()
+        secondaryText.text = R.string.localizable.newPositivesTitle()
+        tertiaryText.text = R.string.localizable.pcrTitle()
     }
 }
