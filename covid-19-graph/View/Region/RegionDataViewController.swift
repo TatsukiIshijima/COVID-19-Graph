@@ -18,6 +18,8 @@ class RegionDataViewController: UIViewController {
         tableView.allowsSelection = false
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.sectionHeaderHeight = 44
+        tableView.register(UINib(resource: R.nib.regionDataHeaderView), forHeaderFooterViewReuseIdentifier: R.nib.regionDataHeaderView.name)
         tableView.register(R.nib.regionDataTableViewCell)
     }
 
@@ -27,7 +29,18 @@ class RegionDataViewController: UIViewController {
     }
 }
 
-extension RegionDataViewController: UITableViewDelegate {}
+extension RegionDataViewController: UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: R.nib.regionDataHeaderView.name) as? RegionDataHeaderView else {
+            fatalError("RegionDataHeaderView is nil.")
+        }
+        return header
+    }
+}
 
 extension RegionDataViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

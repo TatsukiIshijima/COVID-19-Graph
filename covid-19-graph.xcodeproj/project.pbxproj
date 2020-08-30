@@ -67,6 +67,8 @@
 		49939AAE24FB413C00DF3F5C /* RegionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49939AAD24FB413C00DF3F5C /* RegionDataViewController.swift */; };
 		49939AB124FB418100DF3F5C /* RegionDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49939AAF24FB418100DF3F5C /* RegionDataTableViewCell.swift */; };
 		49939AB224FB418100DF3F5C /* RegionDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49939AB024FB418100DF3F5C /* RegionDataTableViewCell.xib */; };
+		49939AB524FB6C5900DF3F5C /* RegionDataHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49939AB424FB6C5900DF3F5C /* RegionDataHeaderView.swift */; };
+		49939AB724FB6C8000DF3F5C /* RegionDataHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49939AB624FB6C8000DF3F5C /* RegionDataHeaderView.xib */; };
 		49940E4624DBEA2600CAC6FA /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49940E4424DBEA2600CAC6FA /* TodayCollectionViewCell.swift */; };
 		49940E4724DBEA2600CAC6FA /* TodayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49940E4524DBEA2600CAC6FA /* TodayCollectionViewCell.xib */; };
 		49A6753B24D19CDA009EC846 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A6753A24D19CDA009EC846 /* AppDelegate.swift */; };
@@ -237,6 +239,8 @@
 		49939AAD24FB413C00DF3F5C /* RegionDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionDataViewController.swift; sourceTree = "<group>"; };
 		49939AAF24FB418100DF3F5C /* RegionDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionDataTableViewCell.swift; sourceTree = "<group>"; };
 		49939AB024FB418100DF3F5C /* RegionDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegionDataTableViewCell.xib; sourceTree = "<group>"; };
+		49939AB424FB6C5900DF3F5C /* RegionDataHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionDataHeaderView.swift; sourceTree = "<group>"; };
+		49939AB624FB6C8000DF3F5C /* RegionDataHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegionDataHeaderView.xib; sourceTree = "<group>"; };
 		49940E4424DBEA2600CAC6FA /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
 		49940E4524DBEA2600CAC6FA /* TodayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCollectionViewCell.xib; sourceTree = "<group>"; };
 		49A6753724D19CDA009EC846 /* covid-19-graph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "covid-19-graph.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -555,6 +559,8 @@
 				49939AAD24FB413C00DF3F5C /* RegionDataViewController.swift */,
 				49939AAF24FB418100DF3F5C /* RegionDataTableViewCell.swift */,
 				49939AB024FB418100DF3F5C /* RegionDataTableViewCell.xib */,
+				49939AB424FB6C5900DF3F5C /* RegionDataHeaderView.swift */,
+				49939AB624FB6C8000DF3F5C /* RegionDataHeaderView.xib */,
 			);
 			path = Region;
 			sourceTree = "<group>";
@@ -901,6 +907,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */,
+				49939AB724FB6C8000DF3F5C /* RegionDataHeaderView.xib in Resources */,
 				490C958324D6864E002C0F45 /* PrefectureViewController.storyboard in Resources */,
 				49FCA84C24F145C2007EE42B /* Localizable.strings in Resources */,
 				4905C65D24D547C7005DE24F /* HomeViewController.storyboard in Resources */,
@@ -1109,6 +1116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4933110A24E95D2900E0347B /* PrefectureContainer.swift in Sources */,
+				49939AB524FB6C5900DF3F5C /* RegionDataHeaderView.swift in Sources */,
 				496BF46C24DEA97F0036DDC6 /* Tyugoku.swift in Sources */,
 				496BF46824DEA97F0036DDC6 /* Kyushu.swift in Sources */,
 				496BF46B24DEA97F0036DDC6 /* Tyubu.swift in Sources */,
