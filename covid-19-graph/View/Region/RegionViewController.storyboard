@@ -21,7 +21,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bd-Qx-KBM" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="568"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryo-EB-eqa" userLabel="RegionView">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryo-EB-eqa" userLabel="TohokuMapView" customClass="TohokuMapView" customModule="covid_19_graph" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsa-QN-Vxm" userLabel="KantoMapView" customClass="KantoMapView" customModule="covid_19_graph" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
@@ -38,12 +42,16 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="3BW-wE-e4L"/>
+                                            <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="bsa-QN-Vxm" secondAttribute="bottom" id="3ZF-cz-u4L"/>
                                             <constraint firstItem="ryo-EB-eqa" firstAttribute="top" secondItem="9bd-Qx-KBM" secondAttribute="top" id="7gw-Ew-Y9U"/>
                                             <constraint firstItem="ryo-EB-eqa" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="Baf-t2-E78"/>
                                             <constraint firstAttribute="bottom" secondItem="Fxx-Jn-7rP" secondAttribute="bottom" id="Cjq-iW-Hhv"/>
+                                            <constraint firstItem="bsa-QN-Vxm" firstAttribute="top" secondItem="9bd-Qx-KBM" secondAttribute="top" id="Fge-oB-zZD"/>
                                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="ryo-EB-eqa" secondAttribute="bottom" id="dHZ-MJ-C41"/>
                                             <constraint firstAttribute="trailing" secondItem="Fxx-Jn-7rP" secondAttribute="trailing" id="hh7-KY-Pl0"/>
                                             <constraint firstAttribute="trailing" secondItem="ryo-EB-eqa" secondAttribute="trailing" id="inj-jc-2Ks"/>
+                                            <constraint firstItem="bsa-QN-Vxm" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="kxv-Ol-Rax"/>
+                                            <constraint firstAttribute="trailing" secondItem="bsa-QN-Vxm" secondAttribute="trailing" id="vXp-S5-0Ti"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -52,6 +60,7 @@
                                     <constraint firstItem="ryo-EB-eqa" firstAttribute="height" secondItem="yQl-RL-Nu0" secondAttribute="height" multiplier="0.45" id="717-Fd-NrK"/>
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="trailing" secondItem="KWH-En-TIg" secondAttribute="trailing" id="AlZ-Pk-bYY"/>
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="width" secondItem="wmg-4T-M41" secondAttribute="width" id="Dww-Vg-pUi"/>
+                                    <constraint firstItem="bsa-QN-Vxm" firstAttribute="height" secondItem="yQl-RL-Nu0" secondAttribute="height" multiplier="0.45" id="HDp-hT-bXr"/>
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="top" secondItem="KWH-En-TIg" secondAttribute="top" id="S0p-bK-Cqb"/>
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="bottom" secondItem="KWH-En-TIg" secondAttribute="bottom" id="duZ-jp-VFA"/>
                                 </constraints>
@@ -69,8 +78,9 @@
                         <viewLayoutGuide key="safeArea" id="zsF-Y2-aXd"/>
                     </view>
                     <connections>
-                        <outlet property="regionView" destination="ryo-EB-eqa" id="dxK-7m-XtS"/>
+                        <outlet property="kantoMapView" destination="bsa-QN-Vxm" id="C9v-p7-6MJ"/>
                         <outlet property="tableViewHeight" destination="3hB-TP-jcW" id="17k-L5-J9I"/>
+                        <outlet property="tohokuMapView" destination="ryo-EB-eqa" id="rDJ-IR-Eb5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="454-tb-99N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

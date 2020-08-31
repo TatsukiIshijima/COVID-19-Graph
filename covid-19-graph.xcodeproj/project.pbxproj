@@ -103,6 +103,7 @@
 		49FCA84524F0B3BE007EE42B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; };
 		49FCA84624F0B3BE007EE42B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49B57D2624D3E7AE00D3E828 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49FCA84C24F145C2007EE42B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49FCA84E24F145C2007EE42B /* Localizable.strings */; };
+		49FFF32724FD268A00482676 /* KantoMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFF32624FD268A00482676 /* KantoMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -284,6 +285,7 @@
 		49FCA84924F14567007EE42B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		49FCA84D24F145C2007EE42B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		49FCA84F24F145E0007EE42B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		49FFF32624FD268A00482676 /* KantoMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoMapView.swift; sourceTree = "<group>"; };
 		4C31CF853D82EA2FA46CD902 /* Pods-covid-19-graphTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graphTests.release.xcconfig"; path = "Target Support Files/Pods-covid-19-graphTests/Pods-covid-19-graphTests.release.xcconfig"; sourceTree = "<group>"; };
 		515B835AFFE4F6F0710BE1CA /* Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.release-production.xcconfig"; sourceTree = "<group>"; };
 		670A691A8C43BAC680571B29 /* Pods-covid-19-graph-covid-19-graphUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-covid-19-graph-covid-19-graphUITests.release.xcconfig"; path = "Target Support Files/Pods-covid-19-graph-covid-19-graphUITests/Pods-covid-19-graph-covid-19-graphUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 				49939AB424FB6C5900DF3F5C /* RegionDataHeaderView.swift */,
 				49939AB624FB6C8000DF3F5C /* RegionDataHeaderView.xib */,
 				493ED1AD24FBAA0300B4632C /* TohokuMapView.swift */,
+				49FFF32624FD268A00482676 /* KantoMapView.swift */,
 			);
 			path = Region;
 			sourceTree = "<group>";
@@ -1144,6 +1147,7 @@
 				493578CE24E14484007FB3EA /* AppCoordinator.swift in Sources */,
 				49940E4624DBEA2600CAC6FA /* TodayCollectionViewCell.swift in Sources */,
 				49B2EEEC24DA9F90000CD25D /* PrefectureCoordinator.swift in Sources */,
+				49FFF32724FD268A00482676 /* KantoMapView.swift in Sources */,
 				490C958124D68630002C0F45 /* PrefectureViewController.swift in Sources */,
 				496BF46224DEA4960036DDC6 /* Hokkaido.swift in Sources */,
 				496BF46924DEA97F0036DDC6 /* Kinki.swift in Sources */,
