@@ -29,6 +29,10 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MS2-q9-Xxw" userLabel="ChubuMapView" customClass="ChubuMapView" customModule="covid_19_graph" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fxx-Jn-7rP">
                                                 <rect key="frame" x="0.0" y="368" width="414" height="200"/>
                                                 <constraints>
@@ -48,9 +52,13 @@
                                             <constraint firstAttribute="bottom" secondItem="Fxx-Jn-7rP" secondAttribute="bottom" id="Cjq-iW-Hhv"/>
                                             <constraint firstItem="bsa-QN-Vxm" firstAttribute="top" secondItem="9bd-Qx-KBM" secondAttribute="top" id="Fge-oB-zZD"/>
                                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="ryo-EB-eqa" secondAttribute="bottom" id="dHZ-MJ-C41"/>
+                                            <constraint firstItem="MS2-q9-Xxw" firstAttribute="top" secondItem="9bd-Qx-KBM" secondAttribute="top" id="gnS-dV-moE"/>
                                             <constraint firstAttribute="trailing" secondItem="Fxx-Jn-7rP" secondAttribute="trailing" id="hh7-KY-Pl0"/>
                                             <constraint firstAttribute="trailing" secondItem="ryo-EB-eqa" secondAttribute="trailing" id="inj-jc-2Ks"/>
+                                            <constraint firstAttribute="trailing" secondItem="MS2-q9-Xxw" secondAttribute="trailing" id="jAg-AR-8yF"/>
                                             <constraint firstItem="bsa-QN-Vxm" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="kxv-Ol-Rax"/>
+                                            <constraint firstItem="MS2-q9-Xxw" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="pna-sL-o9Z"/>
+                                            <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="MS2-q9-Xxw" secondAttribute="bottom" id="vN2-6r-6uC"/>
                                             <constraint firstAttribute="trailing" secondItem="bsa-QN-Vxm" secondAttribute="trailing" id="vXp-S5-0Ti"/>
                                         </constraints>
                                     </view>
@@ -61,6 +69,7 @@
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="trailing" secondItem="KWH-En-TIg" secondAttribute="trailing" id="AlZ-Pk-bYY"/>
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="width" secondItem="wmg-4T-M41" secondAttribute="width" id="Dww-Vg-pUi"/>
                                     <constraint firstItem="bsa-QN-Vxm" firstAttribute="height" secondItem="yQl-RL-Nu0" secondAttribute="height" multiplier="0.45" id="HDp-hT-bXr"/>
+                                    <constraint firstItem="MS2-q9-Xxw" firstAttribute="height" secondItem="yQl-RL-Nu0" secondAttribute="height" multiplier="0.45" id="RBw-RH-YeL"/>
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="top" secondItem="KWH-En-TIg" secondAttribute="top" id="S0p-bK-Cqb"/>
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="bottom" secondItem="KWH-En-TIg" secondAttribute="bottom" id="duZ-jp-VFA"/>
                                 </constraints>
@@ -78,6 +87,7 @@
                         <viewLayoutGuide key="safeArea" id="zsF-Y2-aXd"/>
                     </view>
                     <connections>
+                        <outlet property="chubuMapView" destination="MS2-q9-Xxw" id="eFm-yW-9cB"/>
                         <outlet property="kantoMapView" destination="bsa-QN-Vxm" id="C9v-p7-6MJ"/>
                         <outlet property="tableViewHeight" destination="3hB-TP-jcW" id="17k-L5-J9I"/>
                         <outlet property="tohokuMapView" destination="ryo-EB-eqa" id="rDJ-IR-Eb5"/>
