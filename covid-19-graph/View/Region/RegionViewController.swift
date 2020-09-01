@@ -42,6 +42,7 @@ final class RegionViewController: UIViewController {
             first.id < second.id
         })))
 
+        hokkaidoMapView.isHidden = true
         tohokuMapView.isHidden = true
         kantoMapView.isHidden = true
         chubuMapView.isHidden = true
@@ -49,6 +50,25 @@ final class RegionViewController: UIViewController {
         chugokuMapView.isHidden = true
         shikokuMapView.isHidden = true
         kyushuMapView.isHidden = true
+
+        switch region.name {
+        case .hokkaido:
+            hokkaidoMapView.isHidden = false
+        case .tohoku:
+            tohokuMapView.isHidden = false
+        case .kanto:
+            kantoMapView.isHidden = false
+        case .chubu:
+            chubuMapView.isHidden = false
+        case .kinki:
+            kinkiMapView.isHidden = false
+        case .chugoku:
+            chugokuMapView.isHidden = false
+        case .shikoku:
+            shikokuMapView.isHidden = false
+        case .kyusyu:
+            kyushuMapView.isHidden = false
+        }
     }
 }
 
