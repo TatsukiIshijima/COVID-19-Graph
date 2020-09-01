@@ -21,6 +21,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bd-Qx-KBM" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="568"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plR-eV-gNn" userLabel="HokkaidoMapView" customClass="HokkaidoMapView" customModule="covid_19_graph" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryo-EB-eqa" userLabel="TohokuMapView" customClass="TohokuMapView" customModule="covid_19_graph" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -62,6 +66,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="3BW-wE-e4L"/>
+                                            <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="plR-eV-gNn" secondAttribute="bottom" id="3Cx-uy-u7c"/>
                                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="bsa-QN-Vxm" secondAttribute="bottom" id="3ZF-cz-u4L"/>
                                             <constraint firstItem="ryo-EB-eqa" firstAttribute="top" secondItem="9bd-Qx-KBM" secondAttribute="top" id="7gw-Ew-Y9U"/>
                                             <constraint firstItem="ryo-EB-eqa" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="Baf-t2-E78"/>
@@ -71,11 +76,13 @@
                                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="JYH-iF-eij" secondAttribute="bottom" id="HEw-w4-rYu"/>
                                             <constraint firstItem="DSO-aC-e6K" firstAttribute="top" secondItem="9bd-Qx-KBM" secondAttribute="top" id="HuK-dL-ZfW"/>
                                             <constraint firstAttribute="trailing" secondItem="DSO-aC-e6K" secondAttribute="trailing" id="PUa-3p-P4C"/>
+                                            <constraint firstAttribute="trailing" secondItem="plR-eV-gNn" secondAttribute="trailing" id="T5B-Zi-ziU"/>
                                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="jHI-RJ-MNt" secondAttribute="bottom" id="Tyb-Uy-i3t"/>
                                             <constraint firstItem="jHI-RJ-MNt" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="UrO-UN-3st"/>
                                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="X2a-Si-knx" secondAttribute="bottom" id="X02-Qh-rwm"/>
                                             <constraint firstItem="jHI-RJ-MNt" firstAttribute="top" secondItem="9bd-Qx-KBM" secondAttribute="top" id="axy-1L-pH5"/>
                                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="ryo-EB-eqa" secondAttribute="bottom" id="dHZ-MJ-C41"/>
+                                            <constraint firstItem="plR-eV-gNn" firstAttribute="top" secondItem="9bd-Qx-KBM" secondAttribute="top" id="dQo-E9-JzC"/>
                                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="DSO-aC-e6K" secondAttribute="bottom" id="gMu-ub-k5l"/>
                                             <constraint firstItem="MS2-q9-Xxw" firstAttribute="top" secondItem="9bd-Qx-KBM" secondAttribute="top" id="gnS-dV-moE"/>
                                             <constraint firstAttribute="trailing" secondItem="Fxx-Jn-7rP" secondAttribute="trailing" id="hh7-KY-Pl0"/>
@@ -84,6 +91,7 @@
                                             <constraint firstAttribute="trailing" secondItem="jHI-RJ-MNt" secondAttribute="trailing" id="iqe-am-mhh"/>
                                             <constraint firstAttribute="trailing" secondItem="MS2-q9-Xxw" secondAttribute="trailing" id="jAg-AR-8yF"/>
                                             <constraint firstItem="bsa-QN-Vxm" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="kxv-Ol-Rax"/>
+                                            <constraint firstItem="plR-eV-gNn" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="lxe-82-neP"/>
                                             <constraint firstItem="X2a-Si-knx" firstAttribute="top" secondItem="9bd-Qx-KBM" secondAttribute="top" id="mWH-LO-AHd"/>
                                             <constraint firstAttribute="trailing" secondItem="X2a-Si-knx" secondAttribute="trailing" id="oMt-5u-lyD"/>
                                             <constraint firstItem="X2a-Si-knx" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="pIZ-zr-HtB"/>
@@ -101,6 +109,7 @@
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="trailing" secondItem="KWH-En-TIg" secondAttribute="trailing" id="AlZ-Pk-bYY"/>
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="width" secondItem="wmg-4T-M41" secondAttribute="width" id="Dww-Vg-pUi"/>
                                     <constraint firstItem="bsa-QN-Vxm" firstAttribute="height" secondItem="yQl-RL-Nu0" secondAttribute="height" multiplier="0.45" id="HDp-hT-bXr"/>
+                                    <constraint firstItem="plR-eV-gNn" firstAttribute="height" secondItem="yQl-RL-Nu0" secondAttribute="height" multiplier="0.45" id="OmA-eE-L9U"/>
                                     <constraint firstItem="MS2-q9-Xxw" firstAttribute="height" secondItem="yQl-RL-Nu0" secondAttribute="height" multiplier="0.45" id="RBw-RH-YeL"/>
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="top" secondItem="KWH-En-TIg" secondAttribute="top" id="S0p-bK-Cqb"/>
                                     <constraint firstItem="X2a-Si-knx" firstAttribute="height" secondItem="yQl-RL-Nu0" secondAttribute="height" multiplier="0.45" id="dCf-xw-3Qz"/>
@@ -125,6 +134,7 @@
                     <connections>
                         <outlet property="chubuMapView" destination="MS2-q9-Xxw" id="eFm-yW-9cB"/>
                         <outlet property="chugokuMapView" destination="jHI-RJ-MNt" id="aCl-4D-rf3"/>
+                        <outlet property="hokkaidoMapView" destination="plR-eV-gNn" id="pOg-ka-61E"/>
                         <outlet property="kantoMapView" destination="bsa-QN-Vxm" id="C9v-p7-6MJ"/>
                         <outlet property="kinkiMapView" destination="X2a-Si-knx" id="h08-0G-Gp0"/>
                         <outlet property="kyushuMapView" destination="JYH-iF-eij" id="3O5-46-7Ga"/>

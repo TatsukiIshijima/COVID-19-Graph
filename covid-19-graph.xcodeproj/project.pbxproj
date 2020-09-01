@@ -69,6 +69,7 @@
 		4987A31024FE6E4A00B297BE /* ChugokuMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987A30F24FE6E4A00B297BE /* ChugokuMapView.swift */; };
 		4987A31224FE721400B297BE /* ShikokuMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987A31124FE721400B297BE /* ShikokuMapView.swift */; };
 		4987A31424FE768600B297BE /* KyushuMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987A31324FE768600B297BE /* KyushuMapView.swift */; };
+		4987A31624FE793200B297BE /* HokkaidoMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987A31524FE793200B297BE /* HokkaidoMapView.swift */; };
 		498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 498EDF1624D2F730000CB11B /* .swiftlint.yml */; };
 		49939AAE24FB413C00DF3F5C /* RegionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49939AAD24FB413C00DF3F5C /* RegionDataViewController.swift */; };
 		49939AB124FB418100DF3F5C /* RegionDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49939AAF24FB418100DF3F5C /* RegionDataTableViewCell.swift */; };
@@ -238,6 +239,7 @@
 		4987A30F24FE6E4A00B297BE /* ChugokuMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChugokuMapView.swift; sourceTree = "<group>"; };
 		4987A31124FE721400B297BE /* ShikokuMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikokuMapView.swift; sourceTree = "<group>"; };
 		4987A31324FE768600B297BE /* KyushuMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyushuMapView.swift; sourceTree = "<group>"; };
+		4987A31524FE793200B297BE /* HokkaidoMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HokkaidoMapView.swift; sourceTree = "<group>"; };
 		498EDF1624D2F730000CB11B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		498EDF1924D2FB8E000CB11B /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		498EDF1A24D2FB9E000CB11B /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -585,6 +587,7 @@
 				4987A30F24FE6E4A00B297BE /* ChugokuMapView.swift */,
 				4987A31124FE721400B297BE /* ShikokuMapView.swift */,
 				4987A31324FE768600B297BE /* KyushuMapView.swift */,
+				4987A31524FE793200B297BE /* HokkaidoMapView.swift */,
 			);
 			path = Region;
 			sourceTree = "<group>";
@@ -1142,6 +1145,7 @@
 				4933110A24E95D2900E0347B /* PrefectureContainer.swift in Sources */,
 				493ED1AE24FBAA0300B4632C /* TohokuMapView.swift in Sources */,
 				49939AB524FB6C5900DF3F5C /* RegionDataHeaderView.swift in Sources */,
+				4987A31624FE793200B297BE /* HokkaidoMapView.swift in Sources */,
 				496BF46C24DEA97F0036DDC6 /* Tyugoku.swift in Sources */,
 				4987A31024FE6E4A00B297BE /* ChugokuMapView.swift in Sources */,
 				496BF46824DEA97F0036DDC6 /* Kyushu.swift in Sources */,
