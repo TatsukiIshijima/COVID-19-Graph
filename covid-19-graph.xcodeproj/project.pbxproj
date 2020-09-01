@@ -66,6 +66,7 @@
 		496C1E2924DBC9EF00521D25 /* StatisticsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C1E2824DBC9EF00521D25 /* StatisticsResponse.swift */; };
 		496C1E2B24DBCAE800521D25 /* PrefectureStatisticsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C1E2A24DBCAE800521D25 /* PrefectureStatisticsResponse.swift */; };
 		4987A30E24FE69D400B297BE /* KinkiMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987A30D24FE69D400B297BE /* KinkiMapView.swift */; };
+		4987A31024FE6E4A00B297BE /* ChugokuMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4987A30F24FE6E4A00B297BE /* ChugokuMapView.swift */; };
 		498EDF1724D2F730000CB11B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 498EDF1624D2F730000CB11B /* .swiftlint.yml */; };
 		49939AAE24FB413C00DF3F5C /* RegionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49939AAD24FB413C00DF3F5C /* RegionDataViewController.swift */; };
 		49939AB124FB418100DF3F5C /* RegionDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49939AAF24FB418100DF3F5C /* RegionDataTableViewCell.swift */; };
@@ -232,6 +233,7 @@
 		496C1E2824DBC9EF00521D25 /* StatisticsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsResponse.swift; sourceTree = "<group>"; };
 		496C1E2A24DBCAE800521D25 /* PrefectureStatisticsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureStatisticsResponse.swift; sourceTree = "<group>"; };
 		4987A30D24FE69D400B297BE /* KinkiMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinkiMapView.swift; sourceTree = "<group>"; };
+		4987A30F24FE6E4A00B297BE /* ChugokuMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChugokuMapView.swift; sourceTree = "<group>"; };
 		498EDF1624D2F730000CB11B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		498EDF1924D2FB8E000CB11B /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		498EDF1A24D2FB9E000CB11B /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -576,6 +578,7 @@
 				49FFF32624FD268A00482676 /* KantoMapView.swift */,
 				49FFF32824FD336600482676 /* ChubuMapView.swift */,
 				4987A30D24FE69D400B297BE /* KinkiMapView.swift */,
+				4987A30F24FE6E4A00B297BE /* ChugokuMapView.swift */,
 			);
 			path = Region;
 			sourceTree = "<group>";
@@ -1134,6 +1137,7 @@
 				493ED1AE24FBAA0300B4632C /* TohokuMapView.swift in Sources */,
 				49939AB524FB6C5900DF3F5C /* RegionDataHeaderView.swift in Sources */,
 				496BF46C24DEA97F0036DDC6 /* Tyugoku.swift in Sources */,
+				4987A31024FE6E4A00B297BE /* ChugokuMapView.swift in Sources */,
 				496BF46824DEA97F0036DDC6 /* Kyushu.swift in Sources */,
 				496BF46B24DEA97F0036DDC6 /* Tyubu.swift in Sources */,
 				4942935024DD4BD8006B5C58 /* JapanMapView.swift in Sources */,
