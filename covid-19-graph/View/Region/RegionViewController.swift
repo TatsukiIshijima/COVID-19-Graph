@@ -10,7 +10,17 @@ final class RegionViewController: UIViewController {
     // 画面の横幅とTableViewの縦幅をイコールにすると高さ変更が効かなかったので
     // 一旦定数指定し、その後変更するようにする
     @IBOutlet private weak var tableViewHeight: NSLayoutConstraint!
-    @IBOutlet private weak var regionView: UIView!
+    // Storyboardでクラス指定しての描画でないとサイズが合わなかったので
+    // 地方別にViewを描画し、表示/非表示を切り替える
+    @IBOutlet private weak var hokkaidoMapView: HokkaidoMapView!
+    @IBOutlet private weak var tohokuMapView: TohokuMapView!
+    @IBOutlet private weak var kantoMapView: KantoMapView!
+    @IBOutlet private weak var chubuMapView: ChubuMapView!
+    @IBOutlet private weak var kinkiMapView: KinkiMapView!
+    @IBOutlet private weak var chugokuMapView: ChubuMapView!
+    @IBOutlet private weak var shikokuMapView: ShikokuMapView!
+    @IBOutlet private weak var kyushuMapView: KyushuMapView!
+
     private var regionDataViewController: RegionDataViewController?
 
     var region: RegionModel?
@@ -31,7 +41,13 @@ final class RegionViewController: UIViewController {
             first.id < second.id
         })))
 
-        // regionView.addSubview(TohokuMapView(originalWidth: 185, originalHeight: 235))
+        tohokuMapView.isHidden = true
+        kantoMapView.isHidden = true
+        chubuMapView.isHidden = true
+        kinkiMapView.isHidden = true
+        chugokuMapView.isHidden = true
+        shikokuMapView.isHidden = true
+        kyushuMapView.isHidden = true
     }
 }
 
