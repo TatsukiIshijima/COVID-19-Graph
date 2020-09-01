@@ -36,7 +36,8 @@ final class RegionViewController: UIViewController {
             else {
                 fatalError("RegionDataViewController or RegionModel is nil.")
         }
-        tableViewHeight.constant = CGFloat(region.prefectures.count * 44)
+        // ヘッダーの高さ分で +1
+        tableViewHeight.constant = CGFloat((region.prefectures.count + 1) * 44)
         viewController.reloadData(prefectures: Array(region.prefectures.values.sorted(by: { (first, second) -> Bool in
             first.id < second.id
         })))
