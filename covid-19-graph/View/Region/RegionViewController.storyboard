@@ -41,6 +41,10 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSO-aC-e6K" userLabel="ShikokuMapView" customClass="ShikokuMapView" customModule="covid_19_graph" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fxx-Jn-7rP">
                                                 <rect key="frame" x="0.0" y="368" width="414" height="200"/>
                                                 <constraints>
@@ -59,11 +63,14 @@
                                             <constraint firstItem="ryo-EB-eqa" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="Baf-t2-E78"/>
                                             <constraint firstAttribute="bottom" secondItem="Fxx-Jn-7rP" secondAttribute="bottom" id="Cjq-iW-Hhv"/>
                                             <constraint firstItem="bsa-QN-Vxm" firstAttribute="top" secondItem="9bd-Qx-KBM" secondAttribute="top" id="Fge-oB-zZD"/>
+                                            <constraint firstItem="DSO-aC-e6K" firstAttribute="top" secondItem="9bd-Qx-KBM" secondAttribute="top" id="HuK-dL-ZfW"/>
+                                            <constraint firstAttribute="trailing" secondItem="DSO-aC-e6K" secondAttribute="trailing" id="PUa-3p-P4C"/>
                                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="jHI-RJ-MNt" secondAttribute="bottom" id="Tyb-Uy-i3t"/>
                                             <constraint firstItem="jHI-RJ-MNt" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="UrO-UN-3st"/>
                                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="X2a-Si-knx" secondAttribute="bottom" id="X02-Qh-rwm"/>
                                             <constraint firstItem="jHI-RJ-MNt" firstAttribute="top" secondItem="9bd-Qx-KBM" secondAttribute="top" id="axy-1L-pH5"/>
                                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="ryo-EB-eqa" secondAttribute="bottom" id="dHZ-MJ-C41"/>
+                                            <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="DSO-aC-e6K" secondAttribute="bottom" id="gMu-ub-k5l"/>
                                             <constraint firstItem="MS2-q9-Xxw" firstAttribute="top" secondItem="9bd-Qx-KBM" secondAttribute="top" id="gnS-dV-moE"/>
                                             <constraint firstAttribute="trailing" secondItem="Fxx-Jn-7rP" secondAttribute="trailing" id="hh7-KY-Pl0"/>
                                             <constraint firstAttribute="trailing" secondItem="ryo-EB-eqa" secondAttribute="trailing" id="inj-jc-2Ks"/>
@@ -76,6 +83,7 @@
                                             <constraint firstItem="MS2-q9-Xxw" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="pna-sL-o9Z"/>
                                             <constraint firstItem="Fxx-Jn-7rP" firstAttribute="top" secondItem="MS2-q9-Xxw" secondAttribute="bottom" id="vN2-6r-6uC"/>
                                             <constraint firstAttribute="trailing" secondItem="bsa-QN-Vxm" secondAttribute="trailing" id="vXp-S5-0Ti"/>
+                                            <constraint firstItem="DSO-aC-e6K" firstAttribute="leading" secondItem="9bd-Qx-KBM" secondAttribute="leading" id="xpZ-At-R9m"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -90,6 +98,7 @@
                                     <constraint firstItem="X2a-Si-knx" firstAttribute="height" secondItem="yQl-RL-Nu0" secondAttribute="height" multiplier="0.45" id="dCf-xw-3Qz"/>
                                     <constraint firstItem="9bd-Qx-KBM" firstAttribute="bottom" secondItem="KWH-En-TIg" secondAttribute="bottom" id="duZ-jp-VFA"/>
                                     <constraint firstItem="jHI-RJ-MNt" firstAttribute="height" secondItem="yQl-RL-Nu0" secondAttribute="height" multiplier="0.45" id="hTh-NW-XnN"/>
+                                    <constraint firstItem="DSO-aC-e6K" firstAttribute="height" secondItem="yQl-RL-Nu0" secondAttribute="height" multiplier="0.45" id="xC1-aM-fv5"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="KWH-En-TIg"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="wmg-4T-M41"/>
@@ -109,6 +118,7 @@
                         <outlet property="chugokuMapView" destination="jHI-RJ-MNt" id="aCl-4D-rf3"/>
                         <outlet property="kantoMapView" destination="bsa-QN-Vxm" id="C9v-p7-6MJ"/>
                         <outlet property="kinkiMapView" destination="X2a-Si-knx" id="h08-0G-Gp0"/>
+                        <outlet property="shikokuMapView" destination="DSO-aC-e6K" id="4rA-Oa-KgK"/>
                         <outlet property="tableViewHeight" destination="3hB-TP-jcW" id="17k-L5-J9I"/>
                         <outlet property="tohokuMapView" destination="ryo-EB-eqa" id="rDJ-IR-Eb5"/>
                     </connections>
