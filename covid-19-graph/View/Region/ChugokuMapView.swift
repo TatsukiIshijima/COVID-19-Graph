@@ -44,4 +44,17 @@ final class ChugokuMapView: DrawMapView {
 
         context?.restoreGState()
     }
+
+    func reDraw(shimaneColor: UIColor = R.color.dangerColor7()!,
+                tottoriColor: UIColor = R.color.dangerColor7()!,
+                okayamaColor: UIColor = R.color.dangerColor7()!,
+                hiroshimaColor: UIColor = R.color.dangerColor7()!,
+                yamaguchiColor: UIColor = R.color.dangerColor7()!) {
+        self.shimaneColor = shimaneColor
+        self.tottoriColor = tottoriColor
+        self.okayamaColor = okayamaColor
+        self.hiroshimaColor = hiroshimaColor
+        self.yamaguchiColor = yamaguchiColor
+        setNeedsDisplay()
+    }
 }

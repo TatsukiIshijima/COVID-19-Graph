@@ -60,4 +60,24 @@ final class ChubuMapView: DrawMapView {
 
         context?.restoreGState()
     }
+
+    func reDraw(yamanashiColor: UIColor = R.color.dangerColor7()!,
+                nigataColor: UIColor = R.color.dangerColor7()!,
+                shizuokaColor: UIColor = R.color.dangerColor7()!,
+                naganoColor: UIColor = R.color.dangerColor7()!,
+                aichiColor: UIColor = R.color.dangerColor7()!,
+                gifuColor: UIColor = R.color.dangerColor7()!,
+                toyamaColor: UIColor = R.color.dangerColor7()!,
+                ishikawaColor: UIColor = R.color.dangerColor7()!,
+                fukuiColor: UIColor = R.color.dangerColor7()!) {
+        self.yamanashiColor = yamanashiColor
+        self.nigataColor = nigataColor
+        self.naganoColor = naganoColor
+        self.aichiColor = aichiColor
+        self.gifuColor = gifuColor
+        self.toyamaColor = toyamaColor
+        self.ishikawaColor = ishikawaColor
+        self.fukuiColor = fukuiColor
+        setNeedsDisplay()
+    }
 }

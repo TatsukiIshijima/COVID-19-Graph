@@ -55,4 +55,23 @@ final class KyushuMapView: DrawMapView {
 
         context?.restoreGState()
     }
+
+    func reDraw(oitaColor: UIColor = R.color.dangerColor7()!,
+                miyazakiColor: UIColor = R.color.dangerColor7()!,
+                kagoshimaColor: UIColor = R.color.dangerColor7()!,
+                kumamotoColor: UIColor = R.color.dangerColor7()!,
+                sagaColor: UIColor = R.color.dangerColor7()!,
+                fukuokaColor: UIColor = R.color.dangerColor7()!,
+                nagasakiColor: UIColor = R.color.dangerColor7()!,
+                okinawaColor: UIColor = R.color.dangerColor7()!) {
+        self.oitaColor = oitaColor
+        self.miyazakiColor = miyazakiColor
+        self.kagoshimaColor = kagoshimaColor
+        self.kumamotoColor = kumamotoColor
+        self.sagaColor = sagaColor
+        self.fukuokaColor = fukuokaColor
+        self.nagasakiColor = nagasakiColor
+        self.okinawaColor = okinawaColor
+        setNeedsDisplay()
+    }
 }

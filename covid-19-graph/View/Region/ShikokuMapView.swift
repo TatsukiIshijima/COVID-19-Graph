@@ -39,4 +39,15 @@ final class ShikokuMapView: DrawMapView {
 
         context?.restoreGState()
     }
+
+    func reDraw(kagawaColor: UIColor = R.color.dangerColor7()!,
+                tokushimaColor: UIColor = R.color.dangerColor7()!,
+                kochiColor: UIColor = R.color.dangerColor7()!,
+                ehimeColor: UIColor = R.color.dangerColor7()!) {
+        self.kagawaColor = kagawaColor
+        self.tokushimaColor = tokushimaColor
+        self.kochiColor = kochiColor
+        self.ehimeColor = ehimeColor
+        setNeedsDisplay()
+    }
 }

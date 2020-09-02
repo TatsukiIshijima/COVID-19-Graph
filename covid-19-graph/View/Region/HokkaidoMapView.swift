@@ -20,4 +20,9 @@ final class HokkaidoMapView: DrawMapView {
 
         context?.restoreGState()
     }
+
+    func reDraw(hokkaidoColor: UIColor = R.color.dangerColor7()!) {
+        self.hokkaidoColor = hokkaidoColor
+        setNeedsDisplay()
+    }
 }

@@ -7,7 +7,7 @@ import Foundation
 import UIKit
 
 final class TohokuMapView: DrawMapView {
-    private var aomotiColor = R.color.dangerColor7()!
+    private var aomoriColor = R.color.dangerColor7()!
     private var akitaColor = R.color.dangerColor7()!
     private var iwateColor = R.color.dangerColor7()!
     private var yamagataColor = R.color.dangerColor7()!
@@ -19,7 +19,7 @@ final class TohokuMapView: DrawMapView {
         originalHeight = 235
         super.draw(rect)
 
-        aomotiColor.setFill()
+        aomoriColor.setFill()
         Tohoku.aomori.path.fill()
         drawPath(path: Tohoku.aomori.path)
 
@@ -44,5 +44,20 @@ final class TohokuMapView: DrawMapView {
         drawPath(path: Tohoku.fukushima.path)
 
         context?.restoreGState()
+    }
+
+    func reDraw(aomoriColor: UIColor = R.color.dangerColor7()!,
+                akitaColor: UIColor = R.color.dangerColor7()!,
+                iwateColor: UIColor = R.color.dangerColor7()!,
+                yamagataColor: UIColor = R.color.dangerColor7()!,
+                miyagiColor: UIColor = R.color.dangerColor7()!,
+                fukushimaColor: UIColor = R.color.dangerColor7()!) {
+        self.aomoriColor = aomoriColor
+        self.akitaColor = akitaColor
+        self.iwateColor = iwateColor
+        self.yamagataColor = yamagataColor
+        self.miyagiColor = miyagiColor
+        self.fukushimaColor = fukushimaColor
+        setNeedsDisplay()
     }
 }

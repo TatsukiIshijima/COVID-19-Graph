@@ -54,4 +54,21 @@ final class KantoMapView: DrawMapView {
 
         context?.restoreGState()
     }
+
+    func reDraw(ibarakiColor: UIColor = R.color.dangerColor7()!,
+                tochigiColor: UIColor = R.color.dangerColor7()!,
+                gunmaColor: UIColor = R.color.dangerColor7()!,
+                saitamaColor: UIColor = R.color.dangerColor7()!,
+                chibaColor: UIColor = R.color.dangerColor7()!,
+                tokyoColor: UIColor = R.color.dangerColor7()!,
+                kanagawaColor: UIColor = R.color.dangerColor7()!) {
+        self.ibarakiColor = ibarakiColor
+        self.tochigiColor = tochigiColor
+        self.gunmaColor = gunmaColor
+        self.saitamaColor = saitamaColor
+        self.chibaColor = chibaColor
+        self.tokyoColor = tokyoColor
+        self.kanagawaColor = kanagawaColor
+        setNeedsDisplay()
+    }
 }

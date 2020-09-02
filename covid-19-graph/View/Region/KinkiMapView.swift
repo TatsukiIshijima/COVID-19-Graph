@@ -54,4 +54,21 @@ final class KinkiMapView: DrawMapView {
 
         context?.restoreGState()
     }
+
+    func reDraw(mieColor: UIColor = R.color.dangerColor7()!,
+                shigaColor: UIColor = R.color.dangerColor7()!,
+                naraColor: UIColor = R.color.dangerColor7()!,
+                wakayamaColor: UIColor = R.color.dangerColor7()!,
+                osakaColor: UIColor = R.color.dangerColor7()!,
+                kyotoColor: UIColor = R.color.dangerColor7()!,
+                hyogoColor: UIColor = R.color.dangerColor7()!) {
+        self.mieColor = mieColor
+        self.shigaColor = shigaColor
+        self.naraColor = naraColor
+        self.wakayamaColor = wakayamaColor
+        self.osakaColor = osakaColor
+        self.kyotoColor = kyotoColor
+        self.hyogoColor = hyogoColor
+        setNeedsDisplay()
+    }
 }
