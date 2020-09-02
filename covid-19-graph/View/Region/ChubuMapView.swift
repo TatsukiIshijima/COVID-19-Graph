@@ -72,6 +72,7 @@ final class ChubuMapView: DrawMapView {
                 fukuiColor: UIColor = R.color.dangerColor7()!) {
         self.yamanashiColor = yamanashiColor
         self.nigataColor = nigataColor
+        self.shizuokaColor = shizuokaColor
         self.naganoColor = naganoColor
         self.aichiColor = aichiColor
         self.gifuColor = gifuColor
