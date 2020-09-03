@@ -112,13 +112,13 @@ extension PrefectureListResponse {
                 kyusyuRegion.updateValue(prefecture, forKey: prefecture.name)
             }
         }
-        return JapanMapModel(hokkaido: RegionModel(prefectures: hokkaidoRegion),
-                             tohoku: RegionModel(prefectures: tohokuRegion),
-                             kanto: RegionModel(prefectures: kantoRegion),
-                             tyubu: RegionModel(prefectures: tyubuRegion),
-                             kinki: RegionModel(prefectures: kinkiRegion),
-                             tyugoku: RegionModel(prefectures: tyugokuRegion),
-                             shikoku: RegionModel(prefectures: shikokuRegion),
-                             kyusyu: RegionModel(prefectures: kyusyuRegion))
+        return JapanMapModel(hokkaido: RegionModel(name: .hokkaido, prefectures: hokkaidoRegion),
+                             tohoku: RegionModel(name: .tohoku, prefectures: tohokuRegion),
+                             kanto: RegionModel(name: .kanto, prefectures: kantoRegion),
+                             tyubu: RegionModel(name: .chubu, prefectures: tyubuRegion),
+                             kinki: RegionModel(name: .kinki, prefectures: kinkiRegion),
+                             tyugoku: RegionModel(name: .chugoku, prefectures: tyugokuRegion),
+                             shikoku: RegionModel(name: .shikoku, prefectures: shikokuRegion),
+                             kyusyu: RegionModel(name: .kyusyu, prefectures: kyusyuRegion))
     }
 }

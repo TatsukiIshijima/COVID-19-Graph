@@ -30,24 +30,6 @@ final class PrefectureViewModel: ErrorViewModel {
     func drawPrefectures() {
         japanMapUseCase.execute()
     }
-
-    func toLegendColor(number: Int) -> UIColor {
-        if number > 1000 {
-            return R.color.dangerColor1() ?? .red
-        } else if number > 500, number <= 1000 {
-            return R.color.dangerColor2() ?? .red
-        } else if number > 100, number <= 500 {
-            return R.color.dangerColor3() ?? .red
-        } else if number > 50, number <= 100 {
-            return R.color.dangerColor4() ?? .orange
-        } else if number > 10, number <= 50 {
-            return R.color.dangerColor5() ?? .orange
-        } else if number > 0, number <= 10 {
-            return R.color.dangerColor6() ?? .yellow
-        } else {
-            return R.color.dangerColor7() ?? .lightGray
-        }
-    }
 }
 
 extension PrefectureViewModel: PrefectureView {
