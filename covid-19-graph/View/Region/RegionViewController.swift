@@ -4,6 +4,7 @@
 //
 
 import Core
+import Segmentio
 import UIKit
 
 final class RegionViewController: UIViewController {
@@ -20,6 +21,7 @@ final class RegionViewController: UIViewController {
     @IBOutlet private weak var chugokuMapView: ChugokuMapView!
     @IBOutlet private weak var shikokuMapView: ShikokuMapView!
     @IBOutlet private weak var kyushuMapView: KyushuMapView!
+    @IBOutlet private weak var segmentio: Segmentio!
 
     private var regionDataViewController: RegionDataViewController?
 
@@ -30,6 +32,11 @@ final class RegionViewController: UIViewController {
         super.viewDidLoad()
 
         title = R.string.localizable.regionTitle()
+
+        // NavigationBarの下線を削除
+        navigationController?.navigationBar.shadowImage = UIImage()
+
+        setupSegmentio()
 
         guard let viewController = regionDataViewController,
             let region = self.region
@@ -85,6 +92,58 @@ extension RegionViewController {
         super.prepare(for: segue, sender: sender)
         if let regionDataViewController = segue.destination as? RegionDataViewController {
             self.regionDataViewController = regionDataViewController
+        }
+    }
+}
+
+extension RegionViewController {
+    // Segmentio設定
+    private func setupSegmentio() {
+        let segmentioStates = SegmentioStates(
+            defaultState: SegmentioState(
+                backgroundColor: .clear,
+                titleFont: UIFont.systemFont(ofSize: 14),
+                titleTextColor: .white
+            ),
+            selectedState: SegmentioState(
+                backgroundColor: R.color.secondaryColor()!,
+                titleFont: UIFont.boldSystemFont(ofSize: 16),
+                titleTextColor: .white
+            ),
+            highlightedState: SegmentioState(
+                backgroundColor: UIColor.white.withAlphaComponent(0.6),
+                titleFont: UIFont.boldSystemFont(ofSize: 16),
+                titleTextColor: .white
+            )
+        )
+        let indicatorOptions = SegmentioIndicatorOptions(type: .bottom,
+                                                         ratio: 1,
+                                                         height: 5,
+                                                         color: .orange)
+        let horizontalSeparatorOptions = SegmentioHorizontalSeparatorOptions(type: .none,
+                                                                             height: 0,
+                                                                             color: .clear)
+        let segmentioOptions = SegmentioOptions(backgroundColor: R.color.primaryColor()!,
+                                                segmentPosition: .dynamic,
+                                                scrollEnabled: true,
+                                                indicatorOptions: indicatorOptions,
+                                                horizontalSeparatorOptions: horizontalSeparatorOptions,
+                                                verticalSeparatorOptions: nil,
+                                                imageContentMode: .center,
+                                                labelTextAlignment: .center,
+                                                labelTextNumberOfLines: 1,
+                                                segmentStates: segmentioStates,
+                                                animationDuration: 0.1)
+
+        segmentio.setup(content: [SegmentioItem(title: R.string.localizable.currentTitle(), image: nil),
+                                  SegmentioItem(title: R.string.localizable.totalTitle(), image: nil)],
+                        style: .onlyLabel,
+                        options: segmentioOptions)
+
+        segmentio.selectedSegmentioIndex = 0
+
+        segmentio.valueDidChange = { [weak self] _, _ in
+            // TODO: 切り替え
         }
     }
 }
