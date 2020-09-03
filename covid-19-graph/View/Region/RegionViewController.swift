@@ -142,8 +142,32 @@ extension RegionViewController {
 
         segmentio.selectedSegmentioIndex = 0
 
-        segmentio.valueDidChange = { [weak self] _, _ in
-            // TODO: 切り替え
+        segmentio.valueDidChange = { [weak self] _, index in
+            self?.switchRegionMap(isHospitalize: index == 0)
+        }
+    }
+
+    private func switchRegionMap(isHospitalize: Bool) {
+        guard let region = self.region else {
+            fatalError("Could not get Region.")
+        }
+        switch region.name {
+        case .hokkaido:
+            fillHokkaido(isHospitalize: isHospitalize)
+        case .tohoku:
+            fillTohoku(isHospitalize: isHospitalize)
+        case .kanto:
+            fillKanto(isHospitalize: isHospitalize)
+        case .chubu:
+            fillChubu(isHospitalize: isHospitalize)
+        case .kinki:
+            fillKinki(isHospitalize: isHospitalize)
+        case .chugoku:
+            fillChugoku(isHospitalize: isHospitalize)
+        case .shikoku:
+            fillShikoku(isHospitalize: isHospitalize)
+        case .kyusyu:
+            fillKyushu(isHospitalize: isHospitalize)
         }
     }
 }
